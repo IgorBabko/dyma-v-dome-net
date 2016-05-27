@@ -151,10 +151,10 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        DymaVDomeNet\Providers\AppServiceProvider::class,
+        DymaVDomeNet\Providers\AuthServiceProvider::class,
+        DymaVDomeNet\Providers\EventServiceProvider::class,
+        DymaVDomeNet\Providers\RouteServiceProvider::class,
 
     ],
 
