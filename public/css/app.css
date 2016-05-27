@@ -1,5 +1,23 @@
 body {
-  background: #a52a2a;
+  background-image: url("../img/bricks2.jpg");
+}
+.Main {
+  width: 100vw;
+  height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.Main__block {
+  width: 300px;
+  height: 300px;
+  margin: 30px;
+  background: #fff;
 }
 
 /*# sourceMappingURL=app.css.map */
