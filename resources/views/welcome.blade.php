@@ -1,45 +1,56 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+<html lang="en">
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>dyma_v_dome_net</title>
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/fuelux.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/app.css" rel="stylesheet">
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
+    <script src="/js/require.js"></script>
+    <script>
+        (function()
+        {
+            require.config(
+            {
+                config:
+                {
+                    moment:
+                    {
+                        noGlobal: true
+                    }
+                },
+                paths:
+                {
+                    jquery: '/js/jquery.min',
+                    bootstrap: '/js/bootstrap.min',
+                    //fuelux: 'bower_components/fuelux/js', //Proper UMD/AMD to enable you to get just what you need (goes w/line 33)
+                    fuelux: '/js/fuelux.min',//just grab it all (goes w/line 34)
+                    //moment: 'bower_components/moment/min/moment-with-langs.min', // comment out if you dont want momentjs to be default
+                    //underscore: 'bower_components/underscore/underscore'
+                },
+                shim:
+                {
+                    'bootstrap':
+                    {
+                        deps: ['jquery']
+                    }
+                }
+            });
+            //require(['fuelux/checkbox']); //get just what you need (goes w/line 26)
+            require(['fuelux']);//just grab it all (goes w/line 27)
+        })();
+    </script>
+</head>
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
+<body class="fuelux">
+    <label class="checkbox-custom checkbox-inline" data-initialize="checkbox" id="confirmation">
+        <input class="sr-only" type="checkbox" value="Should load in a 6 wide column, offset by 3 col widths"> <span class="checkbox-label">It worked</span>
+    </label>
+</body>
 
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">dyma v dome net</div>
-            </div>
-        </div>
-    </body>
 </html>
