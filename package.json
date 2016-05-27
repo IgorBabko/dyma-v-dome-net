@@ -14,6 +14,7 @@
     "laravel-elixir-livereload": "^1.1.4",
     "laravel-elixir-stylus": "^1.0.1",
     "poststylus": "^0.2.3",
+    "requirejs": "^2.2.0",
     "rucksack-css": "^0.8.5"
   }
 }
