@@ -1,0 +1,1 @@
+{"version":3,"sources":["app.styl","app.css"],"names":[],"mappings":"AAAA;EACI,oBAAA;CCCH","file":"app.css","sourcesContent":["body\n    background: pink\n","body {\n  background: #ffc0cb;\n}\n"],"sourceRoot":"/source/"}
