@@ -12,4 +12,9 @@ class PagesController extends Controller
     {
         return view('pages.main');
     } 
+
+    public function contact()
+    {
+        return view('pages.contact');
+    }
 }
