@@ -19,6 +19,27 @@ a
 img
     width: 100%
 
+// header
+.top-line
+    min-height: 30px
+    text-align: left
+    color: #aaa 
+    font-weight: bold
+    font-size: 14px
+    padding-top: 4px
+
+    span
+        margin: 0 10px
+
+    @media screen and (max-width: 768px)
+        text-align: center
+
+.navbar-toggle
+    background: #EE3B24 !important
+    margin-top: 15px
+
+    
+
 input:hover,
 textarea:hover,
 input:focus,
@@ -33,7 +54,7 @@ section
     display: flex
     justify-content: center
     align-items: center
-    min-height: calc(100vh - 77px) !important
+    min-height: calc(100vh - 177px) !important
 
 .section-main
     background: #2C2C2C
@@ -147,6 +168,11 @@ section
     font-size: 22px
     width: auto
     padding: 0
+    display: inline-block
+
+
+    @media screen and (max-width: 768px)
+        margin-left: 10px
 
 .single-feature
     background: #eee
@@ -164,3 +190,4 @@ section
 
     &:after
         background: #EE3B24 !important
+

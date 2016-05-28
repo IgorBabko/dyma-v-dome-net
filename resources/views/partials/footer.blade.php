@@ -19,7 +19,7 @@
             </div>
             <div class="col-md-6" style="text-align: right">
                 <div class="footer_bottom">
-                    <p class="text-block">© Тепло квартал 2016</p>
+                    <p class="text-block">© Теплоквартал 2016</p>
                 </div>
             </div>
             <!--<div class="col-md-6">

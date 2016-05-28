@@ -17,6 +17,26 @@ a:focus {
 img {
   width: 100%;
 }
+.top-line {
+  min-height: 30px;
+  text-align: left;
+  color: #aaa;
+  font-weight: bold;
+  font-size: 14px;
+  padding-top: 4px;
+}
+.top-line span {
+  margin: 0 10px;
+}
+@media screen and (max-width: 768px) {
+  .top-line {
+    text-align: center;
+  }
+}
+.navbar-toggle {
+  background: #ee3b24 !important;
+  margin-top: 15px;
+}
 input:hover,
 textarea:hover,
 input:focus,
@@ -34,7 +54,7 @@ section {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  min-height: calc(100vh - 77px) !important;
+  min-height: calc(100vh - 177px) !important;
 }
 .section-main {
   background: #2c2c2c;
@@ -2754,6 +2774,12 @@ textarea:hover {
   font-size: 22px;
   width: auto;
   padding: 0;
+  display: inline-block;
+}
+@media screen and (max-width: 768px) {
+  .nav-logo {
+    margin-left: 10px;
+  }
 }
 .single-feature {
   background: #eee;
