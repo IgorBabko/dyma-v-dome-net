@@ -18,7 +18,8 @@ $ ->
             content: '<h4>Kiev</h4>'
             maxWidth: 100
 
+    return
 
-    # scroll to top
-    window.jQuery.goup()
+# scroll to the top button
+$.goup()
     

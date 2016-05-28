@@ -14,6 +14,9 @@ a:hover,
 a:focus {
   color: #fff;
 }
+.goup-container {
+  background-color: #ee3b24 !important;
+}
 img {
   width: 100%;
 }
