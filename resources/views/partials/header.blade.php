@@ -7,9 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">
-                <img src="images/logo3.png" alt="" class="img-responsive">
-            </a>
+            <div class="feature_title nav-logo"><span style="color: white">Тепло</span><b>Квартал</b></div>
         </div>
         @include ('partials.nav')
     </div>
