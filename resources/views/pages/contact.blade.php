@@ -6,9 +6,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="feature_header text-center">
-                        <h3 class="feature_title">Keep In <b>touch</b></h3>
-                        <h4 class="feature_sub">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h4>
+                    <div class="feature_header text-center" style="text-align: center">
+                        <h3 class="feature_title"><b>Свяжитесь со мной</b></h3>
                         <div class="divider"></div>
                     </div>
                 </div>

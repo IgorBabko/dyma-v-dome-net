@@ -56,6 +56,7 @@
 
 <body class="fuelux">
     @yield ('content')
+    @include ('partials.footer')
 </body>
 
 </html>
