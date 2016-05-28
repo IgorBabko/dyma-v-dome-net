@@ -37,7 +37,9 @@ elixir(function(mix) {
         .copy('node_modules/fuelux/dist/css/fuelux.min.css', 'public/css')
         .copy('node_modules/fuelux/dist/js/fuelux.min.js', 'public/js')
         .copy('node_modules/requirejs/require.js', 'public/js')
-        .copy('node_modules/moment/min/moment.min.js', 'public/js');
+        .copy('node_modules/moment/min/moment.min.js', 'public/js')
+//        .copy('node_modules/google-maps/lib/Google.min.js', 'public/js');
+        .copy('node_modules/gmaps/gmaps.min.js', 'public/js');
 //        .copy('bower_components/bxslider-4/dist/jquery.bxslider.min.css', 'public/css')
 //        .copy('bower_components/bxslider-4/dist/jquery.bxslider.min.js', 'public/js')
 //        .copy('bower_components/bxslider-4/dist/images/bx_loader.gif', 'public/img')

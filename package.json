@@ -8,6 +8,8 @@
   "dependencies": {
     "font-awesome": "^4.5.0",
     "fuelux": "^3.15.4",
+    "gmaps": "^0.4.24",
+    "google-maps": "^3.2.1",
     "gulp": "^3.9.1",
     "jquery": "^2.2.1",
     "laravel-elixir": "^5.0.0",
