@@ -2759,6 +2759,15 @@ textarea:hover {
 .Contacts__item span {
   color: #c0c0c0;
 }
+.Button {
+  background-color: #ee3b24;
+}
+.Button:hover,
+.Button:active,
+.Button:focus {
+  background-color: #d82711;
+  color: #fff;
+}
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
