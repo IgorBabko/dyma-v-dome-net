@@ -57,6 +57,7 @@ section {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
+  padding: 50px 0;
   min-height: calc(100vh - 177px) !important;
 }
 .section-main {
