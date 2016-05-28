@@ -19,5 +19,6 @@ $ ->
             maxWidth: 100
 
 
-    $('.owl-carousel').owlCarousel()
+    # scroll to top
+    window.jQuery.goup()
     

@@ -19,7 +19,7 @@
         maxWidth: 100
       }
     });
-    return $('.owl-carousel').owlCarousel();
+    return $.goup();
   });
 
 }).call(this);
