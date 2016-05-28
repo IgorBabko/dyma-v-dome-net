@@ -19,7 +19,7 @@
         maxWidth: 100
       }
     });
-    return $.goup();
+    return window.jQuery.goup();
   });
 
 }).call(this);
