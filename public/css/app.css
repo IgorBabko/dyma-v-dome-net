@@ -2810,5 +2810,24 @@ textarea:hover {
 .single-feature:hover:after {
   background: #ee3b24 !important;
 }
+.pagination>li>a,
+.pagination>li>span {
+  color: #000;
+}
+.pagination>li>a:focus,
+.pagination>li>a:hover,
+.pagination>li>span:focus,
+.pagination>li>span:hover {
+  color: #000;
+}
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+  background-color: #ee3b24;
+  border-color: #ee3b24;
+}
 
 /*# sourceMappingURL=app.css.map */
