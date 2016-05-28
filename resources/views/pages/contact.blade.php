@@ -40,7 +40,7 @@
                         </div>
                     </div>
                     <div class="col-md-12 text-center">
-                        <button class="btn btn-main featured">Submit Now</button>
+                        <button class="btn btn-main featured">Отправить</button>
                     </div>
                 </div>
             </div>

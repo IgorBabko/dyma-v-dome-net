@@ -20,7 +20,7 @@ img {
 .top-line {
   min-height: 30px;
   text-align: left;
-  color: #aaa;
+  color: #dbdbdb;
   font-weight: bold;
   font-size: 14px;
   padding-top: 4px;
@@ -54,10 +54,11 @@ section {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  min-height: calc(100vh - 177px) !important;
+  min-height: calc(100vh - 100px) !important;
 }
 .section-main {
   background: #2c2c2c;
+  min-height: calc(100vh - 77px) !important;
 }
 .Main {
   width: 100vw;
