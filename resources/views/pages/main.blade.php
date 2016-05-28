@@ -35,7 +35,7 @@
                     <div class="col-md-6">
                         <ul class="nav nav-tabs" role="tablist">
                             <li role="presentation">
-                                <a href="#home" role="tab" data-toggle="tab">
+                                <a href="/chimneys">
                                     <div class="col-sm-12 single-feature">
                                         <div class="col-sm-2 feature-icon">
                                             <i class="fa fa-laptop"></i>

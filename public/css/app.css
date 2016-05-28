@@ -29,12 +29,14 @@ textarea:focus {
   border-top: 2px solid #ee3b24 !important;
 }
 section {
+  background: #fff;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
+  min-height: calc(100vh - 70px);
 }
 .Main {
   width: 100vw;
