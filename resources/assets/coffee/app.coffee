@@ -18,3 +18,6 @@ $ ->
             content: '<h4>Kiev</h4>'
             maxWidth: 100
 
+
+    $('.owl-carousel').owlCarousel()
+    

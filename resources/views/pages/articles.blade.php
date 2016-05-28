@@ -1,278 +1,169 @@
 @extends('layout') @section('content') @include ('partials.header')
-<section id="blog">
+
+<section>
+    <!-- Page Content -->
     <div class="container">
+
+        <!-- Page Heading -->
         <div class="row">
-            <div class="col-md-12">
-                <div class="feature_header text-center">
-                    <h3 class="feature_title">Our <b>Blog</b></h3>
-                    <h4 class="feature_sub">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h4>
-                    <div class="divider"></div>
+            <div class="col-lg-12">
+                <h1 class="page-header">Page Heading
+                    <small>Secondary Text</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project One -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Project One</h3>
+                <h4>Subheading</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
+                    veniam exercitationem expedita laborum at voluptate. Labore,
+                    voluptates totam at aut nemo deserunt rem magni pariatur quos
+                    perspiciatis atque eveniet unde.</p>
+                <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Two -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Project Two</h3>
+                <h4>Subheading</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit
+                    velit cumque vero doloremque repellendus distinctio maiores
+                    rem expedita a nam vitae modi quidem similique ducimus! Velit,
+                    esse totam tempore.</p>
+                <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Three -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Project Three</h3>
+                <h4>Subheading</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis,
+                    temporibus, dolores, at, praesentium ut unde repudiandae voluptatum
+                    sit ab debitis suscipit fugiat natus velit excepturi amet commodi
+                    deleniti alias possimus!</p>
+                <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Four -->
+        <div class="row">
+
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Project Four</h3>
+                <h4>Subheading</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo,
+                    quidem, consectetur, officia rem officiis illum aliquam perspiciatis
+                    aspernatur quod modi hic nemo qui soluta aut eius fugit quam
+                    in suscipit?</p>
+                <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Five -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Project Five</h3>
+                <h4>Subheading</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
+                    quo, minima, inventore voluptatum saepe quos nostrum provident
+                    ex quisquam hic odio repellendus atque porro distinctio quae
+                    id laboriosam facilis dolorum.</p>
+                <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Pagination -->
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <ul class="pagination">
+                    <li>
+                        <a href="#">&laquo;</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#">&raquo;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
                 </div>
             </div>
-            <!-- Col-md-12 End -->
-        </div>
-        <div class="row">
-            <div class="blog-timeline">
-                <div id="owl-blog" class="owl-carousel owl-theme" style="opacity: 1; display: block;">
-                    <div class="owl-wrapper-outer">
-                        <div class="owl-wrapper" style="width: 5860px; left: 0px; display: block; transition: all 800ms ease; transform: translate3d(-879px, 0px, 0px);">
-                            <div class="owl-item" style="width: 293px;">
-                                <div class="item ">
-                                    <div class="single_blog">
-                                        <div class="post_img text-center">
-                                            <a href="blog-single.html">
-                                                <img src="images/blog/pic3.jpg" alt=""
-                                                class="img-responsive">
-                                            </a>
-                                            <div class="post-date">
-                                                <span>25</span> 6
-                                            </div>
-                                        </div>
-                                        <a href="blog-single.html"><h4>Lorem ipsum dolor sit amet</h4></a>
-                                        <ul class="list-inline">
-                                            <li> <i class="fa fa-pencil"></i> John Smith</li>
-                                            <li> <i class="fa fa-comments"></i> 12</li>
-                                        </ul>
-                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                            adipisicing elit. Repellendus provident
-                                            quae maxime consequuntur atque.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="owl-item" style="width: 293px;">
-                                <div class="item ">
-                                    <div class="single_blog">
-                                        <div class="post_img text-center">
-                                            <a href="blog-single.html">
-                                                <img src="images/blog/pic4.jpg" alt=""
-                                                class="img-responsive">
-                                            </a>
-                                            <div class="post-date">
-                                                <span>25</span> 6
-                                            </div>
-                                        </div>
-                                        <a href="blog-single.html">
-                                            <h4>Lorem ipsum dolor sit amet</h4>
-                                        </a>
-                                        <ul class="list-inline">
-                                            <li> <i class="fa fa-pencil"></i> John Smith</li>
-                                            <li> <i class="fa fa-comments"></i> 12</li>
-                                        </ul>
-                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                            adipisicing elit. Repellendus provident
-                                            quae maxime consequuntur atque.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="owl-item" style="width: 293px;">
-                                <div class="item ">
-                                    <div class="single_blog">
-                                        <div class="post_img text-center">
-                                            <a href="blog-single.html">
-                                                <img src="images/blog/pic2.jpg" alt=""
-                                                class="img-responsive">
-                                            </a>
-                                            <div class="post-date">
-                                                <span>25</span> 6
-                                            </div>
-                                        </div>
-                                        <a href="blog-single.html"><h4>Lorem ipsum dolor sit amet</h4></a>
-                                        <ul class="list-inline">
-                                            <li> <i class="fa fa-pencil"></i> John Smith</li>
-                                            <li> <i class="fa fa-comments"></i> 12</li>
-                                        </ul>
-                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                            adipisicing elit. Repellendus provident
-                                            quae maxime consequuntur atque.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="owl-item" style="width: 293px;">
-                                <div class="item ">
-                                    <div class="single_blog">
-                                        <div class="post_img text-center">
-                                            <a href="blog-single.html">
-                                                <img src="images/blog/pic5.jpg" alt=""
-                                                class="img-responsive">
-                                            </a>
-                                            <div class="post-date">
-                                                <span>25</span> 6
-                                            </div>
-                                        </div>
-                                        <a href="blog-single.html"><h4>Lorem ipsum dolor sit amet</h4></a>
-                                        <ul class="list-inline">
-                                            <li> <i class="fa fa-pencil"></i> John Smith</li>
-                                            <li> <i class="fa fa-comments"></i> 12</li>
-                                        </ul>
-                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                            adipisicing elit. Repellendus provident
-                                            quae maxime consequuntur atque.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="owl-item" style="width: 293px;">
-                                <div class="item ">
-                                    <div class="single_blog">
-                                        <div class="post_img text-center">
-                                            <a href="blog-single.html">
-                                                <img src="images/blog/pic1.jpg" alt=""
-                                                class="img-responsive">
-                                            </a>
-                                            <div class="post-date">
-                                                <span>25</span> 6
-                                            </div>
-                                        </div>
-                                        <a href="blog-single.html"><h4>Lorem ipsum dolor sit amet</h4></a>
-                                        <ul class="list-inline">
-                                            <li> <i class="fa fa-pencil"></i> John Smith</li>
-                                            <li> <i class="fa fa-comments"></i> 12</li>
-                                        </ul>
-                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                            adipisicing elit. Repellendus provident
-                                            quae maxime consequuntur atque.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="owl-item" style="width: 293px;">
-                                <div class="item ">
-                                    <div class="single_blog">
-                                        <div class="post_img text-center">
-                                            <a href="blog-single.html">
-                                                <img src="images/blog/pic3.jpg" alt=""
-                                                class="img-responsive">
-                                            </a>
-                                            <div class="post-date">
-                                                <span>25</span> 6
-                                            </div>
-                                        </div>
-                                        <a href="blog-single.html"><h4>Lorem ipsum dolor sit amet</h4></a>
-                                        <ul class="list-inline">
-                                            <li> <i class="fa fa-pencil"></i> John Smith</li>
-                                            <li> <i class="fa fa-comments"></i> 12</li>
-                                        </ul>
-                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                            adipisicing elit. Repellendus provident
-                                            quae maxime consequuntur atque.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="owl-item" style="width: 293px;">
-                                <div class="item ">
-                                    <div class="single_blog">
-                                        <div class="post_img text-center">
-                                            <a href="blog-single.html">
-                                                <img src="images/blog/pic2.jpg" alt=""
-                                                class="img-responsive">
-                                            </a>
-                                            <div class="post-date">
-                                                <span>25</span> 6
-                                            </div>
-                                        </div>
-                                        <a href="blog-single.html"><h4>Lorem ipsum dolor sit amet</h4></a>
-                                        <ul class="list-inline">
-                                            <li> <i class="fa fa-pencil"></i> John Smith</li>
-                                            <li> <i class="fa fa-comments"></i> 12</li>
-                                        </ul>
-                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                            adipisicing elit. Repellendus provident
-                                            quae maxime consequuntur atque.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="owl-item" style="width: 293px;">
-                                <div class="item ">
-                                    <div class="single_blog">
-                                        <div class="post_img text-center">
-                                            <a href="blog-single.html">
-                                                <img src="images/blog/pic4.jpg" alt=""
-                                                class="img-responsive">
-                                            </a>
-                                            <div class="post-date">
-                                                <span>25</span> 6
-                                            </div>
-                                        </div>
-                                        <a href="blog-single.html"><h4>Lorem ipsum dolor sit amet</h4></a>
-                                        <ul class="list-inline">
-                                            <li> <i class="fa fa-pencil"></i> John Smith</li>
-                                            <li> <i class="fa fa-comments"></i> 12</li>
-                                        </ul>
-                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                            adipisicing elit. Repellendus provident
-                                            quae maxime consequuntur atque.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="owl-item" style="width: 293px;">
-                                <div class="item ">
-                                    <div class="single_blog">
-                                        <div class="post_img text-center">
-                                            <a href="blog-single.html">
-                                                <img src="images/blog/pic1.jpg" alt=""
-                                                class="img-responsive">
-                                            </a>
-                                            <div class="post-date">
-                                                <span>25</span> 6
-                                            </div>
-                                        </div>
-                                        <a href="blog-single.html"><h4>Lorem ipsum dolor sit amet</h4></a>
-                                        <ul class="list-inline">
-                                            <li> <i class="fa fa-pencil"></i> John Smith</li>
-                                            <li> <i class="fa fa-comments"></i> 12</li>
-                                        </ul>
-                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                            adipisicing elit. Repellendus provident
-                                            quae maxime consequuntur atque.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="owl-item" style="width: 293px;">
-                                <div class="item ">
-                                    <div class="single_blog">
-                                        <div class="post_img text-center">
-                                            <a href="blog-single.html">
-                                                <img src="images/blog/pic5.jpg" alt=""
-                                                class="img-responsive">
-                                            </a>
-                                            <div class="post-date">
-                                                <span>25</span> 6
-                                            </div>
-                                        </div>
-                                        <a href="blog-single.html"><h4>Lorem ipsum dolor sit amet</h4></a>
-                                        <ul class="list-inline">
-                                            <li> <i class="fa fa-pencil"></i> John Smith</li>
-                                            <li> <i class="fa fa-comments"></i> 12</li>
-                                        </ul>
-                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                            adipisicing elit. Repellendus provident
-                                            quae maxime consequuntur atque.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <!-- /.row -->
+        </footer>
 
-
-
-
-
-
-
-
-
-                    <div class="owl-controls clickable">
-                        <div class="owl-pagination">
-                            <div class="owl-page active"><span class=""></span>
-                            </div>
-                            <div class="owl-page"><span class=""></span>
-                            </div>
-                            <div class="owl-page"><span class=""></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- blog Timeline End -->
-        </div>
     </div>
+    <!-- /.container -->
+
 </section>
 @stop

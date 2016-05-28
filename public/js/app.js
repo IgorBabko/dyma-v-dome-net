@@ -10,7 +10,7 @@
       disableDoubleClickZoom: true,
       zoomControl: false
     });
-    return map.addMarker({
+    map.addMarker({
       lat: 50.44985,
       lng: 30.523151,
       title: 'Kiev',
@@ -19,6 +19,7 @@
         maxWidth: 100
       }
     });
+    return $('.owl-carousel').owlCarousel();
   });
 
 }).call(this);
