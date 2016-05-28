@@ -4,13 +4,11 @@
         </li>
         <li class=""><a href="/chimneys" class="">Дымоходы</a> 
         </li>
-        <li class=""><a href="#portfolio" class="">Алюком</a> 
+        <li class=""><a href="/articles" class="">Статьи</a> 
         </li>
-        <li class=""><a href="#team" class="">Статьи</a> 
+        <li class="active"><a href="/prices" class="active">Цены</a> 
         </li>
-        <li class="active"><a href="#blog" class="active">Цены</a> 
-        </li>
-        <li class=""><a href="#contact" class="">Фото</a> 
+        <li class=""><a href="/photos" class="">Фото</a> 
         </li>
     </ul>
 </nav>

@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <section id="about" style="min-height: calc(100vh - 70px); padding: 0">
+    <section class="section-main" style="min-height: calc(100vh - 70px); padding: 0">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -10,8 +10,8 @@
                         <!--<div class="divider"></div>-->
                         <!--<h4 class="feature_sub" style="color: white">Виды деятельности</h4>-->
                         <div class="Contacts">
-                            <div class="Contacts__item"><span>Виталий:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (050) 67-67-766</div>
-                            <div class="Contacts__item"><span>Александр:</span>&nbsp; (097) 87-161-97</div>
+                            <div class="Contacts__item"><span>Александр:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (050) 57-57-677</div>
+                            <div class="Contacts__item" style="padding-left: 300px">(097) 87-161-97</div>
                             <div class="Contacts__item"><span>Александр:</span>&nbsp; <a href="/contact">i.i.babko@gmail.com</a></div>
                         </div>
                     </div>

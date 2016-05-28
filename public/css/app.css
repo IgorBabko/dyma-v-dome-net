@@ -10,14 +10,12 @@ a {
   color: #fff;
   text-decoration: none;
 }
-a:hover {
+a:hover,
+a:focus {
   color: #fff;
 }
 img {
   width: 100%;
-}
-#contact {
-  min-height: calc(100vh - 70px);
 }
 input:hover,
 textarea:hover,
@@ -36,7 +34,10 @@ section {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  min-height: calc(100vh - 70px);
+  min-height: calc(100vh - 77px) !important;
+}
+.section-main {
+  background: #2c2c2c;
 }
 .Main {
   width: 100vw;
@@ -2710,15 +2711,20 @@ textarea:hover {
 .rel-post .caption h4:hover {
   color: #ee3b24;
 }
+.Footer__menu-link {
+  color: #aaa;
+}
+.Footer__menu-link:hover,
+.Footer__menu-link:active,
+.Footer__menu-link:focus {
+  color: #ee3b24;
+  cursor: pointer;
+}
 .Footer__menu-item {
   display: inline-block;
   margin-right: 30px;
   font-size: 16px;
-  margin: 25px 30px 25px 0;
-}
-.Footer__menu-item:hover {
-  color: #ee3b24;
-  cursor: pointer;
+  margin: 25px 15px;
 }
 .Contacts {
   float: right;

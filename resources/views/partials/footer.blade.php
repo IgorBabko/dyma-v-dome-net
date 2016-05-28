@@ -3,11 +3,18 @@
         <div class="row">
             <div class="col-md-6">
                 <ul class="Footer__menu">
-                    <li class="Footer__menu-item">Документация</li>
-                    <li class="Footer__menu-item">FAQ</li>
-                    <li class="Footer__menu-item">Статьи</li>
-                    <li class="Footer__menu-item">Партнерам</li>
-                    <li class="Footer__menu-item">Контакты</li>
+                    <a href="/docs" class="Footer__menu-link">
+                        <li class="Footer__menu-item">Документация</li>
+                    </a>
+                    <a href="/faq" class="Footer__menu-link">
+                        <li class="Footer__menu-item">FAQ</li>
+                    </a>
+                    <a href="/articles" class="Footer__menu-link">
+                        <li class="Footer__menu-item">Статьи</li>
+                    </a>
+                    <a href="/partners" class="Footer__menu-link">
+                        <li class="Footer__menu-item">Партнерам</li>
+                    </a>
                 </ul>
             </div>
             <div class="col-md-6" style="text-align: right">

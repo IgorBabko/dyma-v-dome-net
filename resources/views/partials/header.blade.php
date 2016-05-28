@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <div class="feature_title nav-logo"><span style="color: white">Тепло</span><b>Квартал</b></div>
+            <div class="feature_title nav-logo"><a href="/"><span style="color: white">Тепло</span><b>Квартал</b></a></div>
         </div>
         @include ('partials.nav')
     </div>

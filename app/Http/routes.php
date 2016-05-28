@@ -15,3 +15,11 @@ Route::get('/', 'PagesController@index');
 Route::get('/contact', 'PagesController@contact'); 
 
 Route::get('/chimneys', 'ChimneysController@index'); 
+
+
+
+// footer links
+Route::get('/docs', 'PagesController@docs'); 
+Route::get('/faq', 'PagesController@faq'); 
+Route::get('/articles', 'PagesController@articles'); 
+Route::get('/partners', 'PagesController@partners'); 
