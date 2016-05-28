@@ -4,6 +4,10 @@ $ ->
         el: '#map'
         lat: 50.44985
         lng: 30.523151
+        draggable: false
+        scrollwheel: false
+        disableDoubleClickZoom: true
+        zoomControl: false
     )
 
     map.addMarker
