@@ -22,4 +22,6 @@ Route::get('/chimneys', 'ChimneysController@index');
 Route::get('/docs', 'PagesController@docs'); 
 Route::get('/faq', 'PagesController@faq'); 
 Route::get('/articles', 'PagesController@articles'); 
+Route::get('/prices', 'PagesController@prices'); 
 Route::get('/partners', 'PagesController@partners'); 
+Route::get('/photos', 'PagesController@photos'); 

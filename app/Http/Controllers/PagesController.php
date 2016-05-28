@@ -33,8 +33,18 @@ class PagesController extends Controller
         return view('pages.articles');
     }
 
+    public function prices()
+    {
+        return view('pages.prices');
+    }
+
     public function partners()
     {
         return view('pages.partners');
+    }
+
+    public function photos()
+    {
+        return view('pages.photos');
     }
 }
