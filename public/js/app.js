@@ -1,14 +1,10 @@
 (function() {
   $(function() {
-    var $mainImg;
-    $mainImg = $('.tab-content img');
-    console.log('jerry');
     $('.single-feature').hover(function() {
-      var imgName, imgPath;
-      console.log('mike');
+      var imgName;
       imgName = $(this).parent('a').attr('href');
-      imgPath = '/images/' + imgName + '.png';
-      return $mainImg.attr('src', imgPath);
+      $('.tab-content .tab-pane').removeClass('active');
+      return $('#' + imgName).addClass('active');
     });
   });
 

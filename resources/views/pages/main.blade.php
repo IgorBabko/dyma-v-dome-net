@@ -7,8 +7,14 @@
                 <div class="feature-tab">
                     <div class="col-md-6">
                         <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active" id="home">
+                            <div role="tabpanel" class="tab-pane active" id="chimneys">
                                 <img src="/images/chimneys.png" alt="" class="img-responsive">
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="briquettes">
+                                <img src="/images/briquettes.png" alt="" class="img-responsive">
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="boilers">
+                                <img src="/images/boilers.png" alt="" class="img-responsive">
                             </div>
                         </div>
                     </div>

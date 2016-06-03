@@ -20,13 +20,10 @@ $ ->
 
 
     # change pictures when hovering categories on the main screen
-    $mainImg = $('.tab-content img')
-    console.log 'jerry'
     $('.single-feature').hover ->
-        console.log 'mike'
         imgName = $(this).parent('a').attr('href')
-        imgPath = '/images/' + imgName + '.png'
-        $mainImg.attr('src', imgPath)
+        $('.tab-content .tab-pane').removeClass('active')
+        $('#' + imgName).addClass('active')
 
         
 
