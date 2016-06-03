@@ -1,14 +1,22 @@
 <nav class="collapse navbar-collapse navigation" id="bs-example-navbar-collapse-1" role="navigation">
     <ul class="nav navbar-nav navbar-right">
-        <li class=""> <a href="/" class="">Главная</a>
-        </li>
-        <li class=""><a href="/chimneys" class="">Дымоходы</a> 
-        </li>
-        <li class=""><a href="/articles" class="">Статьи</a> 
-        </li>
-        <li class="active"><a href="/prices" class="active">Цены</a> 
-        </li>
-        <li class=""><a href="/photos" class="">Фото</a> 
-        </li>
+        @if ( Request::is('/') )
+
+        @elseif ( Request::is('chimneys*') )
+            <li class=""><a href="/" class="">главная</a>
+            </li>
+            <li class=""><a href="/chimneys" class="">каталог</a> 
+            </li>
+            <li class=""><a href="/chimneys/articles" class="">статьи</a> 
+            </li>
+            <li class="active"><a href="/chimneys/prices" class="active">цены</a> 
+            </li>
+            <li class=""><a href="/chimneys/gallery" class="">галерея</a> 
+            </li>
+        @elseif ( Request::is('briquettes*') )
+
+        @else
+
+        @endif
     </ul>
 </nav>
