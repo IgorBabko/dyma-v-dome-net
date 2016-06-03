@@ -4,17 +4,6 @@ var postStylus = require('poststylus');
 require('laravel-elixir-livereload');
 require('laravel-elixir-stylus');
 
-/*
- |--------------------------------------------------------------------------
- | Elixir Asset Management
- |--------------------------------------------------------------------------
- |
- | Elixir provides a clean, fluent API for defining some basic Gulp tasks
- | for your Laravel application. By default, we are compiling the Sass
- | file for our application, as well as publishing vendor resources.
- |
- */
-
 elixir(function(mix) {
 
     mix
@@ -38,15 +27,9 @@ elixir(function(mix) {
         .copy('node_modules/fuelux/dist/js/fuelux.min.js', 'public/js')
         .copy('node_modules/requirejs/require.js', 'public/js')
         .copy('node_modules/moment/min/moment.min.js', 'public/js')
-//        .copy('node_modules/google-maps/lib/Google.min.js', 'public/js');
+        .copy('node_modules/fancybox-plus/images/fbplus', 'public/images/fbplus')
+        .copy('node_modules/fancybox-plus/css/jquery.fancybox-plus.css', 'public/css')
+        .copy('node_modules/fancybox-plus/dist/jquery.fancybox-plus.min.js', 'public/js')
         .copy('node_modules/gmaps/gmaps.min.js', 'public/js');
-//        .copy('bower_components/bxslider-4/dist/jquery.bxslider.min.css', 'public/css')
-//        .copy('bower_components/bxslider-4/dist/jquery.bxslider.min.js', 'public/js')
-//        .copy('bower_components/bxslider-4/dist/images/bx_loader.gif', 'public/img')
-//        .copy('bower_components/bxslider-4/dist/images/controls.png', 'public/img')
-//        .copy('bower_components/scrollmagic/scrollmagic/minified/scrollmagic.min.js', 'public/js')
-//        .copy('bower_components/bootstrap-select/dist/js/bootstrap-select.min.js', 'public/js')
-//        .copy('bower_components/bootstrap-select/dist/css/bootstrap-select.min.css', 'public/css')
-//        .copy('bower_components/parallax.js/parallax.min.js', 'public/js');
 });
 

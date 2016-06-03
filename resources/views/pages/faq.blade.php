@@ -12,7 +12,7 @@
 
         <div class="row">
             <div class="col-md-3">
-                <img src="/img/question_mark.png">
+                <img src="/images/question_mark.png">
             </div>
             <div class="contact_full">
                 <div class="col-md-9">

@@ -1,41 +1,21 @@
 @extends('layout')
 
 @section('content')
-    <section class="section-main" style="min-height: calc(100vh - 70px); padding: 0">
+    <section class="section-main" style="min-height: calc(100vh - 177px); padding: 0">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="feature_header text-center">
-                        <h3 class="feature_title"><span style="color: white">Тепло</span><b>Квартал</b></h3>
-                        <!--<div class="divider"></div>-->
-                        <!--<h4 class="feature_sub" style="color: white">Виды деятельности</h4>-->
-                        <div class="Contacts">
-                            <div class="Contacts__item"><span>Александр: </span>(050) 57-57-677</div>
-                            <div class="Contacts__item" style="padding-left: 100px">(097) 87-161-97</div>
-                            <div class="Contacts__item" style="padding-left: 100px"> <a href="/contact">i.i.babko@gmail.com</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="row">
                 <div class="feature-tab">
                     <div class="col-md-6">
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="home">
-                                <img src="/img/dymohodi.png" alt="" class="img-responsive">
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="profile">
-                                <img src="images/about/marketing.png" alt="" class="img-responsive">
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="messages">
-                                <img src="images/about/browse.png" alt="" class="img-responsive">
+                                <img src="/images/chimneys.png" alt="" class="img-responsive">
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <ul class="nav nav-tabs" role="tablist">
                             <li role="presentation">
-                                <a href="/chimneys">
+                                <a href="chimneys">
                                     <div class="col-sm-12 single-feature">
                                         <div class="col-sm-2 feature-icon">
                                             <i class="fa fa-laptop"></i>
@@ -50,7 +30,7 @@
                                 </a>
                             </li>
                             <li role="presentation">
-                                <a href="#profile" role="tab" data-toggle="tab">
+                                <a href="briquettes" role="tab" data-toggle="tab">
                                     <div class="col-sm-12 single-feature">
                                         <div class="col-sm-2 feature-icon">
                                             <i class="fa fa-send"></i>
@@ -65,7 +45,7 @@
                                 </a>
                             </li>
                             <li role="presentation">
-                                <a href="#messages" role="tab" data-toggle="tab">
+                                <a href="boilers" role="tab" data-toggle="tab">
                                     <div class="col-sm-12 single-feature">
                                         <div class="col-sm-2 feature-icon">
                                             <i class="fa fa-heart"></i>

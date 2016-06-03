@@ -20,6 +20,13 @@ a:focus {
 img {
   width: 100%;
 }
+.tab-content img {
+  width: 400px !important;
+  margin: 0 auto;
+}
+#header {
+  border-bottom: 1px solid #555;
+}
 .top-line {
   min-height: 30px;
   text-align: left;
@@ -46,9 +53,6 @@ input:focus,
 textarea:focus {
   border-color: #ee3b24 !important;
 }
-.footer_b {
-  border-top: 2px solid #ee3b24 !important;
-}
 section {
   background: #fff;
   display: -ms-flexbox;
@@ -62,7 +66,8 @@ section {
 }
 .section-main {
   background: #2c2c2c;
-  min-height: calc(100vh - 77px) !important;
+  min-height: calc(100vh - 177px);
+  padding: 0;
 }
 .Main {
   width: 100vw;

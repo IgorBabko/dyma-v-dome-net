@@ -21,8 +21,8 @@
         <!-- Projects Row -->
         <div class="row">
             <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                <a href="#" class="fancy-img">
+                    <img class="img-responsive" src="/images/bricks.jpg" alt="">
                 </a>
                 <h3>
                     <a href="#">Project Name</a>

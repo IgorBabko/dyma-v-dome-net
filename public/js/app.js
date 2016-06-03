@@ -1,27 +1,26 @@
 (function() {
   $(function() {
-    var map;
-    map = new GMaps({
-      el: '#map',
-      lat: 50.44985,
-      lng: 30.523151,
-      draggable: false,
-      scrollwheel: false,
-      disableDoubleClickZoom: true,
-      zoomControl: false
-    });
-    map.addMarker({
-      lat: 50.44985,
-      lng: 30.523151,
-      title: 'Kiev',
-      infoWindow: {
-        content: '<h4>Kiev</h4>',
-        maxWidth: 100
-      }
+    var $mainImg;
+    $mainImg = $('.tab-content img');
+    console.log('jerry');
+    $('.single-feature').hover(function() {
+      var imgName, imgPath;
+      console.log('mike');
+      imgName = $(this).parent('a').attr('href');
+      imgPath = '/images/' + imgName + '.png';
+      return $mainImg.attr('src', imgPath);
     });
   });
 
   $.goup();
+
+  $("a.fancy-img").fancyboxPlus({
+    'transitionIn': 'elastic',
+    'transitionOut': 'elastic',
+    'speedIn': 600,
+    'speedOut': 200,
+    'overlayShow': false
+  });
 
 }).call(this);
 
