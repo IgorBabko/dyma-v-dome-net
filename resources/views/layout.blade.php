@@ -4,7 +4,9 @@
         @include ('partials.head')
     </head>
     <body>
-        @include ('partials.header')
+        @if ( ! Request::is('/') )
+            @include ('partials.header')
+        @endif
         @yield ('content')
         @include ('partials.footer')
         @include ('partials.scripts')

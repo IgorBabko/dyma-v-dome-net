@@ -1,7 +1,6 @@
 @extends('layout')
 
 @section ('content')
-    @include ('partials.header')
     <section id="contact">
         <div class="container">
             <div class="row">

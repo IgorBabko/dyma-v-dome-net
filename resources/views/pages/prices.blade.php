@@ -1,4 +1,4 @@
-@extends ('layout') @section ('content') @include('partials.header')
+@extends ('layout') @section ('content')
 <section>
     <!-- Page Content -->
     <div class="container">

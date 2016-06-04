@@ -1,3 +1,6 @@
+h3 {
+  text-transform: none !important;
+}
 body {
   background-color: #2c2c2c;
 }
@@ -19,6 +22,10 @@ a:focus {
 }
 img {
   width: 100%;
+}
+#service {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 .tab-content img {
   width: 400px !important;
@@ -66,7 +73,7 @@ section {
 }
 .section-main {
   background: #2c2c2c;
-  min-height: calc(100vh - 177px);
+  min-height: calc(100vh - 77px) !important;
   padding: 0;
 }
 .Main {
@@ -2780,7 +2787,7 @@ textarea:hover {
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  background: #2c2c2c;
+  background: #ee3b24;
 }
 .feature_header {
   text-align: left;
