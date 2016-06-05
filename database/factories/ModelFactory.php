@@ -25,7 +25,7 @@ $types = ['one-wall', 'warmed', 'alyukom', 'ceramic'];
 $factory->define(DymaVDomeNet\Chimney::class, function (Faker\Generator $faker) use ($types) {
     return [
         'name' => $faker->name,
-        'description' => implode('<br>', $faker->paragraphs(3)),
+        'description' => $faker->paragraph,
         'type' => $types[rand(0, 3)],
         'img' => str_random(10),
     ];
