@@ -32,16 +32,16 @@ img
     width: 400px !important
     margin: 0 auto
 
-#header
-    border-bottom: 1px solid #555
-
 .top-line
     min-height: 30px
     text-align: left
-    color: #DBDBDB
+    color: white
     font-weight: bold
-    font-size: 14px
+    font-size: 16px
     padding-top: 4px
+    background: #EE3B24
+    font-weight: bold
+    padding: 10px 0
 
     span
         margin: 0 10px
@@ -163,12 +163,11 @@ section
 @import 'components/Contacts'
 @import 'components/Button'
 
-// override custom.styl
-.nav-tabs > li.active 
-    & > a,
-    & > a:hover,
-    & > a:focus
-        background: #EE3B24
+.navbar-inverse .navbar-nav > .active
+    > a,
+    > a:hover,
+    > a:focus
+        color: #FF4C35 !important
 
 .feature_header
     text-align: left

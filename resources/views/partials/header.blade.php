@@ -11,8 +11,8 @@
         </div>
         @include ('partials.nav')
     </div>
-    <div class="container">
-        <div class="top-line">
+    <div class="top-line">
+        <div class="container">
             Александр: <span>(050) 57-57-677</span><span>(097) 87-161-97</span><span>i.i.babko@gmail.com</span>
         </div>
     </div>

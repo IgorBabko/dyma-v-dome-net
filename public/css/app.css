@@ -31,16 +31,16 @@ img {
   width: 400px !important;
   margin: 0 auto;
 }
-#header {
-  border-bottom: 1px solid #555;
-}
 .top-line {
   min-height: 30px;
   text-align: left;
-  color: #dbdbdb;
+  color: #fff;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
   padding-top: 4px;
+  background: #ee3b24;
+  font-weight: bold;
+  padding: 10px 0;
 }
 .top-line span {
   margin: 0 10px;
@@ -2784,10 +2784,10 @@ textarea:hover {
   background-color: #d82711;
   color: #fff;
 }
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:hover,
-.nav-tabs > li.active > a:focus {
-  background: #ee3b24;
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #ff4c35 !important;
 }
 .feature_header {
   text-align: left;
