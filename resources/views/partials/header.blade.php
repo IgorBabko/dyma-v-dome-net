@@ -20,10 +20,10 @@
             <div class="row">
                 <div class="col-sm-12 col-md-6 col-md-offset-6">
                     <ul class="submenu">
-                        <li>Одностенные</li>
-                        <li>Утепленные</li>
-                        <li>Алюком</li>
-                        <li>Керамические</li>
+                        <li><a href="/chimneys/one-wall">одностенные</a></li>
+                        <li><a href="/chimneys/warmed">утепленные</a></li>
+                        <li><a href="/chimneys/alyukom">алюком</a></li>
+                        <li><a href="/chimneys/ceramic">керамические</a></li>
                     </ul> 
                 </div>
             </div>

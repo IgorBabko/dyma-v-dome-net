@@ -12,6 +12,7 @@ class ChimneysTableSeeder extends Seeder
      */
     public function run()
     {
+        Chimney::truncate();
         factory(Chimney::class, 50)->create();
     }
 }

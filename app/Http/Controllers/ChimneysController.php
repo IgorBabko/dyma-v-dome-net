@@ -15,6 +15,7 @@ class ChimneysController extends Controller
 
     public function showByType($type)
     {
+        echo $type;
         $chimneys = Chimney::whereType($type)->get();
 
         return view('chimneys.showByType', compact('chimneys'));
