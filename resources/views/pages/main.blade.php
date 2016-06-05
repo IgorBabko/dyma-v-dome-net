@@ -35,7 +35,7 @@
                 </div>
                 <div class="col-md-6">
                     <ul class="nav nav-tabs" role="tablist">
-                        <h3 style="font-weight: bold; color: white; text-align: right">что вас интересует?</h3>
+                        <h3 class="subheading_main">Что вас интересует?</h3>
                         <li role="presentation">
                             <a href="chimneys">
                                 <div class="col-sm-12 single-feature">
@@ -43,7 +43,7 @@
                                         <i class="fa fa-laptop"></i>
                                     </div>
                                     <div class="col-sm-10 feature-content">
-                                        <h4>дымоходы</h4>
+                                        <h4>Дымоходы</h4>
                                         <p>excepteur sint occaecat cupidatat non proident,
                                             sunt in culpa qui officia deserunt
                                             mollit anim.</p>

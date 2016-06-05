@@ -3,8 +3,8 @@
 namespace DymaVDomeNet\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use DymaVDomeNet\Http\Requests;
+use DymaVDomeNet\Chimney;
 
 class ChimneysController extends Controller
 {
@@ -15,7 +15,6 @@ class ChimneysController extends Controller
 
     public function showByType($type)
     {
-        echo $type;
         $chimneys = Chimney::whereType($type)->get();
 
         return view('chimneys.showByType', compact('chimneys'));

@@ -57,7 +57,32 @@ img {
 }
 .submenu li {
   display: inline-block;
-  padding: 5px 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+.submenu li:hover a {
+  color: #ddd;
+}
+.page {
+  background: #fff;
+  padding: 50px;
+}
+.chimney:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.chimney {
+  margin: 50px 0;
+}
+.subheading_main {
+  font-weight: bold;
+  color: #fff;
+  text-align: right;
+  margin-right: 15px;
+}
+.tab-content {
+  margin-top: 150px;
 }
 .top-line {
   min-height: 30px;
@@ -68,7 +93,7 @@ img {
   padding-top: 4px;
   background: #ee3b24;
   font-weight: bold;
-  padding: 10px 0;
+  padding: 0;
 }
 .top-line span {
   margin: 0 10px;
@@ -102,7 +127,7 @@ section {
 .section-main {
   background: #2c2c2c;
   min-height: calc(100vh - 77px) !important;
-  padding: 0;
+  padding: 0 0 50px 0;
 }
 .Main {
   width: 100vw;
