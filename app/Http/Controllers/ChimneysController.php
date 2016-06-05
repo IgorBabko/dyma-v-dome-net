@@ -19,4 +19,11 @@ class ChimneysController extends Controller
 
         return view('chimneys.showByType', compact('chimneys'));
     }
+
+    public function prices($type)
+    {
+        $prices = Price::whereType($type)->get();
+
+        return view('chimneys.prices', compact('prices')); 
+    }
 }

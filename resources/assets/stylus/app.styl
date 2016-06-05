@@ -35,17 +35,25 @@ img
 .contacts
     display: inline-block
     margin-left: 30px
-    font-size: 16px
+    font-size: 14px
     font-weight: bold
     padding-top: 0
     color: #aaa
     height: 100%
+
+    @media screen and (max-width: 768px)
+        padding: 10px 0
 
 .navbar-header
     @media screen and (min-width: 768px)
         display: flex
         justify-content: space-between
         align-items: center
+
+.submenu
+    li
+        display: inline-block
+        padding: 5px 10px
 
 .top-line
     min-height: 30px
@@ -182,6 +190,11 @@ section
 ul.navbar-nav > li > a:hover
     background: #EE3B24 !important
     color: white !important
+
+ul.navbar-nav > li > a
+    @media screen and (max-width: 768px)
+        display: block
+    
 
 h1
     text-transform: uppercase
