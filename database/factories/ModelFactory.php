@@ -19,3 +19,14 @@ $factory->define(DymaVDomeNet\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+
+
+$factory->define(DymaVDomeNet\Chimney::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'description' => $faker->paragraphs(rand(3, 5)),
+        'type' => ['one-wall', 'warmed', 'alyukom', 'ceramic'][rand(0, 3)],
+        'img' => str_random(10),
+    ];
+});

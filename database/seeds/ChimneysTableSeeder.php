@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use DymaVDomeNet\Chimney;
 
-class DatabaseSeeder extends Seeder
+class ChimneysTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +12,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
-        $this->call(ChimneysTableSeeder::class);
+        factory(Chimney::class, 50)->create();
     }
 }

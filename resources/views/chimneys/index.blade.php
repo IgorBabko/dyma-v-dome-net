@@ -22,8 +22,8 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing
                                 elit.</p>
                             <p>
-                                <a href="#" class="btn Button">Посмотреть</a> 
-                                <a href="#" class="btn btn-success">Прайс-лист</a> 
+                                <a href="/chimneys/one-wall" class="btn Button">Посмотреть</a> 
+                                <a href="/prices" class="btn btn-success">Прайс-лист</a> 
                             </p>
                         </div>
                     </div>

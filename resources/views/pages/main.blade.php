@@ -35,6 +35,7 @@
                 </div>
                 <div class="col-md-6">
                     <ul class="nav nav-tabs" role="tablist">
+                        <h5 class="feature_title">Что вас интересует?</h5>
                         <li role="presentation">
                             <a href="chimneys">
                                 <div class="col-sm-12 single-feature">

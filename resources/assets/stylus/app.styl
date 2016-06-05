@@ -32,12 +32,27 @@ img
     width: 400px !important
     margin: 0 auto
 
+.contacts
+    display: inline-block
+    margin-left: 30px
+    font-size: 16px
+    font-weight: bold
+    padding-top: 0
+    color: #aaa
+    height: 100%
+
+.navbar-header
+    @media screen and (min-width: 768px)
+        display: flex
+        justify-content: space-between
+        align-items: center
+
 .top-line
     min-height: 30px
-    text-align: left
+    text-align: right
     color: white
     font-weight: bold
-    font-size: 16px
+    font-size: 14px
     padding-top: 4px
     background: #EE3B24
     font-weight: bold
@@ -48,6 +63,7 @@ img
 
     @media screen and (max-width: 768px)
         text-align: center
+
 
 .navbar-toggle
     background: #EE3B24 !important
@@ -167,7 +183,12 @@ section
     > a,
     > a:hover,
     > a:focus
-        color: #FF4C35 !important
+        background: #EE3B24
+        color: white !important
+
+.navbar-inverse .navbar-nav > li > a
+    padding: 15px
+    color: white !important
 
 .feature_header
     text-align: left
