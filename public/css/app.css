@@ -2803,6 +2803,21 @@ textarea:hover {
   background-color: #d82711;
   color: #fff;
 }
+ul.navbar-nav > li > a:hover {
+  background: #ee3b24 !important;
+  color: #fff !important;
+}
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  color: #5a5a5a;
+}
+h3 {
+  font-size: 36px;
+}
+.divider {
+  margin-bottom: 50px;
+}
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {

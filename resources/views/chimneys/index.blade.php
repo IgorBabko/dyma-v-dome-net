@@ -4,6 +4,9 @@
         <!-- Page Content -->
         <div class="container">
 
+            <h1>Каталог дымоходов</h1>
+            <div class="divider"></div>
+
             <!-- Title -->
             <div class="row">
                 <div class="col-lg-12">
