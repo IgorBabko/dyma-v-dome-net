@@ -1,4 +1,4 @@
-@extends('layout') @section('content')
+@extends('content_wrapper') @section('content')
 <section class="section-main">
     <div class="container">
         <div class="row">

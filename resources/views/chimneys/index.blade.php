@@ -1,4 +1,4 @@
-@extends('layout') @section('content')
+@extends('content_wrapper') @section('content')
 <section>
     <section id="service">
         <!-- Page Content -->

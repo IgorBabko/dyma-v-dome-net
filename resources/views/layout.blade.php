@@ -4,11 +4,6 @@
         @include ('partials.head')
     </head>
     <body>
-        @if ( ! Request::is('/') )
-            @include ('partials.header')
-        @endif
-        @yield ('content')
-        @include ('partials.footer')
-        @include ('partials.scripts')
+        @yield ('content_wrapper')
     </body>
 </html>
