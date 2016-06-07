@@ -6,16 +6,14 @@ use Illuminate\Http\Request;
 
 use DymaVDomeNet\Http\Requests;
 
+use DymaVDomeNet\Http\Middleware\Authenticate;
+
 class AdminController extends Controller
 {
-    public function getLogin()
-    {
-        return view('admin.login');
-    }
 
-    public function postLogin(Request $request)
+    public function __construct()
     {
-
+        $this->middleware(Authenticate::class);
     }
     /**
      * Display a listing of the resource.
@@ -24,7 +22,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.index'); 
     }
 
     /**

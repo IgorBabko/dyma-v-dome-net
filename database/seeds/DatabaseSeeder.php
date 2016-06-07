@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use DymaVDomeNet\Admin;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,6 +16,13 @@ class DatabaseSeeder extends Seeder
 
         //disable foreign key check for this connection before running seeders
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+
+        Admin::truncate();
+        Admin::create([
+            'name' => 'admin',
+            'email' => 'admin@gmail.com',
+            'password' => bcrypt('admin')
+        ]);
 
         $this->call(ChimneysTableSeeder::class);
 
