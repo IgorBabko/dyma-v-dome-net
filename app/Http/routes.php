@@ -27,3 +27,8 @@ Route::get('/articles', 'PagesController@articles');
 Route::get('/prices', 'PagesController@prices'); 
 Route::get('/partners', 'PagesController@partners'); 
 Route::get('/photos', 'PagesController@photos'); 
+
+
+// admin
+Route::get('/admin/login', 'AdminController@getLogin');
+Route::post('/admin/login', 'AdminController@postLogin');
