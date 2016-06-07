@@ -45,5 +45,5 @@
             </div>
         </div>
     </section>
-    <div id="map" style="width: 100vw; height: 400px">niko bellic</div>
+    <!--<div id="map" style="width: 100vw; height: 400px">niko bellic</div>-->
 @stop

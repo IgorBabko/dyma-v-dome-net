@@ -10,7 +10,7 @@
             <h1 class="feature_title nav-logo"><a href="/"><span style="color: white">Тепло</span><b style="color: #EE8B24">Квартал</b></a></h1>
             <div class="contacts"><span><i class="fa fa-phone" aria-hidden="true"></i> (095) 57-57-677</span>
                 <br><span><i class="fa fa-phone" aria-hidden="true"></i> (097) 87-161-97</span>
-                <br><span><i class="fa fa-envelope" aria-hidden="true"></i> i.i.babko@gmail.com</span>
+                <br><span><a href="/contact" style="color: #aaa"><i class="fa fa-envelope" aria-hidden="true"></i> i.i.babko@gmail.com</a></span>
             </div>
         </div>
         @include ('partials.nav')
