@@ -53,12 +53,12 @@ img
 .submenu
     li
         display: inline-block
-        padding: 10px
+        padding: 15px 10px
         cursor: pointer
 
         &:hover
             a
-                color: #ddd
+                color: black 
 
 .page
     background: white
@@ -83,14 +83,25 @@ img
 .tab-content
     margin-top: 150px
 
+.search_input
+    border: none 
+    height: 30px
+    margin: 10px 0
+    width: 300px
+    color: black
+    font-size: 16px
+    font-weight: bold
+    padding: 0 10px
+
+
 .top-line
     min-height: 30px
     text-align: right
     color: white
     font-weight: bold
-    font-size: 14px
+    font-size: 16px
     padding-top: 4px
-    background: #EE3B24
+    background: #EE8B24
     font-weight: bold
     padding: 0
 
@@ -102,7 +113,7 @@ img
 
 
 .navbar-toggle
-    background: #EE3B24 !important
+    background: #ee8b24 !important
     margin-top: 15px
 
 input:hover,
@@ -216,7 +227,7 @@ section
 @import 'components/Button'
 
 ul.navbar-nav > li > a:hover
-    background: #EE3B24 !important
+    background: #EE8B24 !important
     color: white !important
 
 ul.navbar-nav > li > a
@@ -234,13 +245,22 @@ h3
 
 .divider
     margin-bottom: 50px
+    background: #ee8b24
 
+.thumbnail
+    border: none
+
+.item-img
+    max-height: 240px
+    margin: 0
+    display: inline-block
+    padding-top: 30px
 
 .navbar-inverse .navbar-nav > .active
     > a,
     > a:hover,
     > a:focus
-        background: #EE3B24
+        background: #EE8B24
         color: white !important
 
 .navbar-inverse .navbar-nav > li > a
@@ -272,15 +292,18 @@ h3
     &:after
         transition: none
 
+.catalog-img
+    max-height: 240px !important
+
 .single-feature:hover
-    background: #EE3B24
+    background: #EE8B24
 
 
     h4, p, i, &::after
        color: white 
 
     &:after
-        background: #EE3B24 !important
+        background: #EE8B24 !important
 
 
 // pagination

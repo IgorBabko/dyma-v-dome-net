@@ -57,11 +57,11 @@ img {
 }
 .submenu li {
   display: inline-block;
-  padding: 10px;
+  padding: 15px 10px;
   cursor: pointer;
 }
 .submenu li:hover a {
-  color: #ddd;
+  color: #000;
 }
 .page {
   background: #fff;
@@ -75,6 +75,14 @@ img {
 .chimney {
   margin: 50px 0;
 }
+.flex-block {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: vertical;
+  flex-direction: vertical;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
 .subheading_main {
   font-weight: bold;
   color: #fff;
@@ -84,14 +92,24 @@ img {
 .tab-content {
   margin-top: 150px;
 }
+.search_input {
+  border: none;
+  height: 30px;
+  margin: 10px 0;
+  width: 300px;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 10px;
+}
 .top-line {
   min-height: 30px;
   text-align: right;
   color: #fff;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
   padding-top: 4px;
-  background: #ee3b24;
+  background: #ee8b24;
   font-weight: bold;
   padding: 0;
 }
@@ -104,7 +122,7 @@ img {
   }
 }
 .navbar-toggle {
-  background: #ee3b24 !important;
+  background: #ee8b24 !important;
   margin-top: 15px;
 }
 input:hover,
@@ -2829,16 +2847,16 @@ textarea:hover {
   color: #c0c0c0;
 }
 .Button {
-  background-color: #ee3b24;
+  background-color: #ee8b24;
 }
 .Button:hover,
 .Button:active,
 .Button:focus {
-  background-color: #d82711;
+  background-color: #d87611;
   color: #fff;
 }
 ul.navbar-nav > li > a:hover {
-  background: #ee3b24 !important;
+  background: #ee8b24 !important;
   color: #fff !important;
 }
 @media screen and (max-width: 768px) {
@@ -2856,11 +2874,21 @@ h3 {
 }
 .divider {
   margin-bottom: 50px;
+  background: #ee8b24;
+}
+.thumbnail {
+  border: none;
+}
+.item-img {
+  max-height: 240px;
+  margin: 0;
+  display: inline-block;
+  padding-top: 30px;
 }
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
-  background: #ee3b24;
+  background: #ee8b24;
   color: #fff !important;
 }
 .navbar-inverse .navbar-nav > li > a {
@@ -2892,8 +2920,11 @@ h3 {
 .single-feature:after {
   transition: none;
 }
+.catalog-img {
+  max-height: 240px !important;
+}
 .single-feature:hover {
-  background: #ee3b24;
+  background: #ee8b24;
 }
 .single-feature:hover h4,
 .single-feature:hover p,
@@ -2902,7 +2933,7 @@ h3 {
   color: #fff;
 }
 .single-feature:hover:after {
-  background: #ee3b24 !important;
+  background: #ee8b24 !important;
 }
 .pagination>li>a,
 .pagination>li>span {

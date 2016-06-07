@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="feature_header text-center">
-                    <h3 class="feature_title"><span style="color: white">Тепло</span><b>Квартал</b></h3>
+                    <h3 class="feature_title"><span style="color: white; text-transform: uppercase">Тепло</span><b style="text-transform: uppercase; color: #EE8B24">Квартал</b></h3>
                     <!--<div class="divider"></div>-->
                     <!--<h4 class="feature_sub" style="color: white">Виды деятельности</h4>-->
                     <div class="Contacts">
