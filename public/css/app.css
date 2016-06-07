@@ -13,6 +13,9 @@ textarea {
   border-color: #eee !important;
   outline: none;
 }
+.hidden {
+  visibility: hidden;
+}
 a {
   color: #fff;
   text-decoration: none;

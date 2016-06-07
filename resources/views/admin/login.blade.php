@@ -19,11 +19,11 @@
 </head>
 
 <body class="admin" style="display: flex; justify-content: center; align-items: center">
-    {{ $errors }}
     <div>
         <h3 class="feature_title" style="margin: 0"><span style="color: white; text-transform: uppercase"><a href="/">Тепло</span><b style="text-transform: uppercase; color: #EE8B24">Квартал</b></a></h3>
         <div class="divider" style="margin: 10px auto"></div>
-        <h4 style="color: white; text-align: center; margin: 20px auto 50px">Админка</h4>
+        <h4 style="color: white; text-align: center; margin: 20px auto">Админка</h4>
+        <div class="{{ !count($errors) ? 'hidden' : '' }}" style="margin: 10px 0; font-weight: bold; font-size: 22px; color: #FF3A3A; text-align: center">Неверные данные</div>
         <form style="margin: 0 auto; width: 250px" method="POST">
             {{ csrf_field() }}
             <div class="form-group">
