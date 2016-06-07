@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
             </button>
             <h1 class="feature_title nav-logo"><a href="/"><span style="color: white">Тепло</span><b style="color: #EE3B24">Квартал</b></a></h1>
-            <div class="contacts"><span><i class="fa fa-phone" aria-hidden="true"></i> (050) 57-57-677</span>
+            <div class="contacts"><span><i class="fa fa-phone" aria-hidden="true"></i> (095) 57-57-677</span>
                 <br><span><i class="fa fa-phone" aria-hidden="true"></i> (097) 87-161-97</span>
                 <br><span><i class="fa fa-envelope" aria-hidden="true"></i> i.i.babko@gmail.com</span>
             </div>

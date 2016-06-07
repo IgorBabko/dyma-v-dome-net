@@ -8,7 +8,7 @@
                     <!--<div class="divider"></div>-->
                     <!--<h4 class="feature_sub" style="color: white">Виды деятельности</h4>-->
                     <div class="Contacts">
-                        <div class="Contacts__item"><span>Александр: </span>(050) 57-57-677</div>
+                        <div class="Contacts__item"><span>Александр: </span>(095) 57-57-677</div>
                         <div class="Contacts__item" style="padding-left: 100px">(097) 87-161-97</div>
                         <div class="Contacts__item" style="padding-left: 100px"> <a href="/contact">i.i.babko@gmail.com</a>
                         </div>
