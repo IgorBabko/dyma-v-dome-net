@@ -30,5 +30,5 @@ Route::get('/photos', 'PagesController@photos');
 
 
 // admin
-Route::get('/admin/login', 'AdminController@getLogin');
-Route::post('/admin/login', 'AdminController@postLogin');
+Route::get('/admin/login', 'Auth\AuthController@getLogin');
+Route::post('/admin/login', 'Auth\AuthController@postLogin');
