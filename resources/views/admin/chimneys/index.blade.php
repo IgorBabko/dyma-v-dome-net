@@ -7,7 +7,7 @@
         <div class="divider"></div>
         <div class="row">
             <div class="col-xs-12" style="text-align: center">
-                <a href="admin/chimneys/create" class="btn btn-primary">Добавить дымоход</a>
+                <a href="/admin/chimneys/create" class="btn btn-primary">Добавить дымоход</a>
             </div>
             @foreach($chimneys as $chimney)
             <div class="chimney">

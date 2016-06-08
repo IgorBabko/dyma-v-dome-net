@@ -3,7 +3,6 @@
 namespace DymaVDomeNet\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-
 use DymaVDomeNet\Chimney;
 use DymaVDomeNet\Http\Requests;
 use DymaVDomeNet\Http\Controllers\Controller;
@@ -40,7 +39,16 @@ class ChimneysController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'description' => 'required',
+            'type' => 'required',
+            'img' => 'string'
+        ]);
+
+        Chimney::create($request->all());
+
+        return redirect('/admin/chimneys')->with('notify', 'Дымоход успешно добавлен');
     }
 
     /**

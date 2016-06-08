@@ -5,7 +5,9 @@
             <h1>Добавить дымоход</h1>
             <div class="divider"></div>
             <div class="col-xs-12">
-                <form>
+                @include ('partials.errors')
+                <form action="/admin/chimneys" method="POST">
+                    {{ csrf_field() }}
                     <div class="form-group">
                         <label for="name">Название</label>
                         <input type="text" class="form-control" id="name" name="name">
