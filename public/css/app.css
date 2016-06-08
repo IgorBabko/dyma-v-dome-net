@@ -11,6 +11,9 @@ body {
   overflow: auto;
   padding: 0;
 }
+textarea {
+  height: 300px !important;
+}
 input,
 textarea {
   border-color: #eee !important;
@@ -75,7 +78,7 @@ img {
 }
 .page {
   background: #fff;
-  padding: 50px;
+  padding: 50px 0;
 }
 .chimney:after {
   content: '';

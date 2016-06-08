@@ -29,7 +29,7 @@ class ChimneysController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.chimneys.create');
     }
 
     /**
