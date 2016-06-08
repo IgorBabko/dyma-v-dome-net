@@ -36,6 +36,9 @@ Route::get('/admin/logout', 'Auth\AuthController@logout');
 
 
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {        
-    Route::get('/', 'AdminController@index');
+    Route::get('/', 'ChimneysController@index');
+    Route::resource('chimneys', 'ChimneysController', [
+        'parameters' => 'singular'
+    ]);
 });
 
