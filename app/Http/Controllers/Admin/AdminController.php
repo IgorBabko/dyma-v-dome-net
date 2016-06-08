@@ -5,6 +5,7 @@ namespace DymaVDomeNet\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 
 use DymaVDomeNet\Http\Requests;
+use DymaVDomeNet\Http\Controllers\Controller;
 
 use DymaVDomeNet\Http\Middleware\Authenticate;
 

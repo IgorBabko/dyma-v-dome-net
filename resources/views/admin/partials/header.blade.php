@@ -15,26 +15,4 @@
         </div>
         @include ('admin.partials.nav')
     </div>
-    <div class="top-line" id="chimneys">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 search">
-                    <form action="/search/chimneys" style="text-align: left">
-                        <span style="display: inline-block; position: relative">
-                            <input type="text" class="search_input">
-                            <i class="fa fa-search" style="position: absolute; top: 15px; right: 10px; font-size: 20px; color: #666" aria-hidden="true"></i>
-                        </span>
-                    </form>
-                </div>
-                <div class="col-sm-12 col-md-6">
-                    <ul class="submenu">
-                        <li><a href="/chimneys/one-wall">одностенные</a></li>
-                        <li><a href="/chimneys/warmed">утепленные</a></li>
-                        <li><a href="/chimneys/alyukom">алюком</a></li>
-                        <li><a href="/chimneys/ceramic">керамические</a></li>
-                    </ul> 
-                </div>
-            </div>
-        </div>
-    </div>
 </header>
