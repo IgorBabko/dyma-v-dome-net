@@ -1,4 +1,4 @@
-@extends('content_wrapper') @section('content')
+@extends('layout') @section('content')
 <section>
     <!-- Page Content -->
     <style>

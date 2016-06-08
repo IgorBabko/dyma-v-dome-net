@@ -99,6 +99,9 @@ img {
 .tab-content {
   margin-top: 150px;
 }
+.search i {
+  color: #ee8b24;
+}
 .search_input {
   border: none;
   height: 30px;

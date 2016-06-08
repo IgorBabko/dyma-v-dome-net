@@ -1,6 +1,6 @@
 <?php
 
-namespace DymaVDomeNet\Http\Controllers;
+namespace DymaVDomeNet\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 

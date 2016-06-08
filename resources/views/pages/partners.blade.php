@@ -1,4 +1,4 @@
-@extends('content_wrapper')
+@extends('layout')
 
 @section('content')
     <section>
