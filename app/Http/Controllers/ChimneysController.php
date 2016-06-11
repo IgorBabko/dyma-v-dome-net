@@ -15,15 +15,14 @@ class ChimneysController extends Controller
 
     public function showByType($type)
     {
-        $chimneys = Chimney::whereType($type)->get();
+        $chimneys = Chimney::whereType($type)->orderBy('created_at', 'desc')->paginate(10);
 
         return view('chimneys.showByType', compact('chimneys'));
     }
 
     public function prices($type)
     {
-        $prices = Price::whereType($type)->get();
-
+        $prices = Price::whereType($type)->get(); 
         return view('chimneys.prices', compact('prices')); 
     }
 }

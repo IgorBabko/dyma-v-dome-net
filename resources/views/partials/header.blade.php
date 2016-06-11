@@ -28,10 +28,10 @@
                 </div>
                 <div class="col-sm-12 col-md-6">
                     <ul class="submenu">
-                        <li><a href="/chimneys/one-wall">одностенные</a></li>
-                        <li><a href="/chimneys/warmed">утепленные</a></li>
-                        <li><a href="/chimneys/alyukom">алюком</a></li>
-                        <li><a href="/chimneys/ceramic">керамические</a></li>
+                        <li><a href="/chimneys/одностенный">одностенные</a></li>
+                        <li><a href="/chimneys/утепленный">утепленные</a></li>
+                        <li><a href="/chimneys/алюком">алюком</a></li>
+                        <li><a href="/chimneys/керамический">керамические</a></li>
                     </ul> 
                 </div>
             </div>

@@ -6,9 +6,14 @@ use Illuminate\Http\Request;
 use DymaVDomeNet\Chimney;
 use DymaVDomeNet\Http\Requests;
 use DymaVDomeNet\Http\Controllers\Controller;
+use DymaVDomeNet\Http\Middleware\Authenticate;
 
 class ChimneysController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(Authenticate::class);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -142,8 +147,15 @@ class ChimneysController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        Chimney::destroy($id); 
+
+        $this->flashData($request, [
+            'type' => 'success',
+            'message' => 'Дымоход успешно удален!',
+        ]);
+
+        return back();
     }
 }

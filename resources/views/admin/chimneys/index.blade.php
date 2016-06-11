@@ -131,7 +131,11 @@
                 </div>
                 <div class="col-xs-12">
                     <a href="/admin/chimneys/{{ $chimney->id }}/edit" class="btn btn-info pull-right">Редактировать</a>
-                    <a href="/admin/chimneys/{{ $chimney->id }}" class="btn btn-danger pull-right" style="margin-right: 5px">Удалить</a>
+                    <form action="/admin/chimneys/{{ $chimney->id }}" method="POST">
+                        {{ csrf_field() }}
+                        {{ method_field('DELETE') }}
+                        <button class="btn btn-danger pull-right" style="margin-right: 5px">Удалить</a>
+                    </form>
                 </div>
             </div>
             @endforeach
