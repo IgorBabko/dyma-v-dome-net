@@ -18,8 +18,8 @@
                 </div>
                 <div class="col-md-9">
                     <h3>{{ $chimney->name }} 
-                        <a href="admin/chimneys/{{ $chimney->id }}/edit" class="btn btn-info">Редактировать</a>
-                        <a href="admin/chimneys/{{ $chimney->id }}" class="btn btn-danger">Удалить</a>
+                        <a href="/admin/chimneys/{{ $chimney->id }}/edit" class="btn btn-info">Редактировать</a>
+                        <a href="/admin/chimneys/{{ $chimney->id }}" class="btn btn-danger">Удалить</a>
                     </h3>
                     <p class="description">{{ $chimney->description }}</p>
                     <!--<a class="btn button" href="#">view project <span class="glyphicon glyphicon-chevron-right"></span></a>-->

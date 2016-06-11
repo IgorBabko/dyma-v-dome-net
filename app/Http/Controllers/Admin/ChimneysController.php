@@ -16,7 +16,7 @@ class ChimneysController extends Controller
      */
     public function index()
     {
-        $chimneys = Chimney::paginate(10);
+        $chimneys = Chimney::orderBy('created_at', 'desc')->paginate(10);
 
         return view('admin.chimneys.index', compact('chimneys'));
     }
@@ -68,9 +68,9 @@ class ChimneysController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Chimney $chimney)
     {
-        //
+        return view('admin.chimneys.edit', compact('chimney'));
     }
 
     /**
@@ -82,7 +82,12 @@ class ChimneysController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Chimney::where('id', $id)->update($request->except(['_token', '_method']));
+
+        $request->session()->flash('type', 'success');
+        $request->session()->flash('message', 'Дымоход успешно добавлен!');
+
+        return redirect('/admin/chimneys');
     }
 
     /**
