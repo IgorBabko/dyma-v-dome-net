@@ -16,12 +16,15 @@
                         <label for="description">Описание</label>
                         <textarea type="text" class="form-control" id="description" name="description"></textarea>
                     </div>
-                    <select class="form-control" name="type">
-                        <option value="one-wall">одностенный</option>
-                        <option value="warmed">утепленный</option>
-                        <option value="alyukom">алюком</option>
-                        <option value="ceramic">керамический</option>
-                    </select>
+                    <div class="form-group">
+                        <label for="type">Тип</label>
+                        <select class="form-control" id="type" name="type">
+                            <option value="one-wall">одностенный</option>
+                            <option value="warmed">утепленный</option>
+                            <option value="alyukom">алюком</option>
+                            <option value="ceramic">керамический</option>
+                        </select>
+                    </div>
                     <div class="form-group" style="margin: 20px 0">
                         <label for="image">Добавить изображение</label>
                         <input type="file" id="image" name="img">

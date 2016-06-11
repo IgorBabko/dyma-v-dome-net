@@ -1,6 +1,11 @@
 h3 {
   text-transform: none !important;
 }
+input.form-control,
+textarea.form-control,
+select.form-control {
+  border-color: #868686 !important;
+}
 body {
   background-color: #2c2c2c;
 }

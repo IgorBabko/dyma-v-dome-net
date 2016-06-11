@@ -48,7 +48,10 @@ class ChimneysController extends Controller
 
         Chimney::create($request->all());
 
-        return redirect('/admin/chimneys')->with('notify', 'Дымоход успешно добавлен');
+        $request->session()->flash('type', 'success');
+        $request->session()->flash('message', 'Дымоход успешно добавлен');
+
+        return redirect('/admin/chimneys');
     }
 
     /**
@@ -85,7 +88,7 @@ class ChimneysController extends Controller
         Chimney::where('id', $id)->update($request->except(['_token', '_method']));
 
         $request->session()->flash('type', 'success');
-        $request->session()->flash('message', 'Дымоход успешно добавлен!');
+        $request->session()->flash('flash', 'Дымоход успешно обновлен!');
 
         return redirect('/admin/chimneys');
     }

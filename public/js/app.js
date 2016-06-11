@@ -6,6 +6,9 @@
       $('.tab-content .tab-pane').removeClass('active');
       return $('#' + imgName).addClass('active');
     });
+    $(".alert-success").fadeTo(2000, 500).slideUp(500, function() {
+      return $(this).alert('close');
+    });
   });
 
   $.goup();

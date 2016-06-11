@@ -25,7 +25,8 @@ $ ->
         $('.tab-content .tab-pane').removeClass('active')
         $('#' + imgName).addClass('active')
 
-        
+    $(".alert-success").fadeTo(2000, 500).slideUp 500, ->
+        $(this).alert 'close'
 
     return
 

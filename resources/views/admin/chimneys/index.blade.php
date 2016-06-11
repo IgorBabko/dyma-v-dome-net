@@ -6,6 +6,9 @@
         <h1>Каталог дымоходов</h1>
         <div class="divider"></div>
         <div class="row">
+            <div class="col-xs-12">
+                @include ('partials.flash')
+            </div>
             <div class="col-xs-12" style="text-align: center">
                 <a href="/admin/chimneys/create" class="btn btn-primary">Добавить дымоход</a>
             </div>
