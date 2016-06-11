@@ -16,8 +16,8 @@ class CreateChimneysTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->text('description');
-            $table->enum('type', ['one-wall', 'warmed', 'alyukom', 'ceramic'])->nullable();
-            $table->string('img')->nullable();
+            $table->string('type')->default('одностенный');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

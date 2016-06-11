@@ -43,16 +43,36 @@ class ChimneysController extends Controller
             'name' => 'required',
             'description' => 'required',
             'type' => 'required',
-            'img' => 'string'
         ]);
 
-        Chimney::create($request->all());
+        $chimney = Chimney::create($request->all());
 
-        $request->session()->flash('type', 'success');
-        $request->session()->flash('message', 'Дымоход успешно добавлен');
+        if ($request->file('image')) {
+            $this->saveImage($request, $chimney);
+        }
+
+        $this->flashData($request, [
+            'type' => 'success',
+            'message' => 'Дымоход успешно добавлен!'
+        ]);
 
         return redirect('/admin/chimneys');
     }
+
+    protected function saveImage(Request $request, Chimney $chimney, $replace = false)
+    {
+        $imageName = $chimney->id . '.' . $request->file('image')->getClientOriginalExtension();
+
+        if ($replace) {
+            \Storage::delete(public_path() . $chimney->image);
+        }
+
+        $request->file('image')->move(public_path() . '/images/uploads/', $imageName);
+    
+        $chimney->image = '/images/uploads/' . $imageName;
+        $chimney->save();
+    }
+
 
     /**
      * Display the specified resource.
@@ -83,14 +103,37 @@ class ChimneysController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Chimney $chimney)
     {
-        Chimney::where('id', $id)->update($request->except(['_token', '_method']));
+        $this->validate($request, [
+            'name' => 'required',
+            'description' => 'required',
+            'type' => 'required',
+        ]);
 
-        $request->session()->flash('type', 'success');
-        $request->session()->flash('flash', 'Дымоход успешно обновлен!');
+        if ($request->file('image')) {
+            $this->saveImage($request, $chimney, true);
+        }
+
+        $chimney->name = $request->name;
+        $chimney->description = $request->description;
+        $chimney->type = $request->type;
+
+        $chimney->save();
+
+        $this->flashData($request, [
+            'type' => 'success',
+            'message' => 'Дымоход успешно обновлен!'
+        ]);
 
         return redirect('/admin/chimneys');
+    }
+
+    protected function flashData(Request $request, $data = [])
+    {
+        foreach ($data as $key => $value) {
+            $request->session()->flash($key, $value);
+        }
     }
 
     /**

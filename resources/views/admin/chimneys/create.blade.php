@@ -6,7 +6,7 @@
             <div class="divider"></div>
             <div class="col-xs-12">
                 @include ('partials.errors')
-                <form action="/admin/chimneys" method="POST">
+                <form action="/admin/chimneys" method="POST" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="name">Название</label>
@@ -19,15 +19,15 @@
                     <div class="form-group">
                         <label for="type">Тип</label>
                         <select class="form-control" id="type" name="type">
-                            <option value="one-wall">одностенный</option>
-                            <option value="warmed">утепленный</option>
-                            <option value="alyukom">алюком</option>
-                            <option value="ceramic">керамический</option>
+                            <option value="одностенный" selected>одностенный</option>
+                            <option value="утепленный">утепленный</option>
+                            <option value="алюком">алюком</option>
+                            <option value="керамический">керамический</option>
                         </select>
                     </div>
                     <div class="form-group" style="margin: 20px 0">
                         <label for="image">Добавить изображение</label>
-                        <input type="file" id="image" name="img">
+                        <input type="file" id="image" name="image">
                     </div>
                     <button type="submit" class="btn btn-success" style="float: right">Добавить</button>
                 </form>

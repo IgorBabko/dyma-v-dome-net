@@ -20,13 +20,11 @@ $factory->define(DymaVDomeNet\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$types = ['one-wall', 'warmed', 'alyukom', 'ceramic'];
-
-$factory->define(DymaVDomeNet\Chimney::class, function (Faker\Generator $faker) use ($types) {
+$factory->define(DymaVDomeNet\Chimney::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'description' => $faker->paragraph,
-        'type' => $types[rand(0, 3)],
-        'img' => str_random(10),
+        'type' => 'одностенный',
+        'image' => str_random(10),
     ];
 });
