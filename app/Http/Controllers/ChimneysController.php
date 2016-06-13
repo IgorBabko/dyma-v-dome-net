@@ -5,6 +5,7 @@ namespace DymaVDomeNet\Http\Controllers;
 use Illuminate\Http\Request;
 use DymaVDomeNet\Http\Requests;
 use DymaVDomeNet\Chimney;
+use Nicolaslopezj\Searchable\SearchableTrait;
 
 class ChimneysController extends Controller
 {
@@ -24,5 +25,14 @@ class ChimneysController extends Controller
     {
         $prices = Price::whereType($type)->get(); 
         return view('chimneys.prices', compact('prices')); 
+    }
+
+    public function search($searchString)
+    {
+        $chimneys = Chimney::search($searchString)->get();
+        //$count         = $chimneys->get()->count();
+        //$chimneys         = $postsBuilder->get();
+
+        return view('chimneys.showByType', compact('chimneys'));
     }
 }
