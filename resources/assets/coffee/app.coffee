@@ -1,5 +1,5 @@
 $ ->
-
+#
 #    map = new GMaps(
 #        el: '#map'
 #        lat: 50.44985
@@ -27,6 +27,26 @@ $ ->
 
     $(".alert-success").fadeTo(2000, 500).slideUp 500, ->
         $(this).alert 'close'
+
+
+    # change prices tables
+    $("input[name='width']").change (e) ->
+        console.log('niko')
+        width = $(this).val()
+        itemName = $(this).parent().siblings('name').text()
+
+        console.log 'itemName: ' + itemName
+        console.log 'width: ' + width
+
+        changePricesTableRequest = $.ajax
+            url: "/prices/" + itemName + "/" + width
+            method: "GET"
+         
+        changePricesTableRequest.done data ->
+            console.log data 
+         
+        changePricesTableRequest.fail (jqXHR, textStatus) ->
+            console.log 'fail'
 
     return
 

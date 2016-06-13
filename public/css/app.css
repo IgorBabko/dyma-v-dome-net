@@ -86,7 +86,7 @@ img {
 }
 .page {
   background: #fff;
-  padding: 50px 0;
+  padding: 150px 0;
 }
 .chimney:after {
   content: '';
@@ -140,6 +140,7 @@ img {
   background: #ee8b24;
   font-weight: bold;
   padding: 0;
+  box-shadow: 0 1px 5px 0px #525252;
 }
 .top-line span {
   margin: 0 10px;
@@ -167,7 +168,7 @@ section {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  padding: 50px 0;
+  padding: 150px 0;
   min-height: calc(100vh - 177px) !important;
 }
 .section-main {
@@ -2908,6 +2909,7 @@ h3 {
   border: none;
 }
 .table {
+  background: #fff;
   margin-top: 30px;
   font-size: 12px;
 }

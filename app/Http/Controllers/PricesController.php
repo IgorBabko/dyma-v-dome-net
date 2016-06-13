@@ -11,10 +11,18 @@ class PricesController extends Controller
 {
     public function getPrice($name, $width)
     {
-        Excel::load(public_path() . '/excel/file.xls', function($reader) {
+        $prices = [];
+        Excel::load(public_path() . '/excel/mine.xlsx', function($reader) use ($prices) {
+
+            foreach ($reader->toArray() as $row) {
+                //if ($row['elementy'] == 'Труба 1 м медь') {
+                    $prices[] = $row;
+                //}
+            }
         });
 
-        echo $name . "<br>" . $width;
-        return 2;
+        dd($prices);
+
+        return $prices;
     }
-k
+}

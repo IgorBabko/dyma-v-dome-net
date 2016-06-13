@@ -9,6 +9,24 @@
     $(".alert-success").fadeTo(2000, 500).slideUp(500, function() {
       return $(this).alert('close');
     });
+    $("input[name='width']").change(function(e) {
+      var changePricesTableRequest, itemName, width;
+      console.log('niko');
+      width = $(this).val();
+      itemName = $(this).parent().siblings('name').text();
+      console.log('itemName: ' + itemName);
+      console.log('width: ' + width);
+      changePricesTableRequest = $.ajax({
+        url: "/prices/" + itemName + "/" + width,
+        method: "GET"
+      });
+      changePricesTableRequest.done(data(function() {
+        return console.log(data);
+      }));
+      return changePricesTableRequest.fail(function(jqXHR, textStatus) {
+        return console.log('fail');
+      });
+    });
   });
 
   $.goup();

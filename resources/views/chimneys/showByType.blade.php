@@ -18,14 +18,15 @@
                     <p class="description">{{ $chimney->description }}</p>
                     <h4>Толщина: </h4>
                     <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked="checked">0.5мм AISI 304
+                        <input type="radio" name="width" value="0.5" checked="checked">0.5мм AISI 304
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">0.8мм AISI 304
+                        <input type="radio" name="width" value="0.8">0.8мм AISI 304
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">1мм AISI 321
+                        <input type="radio" name="width" value="1">1мм AISI 321
                     </label>
+                    <span id="name" style="display: none">{{ $chimney->name }}</span>
                     <h4>Тип</h4>
                     <p class="description">{{ $chimney->type }}</p>
                 </div>

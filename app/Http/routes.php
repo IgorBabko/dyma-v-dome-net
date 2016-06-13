@@ -43,5 +43,5 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
 });
 
 // prices
-Route::get('/prices/{name}/{width}', 'PricesController@getPrice')
+Route::get('/prices/{name}/{width}', 'PricesController@getPrice');
 
