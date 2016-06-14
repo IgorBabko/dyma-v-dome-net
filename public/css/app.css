@@ -86,7 +86,10 @@ img {
 }
 .page {
   background: #fff;
-  padding: 150px 0;
+  padding: 150px 0 50px;
+}
+.admin .page {
+  padding: 50px 0;
 }
 .chimney:after {
   content: '';
@@ -149,6 +152,18 @@ img {
   .top-line {
     text-align: center;
   }
+}
+.search-input {
+  box-shadow: inset 1px 4px 9px -6px;
+}
+.search-button {
+  position: absolute;
+  top: 13px;
+  right: 0;
+  font-size: 20px;
+  color: #666;
+  background: none;
+  border: none;
 }
 .navbar-toggle {
   background: #ee8b24 !important;

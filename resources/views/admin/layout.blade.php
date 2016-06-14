@@ -3,7 +3,7 @@
     <head>
         @include ('partials.head')
     </head>
-    <body>
+    <body class="admin">
         @if ( ! Request::is('/') )
             @include ('admin.partials.header')
         @endif

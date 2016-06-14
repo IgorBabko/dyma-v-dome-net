@@ -27,12 +27,13 @@ class ChimneysController extends Controller
         return view('chimneys.prices', compact('prices')); 
     }
 
-    public function search($searchString)
+    public function search(Request $request)
     {
-        $chimneys = Chimney::search($searchString)->get();
-        //$count         = $chimneys->get()->count();
-        //$chimneys         = $postsBuilder->get();
+        dd($request->query);
 
-        return view('chimneys.showByType', compact('chimneys'));
+        $chimneys = chimney::search($request->query)->get();
+        $count    = count($chimneys);
+
+        return view('chimneys.showbytype', compact('chimneys'));
     }
 }

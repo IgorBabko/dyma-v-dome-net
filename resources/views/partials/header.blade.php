@@ -19,10 +19,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 search">
-                    <form action="/search/chimneys" style="text-align: left">
+                    <form action="/chimneys/search" style="text-align: left">
                         <span style="display: inline-block; position: relative">
-                            <input type="text" class="search_input" placeholder="Что Вы ищите?">
-                            <i class="fa fa-search" style="position: absolute; top: 15px; right: 10px; font-size: 20px; color: #666" aria-hidden="true"></i>
+                            <input type="text" class="search_input">
+                            <button type="submit" class="search-button"><i class="fa fa-search" aria-hidden="true"></i></button>
                         </span>
                     </form>
                 </div>

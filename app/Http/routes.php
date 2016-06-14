@@ -17,6 +17,7 @@ Route::get('/contact', 'PagesController@contact');
 Route::get('/chimneys', 'ChimneysController@index'); 
 Route::get('/chimneys/catalog', 'ChimneysController@index'); 
 Route::get('/chimneys/{type}', 'ChimneysController@showByType'); 
+Route::get('/chimneys/search', 'ChimneysController@search'); 
 
 
 
