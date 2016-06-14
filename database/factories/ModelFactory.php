@@ -32,7 +32,7 @@ $factory->define(DymaVDomeNet\Chimney::class, function (Faker\Generator $faker) 
 $factory->define(DymaVDomeNet\Article::class, function (Faker\Generator $faker) {
     return [
         'title' => $faker->name,
-        'description' => $faker->paragraphs(rand(5, 7)),
+        'text' => implode('<br><br>', $faker->paragraphs(rand(5, 7))),
         'image' => str_random(10),
     ];
 });

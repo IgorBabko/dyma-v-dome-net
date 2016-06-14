@@ -126,7 +126,9 @@ return [
     'attributes'           => [
         'name' => 'название',
         'description' => 'описание',
-        'type' => 'тип'
+        'type' => 'тип',
+        'title' => 'заголовок',
+        'text' => 'текст',
     ],
 
 ];

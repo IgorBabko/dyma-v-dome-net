@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use DymaVDomeNet\Http\Requests;
 use DymaVDomeNet\Http\Controllers\Controller;
 use DymaVDomeNet\Article;
+use DymaVDomeNet\Http\Middleware\Authenticate;
 
 class ArticlesController extends Controller
 {
@@ -47,7 +48,7 @@ class ArticlesController extends Controller
     {
         $this->validate($request, [
             'title' => 'required',
-            'description' => 'required',
+            'text' => 'required',
         ]);
 
         $article = Article::create($request->all());
@@ -111,7 +112,7 @@ class ArticlesController extends Controller
     {
         $this->validate($request, [
             'title' => 'required',
-            'description' => 'required',
+            'text' => 'required',
         ]);
 
         if ($request->file('image')) {
@@ -119,7 +120,7 @@ class ArticlesController extends Controller
         }
 
         $article->title = $request->title;
-        $article->description = $request->description;
+        $article->text = $request->text;
 
         $article->save();
 
@@ -129,7 +130,6 @@ class ArticlesController extends Controller
         ]);
 
         return redirect('/admin/articles');
-        //
     }
 
     protected function flashData(Request $request, $data = [])
@@ -145,7 +145,7 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
         Article::destroy($id); 
 

@@ -41,6 +41,11 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
     Route::resource('chimneys', 'ChimneysController', [
         'parameters' => 'singular'
     ]);
+
+    Route::resource('articles', 'ArticlesController', [
+        'parameters' => 'singular'
+    ]);
+
 });
 
 // prices

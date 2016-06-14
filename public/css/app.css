@@ -91,17 +91,33 @@ img {
 .admin .page {
   padding: 50px 0;
 }
-.chimney:after {
+.chimney:after,
+.article:after {
   content: '';
   display: block;
   clear: both;
 }
-.chimney {
+.chimney,
+.article {
   margin: 50px 0;
   border: 1px solid #e0e0e0;
   padding: 20px;
   background: #f3f3f3;
   border-radius: 4px;
+}
+.article {
+  min-height: 550px;
+  position: relative;
+}
+.article .buttons {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 100%;
+}
+.static {
+  position: static;
+  padding-bottom: 30px;
 }
 .flex-block {
   display: -ms-flexbox;
