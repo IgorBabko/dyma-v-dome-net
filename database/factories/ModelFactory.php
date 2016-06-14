@@ -36,3 +36,12 @@ $factory->define(DymaVDomeNet\Article::class, function (Faker\Generator $faker) 
         'image' => str_random(10),
     ];
 });
+
+$factory->define(DymaVDomeNet\Photo::class, function (Faker\Generator $faker) {
+    return [
+        'title' => $faker->word(2),
+        'description' => $faker->paragraph,
+        'image' => str_random(10),
+    ];
+});
+

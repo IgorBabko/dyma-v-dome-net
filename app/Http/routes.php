@@ -45,6 +45,10 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
     Route::resource('articles', 'ArticlesController', [
         'parameters' => 'singular'
     ]);
+    
+    Route::resource('photos', 'PhotosController', [
+        'parameters' => 'singular'
+    ]);
 
 });
 
