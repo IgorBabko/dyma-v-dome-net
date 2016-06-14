@@ -10,6 +10,11 @@ use DymaVDomeNet\Article;
 
 class ArticlesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(Authenticate::class);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -17,7 +22,7 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        $articles = Article::all();
+        $articles = Article::orderBy('created_at', 'desc')->paginate(10);
 
         return view('admin.articles.index', compact('articles'));
     }
@@ -29,7 +34,7 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.articles.create');
     }
 
     /**
@@ -40,7 +45,37 @@ class ArticlesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required',
+        ]);
+
+        $article = Article::create($request->all());
+
+        if ($request->file('image')) {
+            $this->saveImage($request, $article);
+        }
+
+        $this->flashData($request, [
+            'type' => 'success',
+            'message' => 'Статья успешно добавлена!'
+        ]);
+
+        return redirect('/admin/articles');
+    }
+
+    protected function saveImage(Request $request, Article $article, $replace = false)
+    {
+        $imageName = $article->id . '.' . $request->file('image')->getClientOriginalExtension();
+
+        if ($replace) {
+            \Storage::delete(public_path() . $article->image);
+        }
+
+        $request->file('image')->move(public_path() . '/images/uploads/', $imageName);
+    
+        $article->image = '/images/uploads/' . $imageName;
+        $article->save();
     }
 
     /**
@@ -60,9 +95,9 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Article $article)
     {
-        //
+        return view('admin.articles.edit', compact('article'));
     }
 
     /**
@@ -72,9 +107,36 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Article $article)
     {
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required',
+        ]);
+
+        if ($request->file('image')) {
+            $this->saveImage($request, $article, true);
+        }
+
+        $article->title = $request->title;
+        $article->description = $request->description;
+
+        $article->save();
+
+        $this->flashData($request, [
+            'type' => 'success',
+            'message' => 'Статья успешно обновлена!'
+        ]);
+
+        return redirect('/admin/articles');
         //
+    }
+
+    protected function flashData(Request $request, $data = [])
+    {
+        foreach ($data as $key => $value) {
+            $request->session()->flash($key, $value);
+        }
     }
 
     /**
@@ -85,6 +147,13 @@ class ArticlesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Article::destroy($id); 
+
+        $this->flashData($request, [
+            'type' => 'success',
+            'message' => 'Статья успешно удалена!',
+        ]);
+
+        return back();
     }
 }

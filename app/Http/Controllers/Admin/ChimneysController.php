@@ -14,6 +14,7 @@ class ChimneysController extends Controller
     {
         $this->middleware(Authenticate::class);
     }
+
     /**
      * Display a listing of the resource.
      *
