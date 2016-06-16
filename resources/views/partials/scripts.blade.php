@@ -4,4 +4,5 @@
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/gmaps.min.js"></script>
 <script src="/js/jquery.fancybox-plus.min.js"></script>
+<script src="/js/slick.min.js"></script>
 <script src="/js/app.js"></script>

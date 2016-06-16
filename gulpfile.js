@@ -30,6 +30,10 @@ elixir(function(mix) {
         .copy('node_modules/fancybox-plus/images/fbplus', 'public/images/fbplus')
         .copy('node_modules/fancybox-plus/css/jquery.fancybox-plus.css', 'public/css')
         .copy('node_modules/fancybox-plus/dist/jquery.fancybox-plus.min.js', 'public/js')
+        .copy('node_modules/gmaps/gmaps.min.js', 'public/js')
+        .copy('node_modules/slick-carousel/slick/slick.css', 'public/css')
+        .copy('node_modules/slick-carousel/slick/slick-theme.css', 'public/css')
+        .copy('node_modules/slick-carousel/slick/slick.min.js', 'public/js')
         .copy('node_modules/gmaps/gmaps.min.js', 'public/js');
 });
 

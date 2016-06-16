@@ -13,6 +13,11 @@ class ChimneysController extends Controller
     {
         return view('chimneys.index');
     } 
+    
+    public function catalog()
+    {
+        return view('chimneys.catalog');
+    } 
 
     public function showByType($type)
     {

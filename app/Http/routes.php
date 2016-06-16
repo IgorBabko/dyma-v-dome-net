@@ -15,7 +15,7 @@ Route::get('/', 'PagesController@index');
 Route::get('/contact', 'PagesController@contact'); 
 
 Route::get('/chimneys', 'ChimneysController@index'); 
-Route::get('/chimneys/catalog', 'ChimneysController@index'); 
+Route::get('/chimneys/catalog', 'ChimneysController@catalog'); 
 Route::get('/chimneys/{type}', 'ChimneysController@showByType'); 
 Route::get('/chimneys/search', 'ChimneysController@search'); 
 
@@ -28,6 +28,7 @@ Route::get('/articles', 'PagesController@articles');
 Route::get('/prices', 'PagesController@prices'); 
 Route::get('/partners', 'PagesController@partners'); 
 Route::get('/photos', 'PagesController@photos'); 
+Route::get('/order', 'PagesController@order'); 
 
 
 // admin

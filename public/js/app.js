@@ -1,5 +1,11 @@
 (function() {
   $(function() {
+    $('.slick-carousel').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000
+    });
     $('.single-feature').hover(function() {
       var imgName;
       imgName = $(this).parent('a').attr('href');

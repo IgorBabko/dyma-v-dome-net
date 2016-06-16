@@ -8,10 +8,23 @@ select.form-control
 
 body
     //background-image: url('../img/bricks2.jpg')
-    background-color: #2C2C2C
+    background: white
 
 .description
     font-size: 18px
+
+.order-header-button
+    margin: 3px
+    border-radius: 0 !important
+    background: #ff4700
+    border: none
+    height: 32px
+    padding: 3px 10px
+    margin-top: 9px
+    box-shadow: 0 0 3px 0px #222222
+
+    &:hover
+        background: darken(#ff4700, 10%)
 
 .table-block
     overflow: auto
@@ -54,13 +67,20 @@ img
     margin: 0 auto
 
 .contacts
-    display: inline-block
-    margin-left: 30px
-    font-size: 14px
-    font-weight: bold
-    padding-top: 0
-    color: #aaa
-    height: 100%
+    margin: 15px 0
+    color: #bbb
+
+.contacts-small-screen
+    display: none
+
+    @media screen and (max-width: 768px)
+        display: inline-block
+        margin-left: 30px
+        font-size: 14px
+        font-weight: bold
+        padding-top: 0
+        color: #aaa
+        height: 100%
 
     @media screen and (max-width: 768px)
         padding: 10px 0
@@ -85,6 +105,9 @@ img
 .page
     background: white
     padding: 150px 0 50px
+
+body.admin
+    background: #2c2c2c
 
 .admin .page
     padding: 50px 0
@@ -152,7 +175,7 @@ img
 
 .search
     i
-        color: #EE8B24
+        color: black //#EE8B24
 
 .search_input
     border: none 
@@ -163,6 +186,10 @@ img
     font-size: 16px
     font-weight: bold
     padding: 0 10px
+    background: #b5aea7
+
+    &:focus
+        background: white
 
 
 .top-line
@@ -172,7 +199,7 @@ img
     font-weight: bold
     font-size: 16px
     padding-top: 4px
-    background: #EE8B24
+    background: #6f6356 //#EE8B24
     font-weight: bold
     padding: 0
     box-shadow: 0 1px 5px 0px #525252
@@ -183,17 +210,21 @@ img
     @media screen and (max-width: 768px)
         text-align: center
 
-.search-input
-    box-shadow: inset 1px 4px 9px -6px
+.search_input
+    box-shadow: 0 0 5px 0px #222222
 
 .search-button
     position: absolute
     top: 13px
     right: 0
     font-size: 20px
-    color: #666
+    color: black//#666
     background: none
     border: none
+
+.slick-carousel
+    img
+        max-height: 300px
 
 .navbar-toggle
     background: #ee8b24 !important
@@ -310,7 +341,7 @@ section
 @import 'components/Button'
 
 ul.navbar-nav > li > a:hover
-    background: #EE8B24 !important
+    background: #6f6356 !important //#EE8B24 !important
     color: white !important
 
 ul.navbar-nav > li > a
@@ -352,7 +383,7 @@ tr td:first-child
     > a,
     > a:hover,
     > a:focus
-        background: #EE8B24
+        background: #6f6356 //#EE8B24
         color: white !important
 
 .navbar-inverse .navbar-nav > li > a
