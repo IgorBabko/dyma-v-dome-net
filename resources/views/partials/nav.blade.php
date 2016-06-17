@@ -6,11 +6,11 @@
             </li>
             <li class="{{ Request::is('chimneys/catalog') ? 'active' : '' }}"><a href="/chimneys/catalog" class="">каталог</a> 
             </li>
-            <li class="{{ Request::is('articles') ? 'active' : '' }}"><a href="/chimneys/articles" class="">статьи</a> 
+            <li class="{{ Request::is('articles*') ? 'active' : '' }}"><a href="/articles" class="">статьи</a> 
             </li>
-            <li class="{{ Request::is('prices') ? 'active' : '' }}"><a href="/chimneys/prices" class="active">цены</a> 
+            <li class="{{ Request::is('prices*') ? 'active' : '' }}"><a href="/chimneys/prices" class="active">цены</a> 
             </li>
-            <li class="{{ Request::is('gallery') ? 'active' : '' }}"><a href="/chimneys/gallery" class="">галерея</a> 
+            <li class="{{ Request::is('photos*') ? 'active' : '' }}"><a href="/photos" class="">фото</a> 
             </li>
     </ul>
 </nav>

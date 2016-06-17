@@ -34,10 +34,8 @@ Route::get('/photos/search', 'PhotosController@search');
 // footer links
 Route::get('/docs', 'PagesController@docs'); 
 Route::get('/faq', 'PagesController@faq'); 
-Route::get('/articles', 'PagesController@articles'); 
 Route::get('/prices', 'PagesController@prices'); 
 Route::get('/partners', 'PagesController@partners'); 
-Route::get('/photos', 'PagesController@photos'); 
 
 Route::get('/order', 'PagesController@order'); 
 Route::post('/order', 'PagesController@saveOrder'); 

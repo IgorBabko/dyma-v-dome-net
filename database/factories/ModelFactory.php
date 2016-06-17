@@ -33,7 +33,7 @@ $factory->define(DymaVDomeNet\Article::class, function (Faker\Generator $faker) 
     return [
         'title' => $faker->name,
         'text' => implode('<br><br>', $faker->paragraphs(rand(5, 7))),
-        'image' => str_random(10),
+        'image' => $faker->imageUrl($width = 600, $height = 300),
     ];
 });
 
@@ -41,7 +41,7 @@ $factory->define(DymaVDomeNet\Photo::class, function (Faker\Generator $faker) {
     return [
         'title' => $faker->word(2),
         'description' => $faker->paragraph,
-        'image' => str_random(10),
+        'image' => $faker->imageUrl($width = 600, $height = 300),
     ];
 });
 

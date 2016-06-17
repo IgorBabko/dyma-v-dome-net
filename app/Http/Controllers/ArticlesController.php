@@ -4,14 +4,14 @@ namespace DymaVDomeNet\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DymaVDomeNet\Http\Requests;
-use DymaVDomeNet\Chimney;
+use DymaVDomeNet\Article;
 use Nicolaslopezj\Searchable\SearchableTrait;
 
 class ArticlesController extends Controller
 {
     public function index()
     {
-        $articles = Article::orderBy('create_at', 'desc')->get();
+        $articles = Article::orderBy('created_at', 'desc')->paginate();
         return view('articles.index', compact('articles'));
     } 
 

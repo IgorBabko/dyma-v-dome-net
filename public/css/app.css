@@ -117,24 +117,24 @@ body.admin {
   padding: 50px 0;
 }
 .chimney:after,
-.article:after {
+.admin .article:after {
   content: '';
   display: block;
   clear: both;
 }
 .chimney,
-.article {
+.admin .article {
   margin: 50px 0;
   border: 1px solid #e0e0e0;
   padding: 20px;
   background: #f3f3f3;
   border-radius: 4px;
 }
-.article {
+.admin .article {
   min-height: 550px;
   position: relative;
 }
-.article .buttons {
+.admin .article .buttons {
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -144,6 +144,10 @@ body.admin {
   min-height: 296px;
   position: relative;
   padding-bottom: 50px;
+}
+.article-text {
+  font-size: 18px;
+  margin: 30px 0;
 }
 .photo .thumbnail {
   margin: 0;
@@ -211,10 +215,13 @@ body.admin {
   font-weight: bold;
   padding: 0;
 }
-span {
+.top-line span {
   margin: 0 10px;
 }
 @media screen and (max-width: 768px) {
+  .top-line {
+    text-align: center;
+  }
 }
 .search_input {
   box-shadow: 0 0 5px 0px #222;
