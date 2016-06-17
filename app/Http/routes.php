@@ -19,6 +19,16 @@ Route::get('/chimneys/catalog', 'ChimneysController@catalog');
 Route::get('/chimneys/{type}', 'ChimneysController@showByType'); 
 Route::get('/chimneys/search', 'ChimneysController@search'); 
 
+// articles
+Route::get('/articles', 'ArticlesController@index');
+Route::get('/articles/{article}', 'ArticlesController@show');
+Route::get('/articles/search', 'ArticlesController@search');
+
+
+// photos
+Route::get('/photos', 'PhotosController@index');
+Route::get('/photos/{photo}', 'PhotosController@show');
+Route::get('/photos/search', 'PhotosController@search');
 
 
 // footer links
