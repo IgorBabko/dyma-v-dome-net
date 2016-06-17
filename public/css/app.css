@@ -210,15 +210,11 @@ body.admin {
   background: #6f6356;
   font-weight: bold;
   padding: 0;
-  box-shadow: 0 1px 5px 0px #525252;
 }
-.top-line span {
+span {
   margin: 0 10px;
 }
 @media screen and (max-width: 768px) {
-  .top-line {
-    text-align: center;
-  }
 }
 .search_input {
   box-shadow: 0 0 5px 0px #222;

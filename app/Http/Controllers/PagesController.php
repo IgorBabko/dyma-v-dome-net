@@ -3,7 +3,7 @@
 namespace DymaVDomeNet\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DymaVDomeNet\Order;
 use DymaVDomeNet\Http\Requests;
 
 class PagesController extends Controller
@@ -16,6 +16,18 @@ class PagesController extends Controller
     public function order()
     {
         return view('pages.order');
+    }
+
+    public function saveOrder(Request $request)
+    {
+        $this->validate($request, [
+            'client_name' => 'required|string',
+            'email' => 'email',
+            'question' => 'required',
+        ]);
+
+        // Order::create($request->all());
+        // send email to the admin
     }
 
     public function contact()

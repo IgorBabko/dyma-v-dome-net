@@ -45,3 +45,12 @@ $factory->define(DymaVDomeNet\Photo::class, function (Faker\Generator $faker) {
     ];
 });
 
+$factory->define(DymaVDomeNet\Order::class, function (Faker\Generator $faker) {
+    return [
+        'client_name' => $faker->name,
+        'phone1' => $faker->phoneNumber,
+        'phone2' => $faker->phoneNumber,
+        'email' => $faker->email,
+        'question' => $faker->paragraph,
+    ];
+});
