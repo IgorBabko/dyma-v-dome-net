@@ -31,6 +31,7 @@ Route::get('/photos/{photo}', 'PhotosController@show');
 Route::get('/photos/search', 'PhotosController@search');
 
 
+
 // footer links
 Route::get('/docs', 'PagesController@docs'); 
 Route::get('/faq', 'PagesController@faq'); 
@@ -61,6 +62,8 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
         'parameters' => 'singular'
     ]);
 
+    Route::get('/orders', 'OrdersController@index');
+    Route::delete('/orders/{id}', 'OrdersController@destroy');
 });
 
 // prices

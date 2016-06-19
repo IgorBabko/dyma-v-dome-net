@@ -4,6 +4,7 @@
             <li class="{{ Request::is('admin') ? 'active' : '' }}"><a href="/admin/chimneys" class="">дымоходы</a></li>
             <li class="{{ Request::is('admin/articles*') ? 'active' : '' }}"><a href="/admin/articles" class="">статьи</a></li>
             <li class="{{ Request::is('admin/photos*') ? 'active' : '' }}"><a href="/admin/photos" class="">фото</a></li>
+            <li class="{{ Request::is('admin/orders*') ? 'active' : '' }}"><a href="/admin/orders" class="">заявки</a></li>
             <li><a href="/" class="">вернуться на сайт</a></li>
             <li><a href="/admin/logout" class="">Выйти</a></li>
             <!--<li class="{{ Request::is('admin/articles') ? 'active' : '' }}"><a href="/chimneys/articles" class="">статьи</a> 
