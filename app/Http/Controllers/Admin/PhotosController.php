@@ -154,4 +154,12 @@ class PhotosController extends Controller
 
         return back();
     }
+
+    public function search(Request $request)
+    {
+        $photos = Photo::search($request->queryString)->get();
+        $searchCount    = count($photos);
+
+        return view('admin.photos.index', compact('photos', 'searchCount'));
+    }
 }

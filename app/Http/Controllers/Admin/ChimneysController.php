@@ -159,4 +159,12 @@ class ChimneysController extends Controller
 
         return back();
     }
+
+    public function search(Request $request)
+    {
+        $chimneys = Chimney::search($request->queryString)->get();
+        $searchCount    = count($chimneys);
+
+        return view('admin.chimneys.index', compact('chimneys', 'searchCount'));
+    }
 }

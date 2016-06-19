@@ -1,7 +1,6 @@
-
 <nav class="collapse navbar-collapse navigation" id="bs-example-navbar-collapse-1" role="navigation">
     <ul class="nav navbar-nav navbar-right">
-            <li class="{{ Request::is('admin') ? 'active' : '' }}"><a href="/admin/chimneys" class="">дымоходы</a></li>
+            <li class="{{ Request::is('admin/chimneys*') ? 'active' : '' }}"><a href="/admin/chimneys" class="">дымоходы</a></li>
             <li class="{{ Request::is('admin/articles*') ? 'active' : '' }}"><a href="/admin/articles" class="">статьи</a></li>
             <li class="{{ Request::is('admin/photos*') ? 'active' : '' }}"><a href="/admin/photos" class="">фото</a></li>
             <li class="{{ Request::is('admin/orders*') ? 'active' : '' }}"><a href="/admin/orders" class="">заявки</a></li>

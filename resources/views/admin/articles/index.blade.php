@@ -4,14 +4,16 @@
         <h1>Статьи</h1>
         <div class="divider"></div>
         <div class="row">
+            @include ('partials.search-results', ['url' => 'admin/articles/search*'])
             <div class="col-xs-12">
                 @include ('partials.flash')
             </div>
             <div class="col-xs-12" style="text-align: center; float: none">
-                <a href="/admin/articles/create" class="btn btn-primary">Добавить статью</a>
+                <a href="/admin/articles/create" style="margin-top: 20px" class="btn btn-primary">Добавить статью</a>
             </div>
         </div>
         <div class="row">
+        @if (count($articles))
         @foreach ($articles as $article)
             <div class="col-xs-12 col-md-6">
                 <div class="row article">
@@ -34,9 +36,11 @@
                     </div>
                 </div>
             </div>
-        @endforeach
-        </div>
-        {!! $articles->render() !!}
+            @endforeach
+            @if (!Request::is('admin/articles/search*')) 
+               {!! $articles->render() !!}
+            @endif
+        @endif
     </div>
 </div>
 @stop

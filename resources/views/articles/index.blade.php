@@ -3,13 +3,7 @@
     <h1>статьи</h1>
     <div class="divider"></div>
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12" style="text-align: center">
-                @if (Request::is('articles/search*'))
-                    <span class="search-results">Результаты поиска по запросу <span class="query-string">'{{ Request::input('queryString') }}'</span>: {{ $searchCount }}</span>
-                @endif
-            </div>
-        </div>
+        @include ('partials.search-results', ['url' => 'articles/search*'])
         @if (count($articles))
             @foreach ($articles as $article)
             <div class="row" style="margin: 50px 0">

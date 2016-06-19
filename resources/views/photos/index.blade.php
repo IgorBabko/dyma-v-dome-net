@@ -3,13 +3,7 @@
     <h1>фотографии</h1>
     <div class="divider"></div>
     <div class="container">
-        <div class="row" style="height: 100px">
-            <div class="col-xs-12" style="text-align: center">
-                @if (Request::is('photos/search*'))
-                    <span class="search-results">Результаты поиска по запросу <span class="query-string">'{{ Request::input('queryString') }}'</span>: {{ $searchCount }}</span>
-                @endif
-            </div>
-        </div>
+        @include ('partials.search-results', ['url' => 'photos/search*'])
         @if (count($photos))
             @foreach ($photos->chunk(3) as $photosRow)
             <div class="row">

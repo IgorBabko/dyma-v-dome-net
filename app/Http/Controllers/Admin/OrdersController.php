@@ -52,4 +52,12 @@ class OrdersController extends Controller
             $request->session()->flash($key, $value);
         }
     }
+
+    public function search(Request $request)
+    {
+        $orders = Order::search($request->queryString)->get();
+        $searchCount    = count($orders);
+
+        return view('admin.orders.index', compact('orders', 'searchCount'));
+    }
 }

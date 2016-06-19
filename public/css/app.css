@@ -41,6 +41,12 @@ body {
 .order-header-button:hover {
   background: #e64000;
 }
+.order-header-button:focus {
+  background: #e64000;
+}
+.order-header-button:active:focus {
+  background: #e64000;
+}
 .table-block {
   overflow: auto;
 }
@@ -223,7 +229,7 @@ body.admin {
   background: #fff;
 }
 .top-line {
-  min-height: 30px;
+  min-height: 50px;
   text-align: right;
   color: #fff;
   font-weight: bold;

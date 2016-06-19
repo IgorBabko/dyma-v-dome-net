@@ -6,9 +6,11 @@
         <h1>Заявки</h1>
         <div class="divider"></div>
         <div class="row">
+            @include ('partials.search-results', ['url' => 'admin/orders/search*'])
             <div class="col-xs-12">
                 @include ('partials.flash')
             </div>
+            @if (count($orders))
             @foreach($orders as $order)
             <div class="order">
                 <div class="col-xs-12">
@@ -34,8 +36,10 @@
                 </div>
             </div>
             @endforeach
-        </div>
-        {!! $orders->render() !!}
+            @if (!Request::is('admin/orders/search*')) 
+               {!! $orders->render() !!}
+            @endif
+        @endif
     </div>
 </div>
 @stop

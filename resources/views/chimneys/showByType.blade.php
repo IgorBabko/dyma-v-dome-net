@@ -4,14 +4,7 @@
     <div class="container">
         <h1>Одностенные дымоходы</h1>
         <div class="divider"></div>
-
-        <div class="row">
-            <div class="col-xs-12" style="text-align: center">
-                @if (Request::is('chimneys/search*'))
-                    <span class="search-results">Результаты поиска по запросу <span class="query-string">'{{ Request::input('queryString') }}'</span>: {{ $searchCount }}</span>
-                @endif
-            </div>
-        </div>
+        @include ('partials.search-results', ['url' => 'chimneys/search*'])
         @if (count($chimneys))
             @foreach ($chimneys as $chimney)
             <div class="chimney">

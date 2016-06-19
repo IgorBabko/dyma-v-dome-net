@@ -48,20 +48,25 @@ Route::get('/admin/logout', 'Auth\AuthController@logout');
 
 
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {        
+
     Route::get('/', 'ChimneysController@index');
+    Route::get('/chimneys/search', 'ChimneysController@search');
     Route::resource('chimneys', 'ChimneysController', [
         'parameters' => 'singular'
     ]);
 
+    Route::get('/articles/search', 'ArticlesController@search');
     Route::resource('articles', 'ArticlesController', [
         'parameters' => 'singular'
     ]);
     
+    Route::get('/photos/search', 'PhotosController@search');
     Route::resource('photos', 'PhotosController', [
         'parameters' => 'singular'
     ]);
 
     Route::get('/orders', 'OrdersController@index');
+    Route::get('/orders/search', 'OrdersController@search');
     Route::delete('/orders/{id}', 'OrdersController@destroy');
 });
 

@@ -156,4 +156,12 @@ class ArticlesController extends Controller
 
         return back();
     }
+
+    public function search(Request $request)
+    {
+        $articles = Article::search($request->queryString)->get();
+        $searchCount    = count($articles);
+
+        return view('admin.articles.index', compact('articles', 'searchCount'));
+    }
 }
