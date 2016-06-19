@@ -26,8 +26,30 @@ class PagesController extends Controller
             'question' => 'required',
         ]);
 
-        // Order::create($request->all());
-        // send email to the admin
+        Order::create($request->all());
+
+        $data = $request->all();
+        $data['question'] = str_replace("\n", "<br>", $request->question);
+
+        \Mail::send('emails.order', $data, function ($message) use ($data) {
+            $message->subject('Оформление заказа')
+                ->from(env('MAIL_FROM'))
+                ->to(env('MAIL_TO'));
+        });
+
+        $this->flashData($request, [
+            'type' => 'success',
+            'message' => 'Заявка успешно оформлена'
+        ]);
+
+        return redirect('/order');
+    }
+
+    protected function flashData(Request $request, $data = [])
+    {
+        foreach ($data as $key => $value) {
+            $request->session()->flash($key, $value);
+        }
     }
 
     public function contact()
