@@ -1,6 +1,16 @@
 h3 {
   text-transform: none !important;
 }
+.search-results {
+  background: #008000;
+  font-size: 18px;
+  padding: 20px;
+  color: #fff;
+  display: inline-block;
+}
+.query-string {
+  color: #ff0;
+}
 .order {
   font-size: 20px;
 }

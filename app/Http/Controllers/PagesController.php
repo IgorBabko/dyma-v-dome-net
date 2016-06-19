@@ -13,6 +13,11 @@ class PagesController extends Controller
         return view('pages.main');
     } 
 
+    public function about()
+    {
+        return view('pages.about');
+    }
+
     public function order()
     {
         return view('pages.order');

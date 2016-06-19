@@ -22,9 +22,9 @@ class PhotosController extends Controller
 
     public function search(Request $request)
     {
-        $photos = Photo::search($request->query)->get();
-        $count    = count($photos);
+        $photos = Photo::search($request->queryString)->get();
+        $searchCount    = count($photos);
 
-        return view('photos.index', compact('photos'));
+        return view('photos.index', compact('photos', 'searchCount'));
     }
 }

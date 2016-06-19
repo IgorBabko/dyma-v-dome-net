@@ -34,11 +34,9 @@ class ChimneysController extends Controller
 
     public function search(Request $request)
     {
-        dd($request->query);
+        $chimneys = Chimney::search($request->queryString)->get();
+        $searchCount    = count($chimneys);
 
-        $chimneys = chimney::search($request->query)->get();
-        $count    = count($chimneys);
-
-        return view('chimneys.showbytype', compact('chimneys'));
+        return view('chimneys.showByType', compact('chimneys', 'searchCount'));
     }
 }

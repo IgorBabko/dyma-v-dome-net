@@ -16,19 +16,19 @@ Route::get('/contact', 'PagesController@contact');
 
 Route::get('/chimneys', 'ChimneysController@index'); 
 Route::get('/chimneys/catalog', 'ChimneysController@catalog'); 
-Route::get('/chimneys/{type}', 'ChimneysController@showByType'); 
 Route::get('/chimneys/search', 'ChimneysController@search'); 
+Route::get('/chimneys/{type}', 'ChimneysController@showByType'); 
 
 // articles
 Route::get('/articles', 'ArticlesController@index');
-Route::get('/articles/{article}', 'ArticlesController@show');
 Route::get('/articles/search', 'ArticlesController@search');
+Route::get('/articles/{article}', 'ArticlesController@show');
 
 
 // photos
 Route::get('/photos', 'PhotosController@index');
-Route::get('/photos/{photo}', 'PhotosController@show');
 Route::get('/photos/search', 'PhotosController@search');
+Route::get('/photos/{photo}', 'PhotosController@show');
 
 
 
@@ -37,7 +37,6 @@ Route::get('/docs', 'PagesController@docs');
 Route::get('/faq', 'PagesController@faq'); 
 Route::get('/prices', 'PagesController@prices'); 
 Route::get('/partners', 'PagesController@partners'); 
-
 Route::get('/order', 'PagesController@order'); 
 Route::post('/order', 'PagesController@saveOrder'); 
 

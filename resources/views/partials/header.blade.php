@@ -18,15 +18,15 @@
     <div class="top-line" id="chimneys">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 search">
-                    <a class="btn btn-success btn-lg pull-left order-header-button" href="/order"
-                    role="button">заявка</a>
-                    <form action="/chimneys/search" style="text-align: left">
-                        <span style="display: inline-block; position: relative">
-                            <input type="text" class="search_input">
-                            <button type="submit" class="search-button"><i class="fa fa-search" aria-hidden="true"></i></button>
-                        </span>
-                    </form>
+                <div class="col-sm-12 col-md-6">
+                <a class="btn btn-success btn-lg pull-left order-header-button" href="/order" role="button">заявка</a>
+                @if ( Request::is('chimneys*') )
+                    @include ('partials.search', ['action' => '/chimneys/search'])
+                @elseif ( Request::is('articles*'))
+                    @include ('partials.search', ['action' => '/articles/search'])
+                @elseif ( Request::is('photos*'))
+                    @include ('partials.search', ['action' => '/photos/search'])
+                @endif
                 </div>
                 <div class="col-sm-12 col-md-6">
                     <div class="contacts">

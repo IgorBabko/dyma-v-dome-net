@@ -4,13 +4,20 @@
     <div class="container">
         <h1>Одностенные дымоходы</h1>
         <div class="divider"></div>
+
         <div class="row">
-            @foreach($chimneys as $chimney)
+            <div class="col-xs-12" style="text-align: center">
+                @if (Request::is('chimneys/search*'))
+                    <span class="search-results">Результаты поиска по запросу <span class="query-string">'{{ Request::input('queryString') }}'</span>: {{ $searchCount }}</span>
+                @endif
+            </div>
+        </div>
+        @if (count($chimneys))
+            @foreach ($chimneys as $chimney)
             <div class="chimney">
                 <div class="col-md-3">
                     @if ( $chimney->image )
-                        <img class="img-responsive item-img" src="{{ $chimney->image }}" alt="picture">
-                    @endif
+                    <img class="img-responsive item-img" src="{{ $chimney->image }}" alt="picture">@endif
                 </div>
                 <div class="col-md-9">
                     <h3>{{ $chimney->name }}</h3>
@@ -36,25 +43,25 @@
                         <table class="table table-bordered">
                             <thead style="font-weight: bold">
                                 <tr>
-                                    <td>Димаметр</td> 
-                                    <td>100/160</td> 
-                                    <td>100/160</td> 
-                                    <td>100/160</td> 
-                                    <td>100/160</td> 
-                                    <td>100/160</td> 
-                                    <td>100/160</td> 
-                                    <td>100/160</td> 
-                                    <td>100/160</td> 
-                                    <td>100/160</td> 
-                                    <td>100/160</td> 
-                                    <td>100/160</td> 
-                                    <td>100/160</td> 
-                                    <td>100/160</td> 
-                                    <td>100/160</td> 
-                                    <td>100/160</td> 
-                                    <td>100/160</td> 
-                                    <td>100/160</td> 
-                                    <td>100/160</td> 
+                                    <td>Димаметр</td>
+                                    <td>100/160</td>
+                                    <td>100/160</td>
+                                    <td>100/160</td>
+                                    <td>100/160</td>
+                                    <td>100/160</td>
+                                    <td>100/160</td>
+                                    <td>100/160</td>
+                                    <td>100/160</td>
+                                    <td>100/160</td>
+                                    <td>100/160</td>
+                                    <td>100/160</td>
+                                    <td>100/160</td>
+                                    <td>100/160</td>
+                                    <td>100/160</td>
+                                    <td>100/160</td>
+                                    <td>100/160</td>
+                                    <td>100/160</td>
+                                    <td>100/160</td>
                                 </tr>
                             </thead>
                             <tr>
@@ -128,8 +135,10 @@
                 </div>
             </div>
             @endforeach
-        </div>
-        {{ $chimneys->render() }}
+            @if (!Request::is('chimneys/search*')) 
+               {!! $chimneys->render() !!}
+            @endif
+        @endif
     </div>
 </div>
 @stop

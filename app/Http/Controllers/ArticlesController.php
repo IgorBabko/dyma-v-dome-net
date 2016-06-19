@@ -22,9 +22,9 @@ class ArticlesController extends Controller
 
     public function search(Request $request)
     {
-        $articles = Article::search($request->query)->get();
-        $count    = count($articles);
+        $articles = Article::search($request->queryString)->get();
+        $searchCount    = count($articles);
 
-        return view('articles.index', compact('articles'));
+        return view('articles.index', compact('articles', 'searchCount'));
     }
 }
