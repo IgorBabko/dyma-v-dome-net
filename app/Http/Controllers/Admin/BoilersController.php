@@ -48,7 +48,7 @@ class BoilersController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'description' => 'required',
-            'type' => 'required',
+            //'type' => 'required',
         ]);
 
         $boiler = Boiler::create($request->all());
@@ -114,7 +114,7 @@ class BoilersController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'description' => 'required',
-            'type' => 'required',
+            //'type' => 'required',
         ]);
 
         if ($request->file('image')) {

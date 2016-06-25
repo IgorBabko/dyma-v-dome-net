@@ -48,7 +48,7 @@ class BriquettesController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'description' => 'required',
-            'type' => 'required',
+            //'type' => 'required',
         ]);
 
         $briquette = Briquette::create($request->all());
@@ -114,7 +114,7 @@ class BriquettesController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'description' => 'required',
-            'type' => 'required',
+            //'type' => 'required',
         ]);
 
         if ($request->file('image')) {
