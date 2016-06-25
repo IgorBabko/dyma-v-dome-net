@@ -12,7 +12,7 @@
                 </div>
                 <div class="col-md-5">
                     <h3>{{ $article->title }}</h3>
-                    <p>{!! str_limit($article->text, 300) !!}</p>
+                    <p>{{ $article->short_text }}</p>
                     <a class="btn Button" href="/articles/{{ $article->id }}">подробнее<span class="glyphicon glyphicon-chevron-right"></span></a>
                 </div>
             </div>

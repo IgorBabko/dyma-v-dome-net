@@ -38,6 +38,15 @@ $factory->define(DymaVDomeNet\Briquette::class, function (Faker\Generator $faker
     ];
 });
 
+$factory->define(DymaVDomeNet\Boiler::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'description' => $faker->paragraph,
+        //'type' => 'одностенный',
+        'image' => str_random(10),
+    ];
+});
+
 $factory->define(DymaVDomeNet\Article::class, function (Faker\Generator $faker) {
     return [
         'title' => $faker->name,

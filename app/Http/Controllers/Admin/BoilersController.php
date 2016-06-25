@@ -3,13 +3,12 @@
 namespace DymaVDomeNet\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-
+use DymaVDomeNet\Boiler;
 use DymaVDomeNet\Http\Requests;
 use DymaVDomeNet\Http\Controllers\Controller;
-use DymaVDomeNet\Article;
 use DymaVDomeNet\Http\Middleware\Authenticate;
 
-class ArticlesController extends Controller
+class BoilersController extends Controller
 {
     public function __construct()
     {
@@ -23,9 +22,9 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        $articles = Article::orderBy('created_at', 'desc')->paginate(10);
+        $boilers = Boiler::orderBy('created_at', 'desc')->paginate(10);
 
-        return view('admin.articles.index', compact('articles'));
+        return view('admin.boilers.index', compact('boilers'));
     }
 
     /**
@@ -35,7 +34,7 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-        return view('admin.articles.create');
+        return view('admin.boilers.create');
     }
 
     /**
@@ -47,38 +46,39 @@ class ArticlesController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title' => 'required',
-            'short_text' => 'required',
-            'text' => 'required',
+            'name' => 'required',
+            'description' => 'required',
+            'type' => 'required',
         ]);
 
-        $article = Article::create($request->all());
+        $boiler = Boiler::create($request->all());
 
         if ($request->file('image')) {
-            $this->saveImage($request, $article);
+            $this->saveImage($request, $boiler);
         }
 
         $this->flashData($request, [
             'type' => 'success',
-            'message' => 'Статья успешно добавлена!'
+            'message' => 'Дымоход успешно добавлен!'
         ]);
 
-        return redirect('/admin/articles');
+        return redirect('/admin/boilers');
     }
 
-    protected function saveImage(Request $request, Article $article, $replace = false)
+    protected function saveImage(Request $request, Boiler $boiler, $replace = false)
     {
-        $imageName = $article->id . '.' . $request->file('image')->getClientOriginalExtension();
+        $imageName = $boiler->id . '.' . $request->file('image')->getClientOriginalExtension();
 
         if ($replace) {
-            \Storage::delete(public_path() . $article->image);
+            \Storage::delete(public_path() . $boiler->image);
         }
 
         $request->file('image')->move(public_path() . '/images/uploads/', $imageName);
     
-        $article->image = '/images/uploads/' . $imageName;
-        $article->save();
+        $boiler->image = '/images/uploads/' . $imageName;
+        $boiler->save();
     }
+
 
     /**
      * Display the specified resource.
@@ -97,9 +97,9 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Article $article)
+    public function edit(Boiler $boiler)
     {
-        return view('admin.articles.edit', compact('article'));
+        return view('admin.boilers.edit', compact('boiler'));
     }
 
     /**
@@ -109,29 +109,30 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Article $article)
+    public function update(Request $request, Boiler $boiler)
     {
         $this->validate($request, [
-            'title' => 'required',
-            'short_text' => 'required',
-            'text' => 'required',
+            'name' => 'required',
+            'description' => 'required',
+            'type' => 'required',
         ]);
 
         if ($request->file('image')) {
-            $this->saveImage($request, $article, true);
+            $this->saveImage($request, $boiler, true);
         }
 
-        $article->title = $request->title;
-        $article->text = $request->text;
+        $boiler->name = $request->name;
+        $boiler->description = $request->description;
+        $boiler->type = $request->type;
 
-        $article->save();
+        $boiler->save();
 
         $this->flashData($request, [
             'type' => 'success',
-            'message' => 'Статья успешно обновлена!'
+            'message' => 'Дымоход успешно обновлен!'
         ]);
 
-        return redirect('/admin/articles');
+        return redirect('/admin/boilers');
     }
 
     protected function flashData(Request $request, $data = [])
@@ -149,11 +150,11 @@ class ArticlesController extends Controller
      */
     public function destroy(Request $request, $id)
     {
-        Article::destroy($id); 
+        Boiler::destroy($id); 
 
         $this->flashData($request, [
             'type' => 'success',
-            'message' => 'Статья успешно удалена!',
+            'message' => 'Дымоход успешно удален!',
         ]);
 
         return back();
@@ -161,9 +162,9 @@ class ArticlesController extends Controller
 
     public function search(Request $request)
     {
-        $articles = Article::search($request->queryString)->get();
-        $searchCount    = count($articles);
+        $boilers = Boiler::search($request->queryString)->get();
+        $searchCount    = count($boilers);
 
-        return view('admin.articles.index', compact('articles', 'searchCount'));
+        return view('admin.boilers.index', compact('boilers', 'searchCount'));
     }
 }

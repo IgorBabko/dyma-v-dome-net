@@ -7,19 +7,19 @@ use DymaVDomeNet\Http\Requests;
 use DymaVDomeNet\Briquette;
 use Nicolaslopezj\Searchable\SearchableTrait;
 
-class ChimneysController extends Controller
+class BriquettesController extends Controller
 {
     public function index()
     {
         return view('briquettes.index');
     } 
     
-/*    public function catalog()
+    public function catalog()
     {
-        return view('chimneys.catalog');
-}
+        return view('briquettes.catalog');
+    }
 
-    public function showByType($type)
+/*    public function showByType($type)
     {
         $chimneys = Chimney::whereType($type)->orderBy('created_at', 'desc')->paginate(10);
 

@@ -24,7 +24,7 @@
                     </div>
                     <div class="col-xs-12 static">
                         <h3>{{ $article->title }}</h3>
-                        <p>{!! str_limit($article->text, 300) !!}</p>
+                        <p>{{ $article->short_text }}</p>
                         <div class="buttons">
                             <a href="/admin/articles/{{ $article->id }}/edit" class="btn btn-info pull-right">Редактировать</a>
                             <form action="/admin/articles/{{ $article->id }}" method="POST">

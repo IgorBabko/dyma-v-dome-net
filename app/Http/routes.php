@@ -14,10 +14,23 @@
 Route::get('/', 'PagesController@index'); 
 Route::get('/contact', 'PagesController@contact'); 
 
+// chimneys
 Route::get('/chimneys', 'ChimneysController@index'); 
 Route::get('/chimneys/catalog', 'ChimneysController@catalog'); 
 Route::get('/chimneys/search', 'ChimneysController@search'); 
 Route::get('/chimneys/{type}', 'ChimneysController@showByType'); 
+
+// briquettes
+Route::get('/briquettes', 'BriquettesController@index'); 
+Route::get('/briquettes/catalog', 'BriquettesController@catalog'); 
+Route::get('/briquettes/search', 'BriquettesController@search'); 
+//Route::get('/briquettes/{type}', 'BriquettesController@showByType'); 
+
+// boilers
+Route::get('/boilers', 'BoilersController@index'); 
+Route::get('/boilers/catalog', 'BoilersController@catalog'); 
+Route::get('/boilers/search', 'BoilersController@search'); 
+//Route::get('/boilers/{type}', 'BoilersController@showByType'); 
 
 // articles
 Route::get('/articles', 'ArticlesController@index');
@@ -30,7 +43,8 @@ Route::get('/photos', 'PhotosController@index');
 Route::get('/photos/search', 'PhotosController@search');
 Route::get('/photos/{photo}', 'PhotosController@show');
 
-
+// prices
+Route::get('/prices/{name}/{width}', 'PricesController@getPrice');
 
 // footer links
 Route::get('/docs', 'PagesController@docs'); 
@@ -55,6 +69,16 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
         'parameters' => 'singular'
     ]);
 
+    Route::get('/briquettes/search', 'BriquettesController@search');
+    Route::resource('briquettes', 'BriquettesController', [
+        'parameters' => 'singular'
+    ]);
+
+    Route::get('/boilers/search', 'BoilersController@search');
+    Route::resource('boilers', 'BoilersController', [
+        'parameters' => 'singular'
+    ]);
+
     Route::get('/articles/search', 'ArticlesController@search');
     Route::resource('articles', 'ArticlesController', [
         'parameters' => 'singular'
@@ -69,7 +93,3 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
     Route::get('/orders/search', 'OrdersController@search');
     Route::delete('/orders/{id}', 'OrdersController@destroy');
 });
-
-// prices
-Route::get('/prices/{name}/{width}', 'PricesController@getPrice');
-
