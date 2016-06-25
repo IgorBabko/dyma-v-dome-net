@@ -5,6 +5,8 @@ $ ->
         autoplay: true
         autoplaySpeed: 2000
 
+    CKEDITOR.replace('description')
+
 #    map = new GMaps(
 #        el: '#map'
 #        lat: 50.44985

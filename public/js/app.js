@@ -6,6 +6,7 @@
       autoplay: true,
       autoplaySpeed: 2000
     });
+    CKEDITOR.replace('description');
     $('.single-feature').hover(function() {
       var imgName;
       imgName = $(this).parent('a').attr('href');
