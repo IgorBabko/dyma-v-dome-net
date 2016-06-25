@@ -3,7 +3,7 @@
 @section ('content')
 <div class="page">
     <div class="container">
-        <h1>Каталог дымоходов</h1>
+        <h1>Каталог брикетов</h1>
         <div class="divider"></div>
         <div class="row">
             @include ('partials.search-results', ['url' => 'admin/briquettes/search*'])
@@ -25,7 +25,7 @@
                         <h3>{{ $briquette->name }}</h3>
                         <h4>Описание</h4> 
                         <p class="description">{{ $briquette->description }}</p>
-                        <h4>Толщина: </h4>
+                        <!--<h4>Толщина: </h4>
                         <label class="radio-inline">
                             <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked="checked">0.5мм AISI 304
                         </label>
@@ -36,7 +36,7 @@
                             <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">1мм AISI 321
                         </label>
                         <h4>Тип</h4>
-                        <p class="description">{{ $briquette->type }}</p>
+                        <p class="description">{{ $briquette->type }}</p>-->
                     </div>
                     <div class="col-xs-12 col-md-9 col-md-offset-3">
                         <h4>Цены</h4>

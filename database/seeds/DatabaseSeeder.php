@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $this->call(ChimneysTableSeeder::class);
+        $this->call(BriquettesTableSeeder::class);
         $this->call(ArticlesTableSeeder::class);
         $this->call(PhotosTableSeeder::class);
         $this->call(OrdersTableSeeder::class);

@@ -2,7 +2,7 @@
 <div class="jumbotron" style="margin: 120px 0 0; background: white">
     <div class="container">
         <div class="row" style="margin-bottom: 100px">
-            <h1 style="text-align: left">О нас</h1>
+            <h1 style="text-align: left">Брикеты</h1>
             <p>
                 Наша компания занимается изготовлением, продажей, а также монтажом дымоходов, газоходных
                 и дымоходных систем и других элементов дымоходов. Мы производим

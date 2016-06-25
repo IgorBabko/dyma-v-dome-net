@@ -2,7 +2,7 @@
 <div class="page">
     <div class="container">
         <div class="row">
-            <h1>Редактировать дымоход</h1>
+            <h1>Редактировать брикет</h1>
             <div class="divider"></div>
             <div class="col-xs-12">
                 @include ('partials.errors')
@@ -17,12 +17,12 @@
                         <label for="description">Описание</label>
                         <textarea type="text" class="form-control" id="description" name="description">{{ $briquette->description }}</textarea>
                     </div>
-                    <select class="form-control" name="type">
+                    <!--<select class="form-control" name="type">
                         <option value="одностенный" {{ $briquette->type == 'одностенный' ? 'selected' :'' }}>одностенный</option>
                         <option value="утепленный" {{ $briquette->type == 'утепленный' ? 'selected' : '' }}>утепленный</option>
                         <option value="алюком" {{ $briquette->type == 'алюком' ? 'selected' : '' }}>алюком</option>
                         <option value="керамический" {{ $briquette->type == 'керамический' ? 'selected' : '' }}>керамический</option>
-                    </select>
+                    </select>-->
                     <div class="form-group" style="margin: 20px 0">
                         <label for="image">Изменить изображение</label>
                         <input type="file" id="image" name="image">
