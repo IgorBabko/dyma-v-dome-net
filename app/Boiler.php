@@ -3,6 +3,7 @@
 namespace DymaVDomeNet;
 
 use Illuminate\Database\Eloquent\Model;
+use Nicolaslopezj\Searchable\SearchableTrait;
 
 class Boiler extends Model
 {

@@ -5,7 +5,8 @@ $ ->
         autoplay: true
         autoplaySpeed: 2000
 
-    CKEDITOR.replace('text')
+    if $('#text')
+        CKEDITOR.replace('text')
 
 #    map = new GMaps(
 #        el: '#map'

@@ -2,11 +2,12 @@ h3
     text-transform: none !important
 
 .search-results
-    background: green
+    background: #23c9ee
     font-size: 18px
     padding: 20px
     color: white
     display: inline-block
+    box-shadow: 3px 3px 5px 0 #8a8a8a
 
 .query-string
     color: yellow
@@ -90,7 +91,7 @@ img
 
 .contacts
     margin: 15px 0
-    color: #bbb
+    color: #fffbc7 // white //bbb
 
 .contacts-small-screen
     display: none
@@ -136,6 +137,8 @@ body.admin
 
 
 .chimney,
+.briquette,
+.boiler,
 .order,
 .admin .article
     margin: 50px 0
@@ -211,13 +214,18 @@ body.admin
     width: 300px
     color: black
     font-size: 16px
-    font-weight: bold
+    font-weight: normal
     padding: 0 10px
-    background: #b5aea7
+    background: white
+    box-shadow: none
+    transition: box-shadow 0.2s ease-in-out
 
     &:focus
-        background: white
+        box-shadow: 0 0 5px 0px #222222
+        background: white !important
 
+:focus
+    background: none
 
 .top-line
     min-height: 50px
@@ -226,9 +234,10 @@ body.admin
     font-weight: bold
     font-size: 16px
     padding-top: 4px
-    background: #6f6356 //#EE8B24
+    background: #23c9ee //#6f6356 //#EE8B24
     font-weight: bold
     padding: 0
+    box-shadow: 0 2px 5px 0 #949494
 
     span
         margin: 0 10px
@@ -236,8 +245,6 @@ body.admin
     @media screen and (max-width: 768px)
         text-align: center
 
-.search_input
-    box-shadow: 0 0 5px 0px #222222
 
 .search-button
     position: absolute
@@ -253,7 +260,7 @@ body.admin
         max-height: 300px
 
 .navbar-toggle
-    background: #ee8b24 !important
+    background: #23c9ee //#ee8b24 !important
     margin-top: 15px
 
 input:hover,
@@ -367,7 +374,7 @@ section
 @import 'components/Button'
 
 ul.navbar-nav > li > a:hover
-    background: #6f6356 !important //#EE8B24 !important
+    background: #23c9ee !important // #23c9ee //#6f6356 !important //#EE8B24 !important
     color: white !important
 
 ul.navbar-nav > li > a
@@ -409,7 +416,7 @@ tr td:first-child
     > a,
     > a:hover,
     > a:focus
-        background: #6f6356 //#EE8B24
+        background: #23c9ee //#6f6356 //#EE8B24
         color: white !important
 
 .navbar-inverse .navbar-nav > li > a

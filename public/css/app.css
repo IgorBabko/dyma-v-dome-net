@@ -2,11 +2,12 @@ h3 {
   text-transform: none !important;
 }
 .search-results {
-  background: #008000;
+  background: #23c9ee;
   font-size: 18px;
   padding: 20px;
   color: #fff;
   display: inline-block;
+  box-shadow: 3px 3px 5px 0 #8a8a8a;
 }
 .query-string {
   color: #ff0;
@@ -89,7 +90,7 @@ img {
 }
 .contacts {
   margin: 15px 0;
-  color: #bbb;
+  color: #fffbc7;
 }
 .contacts-small-screen {
   display: none;
@@ -139,6 +140,8 @@ body.admin {
   padding: 50px 0;
 }
 .chimney:after,
+.briquette:after,
+.boiler:after,
 .order:after,
 .admin .article:after {
   content: '';
@@ -146,6 +149,8 @@ body.admin {
   clear: both;
 }
 .chimney,
+.briquette,
+.boiler,
 .order,
 .admin .article {
   margin: 50px 0;
@@ -221,12 +226,18 @@ body.admin {
   width: 300px;
   color: #000;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: normal;
   padding: 0 10px;
-  background: #b5aea7;
+  background: #fff;
+  box-shadow: none;
+  transition: box-shadow 0.2s ease-in-out;
 }
 .search_input:focus {
-  background: #fff;
+  box-shadow: 0 0 5px 0px #222;
+  background: #fff !important;
+}
+:focus {
+  background: none;
 }
 .top-line {
   min-height: 50px;
@@ -235,9 +246,10 @@ body.admin {
   font-weight: bold;
   font-size: 16px;
   padding-top: 4px;
-  background: #6f6356;
+  background: #23c9ee;
   font-weight: bold;
   padding: 0;
+  box-shadow: 0 2px 5px 0 #949494;
 }
 .top-line span {
   margin: 0 10px;
@@ -246,9 +258,6 @@ body.admin {
   .top-line {
     text-align: center;
   }
-}
-.search_input {
-  box-shadow: 0 0 5px 0px #222;
 }
 .search-button {
   position: absolute;
@@ -263,7 +272,7 @@ body.admin {
   max-height: 300px;
 }
 .navbar-toggle {
-  background: #ee8b24 !important;
+  background: #23c9ee;
   margin-top: 15px;
 }
 input:hover,
@@ -2997,7 +3006,7 @@ textarea:hover {
   color: #fff;
 }
 ul.navbar-nav > li > a:hover {
-  background: #6f6356 !important;
+  background: #23c9ee !important;
   color: #fff !important;
 }
 @media screen and (max-width: 768px) {
@@ -3037,7 +3046,7 @@ tr td:first-child {
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
-  background: #6f6356;
+  background: #23c9ee;
   color: #fff !important;
 }
 .navbar-inverse .navbar-nav > li > a {

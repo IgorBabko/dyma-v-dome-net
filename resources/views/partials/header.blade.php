@@ -20,8 +20,12 @@
             <div class="row">
                 <div class="col-sm-12 col-md-6">
                 <a class="btn btn-success btn-lg pull-left order-header-button" href="/order" role="button">заявка</a>
-                @if ( Request::is('chimneys*') )
+                @if ( request::is('chimneys*') )
                     @include ('partials.search', ['action' => '/chimneys/search'])
+                @elseif ( Request::is('briquettes*'))
+                    @include ('partials.search', ['action' => '/briquettes/search'])
+                @elseif ( Request::is('boilers*'))
+                    @include ('partials.search', ['action' => '/boilers/search'])
                 @elseif ( Request::is('articles*'))
                     @include ('partials.search', ['action' => '/articles/search'])
                 @elseif ( Request::is('photos*'))
@@ -32,7 +36,7 @@
                     <div class="contacts">
                         <span><i class="fa fa-phone" aria-hidden="true"></i> (095) 57-57-677</span>
                         <span><i class="fa fa-phone" aria-hidden="true"></i> (097) 87-161-97</span>
-                        <span><a href="/contact" style="color: #bbb"><i class="fa fa-envelope" aria-hidden="true"></i> i.i.babko@gmail.com</a></span>
+                        <span><a href="/contact" style="color: #fffbc7"><i class="fa fa-envelope" aria-hidden="true"></i> i.i.babko@gmail.com</a></span>
                     </div>
 
                 </div>

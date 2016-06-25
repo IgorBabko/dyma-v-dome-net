@@ -16,7 +16,9 @@ class BoilersController extends Controller
     
     public function catalog()
     {
-        return view('boilers.catalog');
+        $boilers = Boiler::orderBy('created_at', 'desc')->paginate(10);
+
+        return view('boilers.catalog', compact('boilers'));
     }
 
  /*   public function showByType($type)

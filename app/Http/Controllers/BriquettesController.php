@@ -16,7 +16,9 @@ class BriquettesController extends Controller
     
     public function catalog()
     {
-        return view('briquettes.catalog');
+        $briquettes = Briquette::orderBy('created_at', 'desc')->paginate(10);
+
+        return view('briquettes.catalog', compact('briquettes'));
     }
 
 /*    public function showByType($type)

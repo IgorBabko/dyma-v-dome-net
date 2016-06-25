@@ -12,7 +12,7 @@ class BoilersTableSeeder extends Seeder
      */
     public function run()
     {
-        Briquette::truncate();
-        factory(Briquette::class, 50)->create();
+        Boiler::truncate();
+        factory(Boiler::class, 50)->create();
     }
 }

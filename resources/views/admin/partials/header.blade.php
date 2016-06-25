@@ -17,6 +17,10 @@
                 <div class="col-sm-12 col-md-6">
                     @if ( Request::is('admin/chimneys*') )
                         @include ('partials.search', ['action' => '/admin/chimneys/search'])
+                    @elseif ( Request::is('admin/briquettes*'))
+                        @include ('partials.search', ['action' => '/admin/briquettes/search'])
+                    @elseif ( Request::is('admin/boilers*'))
+                        @include ('partials.search', ['action' => '/admin/boilers/search'])
                     @elseif ( Request::is('admin/articles*'))
                         @include ('partials.search', ['action' => '/admin/articles/search'])
                     @elseif ( Request::is('admin/photos*'))
