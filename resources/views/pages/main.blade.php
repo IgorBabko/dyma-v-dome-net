@@ -37,7 +37,7 @@
                     <ul class="nav nav-tabs" role="tablist">
                         <h3 class="subheading_main">Что вас интересует?</h3>
                         <li role="presentation">
-                            <a href="chimneys">
+                            <a href="/chimneys">
                                 <div class="col-sm-12 single-feature">
                                     <div class="col-sm-2 feature-icon">
                                         <i class="fa fa-laptop"></i>
@@ -52,7 +52,7 @@
                             </a>
                         </li>
                         <li role="presentation">
-                            <a href="briquettes" role="tab" data-toggle="tab">
+                            <a href="/briquettes">
                                 <div class="col-sm-12 single-feature">
                                     <div class="col-sm-2 feature-icon">
                                         <i class="fa fa-send"></i>
@@ -67,7 +67,7 @@
                             </a>
                         </li>
                         <li role="presentation">
-                            <a href="boilers" role="tab" data-toggle="tab">
+                            <a href="/boilers">
                                 <div class="col-sm-12 single-feature">
                                     <div class="col-sm-2 feature-icon">
                                         <i class="fa fa-heart"></i>

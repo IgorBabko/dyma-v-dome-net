@@ -2,6 +2,7 @@
 
 namespace DymaVDomeNet\Http\Controllers;
 
+use Session;
 use Illuminate\Http\Request;
 use DymaVDomeNet\Http\Requests;
 use DymaVDomeNet\Briquette;
