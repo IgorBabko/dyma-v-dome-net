@@ -4,7 +4,6 @@ namespace DymaVDomeNet\Http\Controllers;
 
 use Session;
 use Illuminate\Http\Request;
-use Session;
 use DymaVDomeNet\Http\Requests;
 use DymaVDomeNet\Boiler;
 use Nicolaslopezj\Searchable\SearchableTrait;
