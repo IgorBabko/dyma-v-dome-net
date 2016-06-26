@@ -32,7 +32,7 @@ body {
 .order-header-button {
   margin: 3px;
   border-radius: 0 !important;
-  background: #ff4700;
+  background: #35d22a;
   border: none;
   height: 32px;
   padding: 3px 10px;
@@ -40,13 +40,13 @@ body {
   box-shadow: 0 0 3px 0px #222;
 }
 .order-header-button:hover {
-  background: #e64000;
+  background: #30bd26;
 }
 .order-header-button:focus {
-  background: #e64000;
+  background: #30bd26;
 }
 .order-header-button:active:focus {
-  background: #e64000;
+  background: #30bd26;
 }
 .table-block {
   overflow: auto;
@@ -236,9 +236,6 @@ body.admin {
   box-shadow: 0 0 5px 0px #222;
   background: #fff !important;
 }
-:focus {
-  background: none;
-}
 .top-line {
   min-height: 50px;
   text-align: right;
@@ -246,7 +243,7 @@ body.admin {
   font-weight: bold;
   font-size: 16px;
   padding-top: 4px;
-  background: #23c9ee;
+  background: #dc4545;
   font-weight: bold;
   padding: 0;
   box-shadow: 0 2px 5px 0 #949494;
@@ -3006,7 +3003,7 @@ textarea:hover {
   color: #fff;
 }
 ul.navbar-nav > li > a:hover {
-  background: #23c9ee !important;
+  background: #dc4545 !important;
   color: #fff !important;
 }
 @media screen and (max-width: 768px) {
@@ -3046,7 +3043,7 @@ tr td:first-child {
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
-  background: #23c9ee;
+  background: #dc4545;
   color: #fff !important;
 }
 .navbar-inverse .navbar-nav > li > a {

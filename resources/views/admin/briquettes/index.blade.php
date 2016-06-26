@@ -11,7 +11,7 @@
                 @include ('partials.flash')
             </div>
             <div class="col-xs-12" style="text-align: center; float: none">
-                <a href="/admin/briquettes/create" style="margin-top: 20px" class="btn btn-primary">Добавить дымоход</a>
+                <a href="/admin/briquettes/create" style="margin-top: 20px" class="btn btn-primary">Добавить брикет</a>
             </div>
             @if (count($briquettes))
                 @foreach ($briquettes as $briquette)

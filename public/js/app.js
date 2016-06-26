@@ -7,6 +7,7 @@
       autoplaySpeed: 2000
     });
     if ($('#text')) {
+      CKEDITOR.config.height = 700;
       CKEDITOR.replace('text');
     }
     $('.single-feature').hover(function() {

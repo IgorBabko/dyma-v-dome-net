@@ -6,6 +6,7 @@ $ ->
         autoplaySpeed: 2000
 
     if $('#text')
+        CKEDITOR.config.height = 700 
         CKEDITOR.replace('text')
 
 #    map = new GMaps(
