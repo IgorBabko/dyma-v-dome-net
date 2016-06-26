@@ -130,7 +130,7 @@ img {
   color: #000;
 }
 .page {
-  background: #fff;
+  background: #e6e6e6;
   padding: 150px 0 50px;
 }
 body.admin {
@@ -246,7 +246,7 @@ body.admin {
   background: #dc4545;
   font-weight: bold;
   padding: 0;
-  box-shadow: 0 2px 5px 0 #949494;
+  box-shadow: 0 2px 2px 0px #353535;
 }
 .top-line span {
   margin: 0 10px;
@@ -255,6 +255,9 @@ body.admin {
   .top-line {
     text-align: center;
   }
+}
+.gray-section {
+  background: #e6e6e6;
 }
 .search-button {
   position: absolute;

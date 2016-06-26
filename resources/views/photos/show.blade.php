@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-<section>
+<section class="gray-section">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
