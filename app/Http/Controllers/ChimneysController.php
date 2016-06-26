@@ -2,6 +2,7 @@
 
 namespace DymaVDomeNet\Http\Controllers;
 
+use Session;
 use Illuminate\Http\Request;
 use DymaVDomeNet\Http\Requests;
 use DymaVDomeNet\Chimney;
@@ -11,6 +12,8 @@ class ChimneysController extends Controller
 {
     public function index()
     {
+        Session::put('type', 'chimneys');
+
         return view('chimneys.index');
     } 
     

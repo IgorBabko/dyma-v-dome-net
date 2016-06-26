@@ -11,6 +11,8 @@ class BoilersController extends Controller
 {
     public function index()
     {
+        Session::put('type', 'boilers');
+
         return view('boilers.index');
     } 
     

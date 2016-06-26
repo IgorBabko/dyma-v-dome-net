@@ -11,6 +11,8 @@ class BriquettesController extends Controller
 {
     public function index()
     {
+        Session::put('type', 'briquettes');
+
         return view('briquettes.index');
     } 
     
