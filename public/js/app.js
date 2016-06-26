@@ -6,7 +6,7 @@
       autoplay: true,
       autoplaySpeed: 2000
     });
-    if ($('#text')) {
+    if (($('#text')).length) {
       CKEDITOR.config.height = 700;
       CKEDITOR.replace('text');
     }
