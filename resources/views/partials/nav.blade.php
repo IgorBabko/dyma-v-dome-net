@@ -5,7 +5,7 @@
             @if ( Session::get('type') == 'chimneys' )
             <li class="{{ Request::is('chimneys') ? 'active' : '' }}"><a href="/chimneys" class="">дымоходы</a> 
             </li>
-            <li class="{{ Request::is('chimneys/catalog') ? 'active' : '' }}"><a href="/chimneys/catalog" class="">каталог</a> 
+            <li class="{{ Request::is('chimneys/*') ? 'active' : '' }}"><a href="/chimneys/catalog" class="">каталог</a> 
             </li>
             @elseif (Request::is('briquettes*'))
             <li class="{{ Request::is('briquettes') ? 'active' : '' }}"><a href="/briquettes" class="">брикеты</a> 

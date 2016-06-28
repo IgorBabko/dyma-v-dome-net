@@ -13,8 +13,8 @@
                         <div class="caption">
                             <h3 style="font-size: 24px">Одностенные</h3>
                             <p>
-                                <a href="/chimneys/одностенный" class="btn Button">Посмотреть</a> 
-                                <a href="/prices/chimneys/одностенный" class="btn btn-success">Прайс-лист</a> 
+                                <a href="/chimneys/одностенный" class="Button">Посмотреть</a> 
+                                <a href="/prices/chimneys/одностенный" class="Button Button--orange">Прайс-лист</a> 
                             </p>
                         </div>
                     </div>
@@ -26,8 +26,8 @@
                         <div class="caption">
                             <h3 style="font-size: 24px">Утепленные</h3>
                             <p>
-                                <a href="/chimneys/утепленный" class="btn Button">Посмотреть</a> 
-                                <a href="/prices/chimneys/утепленный" class="btn btn-success">Прайс-лист</a> 
+                                <a href="/chimneys/утепленный" class="Button">Посмотреть</a> 
+                                <a href="/prices/chimneys/утепленный" class="Button Button--orange">Прайс-лист</a> 
                             </p>
                         </div>
                     </div>
@@ -39,8 +39,8 @@
                         <div class="caption">
                             <h3 style="font-size: 24px">Алюком</h3>
                             <p>
-                                <a href="/chimneys/алюком" class="btn Button">Посмотреть</a> 
-                                <a href="/prices/chimneys/алюком" class="btn btn-success">Прайс-лист</a> 
+                                <a href="/chimneys/алюком" class="Button Button">Посмотреть</a> 
+                                <a href="/prices/chimneys/алюком" class="Button Button--orange">Прайс-лист</a> 
                             </p>
                         </div>
                     </div>
@@ -52,8 +52,8 @@
                         <div class="caption">
                             <h3 style="font-size: 24px">Керамические</h3>
                             <p>
-                                <a href="/chimneys/керамический" class="btn Button">Посмотреть</a> 
-                                <a href="/prices/chimneys/керамический" class="btn btn-success">Прайс-лист</a> 
+                                <a href="/chimneys/керамический" class="Button">Посмотреть</a> 
+                                <a href="/prices/chimneys/керамический" class="Button Button--orange">Прайс-лист</a> 
                             </p>
                         </div>
                     </div>

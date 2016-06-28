@@ -124,13 +124,15 @@
                     </div>
                 </div>
                 <div class="col-xs-12">
-                    <a href="#" class="btn btn-primary pull-right">Подробнее</a>
+                    <a href="#" class="pull-right Button">Подробнее</a>
                 </div>
             </div>
             @endforeach
+            <div class="pagination-wrapper">
             @if (!Request::is('chimneys/search*')) 
                {!! $chimneys->render() !!}
             @endif
+            </div>
         @endif
     </div>
 </div>

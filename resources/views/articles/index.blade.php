@@ -6,7 +6,7 @@
         @include ('partials.search-results', ['url' => 'articles/search*'])
         @if (count($articles))
             @foreach ($articles as $article)
-            <div class="row" style="margin: 50px 0">
+            <div class="row article">
                 <div class="col-md-7">
                     <img class="img-responsive" src="{{ $article->image }}" alt="">
                 </div>
