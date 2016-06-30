@@ -19,9 +19,9 @@
             </li>
             @endif
             <li class="{{ Request::is('articles*') ? 'active' : '' }}"><a href="/articles" class="">статьи</a> 
-            </li>
-            <li class="{{ Request::is('prices*') ? 'active' : '' }}"><a href="/chimneys/prices" class="active">цены</a> 
-            </li>
+        <!--    </li>
+            <li class="{{ Request::is('prices*') ? 'active' : '' }}"><a href="/chimneys/prices" class="active">цены</a>
+            </li> -->
             <li class="{{ Request::is('photos*') ? 'active' : '' }}"><a href="/photos" class="">фото</a> 
             </li>
     </ul>

@@ -162,15 +162,52 @@ body.admin {
 .order,
 .photo-description,
 .admin .article {
+  position: relative;
   margin: 0 0 50px 0;
-  border: 1px solid #e0e0e0;
-  padding: 20px;
+  padding: 40px;
   background: #f3f3f3;
   box-shadow: 0 2px 1px #b7b7b7;
+}
+.chimney img,
+.briquette img,
+.article img,
+.boiler img,
+.order img,
+.photo-description img,
+.admin .article img {
+  box-shadow: 0 0 5px 1px #868686;
 }
 .photo-description {
   min-height: 250px;
   position: relative;
+  padding: 20px;
+}
+.photo-expanded,
+.article-expanded {
+  background: #f3f3f3;
+  box-shadow: 0 2px 1px #b7b7b7;
+  margin-top: 20px;
+  padding: 0 40px 40px;
+}
+.photo-expanded img,
+.article-expanded img {
+  box-shadow: 0 0 5px 1px #868686;
+}
+.main-block {
+  background: #f3f3f3;
+  box-shadow: 0 2px 1px #b7b7b7;
+  margin-top: 20px;
+  background: #fff;
+  padding: 50px;
+}
+.main-block h1 {
+  text-align: left;
+}
+.main-block .row {
+  margin: 0;
+}
+.main-block p {
+  font-size: 18px !important;
 }
 .admin .article {
   min-height: 550px;
@@ -258,7 +295,7 @@ body.admin {
   background: #dc4545;
   font-weight: bold;
   padding: 0;
-  box-shadow: 0 2px 2px 0px #353535;
+  box-shadow: 0 1px 1px 0px #212121;
 }
 .top-line span {
   margin: 0 10px;
@@ -301,7 +338,7 @@ section {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  padding: 150px 0;
+  padding: 150px 0 70px;
   min-height: calc(100vh - 177px) !important;
 }
 .section-main {
@@ -3014,6 +3051,13 @@ textarea:hover {
   padding: 10px;
   border-bottom: 5px solid #aa2020;
   height: 46px;
+  color: #fff;
+  margin-top: 20px;
+}
+.Button--more {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
 }
 .Button:hover,
 .Button:active,
@@ -3028,6 +3072,16 @@ textarea:hover {
 .Button--orange:active,
 .Button--orange:focus {
   background-color: #fc5c00;
+  color: #fff;
+}
+.Button--green {
+  background-color: #30bd26;
+  border-bottom: 5px solid #22841b;
+}
+.Button--green:hover,
+.Button--green:active,
+.Button--green:focus {
+  background-color: #29a120;
   color: #fff;
 }
 ul.navbar-nav > li > a:hover {

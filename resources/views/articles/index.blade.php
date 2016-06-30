@@ -10,16 +10,18 @@
                 <div class="col-md-7">
                     <img class="img-responsive" src="{{ $article->image }}" alt="">
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-5" style="position: static">
                     <h3>{{ $article->title }}</h3>
                     <p>{{ $article->short_text }}</p>
-                    <a class="btn Button" href="/articles/{{ $article->id }}">подробнее<span class="glyphicon glyphicon-chevron-right"></span></a>
+                    <a class="btn Button Button--more" href="/articles/{{ $article->id }}">подробнее<span class="glyphicon glyphicon-chevron-right"></span></a>
                 </div>
             </div>
             @endforeach
+            <div class="pagination-wrapper">
             @if (!Request::is('articles/search*')) 
                {!! $articles->render() !!}
             @endif
+            </div>
         @endif
     </div>
 </div>

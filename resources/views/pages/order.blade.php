@@ -39,8 +39,8 @@
                     <div class="form-level">
                         <textarea name="question" id="question" rows="5" style="width: 100%" class="textarea-block"></textarea>
                     </div>
-                    <div class="col-md-12 text-center">
-                        <button type="submit" class="btn btn-main featured">Отправить</button>
+                    <div class="col-md-12r" style="padding: 0">
+                        <button type="submit" class="btn Button pull-right">Отправить</button>
                     </div>
                 </form>
             </div>

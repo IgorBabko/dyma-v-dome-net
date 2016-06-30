@@ -18,9 +18,11 @@
                 @endforeach
             </div>
             @endforeach
+            <div class="pagination-wrapper">
             @if (!Request::is('photos/search*'))
                 {!! $photos->render() !!}
             @endif
+            </div>
         @endif
     </div>
 </div>

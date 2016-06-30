@@ -3,7 +3,7 @@
 @section('content')
 <section class="gray-section">
     <div class="container">
-        <div class="row">
+        <div class="row photo-expanded">
             <div class="col-xs-12">
                 <h3>{{ $photo->title }}</h3>
                 <img class="img-responsive" src="{{ $photo->image }}" alt="">

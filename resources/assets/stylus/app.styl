@@ -147,16 +147,48 @@ body.admin
 .order,
 .photo-description,
 .admin .article
+    position: relative
     margin: 0 0 50px 0
     clear: fix
-    border: 1px solid #E0E0E0
-    padding: 20px
+    //border: 1px solid #E0E0E0
+    padding: 40px
     background: #F3F3F3
     box-shadow: 0 2px 1px #b7b7b7
+
+    img
+        box-shadow: 0 0 5px 1px #868686
 
 .photo-description
     min-height: 250px
     position: relative
+    padding: 20px
+
+.photo-expanded,
+.article-expanded
+    background: #F3F3F3
+    box-shadow: 0 2px 1px #b7b7b7
+    margin-top: 20px
+    padding: 0 40px 40px
+
+    img
+        box-shadow: 0 0 5px 1px #868686
+
+.main-block
+    background: #F3F3F3
+    box-shadow: 0 2px 1px #b7b7b7
+    margin-top: 20px
+    background: white
+    padding: 50px
+
+    h1
+        text-align: left
+
+    .row
+        margin: 0
+
+    p
+        font-size: 18px !important
+
 
 .admin .article
     min-height: 550px
@@ -243,7 +275,7 @@ body.admin
     background: #dc4545 //#23c9ee //#6f6356 //#EE8B24
     font-weight: bold
     padding: 0
-    box-shadow: 0 2px 2px 0px #353535
+    box-shadow: 0 1px 1px 0px #212121
 
     span
         margin: 0 10px
@@ -282,7 +314,7 @@ section
     display: flex
     justify-content: center
     align-items: center
-    padding: 150px 0
+    padding: 150px 0 70px 
     min-height: calc(100vh - 177px) !important
 
 .section-main

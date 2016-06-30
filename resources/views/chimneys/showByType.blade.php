@@ -124,7 +124,7 @@
                     </div>
                 </div>
                 <div class="col-xs-12">
-                    <a href="#" class="pull-right Button">Подробнее</a>
+                    <a class="btn Button Button--more" href="/chimneys/{{ $chimney->id }}">подробнее<span class="glyphicon glyphicon-chevron-right"></span></a>
                 </div>
             </div>
             @endforeach
