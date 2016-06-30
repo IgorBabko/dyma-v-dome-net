@@ -3,7 +3,9 @@
     <h1>фотографии</h1>
     <div class="divider"></div>
     <div class="container">
-        @include ('partials.search-results', ['url' => 'photos/search*'])
+        @if ( Request::is('photos/search*') )
+            @include ('partials.search-results', ['returnUrl' => '/photos'])
+        @endif
         @if (count($photos))
             @foreach ($photos->chunk(3) as $photosRow)
             <div class="row">

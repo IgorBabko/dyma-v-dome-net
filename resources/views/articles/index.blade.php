@@ -3,7 +3,9 @@
     <h1>статьи</h1>
     <div class="divider"></div>
     <div class="container">
-        @include ('partials.search-results', ['url' => 'articles/search*'])
+        @if ( Request::is('articles/search*') )
+            @include ('partials.search-results', ['returnUrl' => '/articles'])
+        @endif
         @if (count($articles))
             @foreach ($articles as $article)
             <div class="row article">

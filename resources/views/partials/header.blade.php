@@ -21,15 +21,15 @@
                 <div class="col-sm-12 col-md-6">
                 <a class="btn btn-success btn-lg pull-left order-header-button" href="/order" role="button">заявка</a>
                 @if ( request::is('chimneys*') )
-                    @include ('partials.search', ['action' => '/chimneys/search'])
+                    @include ('partials.search', ['action' => '/chimneys/search', 'placeholder' => 'найти дымоход'])
                 @elseif ( Request::is('briquettes*'))
-                    @include ('partials.search', ['action' => '/briquettes/search'])
+                    @include ('partials.search', ['action' => '/briquettes/search', 'placeholder' => 'найти брикет'])
                 @elseif ( Request::is('boilers*'))
-                    @include ('partials.search', ['action' => '/boilers/search'])
+                    @include ('partials.search', ['action' => '/boilers/search', 'placeholder' => 'найти котел'])
                 @elseif ( Request::is('articles*'))
-                    @include ('partials.search', ['action' => '/articles/search'])
+                    @include ('partials.search', ['action' => '/articles/search', 'placeholder' => 'найти сатью'])
                 @elseif ( Request::is('photos*'))
-                    @include ('partials.search', ['action' => '/photos/search'])
+                    @include ('partials.search', ['action' => '/photos/search', 'placeholder' => 'найти фото'])
                 @endif
                 </div>
                 <div class="col-sm-12 col-md-6">

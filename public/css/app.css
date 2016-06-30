@@ -3061,10 +3061,11 @@ textarea:hover {
   background-color: #dc4545;
   border-radius: 0;
   padding: 10px;
-  border-bottom: 5px solid #aa2020;
   height: 46px;
   color: #fff;
   margin-top: 20px;
+  box-shadow: 0 1px 1px 0px #212121;
+  font-size: 18px;
 }
 .Button__more {
   float: right;
@@ -3091,7 +3092,6 @@ textarea:hover {
 }
 .Button--green {
   background-color: #30bd26;
-  border-bottom: 5px solid #22841b;
 }
 .Button--green:hover,
 .Button--green:active,
