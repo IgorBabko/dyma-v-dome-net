@@ -130,9 +130,11 @@
                 </div>
             </div>
             @endforeach
+            <div class="pagination-wrapper">
             @if (!Request::is('boilers/search*')) 
                {!! $boilers->render() !!}
             @endif
+            </div>
         @endif
     </div>
 </div>

@@ -130,9 +130,11 @@
                 </div>
             </div>
             @endforeach
+            <div class="pagination-wrapper">
             @if (!Request::is('briquettes/search*')) 
                {!! $briquettes->render() !!}
             @endif
+            </div>
         @endif
     </div>
 </div>

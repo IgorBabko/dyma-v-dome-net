@@ -1,45 +1,44 @@
-@extends ('admin.layout') @section ('content')
+@extends('admin.layout') @section('content')
 <div class="page">
+    <h1>{{ Request::input('queryString') ? 'Результаты поиска' : 'Статьи' }}</h1>
+    <div class="divider"></div>
     <div class="container">
-        <h1>Статьи</h1>
-        <div class="divider"></div>
         <div class="row">
-            @include ('partials.search-results', ['url' => 'admin/articles/search*'])
+            @if ( Request::is('admin/articles/search*') )
+                @include ('partials.search-results', ['returnUrl' => '/admin/articles'])
+            @endif
             <div class="col-xs-12">
                 @include ('partials.flash')
             </div>
             <div class="col-xs-12" style="text-align: center; float: none">
-                <a href="/admin/articles/create" style="margin-top: 20px" class="btn btn-primary">Добавить статью</a>
+                <a href="/admin/articles/create" style="margin-top: 20px" class="btn Button Button__add-resource Button--green">Добавить статью</a>
             </div>
         </div>
-        <div class="row">
         @if (count($articles))
-        @foreach ($articles as $article)
-            <div class="col-xs-12 col-md-6">
-                <div class="row article">
-                    <div class="col-xs-12">
-                        <a href="#">
-                            <img class="img-responsive" src="{{ $article->image }}" alt="">
-                        </a>
-                    </div>
-                    <div class="col-xs-12 static">
-                        <h3>{{ $article->title }}</h3>
-                        <p>{{ $article->short_text }}</p>
-                        <div class="buttons">
-                            <a href="/admin/articles/{{ $article->id }}/edit" class="btn btn-info pull-right">Редактировать</a>
-                            <form action="/admin/articles/{{ $article->id }}" method="POST">
-                                {{ csrf_field() }}
-                                {{ method_field('DELETE') }}
-                                <button class="btn btn-danger pull-right" style="margin-right: 5px">Удалить</a>
-                            </form>
-                        </div>
+            @foreach ($articles as $article)
+            <div class="row article">
+                <div class="col-md-7">
+                    <img class="img-responsive" src="{{ $article->image }}" alt="">
+                </div>
+                <div class="col-md-5" style="position: static">
+                    <h3>{{ $article->title }}</h3>
+                    <p>{{ $article->short_text }}</p>
+                    <div class="Button__group--positioned" style="right: 40px; bottom: 40px">
+                        <form action="/admin/articles/{{ $article->id }}" style="display: inline-block" method="POST">
+                            {{ csrf_field() }}
+                            {{ method_field('DELETE') }}
+                            <button class="btn Button pull-right" style="margin-right: 5px">Удалить</button>
+                        </form>
+                        <a href="/admin/articles/{{ $article->id }}/edit" class="btn Button Button--blue pull-right">Редактировать</a>
                     </div>
                 </div>
             </div>
             @endforeach
-            @if (!Request::is('admin/articles/search*')) 
+            <div class="pagination-wrapper">
+            @if (!Request::is('articles/search*')) 
                {!! $articles->render() !!}
             @endif
+            </div>
         @endif
     </div>
 </div>

@@ -3,10 +3,12 @@
 @section ('content')
 <div class="page">
     <div class="container">
-        <h1>Заявки</h1>
+        <h1>{{ Request::input('queryString') ? 'Результаты поиска' : 'Заявки' }}</h1>
         <div class="divider"></div>
         <div class="row">
-            @include ('partials.search-results', ['url' => 'admin/orders/search*'])
+            @if ( Request::is('admin/orders/search*') )
+                @include ('partials.search-results', ['returnUrl' => '/admin/orders'])
+            @endif
             <div class="col-xs-12">
                 @include ('partials.flash')
             </div>
@@ -31,14 +33,17 @@
                     <form action="/admin/orders/{{ $order->id }}" method="POST">
                         {{ csrf_field() }}
                         {{ method_field('DELETE') }}
-                        <button class="btn btn-danger pull-right" style="margin-right: 5px">Удалить</a>
+                        <a href="/admin/orders/{{ $order->id }}" class="btn Button Button--blue pull-right">Просмотреть</a>
+                        <button class="btn Button pull-right" style="margin-right: 5px">Удалить</a>
                     </form>
                 </div>
             </div>
             @endforeach
+            <div class="pagination-wrapper">
             @if (!Request::is('admin/orders/search*')) 
                {!! $orders->render() !!}
             @endif
+            </div>
         @endif
     </div>
 </div>

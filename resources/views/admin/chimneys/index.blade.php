@@ -3,15 +3,17 @@
 @section ('content')
 <div class="page">
     <div class="container">
-        <h1>Каталог дымоходов</h1>
+        <h1>{{ Request::input('queryString') ? 'Результаты поиска' : 'Каталог дымоходов' }}</h1>
         <div class="divider"></div>
         <div class="row">
-            @include ('partials.search-results', ['url' => 'admin/chimneys/search*'])
+            @if ( Request::is('admin/chimneys/search*') )
+                @include ('partials.search-results', ['returnUrl' => '/admin/chimneys'])
+            @endif
             <div class="col-xs-12">
                 @include ('partials.flash')
             </div>
             <div class="col-xs-12" style="text-align: center; float: none">
-                <a href="/admin/chimneys/create" style="margin-top: 20px" class="btn btn-primary">Добавить дымоход</a>
+                <a href="/admin/chimneys/create" class="btn Button Button__add-resource Button--green">Добавить дымоход</a>
             </div>
             @if (count($chimneys))
                 @foreach ($chimneys as $chimney)
@@ -132,18 +134,20 @@
                         </div>
                     </div>
                     <div class="col-xs-12">
-                        <a href="/admin/chimneys/{{ $chimney->id }}/edit" class="btn btn-info pull-right">Редактировать</a>
+                        <a href="/admin/chimneys/{{ $chimney->id }}/edit" class="btn Button Button--blue pull-right">Редактировать</a>
                         <form action="/admin/chimneys/{{ $chimney->id }}" method="POST">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
-                            <button class="btn btn-danger pull-right" style="margin-right: 5px">Удалить</a>
+                            <button class="btn Button pull-right" style="margin-right: 5px">Удалить</a>
                         </form>
                     </div>
                 </div>
             @endforeach
+            <div class="pagination-wrapper">
             @if (!Request::is('admin/chimneys/search*')) 
                {!! $chimneys->render() !!}
             @endif
+            </div>
         @endif
     </div>
 </div>

@@ -1,6 +1,6 @@
 @extends('layout') @section('content')
 <div class="page">
-    <h1>статьи</h1>
+    <h1>{{ Request::input('queryString') ? 'Результаты поиска' : 'Статьи' }}</h1>
     <div class="divider"></div>
     <div class="container">
         @if ( Request::is('articles/search*') )

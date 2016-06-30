@@ -28,7 +28,7 @@
                         <input type="file" id="image" name="image">
                         <img src="{{ $briquette->image }}" class="thumb">
                     </div>
-                    <button type="submit" class="btn btn-success" style="float: right">Редактировать</button>
+                    <button type="submit" class="btn Button Button--green" style="float: right">Сохранить</button>
                 </form>
             </div>
         </div>

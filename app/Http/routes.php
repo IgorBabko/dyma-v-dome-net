@@ -94,5 +94,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
 
     Route::get('/orders', 'OrdersController@index');
     Route::get('/orders/search', 'OrdersController@search');
+    Route::get('/orders/{order}', 'OrdersController@show');
     Route::delete('/orders/{id}', 'OrdersController@destroy');
 });

@@ -7,7 +7,12 @@
     color: white
     margin-top: 20px
     box-shadow: 0 1px 1px 0px #212121
-    font-size: 18px
+    font-size: 16px
+
+    &__group--positioned
+        position: absolute
+        right: 20px
+        bottom: 20px
 
     &__more
         float: right
@@ -39,6 +44,20 @@
         &:active,
         &:focus
             background-color: darken(#30bd26, 15%)
+            color: white
+
+        //border-bottom: 5px solid darken(#30bd26, 30%)
+
+    &__add-resource
+        margin: 30px
+
+    &--blue
+        background-color: #446fce
+
+        &:hover,
+        &:active,
+        &:focus
+            background-color: darken(#446fce, 15%)
             color: white
 
         //border-bottom: 5px solid darken(#30bd26, 30%)

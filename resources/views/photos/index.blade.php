@@ -1,10 +1,10 @@
 @extends('layout') @section('content')
 <div class="page">
-    <h1>фотографии</h1>
+    <h1>{{ Request::input('queryString') ? 'Результаты поиска' : 'Фотографии' }}</h1>
     <div class="divider"></div>
     <div class="container">
-        @if ( Request::is('photos/search*') )
-            @include ('partials.search-results', ['returnUrl' => '/photos'])
+        @if ( Request::is('/admin/photos/search*') )
+            @include ('partials.search-results', ['returnUrl' => '/admin/photos'])
         @endif
         @if (count($photos))
             @foreach ($photos->chunk(3) as $photosRow)

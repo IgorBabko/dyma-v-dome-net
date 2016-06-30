@@ -16,17 +16,17 @@
             <div class="row">
                 <div class="col-sm-12 col-md-6">
                     @if ( Request::is('admin/chimneys*') )
-                        @include ('partials.search', ['action' => '/admin/chimneys/search'])
+                        @include ('partials.search', ['action' => '/admin/chimneys/search', 'placeholder' => 'найти дымоход'])
                     @elseif ( Request::is('admin/briquettes*'))
-                        @include ('partials.search', ['action' => '/admin/briquettes/search'])
+                        @include ('partials.search', ['action' => '/admin/briquettes/search', 'placeholder' => 'найти брикет'])
                     @elseif ( Request::is('admin/boilers*'))
-                        @include ('partials.search', ['action' => '/admin/boilers/search'])
+                        @include ('partials.search', ['action' => '/admin/boilers/search', 'placeholder' => 'найти котел'])
                     @elseif ( Request::is('admin/articles*'))
-                        @include ('partials.search', ['action' => '/admin/articles/search'])
+                        @include ('partials.search', ['action' => '/admin/articles/search', 'placeholder' => 'найти статю'])
                     @elseif ( Request::is('admin/photos*'))
-                        @include ('partials.search', ['action' => '/admin/photos/search'])
+                        @include ('partials.search', ['action' => '/admin/photos/search', 'placeholder' => 'найти фото'])
                     @elseif ( Request::is('admin/orders*'))
-                        @include ('partials.search', ['action' => '/admin/orders/search'])
+                        @include ('partials.search', ['action' => '/admin/orders/search', 'placeholder' => 'найти заявку'])
                     @endif
                 </div>
             </div>

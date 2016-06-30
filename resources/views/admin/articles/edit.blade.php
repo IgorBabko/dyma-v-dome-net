@@ -26,7 +26,7 @@
                         <input type="file" id="image" name="image">
                         <img src="{{ $article->image }}" class="thumb">
                     </div>
-                    <button type="submit" class="btn btn-success" style="float: right">Редактировать</button>
+                    <button type="submit" class="btn Button Button--green" style="float: right">Редактировать</button>
                 </form>
             </div>
         </div>

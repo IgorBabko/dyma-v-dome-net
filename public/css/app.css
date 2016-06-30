@@ -209,7 +209,6 @@ body.admin {
   background: #f3f3f3;
   box-shadow: 0 2px 1px #b7b7b7;
   margin: 20px 0 50px 0;
-  background: #fff;
   padding: 50px;
 }
 .main-block h1 {
@@ -220,16 +219,6 @@ body.admin {
 }
 .main-block p {
   font-size: 18px !important;
-}
-.admin .article {
-  min-height: 550px;
-  position: relative;
-}
-.admin .article .buttons {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 100%;
 }
 .photo {
   min-height: 296px;
@@ -3065,7 +3054,12 @@ textarea:hover {
   color: #fff;
   margin-top: 20px;
   box-shadow: 0 1px 1px 0px #212121;
-  font-size: 18px;
+  font-size: 16px;
+}
+.Button__group--positioned {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
 }
 .Button__more {
   float: right;
@@ -3097,6 +3091,18 @@ textarea:hover {
 .Button--green:active,
 .Button--green:focus {
   background-color: #29a120;
+  color: #fff;
+}
+.Button__add-resource {
+  margin: 30px;
+}
+.Button--blue {
+  background-color: #446fce;
+}
+.Button--blue:hover,
+.Button--blue:active,
+.Button--blue:focus {
+  background-color: #305bb9;
   color: #fff;
 }
 ul.navbar-nav > li > a:hover {

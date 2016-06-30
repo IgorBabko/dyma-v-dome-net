@@ -29,7 +29,7 @@
                         <label for="image">Добавить изображение</label>
                         <input type="file" id="image" name="image">
                     </div>
-                    <button type="submit" class="btn btn-success" style="float: right">Добавить</button>
+                    <button type="submit" class="btn Button Button--green" style="float: right">Добавить</button>
                 </form>
             </div>
         </div>
