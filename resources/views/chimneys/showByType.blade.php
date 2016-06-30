@@ -4,7 +4,9 @@
     <div class="container">
         <h1>{{ isset($type) ? $type : 'Результаты поиска' }}</h1>
         <div class="divider"></div>
-        @include ('partials.search-results', ['url' => 'chimneys/search*'])
+        @if ( Request::is('chimneys/search*') )
+            @include ('partials.search-results', ['returnUrl' => '/chimneys/catalog'])
+        @endif
         @if (count($chimneys))
             @foreach ($chimneys as $chimney)
             <div class="chimney">

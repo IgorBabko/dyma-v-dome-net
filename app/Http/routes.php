@@ -33,7 +33,7 @@ Route::get('/boilers', 'BoilersController@index');
 Route::get('/boilers/catalog', 'BoilersController@catalog'); 
 Route::get('/boilers/search', 'BoilersController@search'); 
 //Route::get('/boilers/{type}', 'BoilersController@showByType'); 
-Route::get('/boilers/{boiler}', 'ArticlesController@show'); 
+Route::get('/boilers/{boiler}', 'BoilersController@show'); 
 
 // articles
 Route::get('/articles', 'ArticlesController@index');

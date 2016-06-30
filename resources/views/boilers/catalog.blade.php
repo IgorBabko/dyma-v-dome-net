@@ -4,7 +4,9 @@
     <div class="container">
         <h1>{{ Request::input('queryString') ? 'Результаты поиска' : 'Каталог котлов' }}</h1>
         <div class="divider"></div>
-        @include ('partials.search-results', ['url' => 'boilers/search*'])
+        @if ( Request::is('boilers/search*') )
+            @include ('partials.search-results', ['returnUrl' => '/boilers/catalog'])
+        @endif
         @if (count($boilers))
             @foreach ($boilers as $boiler)
             <div class="boiler">
