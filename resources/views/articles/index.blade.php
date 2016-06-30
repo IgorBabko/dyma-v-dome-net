@@ -13,7 +13,7 @@
                 <div class="col-md-5" style="position: static">
                     <h3>{{ $article->title }}</h3>
                     <p>{{ $article->short_text }}</p>
-                    <a class="btn Button Button--more" href="/articles/{{ $article->id }}">подробнее<span class="glyphicon glyphicon-chevron-right"></span></a>
+                    <a class="btn Button Button__more--positioned" href="/articles/{{ $article->id }}">подробнее<span class="glyphicon glyphicon-chevron-right"></span></a>
                 </div>
             </div>
             @endforeach

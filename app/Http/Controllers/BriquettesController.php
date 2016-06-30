@@ -24,6 +24,11 @@ class BriquettesController extends Controller
         return view('briquettes.catalog', compact('briquettes'));
     }
 
+    public function show(Briquette $briquette)
+    {
+        return view('briquettes.show', compact('type', 'briquette'));
+    }
+
 /*    public function showByType($type)
     {
         $chimneys = Chimney::whereType($type)->orderBy('created_at', 'desc')->paginate(10);
@@ -42,6 +47,6 @@ class BriquettesController extends Controller
         $briquettes = Briquette::search($request->queryString)->get();
         $searchCount    = count($briquettes);
 
-        return view('briquettes.index', compact('briquettes', 'searchCount'));
+        return view('briquettes.catalog', compact('briquettes', 'searchCount'));
     }
 }

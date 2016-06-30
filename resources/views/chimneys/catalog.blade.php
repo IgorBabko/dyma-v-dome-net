@@ -13,7 +13,7 @@
                         <div class="caption">
                             <h3 style="font-size: 24px">Одностенные</h3>
                             <p>
-                                <a href="/chimneys/одностенный" class="Button">Посмотреть</a> 
+                                <a href="/chimneys/catalog/одностенный" class="Button">Посмотреть</a> 
                                 <a href="/prices/chimneys/одностенный" class="Button Button--orange">Прайс-лист</a> 
                             </p>
                         </div>
@@ -26,7 +26,7 @@
                         <div class="caption">
                             <h3 style="font-size: 24px">Утепленные</h3>
                             <p>
-                                <a href="/chimneys/утепленный" class="Button">Посмотреть</a> 
+                                <a href="/chimneys/catalog/утепленный" class="Button">Посмотреть</a> 
                                 <a href="/prices/chimneys/утепленный" class="Button Button--orange">Прайс-лист</a> 
                             </p>
                         </div>
@@ -39,7 +39,7 @@
                         <div class="caption">
                             <h3 style="font-size: 24px">Алюком</h3>
                             <p>
-                                <a href="/chimneys/алюком" class="Button Button">Посмотреть</a> 
+                                <a href="/chimneys/catalog/алюком" class="Button Button">Посмотреть</a> 
                                 <a href="/prices/chimneys/алюком" class="Button Button--orange">Прайс-лист</a> 
                             </p>
                         </div>
@@ -52,7 +52,7 @@
                         <div class="caption">
                             <h3 style="font-size: 24px">Керамические</h3>
                             <p>
-                                <a href="/chimneys/керамический" class="Button">Посмотреть</a> 
+                                <a href="/chimneys/catalog/керамический" class="Button">Посмотреть</a> 
                                 <a href="/prices/chimneys/керамический" class="Button Button--orange">Прайс-лист</a> 
                             </p>
                         </div>

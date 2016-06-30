@@ -2,7 +2,7 @@
 
 <div class="page">
     <div class="container">
-        <h1>Одностенные дымоходы</h1>
+        <h1>{{ isset($type) ? $type : 'Результаты поиска' }}</h1>
         <div class="divider"></div>
         @include ('partials.search-results', ['url' => 'chimneys/search*'])
         @if (count($chimneys))
@@ -124,7 +124,7 @@
                     </div>
                 </div>
                 <div class="col-xs-12">
-                    <a class="btn Button Button--more" href="/chimneys/{{ $chimney->id }}">подробнее<span class="glyphicon glyphicon-chevron-right"></span></a>
+                    <a class="btn Button Button__more" href="/chimneys/catalog/{{ $type }}/{{ $chimney->id }}">подробнее <span class="glyphicon glyphicon-chevron-right"></span></a>
                 </div>
             </div>
             @endforeach

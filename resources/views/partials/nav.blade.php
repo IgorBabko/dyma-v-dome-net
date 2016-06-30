@@ -7,15 +7,15 @@
             </li>
             <li class="{{ Request::is('chimneys/*') ? 'active' : '' }}"><a href="/chimneys/catalog" class="">каталог</a> 
             </li>
-            @elseif (Request::is('briquettes*'))
+            @elseif ( Session::get('type') == 'briquettes' )
             <li class="{{ Request::is('briquettes') ? 'active' : '' }}"><a href="/briquettes" class="">брикеты</a> 
             </li>
-            <li class="{{ Request::is('briquettes/catalog') ? 'active' : '' }}"><a href="/chimneys/catalog" class="">каталог</a> 
+            <li class="{{ Request::is('briquettes/*') ? 'active' : '' }}"><a href="/briquettes/catalog" class="">каталог</a> 
             </li>
             @else
             <li class="{{ Request::is('boilers') ? 'active' : '' }}"><a href="/boilers" class="">котлы</a> 
             </li>
-            <li class="{{ Request::is('boilers/catalog') ? 'active' : '' }}"><a href="/boilers/catalog" class="">каталог</a> 
+            <li class="{{ Request::is('boilers/*') ? 'active' : '' }}"><a href="/boilers/catalog" class="">каталог</a> 
             </li>
             @endif
             <li class="{{ Request::is('articles*') ? 'active' : '' }}"><a href="/articles" class="">статьи</a> 

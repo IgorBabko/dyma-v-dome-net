@@ -16,21 +16,24 @@ Route::get('/contact', 'PagesController@contact');
 
 // chimneys
 Route::get('/chimneys', 'ChimneysController@index'); 
-Route::get('/chimneys/catalog', 'ChimneysController@catalog'); 
 Route::get('/chimneys/search', 'ChimneysController@search'); 
-Route::get('/chimneys/{type}', 'ChimneysController@showByType'); 
+Route::get('/chimneys/catalog', 'ChimneysController@catalog'); 
+Route::get('/chimneys/catalog/{type}', 'ChimneysController@showByType'); 
+Route::get('/chimneys/catalog/{type}/{chimney}', 'ChimneysController@show'); 
 
 // briquettes
 Route::get('/briquettes', 'BriquettesController@index'); 
 Route::get('/briquettes/catalog', 'BriquettesController@catalog'); 
 Route::get('/briquettes/search', 'BriquettesController@search'); 
 //Route::get('/briquettes/{type}', 'BriquettesController@showByType'); 
+Route::get('/briquettes/{briquette}', 'BriquettesController@show'); 
 
 // boilers
 Route::get('/boilers', 'BoilersController@index'); 
 Route::get('/boilers/catalog', 'BoilersController@catalog'); 
 Route::get('/boilers/search', 'BoilersController@search'); 
 //Route::get('/boilers/{type}', 'BoilersController@showByType'); 
+Route::get('/boilers/{boiler}', 'ArticlesController@show'); 
 
 // articles
 Route::get('/articles', 'ArticlesController@index');

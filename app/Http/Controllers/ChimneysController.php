@@ -26,7 +26,12 @@ class ChimneysController extends Controller
     {
         $chimneys = Chimney::whereType($type)->orderBy('created_at', 'desc')->paginate(10);
 
-        return view('chimneys.showByType', compact('chimneys'));
+        return view('chimneys.showByType', compact('type', 'chimneys'));
+    }
+
+    public function show($type, Chimney $chimney)
+    {
+        return view('chimneys.show', compact('type', 'chimney'));
     }
 
     public function prices($type)

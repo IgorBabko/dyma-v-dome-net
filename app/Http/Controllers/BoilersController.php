@@ -24,6 +24,11 @@ class BoilersController extends Controller
         return view('boilers.catalog', compact('boilers'));
     }
 
+    public function show(Boiler $boiler)
+    {
+        return view('boilers.show', compact('type', 'boiler'));
+    }
+
  /*   public function showByType($type)
     {
         $boilers = Boiler::whereType($type)->orderBy('created_at', 'desc')->paginate(10);
@@ -42,6 +47,6 @@ class BoilersController extends Controller
         $boilers = Boiler::search($request->queryString)->get();
         $searchCount    = count($boilers);
 
-        return view('boilers.index', compact('boilers', 'searchCount'));
+        return view('boilers.catalog', compact('boilers', 'searchCount'));
     }
 }

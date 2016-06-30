@@ -12,7 +12,7 @@
                     <img class="img-responsive" src="{{ $photo->image }}" alt="">
                     <div class="photo-description">
                         <p>{!! $photo->description !!}</p>
-                        <a href="/photos/{{ $photo->id }}" style="display: inline-block; position: absolute; bottom: 20px; right: 20px" class="Button">подробнее</a>
+                        <a href="/photos/{{ $photo->id }}" class="btn Button Button__more--positioned" style="right: 20px; bottom: 20px">подробнее</a> 
                     </div>
                 </div>
                 @endforeach

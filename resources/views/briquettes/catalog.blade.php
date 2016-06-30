@@ -2,7 +2,7 @@
 
 <div class="page">
     <div class="container">
-        <h1>Каталог брикетов</h1>
+        <h1>{{ Request::input('queryString') ? 'Результаты поиска' : 'Каталог брикетов' }}</h1>
         <div class="divider"></div>
         @include ('partials.search-results', ['url' => 'briquettes/search*'])
         @if (count($briquettes))
@@ -124,7 +124,7 @@
                     </div>
                 </div>
                 <div class="col-xs-12">
-                    <a href="#" class="btn btn-primary pull-right">Подробнее</a>
+                    <a href="/briquettes/{{ $briquette->id }}" class="btn Button pull-right">Подробнее <span class="glyphicon glyphicon-chevron-right"></span></a>
                 </div>
             </div>
             @endforeach

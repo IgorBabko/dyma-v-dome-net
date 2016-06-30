@@ -2,12 +2,12 @@ h3
     text-transform: none !important
 
 .search-results
-    background: #23c9ee
+    background: #dc4545 //#23c9ee
     font-size: 18px
     padding: 20px
     color: white
     display: inline-block
-    box-shadow: 3px 3px 5px 0 #8a8a8a
+    box-shadow: 1px 1px 1px 0px #212121
 
 .query-string
     color: yellow
@@ -130,6 +130,7 @@ img
 .page
     background: #e6e6e6 // #f3f3f3
     padding: 150px 0 50px
+    min-height: calc(100vh - 76px)
 
 body.admin
     background: #2c2c2c
@@ -164,7 +165,8 @@ body.admin
     padding: 20px
 
 .photo-expanded,
-.article-expanded
+.article-expanded,
+.resource-expanded
     background: #F3F3F3
     box-shadow: 0 2px 1px #b7b7b7
     margin-top: 20px
@@ -176,7 +178,7 @@ body.admin
 .main-block
     background: #F3F3F3
     box-shadow: 0 2px 1px #b7b7b7
-    margin-top: 20px
+    margin: 20px 0 50px 0
     background: white
     padding: 50px
 
@@ -484,12 +486,24 @@ tr td:first-child
 .single-feature
     background: #eee
     transition: none
+    border-radius: 0
 
     &:after
         transition: none
 
+.nav-tabs
+    a
+        padding: 0 !important
+
 .catalog-img
     max-height: 240px !important
+
+.carousel-block
+    margin-top: 50px !important
+
+.glyphicon-chevron-left,
+.glyphicon-chevron-right
+    font-size: 12px
 
 .single-feature:hover
     background: #EE8B24

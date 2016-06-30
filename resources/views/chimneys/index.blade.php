@@ -2,8 +2,8 @@
 <div class="page">
     <div class="container">
         <div class="main-block">
-            <div class="row" style="margin-bottom: 100px">
-                <h1>О нас</h1>
+            <div class="row">
+                <h1>Дымоходы</h1>
                 <p>
                     Наша компания занимается изготовлением, продажей, а также монтажом дымоходов, газоходных
                     и дымоходных систем и других элементов дымоходов. Мы производим
@@ -28,7 +28,7 @@
                 </p>
             </div>
 
-            <div class="row">
+            <div class="row carousel-block">
                 <div class="slick-carousel">
                     <div>
                         <img src="/images/chimneys/one-wall/leyka.jpg">
