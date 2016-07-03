@@ -14,7 +14,7 @@
     <div class="top-line" id="chimneys">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 col-md-5">
+                <div class="col-sm-12 col-md-5" style="padding-right: 0">
                     <a class="btn btn-success btn-lg pull-left order-header-button" href="/order" role="button">заявка</a>
                     @if ( request::is('chimneys*') )
                         @include ('partials.search', ['action' => '/chimneys/search', 'placeholder' => 'найти дымоход'])
