@@ -24,7 +24,7 @@
                 </p>
                 <p>
                     <a class="btn Button btn-lg pull-right" href="/chimneys/catalog">посмотреть каталог</a>
-                    <a class="btn Button Button--green btn-lg pull-right" href="/order" style="margin-right: 20px">оформить заявку</a>
+                    <a class="btn Button Button--green btn-lg pull-right" href="/pages/order" style="margin-right: 20px">оформить заявку</a>
                 </p>
             </div>
 

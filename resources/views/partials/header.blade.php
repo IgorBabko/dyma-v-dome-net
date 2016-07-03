@@ -11,7 +11,7 @@
         </div>
         @include ('partials.nav')
     </div>
-    <div class="top-line" id="chimneys">
+    <div class="top-line">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-5" style="padding-right: 0">
@@ -32,7 +32,7 @@
                     <div class="contacts">
                         <span><i class="fa fa-phone" aria-hidden="true"></i> (095) 57-57-677</span>
                         <span><i class="fa fa-phone" aria-hidden="true"></i> (097) 87-161-97</span>
-                        <span><a href="/contact" style="color: #fffbc7"><i class="fa fa-envelope" aria-hidden="true"></i> i.i.babko@gmail.com</a></span>
+                        <span><a href="/contact" style="color: #e6e6e6"><i class="fa fa-envelope" aria-hidden="true"></i> i.i.babko@gmail.com</a></span>
                     </div>
                 </div>
                 <!--                <div class="col-sm-12 col-md-6">
