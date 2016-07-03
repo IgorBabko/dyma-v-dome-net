@@ -1,6 +1,10 @@
 h3 {
   text-transform: none !important;
 }
+.logo {
+  width: 32px;
+  margin: 0 7px 7px 0;
+}
 .reset-search-link {
   margin-top: 30px;
   color: #8e8e8e;
@@ -38,16 +42,22 @@ body {
 .description {
   font-size: 18px;
 }
+.search-form {
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .search-form {
+    text-align: center;
+  }
+}
 .order-header-button {
-  margin: 3px;
+  margin-top: 10px;
   border-radius: 0 !important;
   background: #35d22a;
   border: none;
   height: 32px;
   padding: 3px 10px;
-  margin-top: 9px;
   box-shadow: 0 0 3px 0px #222;
-  margin: 10px 0;
 }
 .order-header-button:hover {
   background: #30bd26;
@@ -102,6 +112,12 @@ img {
 .contacts {
   margin: 15px 0;
   color: #fffbc7;
+}
+@media screen and (max-width: 992px) {
+  .contacts {
+    margin: 5px 0;
+    text-align: center;
+  }
 }
 .contacts-small-screen {
   display: none;
@@ -274,7 +290,7 @@ body.admin {
   border: none;
   height: 32px;
   margin: 10px 0;
-  width: 300px;
+  width: 265px;
   color: #000;
   font-size: 16px;
   font-weight: normal;
@@ -322,7 +338,6 @@ body.admin {
   max-height: 300px;
 }
 .navbar-toggle {
-  background: #23c9ee;
   margin-top: 15px;
 }
 input:hover,
@@ -2739,7 +2754,7 @@ ul.navbar-nav > li > a:hover,
   background: #000;
 }
 .navbar-toggle {
-  background: #ccc;
+  background: #dc4545;
 }
 .navbar-brand span {
   color: #000;

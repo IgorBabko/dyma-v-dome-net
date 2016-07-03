@@ -61,8 +61,9 @@ $factory->define(DymaVDomeNet\Article::class, function (Faker\Generator $faker) 
 
 $factory->define(DymaVDomeNet\Photo::class, function (Faker\Generator $faker) {
     return [
-        'title' => $faker->word(2),
+        'name' => $faker->word(2),
         'desc' => $faker->paragraph,
+        'content' => implode('<br><br>', $faker->paragraphs(rand(5, 7))),
         'image' => $faker->imageUrl($width = 600, $height = 300),
     ];
 });

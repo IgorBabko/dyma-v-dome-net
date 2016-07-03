@@ -13,6 +13,14 @@
 
 Route::get('/', 'PagesController@index'); 
 Route::get('/contact', 'PagesController@contact'); 
+Route::get('/faq', 'PagesController@faq'); 
+
+// order
+Route::get('/order', 'PagesController@order'); 
+Route::post('/order', 'PagesController@saveOrder'); 
+
+// pages
+Route::get('/pages/{name}', 'PagesController@show');
 
 // chimneys
 Route::get('/chimneys', 'ChimneysController@index'); 
@@ -49,16 +57,6 @@ Route::get('/photos/{photo}', 'PhotosController@show');
 // prices
 Route::get('/prices/{name}/{width}', 'PricesController@getPrice');
 
-// pages
-Route::get('/pages/{name}', 'PagesController@index');
-
-// footer links
-Route::get('/docs', 'PagesController@docs'); 
-Route::get('/faq', 'PagesController@faq'); 
-Route::get('/prices', 'PagesController@prices'); 
-Route::get('/partners', 'PagesController@partners'); 
-Route::get('/order', 'PagesController@order'); 
-Route::post('/order', 'PagesController@saveOrder'); 
 
 
 // admin
@@ -95,8 +93,8 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
         'parameters' => 'singular'
     ]);
 
-    Route::get('/orders', 'OrdersController@index');
     Route::get('/orders/search', 'OrdersController@search');
-    Route::get('/orders/{order}', 'OrdersController@show');
-    Route::delete('/orders/{id}', 'OrdersController@destroy');
+    Route::resource('orders', 'OrdersController', [
+        'parameters' => 'singular'
+    ]);
 });

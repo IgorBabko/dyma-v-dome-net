@@ -8,9 +8,14 @@ use DymaVDomeNet\Http\Requests;
 
 class PagesController extends Controller
 {
-    public function index(Page $page)
+    public function index()
     {
-        return view('pages.show', compact('page'));
+        return view('pages.main');
+    }
+
+    public function show(Page $page)
+    {
+        return view('pages.index', compact('page'));
     } 
 
     public function order()

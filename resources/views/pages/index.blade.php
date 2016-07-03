@@ -5,11 +5,11 @@
     <div class="container">
         <div class="row article-expanded">
             <div class="col-xs-12">
-                <h3>{{ $article->name }}</h3>
-                <img class="img-responsive" src="{{ $article->image }}" alt="">
+                <h3>{{ $page->name }}</h3>
+                <img class="img-responsive" src="{{ $page->image }}" alt="">
             </div>
             <div class="col-xs-12">
-                <div class="article-text">{!! $article->content !!}</div>
+                <div class="article-text">{!! $page->content !!}</div>
                 <a class="btn Button" href="/articles">назад <span class="glyphicon glyphicon-chevron-left"></span></a>
             </div>
         </div>
