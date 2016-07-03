@@ -80,8 +80,8 @@ $factory->define(DymaVDomeNet\Order::class, function (Faker\Generator $faker) {
 
 $factory->define(DymaVDomeNet\Page::class, function (Faker\Generator $faker) {
     return [
-        'name' => $faker->name,
-        'desc' => $faker->phoneNumber,
-        'content' => $faker->phoneNumber,
+        'name' => $faker->word,
+        'desc' => $faker->paragraph,
+        'content' => implode('<br><br>', $faker->paragraphs(rand(5, 7))),
     ];
 });

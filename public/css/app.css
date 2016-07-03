@@ -58,6 +58,9 @@ body {
     text-align: right;
   }
 }
+.admin .search-form {
+  text-align: right;
+}
 .order-header-button {
   margin-top: 10px;
   border-radius: 0 !important;
@@ -114,7 +117,6 @@ img {
   padding-bottom: 0 !important;
 }
 .tab-content img {
-  width: 400px !important;
   margin: 0 auto;
 }
 .contacts {
@@ -170,9 +172,15 @@ img {
     padding-top: 200px !important;
   }
 }
+@media screen and (max-width: 768px) {
+  .admin .page,
+  .admin section {
+    padding-top: 0 !important;
+  }
+}
 .page {
   background: #e6e6e6;
-  padding: 150px 0 50px;
+  padding: 180px 0 50px;
   min-height: calc(100vh - 76px);
 }
 body.admin {
@@ -203,7 +211,7 @@ body.admin {
 .photo-description,
 .admin .article {
   position: relative;
-  margin: 0 0 50px 0;
+  margin: 0 10px 50px;
   padding: 40px;
   background: #f3f3f3;
   box-shadow: 0 2px 1px #b7b7b7;
@@ -222,13 +230,18 @@ body.admin {
   position: relative;
   padding: 20px;
 }
+@media screen and (max-width: 992px) {
+  .photo-description {
+    min-height: auto;
+  }
+}
 .photo-expanded,
 .article-expanded,
 .resource-expanded {
   background: #f3f3f3;
   box-shadow: 0 2px 1px #b7b7b7;
-  margin-top: 20px;
   padding: 0 40px 40px;
+  margin: 0 10px;
 }
 .photo-expanded img,
 .article-expanded img,
@@ -296,6 +309,15 @@ body.admin {
 }
 .tab-content {
   margin-top: 150px;
+}
+.tab-content .tab-pane.active img {
+  height: 300px;
+  width: auto;
+}
+@media screen and (max-width: 992px) {
+  .tab-content {
+    margin: 0;
+  }
 }
 .search i {
   color: #000;
@@ -372,7 +394,7 @@ section {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  padding: 150px 0 70px;
+  padding: 180px 0 70px;
   min-height: calc(100vh - 177px) !important;
 }
 .section-main {
@@ -3101,6 +3123,12 @@ textarea:hover {
   position: absolute;
   right: 40px;
   bottom: 40px;
+}
+@media screen and (max-width: 992px) {
+  .Button__more--positioned {
+    position: static;
+    float: right;
+  }
 }
 .Button:hover,
 .Button:active,

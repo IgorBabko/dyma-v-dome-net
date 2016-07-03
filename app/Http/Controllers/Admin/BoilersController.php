@@ -60,7 +60,7 @@ class BoilersController extends Controller
 
         $this->flashData($request, [
             'type' => 'success',
-            'message' => 'Дымоход успешно добавлен!'
+            'message' => 'Котел успешно добавлен!'
         ]);
 
         return redirect('/admin/boilers');
@@ -124,14 +124,15 @@ class BoilersController extends Controller
         }
 
         $boiler->name = $request->name;
-        $boiler->description = $request->description;
-        $boiler->type = $request->type;
+        $boiler->desc = $request->desc;
+        $boiler->content = $request->content;
+        //$boiler->type = $request->type;
 
         $boiler->save();
 
         $this->flashData($request, [
             'type' => 'success',
-            'message' => 'Дымоход успешно обновлен!'
+            'message' => 'Котел успешно обновлен!'
         ]);
 
         return redirect('/admin/boilers');
@@ -156,7 +157,7 @@ class BoilersController extends Controller
 
         $this->flashData($request, [
             'type' => 'success',
-            'message' => 'Дымоход успешно удален!',
+            'message' => 'Котел успешно удален!',
         ]);
 
         return back();

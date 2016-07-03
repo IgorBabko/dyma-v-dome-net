@@ -121,8 +121,9 @@ class ArticlesController extends Controller
             $this->saveImage($request, $article, true);
         }
 
-        $article->title = $request->title;
-        $article->text = $request->text;
+        $article->name = $request->name;
+        $article->desc = $request->desc;
+        $article->content = $request->content;
 
         $article->save();
 

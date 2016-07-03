@@ -60,7 +60,7 @@ class BriquettesController extends Controller
 
         $this->flashData($request, [
             'type' => 'success',
-            'message' => 'Дымоход успешно добавлен!'
+            'message' => 'Брикет успешно добавлен!'
         ]);
 
         return redirect('/admin/briquettes');
@@ -124,14 +124,15 @@ class BriquettesController extends Controller
         }
 
         $briquette->name = $request->name;
-        $briquette->description = $request->description;
-        $briquette->type = $request->type;
+        $briquette->desc = $request->desc;
+        $briquette->content = $request->content;
+        //$briquette->type = $request->type;
 
         $briquette->save();
 
         $this->flashData($request, [
             'type' => 'success',
-            'message' => 'Дымоход успешно обновлен!'
+            'message' => 'Брикет успешно обновлен!'
         ]);
 
         return redirect('/admin/briquettes');
@@ -156,7 +157,7 @@ class BriquettesController extends Controller
 
         $this->flashData($request, [
             'type' => 'success',
-            'message' => 'Дымоход успешно удален!',
+            'message' => 'Брикет успешно удален!',
         ]);
 
         return back();

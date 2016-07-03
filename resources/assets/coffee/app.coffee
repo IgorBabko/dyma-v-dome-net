@@ -5,9 +5,10 @@ $ ->
         autoplay: true
         autoplaySpeed: 2000
 
-    if ($('#text')).length 
-        CKEDITOR.config.height = 700 
-        CKEDITOR.replace('text')
+    if ($('#desc, #content')).length 
+        CKEDITOR.config.language = 'ru'
+        CKEDITOR.replace('desc', height: 300)
+        CKEDITOR.replace('content', height: 700)
 
 #    map = new GMaps(
 #        el: '#map'

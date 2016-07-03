@@ -124,7 +124,8 @@ class ChimneysController extends Controller
         }
 
         $chimney->name = $request->name;
-        $chimney->description = $request->description;
+        $chimney->desc = $request->desc;
+        $chimney->content = $request->content;
         $chimney->type = $request->type;
 
         $chimney->save();

@@ -57,6 +57,9 @@ body
     @media screen and (max-width: 992px)
         text-align: right
 
+.admin .search-form
+    text-align: right
+
 .order-header-button
     margin-top: 10px
     border-radius: 0 !important
@@ -112,8 +115,8 @@ img
     padding-top: 0 !important
     padding-bottom: 0 !important
 
+
 .tab-content img
-    width: 400px !important
     margin: 0 auto
 
 .contacts
@@ -160,9 +163,15 @@ section
     @media screen and (max-width: 768px)
         padding-top: 200px !important
 
+.admin
+    .page,
+    section
+        @media screen and (max-width: 768px)
+            padding-top: 0 !important
+
 .page
     background: #e6e6e6 // #f3f3f3
-    padding: 150px 0 50px
+    padding: 180px 0 50px
     min-height: calc(100vh - 76px)
 
 body.admin
@@ -182,7 +191,7 @@ body.admin
 .photo-description,
 .admin .article
     position: relative
-    margin: 0 0 50px 0
+    margin: 0 10px 50px
     clear: fix
     //border: 1px solid #E0E0E0
     padding: 40px
@@ -197,13 +206,16 @@ body.admin
     position: relative
     padding: 20px
 
+    @media screen and (max-width: 992px)
+        min-height: auto
+
 .photo-expanded,
 .article-expanded,
 .resource-expanded
     background: #F3F3F3
     box-shadow: 0 2px 1px #b7b7b7
-    margin-top: 20px
     padding: 0 40px 40px
+    margin: 0 10px
 
     img
         box-shadow: 0 0 5px 1px #868686
@@ -267,6 +279,13 @@ body.admin
 
 .tab-content
     margin-top: 150px
+    .tab-pane.active img
+        height: 300px
+        width: auto
+
+    @media screen and (max-width: 992px)
+        margin: 0
+
 
 .search
     i
@@ -341,7 +360,7 @@ section
     display: flex
     justify-content: center
     align-items: center
-    padding: 150px 0 70px 
+    padding: 180px 0 70px 
     min-height: calc(100vh - 177px) !important
 
 .section-main

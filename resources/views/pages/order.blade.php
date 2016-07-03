@@ -9,7 +9,7 @@
             </div>
             <div class="col-xs-12 col-md-offset-3 col-md-6">
                 @include ('partials.errors')
-                <form action="/order" method="POST">
+                <form action="/pages/order" method="POST">
                     {{ csrf_field() }}
                     <div class="form-level">
                         <label for="client_name">Контактное лицо</label>

@@ -60,7 +60,7 @@ class PagesController extends Controller
 
         $this->flashData($request, [
             'type' => 'success',
-            'message' => 'Статья успешно добавлена!'
+            'message' => 'Страница успешно добавлена!'
         ]);
 
         return redirect('/admin/pages');
@@ -121,14 +121,15 @@ class PagesController extends Controller
             $this->saveImage($request, $page, true);
         }
 
-        $page->title = $request->title;
-        $page->text = $request->text;
+        $page->name = $request->name;
+        $page->desc = $request->desc;
+        $page->content = $request->content;
 
         $page->save();
 
         $this->flashData($request, [
             'type' => 'success',
-            'message' => 'Статья успешно обновлена!'
+            'message' => 'Страница успешно обновлена!'
         ]);
 
         return redirect('/admin/pages');
@@ -153,7 +154,7 @@ class PagesController extends Controller
 
         $this->flashData($request, [
             'type' => 'success',
-            'message' => 'Статья успешно удалена!',
+            'message' => 'Страница успешно удалена!',
         ]);
 
         return back();

@@ -112,13 +112,16 @@ class PhotosController extends Controller
         $this->validate($request, [
             'name' => 'required',
             //'desc' => 'required',
+            //'content' => 'required',
         ]);
 
         if ($request->file('image')) {
             $this->saveImage($request, $photo, true);
         }
 
-        $photo->description = $request->description;
+        $photo->name = $request->name;
+        $photo->desc = $request->desc;
+        $photo->content = $request->content;
 
         $photo->save();
 

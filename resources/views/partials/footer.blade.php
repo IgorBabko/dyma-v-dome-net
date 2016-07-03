@@ -3,18 +3,14 @@
         <div class="row">
             <div class="col-md-6">
                 <ul class="Footer__menu">
-                    <a href="/docs" class="Footer__menu-link">
-                        <li class="Footer__menu-item">Документация</li>
-                    </a>
-                    <a href="/faq" class="Footer__menu-link">
+                    @foreach ($pages as $page)
+                        <a href="/pages/{{ $page->id }}" class="Footer__menu-link">
+                            <li class="Footer__menu-item">{{ $page->name }}</li>
+                        </a>
+                    @endforeach
+<!--                    <a href="/faq" class="Footer__menu-link">
                         <li class="Footer__menu-item">FAQ</li>
-                    </a>
-                    <a href="/articles" class="Footer__menu-link">
-                        <li class="Footer__menu-item">Статьи</li>
-                    </a>
-                    <a href="/partners" class="Footer__menu-link">
-                        <li class="Footer__menu-item">Партнерам</li>
-                    </a>
+                    </a> -->
                 </ul>
             </div>
             <div class="col-md-6" style="text-align: right">

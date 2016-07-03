@@ -13,6 +13,6 @@ class PagesTableSeeder extends Seeder
     public function run()
     {
         Page::truncate();
-        factory(Page::class, 50)->create();
+        factory(Page::class, 4)->create();
     }
 }
