@@ -2,11 +2,11 @@
 <div class="page">
     <div class="container">
         <div class="row">
-            <h1>Добавить фотографию</h1>
+            <h1>Добавить страницу</h1>
             <div class="divider"></div>
             <div class="col-xs-12">
                 @include ('partials.errors')
-                <form action="/admin/photos" method="POST" enctype="multipart/form-data">
+                <form action="/admin/pages" method="POST" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="name">Название</label>
@@ -15,6 +15,10 @@
                     <div class="form-group">
                         <label for="desc">Описание</label>
                         <textarea type="text" class="form-control" id="desc" name="desc"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Контент</label>
+                        <textarea type="text" class="form-control" id="content" name="content"></textarea>
                     </div>
                     <div class="form-group" style="margin: 20px 0">
                         <label for="image">Добавить изображение</label>

@@ -46,8 +46,8 @@ class PhotosController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title' => 'required',
-            'description' => 'required',
+            'name' => 'required',
+            //'desc' => 'required',
         ]);
 
         $photo = Photo::create($request->all());
@@ -110,8 +110,8 @@ class PhotosController extends Controller
     public function update(Request $request, Photo $photo)
     {
         $this->validate($request, [
-            'title' => 'required',
-            'description' => 'required',
+            'name' => 'required',
+            //'desc' => 'required',
         ]);
 
         if ($request->file('image')) {

@@ -2,25 +2,29 @@
 <div class="page">
     <div class="container">
         <div class="row">
-            <h1>Редактировать фотографию</h1>
+            <h1>Редактировать страницу</h1>
             <div class="divider"></div>
             <div class="col-xs-12">
                 @include ('partials.errors')
-                <form action="/admin/photos/{{ $photo->id }}" method="POST" enctype="multipart/form-data">
+                <form action="/admin/pages/{{ $page->id }}" method="POST" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     {{ method_field('PATCH') }}
                     <div class="form-group">
                         <label for="name">Название</label>
-                        <input type="text" class="form-control" id="name" name="name" value="{{ $photo->name }}"> 
+                        <input type="text" class="form-control" id="name" name="name" value="{{ $page->name }}"> 
                     </div>
                     <div class="form-group">
-                        <label for="desc">Описание</label>
-                        <textarea type="text" class="form-control" id="desc" name="decs">{!! $photo->desc !!}</textarea>
+                        <label for="desc">Краткое описание</label>
+                        <textarea type="text" class="form-control" id="desc" name="desc">{!! $article->desc !!}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Контент</label>
+                        <textarea type="text" class="form-control" id="content" name="content">{!! $page->content !!}</textarea>
                     </div>
                     <div class="form-group" style="margin: 20px 0">
                         <label for="image">Изменить изображение</label>
                         <input type="file" id="image" name="image">
-                        <img src="{{ $photo->image }}" class="thumb">
+                        <img src="{{ $page->image }}" class="thumb">
                     </div>
                     <button type="submit" class="btn Button Button--green" style="float: right">Редактировать</button>
                 </form>

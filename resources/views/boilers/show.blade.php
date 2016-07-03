@@ -9,7 +9,7 @@
                 <img class="img-responsive" src="{{ $boiler->image }}" alt="">
             </div>
             <div class="col-xs-12">
-                <p class="article-text">{!! $boiler->text !!}</p>
+                <div class="article-text">{!! $boiler->content !!}</div>
                 <a class="btn Button" href="/boilers/catalog">назад <span class="glyphicon glyphicon-chevron-left"></span></a>
             </div>
         </div>

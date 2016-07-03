@@ -19,6 +19,7 @@ class Briquette extends Model
     protected $searchable = [
         'columns' => [
             'name' => 10,
+            'desc' => 10,
             'description' => 10,
         ],
     ];

@@ -19,7 +19,7 @@
                 <div class="col-md-4 portfolio-item">
                     <img class="img-responsive" src="{{ $photo->image }}" alt="">
                     <div class="photo-description" style="position: relative">
-                        <p>{!! $photo->description !!}</p>
+                        <div>{!! $photo->desc !!}</div>
                         <div class="Button__group--positioned">
                             <form action="/admin/photos/{{ $photo->id }}" style="display: inline-block" method="POST">
                                 {{ csrf_field() }}

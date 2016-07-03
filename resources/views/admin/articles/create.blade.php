@@ -9,16 +9,16 @@
                 <form action="/admin/articles" method="POST" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="form-group">
-                        <label for="title">Заголовок</label>
-                        <input type="text" class="form-control" id="title" name="title">
+                        <label for="name">Название</label>
+                        <input type="text" class="form-control" id="name" name="name">
                     </div>
                     <div class="form-group">
-                        <label for="short_text">Короткое описание</label>
-                        <textarea type="text" class="form-control" id="short_text" name="short_text"></textarea>
+                        <label for="desc">Описание</label>
+                        <textarea type="text" class="form-control" id="desc" name="desc"></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="text">Текст</label>
-                        <textarea type="text" class="form-control" id="text" name="text"></textarea>
+                        <label for="content">Контент</label>
+                        <textarea type="text" class="form-control" id="content" name="content"></textarea>
                     </div>
                     <div class="form-group" style="margin: 20px 0">
                         <label for="image">Добавить изображение</label>

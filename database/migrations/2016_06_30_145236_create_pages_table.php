@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateChimneysTable extends Migration
+class CreatePagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,13 +12,12 @@ class CreateChimneysTable extends Migration
      */
     public function up()
     {
-        Schema::create('chimneys', function (Blueprint $table) {
+        Schema::create('pages', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->text('desc');
             $table->text('content');
-            $table->string('type')->default('одностенный');
-            $table->string('image')->nullable();
+            //$table->string('type')->default('одностенный');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateChimneysTable extends Migration
      */
     public function down()
     {
-        Schema::drop('chimneys');
+        Schema::drop('pages');
     }
 }

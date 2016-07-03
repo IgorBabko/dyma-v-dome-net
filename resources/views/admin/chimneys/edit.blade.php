@@ -14,8 +14,12 @@
                         <input type="text" class="form-control" id="name" name="name" value="{{ $chimney->name }}"> 
                     </div>
                     <div class="form-group">
-                        <label for="description">Описание</label>
-                        <textarea type="text" class="form-control" id="description" name="description">{{ $chimney->description }}</textarea>
+                        <label for="desc">Описание</label>
+                        <textarea type="text" class="form-control" id="desc" name="desc">{!! $chimney->desc !!}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Контент</label>
+                        <textarea type="text" class="form-control" id="content" name="content">{!! $chimney->content !!}</textarea>
                     </div>
                     <select class="form-control" name="type">
                         <option value="одностенный" {{ $chimney->type == 'одностенный' ? 'selected' :'' }}>одностенный</option>

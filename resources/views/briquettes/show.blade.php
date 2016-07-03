@@ -9,7 +9,7 @@
                 <img class="img-responsive" src="{{ $briquette->image }}" alt="">
             </div>
             <div class="col-xs-12">
-                <p class="article-text">{!! $briquette->text !!}</p>
+                <div class="article-text">{!! $briquette->content !!}</div>
                 <a class="btn Button" href="/briquettes/catalog">назад <span class="glyphicon glyphicon-chevron-left"></span></a>
             </div>
         </div>

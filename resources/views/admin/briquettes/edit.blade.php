@@ -14,8 +14,12 @@
                         <input type="text" class="form-control" id="name" name="name" value="{{ $briquette->name }}"> 
                     </div>
                     <div class="form-group">
-                        <label for="description">Описание</label>
-                        <textarea type="text" class="form-control" id="description" name="description">{{ $briquette->description }}</textarea>
+                        <label for="desc">Описание</label>
+                        <textarea type="text" class="form-control" id="desc" name="desc">{!! $briquette->desc !!}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Контент</label>
+                        <textarea type="text" class="form-control" id="content" name="content">{!! $briquette->content !!}</textarea>
                     </div>
                     <!--<select class="form-control" name="type">
                         <option value="одностенный" {{ $briquette->type == 'одностенный' ? 'selected' :'' }}>одностенный</option>

@@ -47,9 +47,9 @@ class ArticlesController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title' => 'required',
-            'short_text' => 'required',
-            'text' => 'required',
+            'name' => 'required',
+            //'desc' => 'required',
+            'content' => 'required',
         ]);
 
         $article = Article::create($request->all());
@@ -112,9 +112,9 @@ class ArticlesController extends Controller
     public function update(Request $request, Article $article)
     {
         $this->validate($request, [
-            'title' => 'required',
-            'short_text' => 'required',
-            'text' => 'required',
+            'name' => 'required',
+            //'desc' => 'required',
+            'content' => 'required',
         ]);
 
         if ($request->file('image')) {

@@ -10,16 +10,16 @@
                     {{ csrf_field() }}
                     {{ method_field('PATCH') }}
                     <div class="form-group">
-                        <label for="title">Заголовок</label>
-                        <input type="text" class="form-control" id="title" name="title" value="{{ $article->title }}"> 
+                        <label for="name">Название</label>
+                        <input type="text" class="form-control" id="name" name="name" value="{{ $article->name }}"> 
                     </div>
                     <div class="form-group">
-                        <label for="short_text">Короткое описание</label>
-                        <textarea type="text" class="form-control" id="short_text" name="short_text">{{ $article->short_text }}</textarea>
+                        <label for="desc">Краткое описание</label>
+                        <textarea type="text" class="form-control" id="desc" name="desc">{!! $article->desc !!}</textarea>
                     </div>
                     <div class="form-group">
-                        <label for="text">Текст</label>
-                        <textarea type="text" class="form-control" id="text" name="text">{{ $article->text }}</textarea>
+                        <label for="content">Контент</label>
+                        <textarea type="text" class="form-control" id="content" name="content">{!! $article->content !!}</textarea>
                     </div>
                     <div class="form-group" style="margin: 20px 0">
                         <label for="image">Изменить изображение</label>

@@ -15,7 +15,8 @@ class CreateBoilersTable extends Migration
         Schema::create('boilers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->text('description');
+            $table->text('desc');
+            $table->text('content');
             //$table->string('type')->default('одностенный');
             $table->string('image')->nullable();
             $table->timestamps();

@@ -3,12 +3,13 @@
 namespace DymaVDomeNet\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use DymaVDomeNet\Chimney;
+
 use DymaVDomeNet\Http\Requests;
 use DymaVDomeNet\Http\Controllers\Controller;
+use DymaVDomeNet\Page;
 use DymaVDomeNet\Http\Middleware\Authenticate;
 
-class ChimneysController extends Controller
+class PagesController extends Controller
 {
     public function __construct()
     {
@@ -22,9 +23,9 @@ class ChimneysController extends Controller
      */
     public function index()
     {
-        $chimneys = Chimney::orderBy('created_at', 'desc')->paginate(10);
+        $pages = Page::orderBy('created_at', 'desc')->paginate(10);
 
-        return view('admin.chimneys.index', compact('chimneys'));
+        return view('admin.pages.index', compact('pages'));
     }
 
     /**
@@ -34,7 +35,7 @@ class ChimneysController extends Controller
      */
     public function create()
     {
-        return view('admin.chimneys.create');
+        return view('admin.pages.create');
     }
 
     /**
@@ -47,39 +48,37 @@ class ChimneysController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            //'desc' => 'required',
+   //         'desc' => 'required',
             'content' => 'required',
-            'type' => 'required',
         ]);
 
-        $chimney = Chimney::create($request->all());
+        $page = Page::create($request->all());
 
         if ($request->file('image')) {
-            $this->saveImage($request, $chimney);
+            $this->saveImage($request, $page);
         }
 
         $this->flashData($request, [
             'type' => 'success',
-            'message' => 'Дымоход успешно добавлен!'
+            'message' => 'Статья успешно добавлена!'
         ]);
 
-        return redirect('/admin/chimneys');
+        return redirect('/admin/pages');
     }
 
-    protected function saveImage(Request $request, Chimney $chimney, $replace = false)
+    protected function saveImage(Request $request, Page $page, $replace = false)
     {
-        $imageName = $chimney->id . '.' . $request->file('image')->getClientOriginalExtension();
+        $imageName = $page->id . '.' . $request->file('image')->getClientOriginalExtension();
 
         if ($replace) {
-            \Storage::delete(public_path() . $chimney->image);
+            \Storage::delete(public_path() . $page->image);
         }
 
         $request->file('image')->move(public_path() . '/images/uploads/', $imageName);
     
-        $chimney->image = '/images/uploads/' . $imageName;
-        $chimney->save();
+        $page->image = '/images/uploads/' . $imageName;
+        $page->save();
     }
-
 
     /**
      * Display the specified resource.
@@ -98,9 +97,9 @@ class ChimneysController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Chimney $chimney)
+    public function edit(Page $page)
     {
-        return view('admin.chimneys.edit', compact('chimney'));
+        return view('admin.pages.edit', compact('page'));
     }
 
     /**
@@ -110,31 +109,29 @@ class ChimneysController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Chimney $chimney)
+    public function update(Request $request, Page $page)
     {
         $this->validate($request, [
             'name' => 'required',
             //'desc' => 'required',
             'content' => 'required',
-            'type' => 'required',
         ]);
 
         if ($request->file('image')) {
-            $this->saveImage($request, $chimney, true);
+            $this->saveImage($request, $page, true);
         }
 
-        $chimney->name = $request->name;
-        $chimney->description = $request->description;
-        $chimney->type = $request->type;
+        $page->title = $request->title;
+        $page->text = $request->text;
 
-        $chimney->save();
+        $page->save();
 
         $this->flashData($request, [
             'type' => 'success',
-            'message' => 'Дымоход успешно обновлен!'
+            'message' => 'Статья успешно обновлена!'
         ]);
 
-        return redirect('/admin/chimneys');
+        return redirect('/admin/pages');
     }
 
     protected function flashData(Request $request, $data = [])
@@ -152,11 +149,11 @@ class ChimneysController extends Controller
      */
     public function destroy(Request $request, $id)
     {
-        Chimney::destroy($id); 
+        Page::destroy($id); 
 
         $this->flashData($request, [
             'type' => 'success',
-            'message' => 'Дымоход успешно удален!',
+            'message' => 'Статья успешно удалена!',
         ]);
 
         return back();
@@ -164,9 +161,9 @@ class ChimneysController extends Controller
 
     public function search(Request $request)
     {
-        $chimneys = Chimney::search($request->queryString)->get();
-        $searchCount    = count($chimneys);
+        $pages = Page::search($request->queryString)->get();
+        $searchCount    = count($pages);
 
-        return view('admin.chimneys.index', compact('chimneys', 'searchCount'));
+        return view('admin.pages.index', compact('pages', 'searchCount'));
     }
 }

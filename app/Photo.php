@@ -16,8 +16,8 @@ class Photo extends Model
      */
     protected $searchable = [
         'columns' => [
-            'title' => 10,
-            'description' => 10,
+            'name' => 10,
+            'desc' => 10,
         ],
     ];
 

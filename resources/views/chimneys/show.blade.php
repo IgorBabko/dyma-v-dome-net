@@ -9,7 +9,7 @@
                 <img class="img-responsive" src="{{ $chimney->image }}" alt="">
             </div>
             <div class="col-xs-12">
-                <p class="article-text">{!! $chimney->text !!}</p>
+                <div class="article-text">{!! $chimney->content !!}</div>
                 <a class="btn Button" href="/chimneys/catalog/{{ $type }}">назад <span class="glyphicon glyphicon-chevron-left"></span></a>
             </div>
         </div>

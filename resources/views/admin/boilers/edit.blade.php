@@ -14,8 +14,12 @@
                         <input type="text" class="form-control" id="name" name="name" value="{{ $boiler->name }}"> 
                     </div>
                     <div class="form-group">
-                        <label for="description">Описание</label>
-                        <textarea type="text" class="form-control" id="description" name="description">{{ $boiler->description }}</textarea>
+                        <label for="desc">Описание</label>
+                        <textarea type="text" class="form-control" id="desc" name="desc">{!! $boiler->desc !!}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Контент</label>
+                        <textarea type="text" class="form-control" id="content" name="content">{!! $boiler->content !!}</textarea>
                     </div>
                     <!--<select class="form-control" name="type">
                         <option value="одностенный" {{ $boiler->type == 'одностенный' ? 'selected' :'' }}>одностенный</option>

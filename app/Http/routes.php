@@ -49,6 +49,9 @@ Route::get('/photos/{photo}', 'PhotosController@show');
 // prices
 Route::get('/prices/{name}/{width}', 'PricesController@getPrice');
 
+// pages
+Route::get('/pages/{name}', 'PagesController@index');
+
 // footer links
 Route::get('/docs', 'PagesController@docs'); 
 Route::get('/faq', 'PagesController@faq'); 

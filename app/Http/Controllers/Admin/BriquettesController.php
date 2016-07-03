@@ -47,7 +47,8 @@ class BriquettesController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'description' => 'required',
+            //'desc' => 'required',
+            'content' => 'required',
             //'type' => 'required',
         ]);
 
@@ -113,7 +114,8 @@ class BriquettesController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'description' => 'required',
+            //'desc' => 'required',
+            'content' => 'required',
             //'type' => 'required',
         ]);
 

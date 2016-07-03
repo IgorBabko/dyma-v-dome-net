@@ -17,7 +17,7 @@
                 <div class="col-md-9">
                     <h3>{{ $boiler->name }}</h3>
                     <h4>Описание</h4> 
-                    <p class="description">{{ $boiler->description }}</p>
+                    <div class="description">{!! $boiler->desc !!}</div>
                     <!--<h4>Толщина: </h4>
                     <label class="radio-inline">
                         <input type="radio" name="width" value="0.5" checked="checked">0.5мм AISI 304

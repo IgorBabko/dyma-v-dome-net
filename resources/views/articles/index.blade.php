@@ -13,8 +13,8 @@
                     <img class="img-responsive" src="{{ $article->image }}" alt="">
                 </div>
                 <div class="col-md-5" style="position: static">
-                    <h3>{{ $article->title }}</h3>
-                    <p>{{ $article->short_text }}</p>
+                    <h3>{{ $article->name }}</h3>
+                    <div>{!! $article->desc !!}</div>
                     <a class="btn Button Button__more--positioned" href="/articles/{{ $article->id }}">подробнее<span class="glyphicon glyphicon-chevron-right"></span></a>
                 </div>
             </div>

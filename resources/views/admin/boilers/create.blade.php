@@ -13,8 +13,12 @@
                         <input type="text" class="form-control" id="name" name="name">
                     </div>
                     <div class="form-group">
-                        <label for="description">Описание</label>
-                        <textarea name="description" type="text" class="form-control" id="description" name="description"></textarea>
+                        <label for="desc">Описание</label>
+                        <textarea name="desc" type="text" class="form-control" id="desc"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Контент</label>
+                        <textarea type="text" class="form-control" id="content" name="content"></textarea>
                     </div>
                     <!--<div class="form-group">
                         <label for="type">Тип</label>

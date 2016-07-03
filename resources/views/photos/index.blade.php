@@ -13,7 +13,7 @@
                 <div class="col-md-4 portfolio-item">
                     <img class="img-responsive" src="{{ $photo->image }}" alt="">
                     <div class="photo-description">
-                        <p>{!! $photo->description !!}</p>
+                        <div>{!! $photo->desc !!}</div>
                         <a href="/photos/{{ $photo->id }}" class="btn Button Button__more--positioned" style="right: 20px; bottom: 20px">подробнее</a> 
                     </div>
                 </div>

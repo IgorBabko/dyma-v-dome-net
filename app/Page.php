@@ -5,10 +5,8 @@ namespace DymaVDomeNet;
 use Illuminate\Database\Eloquent\Model;
 use Nicolaslopezj\Searchable\SearchableTrait;
 
-class Chimney extends Model
+class Page extends Model
 {
-    protected $guarded = [];
-
     use SearchableTrait;
 
     /**
@@ -20,7 +18,9 @@ class Chimney extends Model
         'columns' => [
             'name' => 10,
             'desc' => 10,
-            'description' => 10,
+            'content' => 10,
         ],
     ];
+
+    protected $guarded = [];
 }

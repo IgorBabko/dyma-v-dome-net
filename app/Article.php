@@ -16,8 +16,9 @@ class Article extends Model
      */
     protected $searchable = [
         'columns' => [
-            'title' => 10,
-            'text' => 10,
+            'name' => 10,
+            'desc' => 10,
+            'content' => 10,
         ],
     ];
 

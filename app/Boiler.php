@@ -19,7 +19,8 @@ class Boiler extends Model
     protected $searchable = [
         'columns' => [
             'name' => 10,
-            'description' => 10,
+            'desc' => 10,
+            'content' => 10,
         ],
     ];
 }

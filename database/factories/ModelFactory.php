@@ -23,7 +23,8 @@ $factory->define(DymaVDomeNet\User::class, function (Faker\Generator $faker) {
 $factory->define(DymaVDomeNet\Chimney::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
-        'description' => $faker->paragraph,
+        'desc' => $faker->paragraph,
+        'content' => implode('<br><br>', $faker->paragraphs(rand(5, 7))),
         'type' => 'одностенный',
         'image' => str_random(10),
     ];
@@ -32,7 +33,8 @@ $factory->define(DymaVDomeNet\Chimney::class, function (Faker\Generator $faker) 
 $factory->define(DymaVDomeNet\Briquette::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
-        'description' => $faker->paragraph,
+        'desc' => $faker->paragraph,
+        'content' => implode('<br><br>', $faker->paragraphs(rand(5, 7))),
         //'type' => 'одностенный',
         'image' => str_random(10),
     ];
@@ -41,7 +43,8 @@ $factory->define(DymaVDomeNet\Briquette::class, function (Faker\Generator $faker
 $factory->define(DymaVDomeNet\Boiler::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
-        'description' => $faker->paragraph,
+        'desc' => $faker->paragraph,
+        'content' => implode('<br><br>', $faker->paragraphs(rand(5, 7))),
         //'type' => 'одностенный',
         'image' => str_random(10),
     ];
@@ -49,9 +52,9 @@ $factory->define(DymaVDomeNet\Boiler::class, function (Faker\Generator $faker) {
 
 $factory->define(DymaVDomeNet\Article::class, function (Faker\Generator $faker) {
     return [
-        'title' => $faker->name,
-        'short_text' => implode('<br><br>', $faker->paragraphs(rand(1, 2))),
-        'text' => implode('<br><br>', $faker->paragraphs(rand(5, 7))),
+        'name' => $faker->name,
+        'desc' => implode('<br><br>', $faker->paragraphs(rand(1, 2))),
+        'content' => implode('<br><br>', $faker->paragraphs(rand(5, 7))),
         'image' => $faker->imageUrl($width = 600, $height = 300),
     ];
 });
@@ -59,7 +62,7 @@ $factory->define(DymaVDomeNet\Article::class, function (Faker\Generator $faker) 
 $factory->define(DymaVDomeNet\Photo::class, function (Faker\Generator $faker) {
     return [
         'title' => $faker->word(2),
-        'description' => $faker->paragraph,
+        'desc' => $faker->paragraph,
         'image' => $faker->imageUrl($width = 600, $height = 300),
     ];
 });
@@ -71,5 +74,13 @@ $factory->define(DymaVDomeNet\Order::class, function (Faker\Generator $faker) {
         'phone2' => $faker->phoneNumber,
         'email' => $faker->email,
         'question' => $faker->paragraph,
+    ];
+});
+
+$factory->define(DymaVDomeNet\Page::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'desc' => $faker->phoneNumber,
+        'content' => $faker->phoneNumber,
     ];
 });

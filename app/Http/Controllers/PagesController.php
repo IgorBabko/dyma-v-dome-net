@@ -3,20 +3,15 @@
 namespace DymaVDomeNet\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DymaVDomeNet\Order;
+use DymaVDomeNet\Page;
 use DymaVDomeNet\Http\Requests;
 
 class PagesController extends Controller
 {
-    public function index()
+    public function index(Page $page)
     {
-        return view('pages.main');
+        return view('pages.show', compact('page'));
     } 
-
-    public function about()
-    {
-        return view('pages.about');
-    }
 
     public function order()
     {
@@ -57,38 +52,8 @@ class PagesController extends Controller
         }
     }
 
-    public function contact()
-    {
-        return view('pages.contact');
-    }
-
-    public function docs()
-    {
-        return view('pages.docs');
-    }
-
     public function faq()
     {
         return view('pages.faq');
-    }
-
-    public function articles()
-    {
-        return view('pages.articles');
-    }
-
-    public function prices()
-    {
-        return view('pages.prices');
-    }
-
-    public function partners()
-    {
-        return view('pages.partners');
-    }
-
-    public function photos()
-    {
-        return view('pages.photos');
     }
 }
