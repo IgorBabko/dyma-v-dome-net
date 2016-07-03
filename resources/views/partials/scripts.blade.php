@@ -6,4 +6,5 @@
 <script src="/js/jquery.fancybox-plus.min.js"></script>
 <script src="/js/slick.min.js"></script>
 <script src="/ckeditor/ckeditor.js"></script>
+<script src="/js/jquery.fancybox.pack.js"></script>
 <script src="/js/app.js"></script>

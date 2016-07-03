@@ -27,13 +27,14 @@ elixir(function(mix) {
         .copy('node_modules/fuelux/dist/js/fuelux.min.js', 'public/js')
         .copy('node_modules/requirejs/require.js', 'public/js')
         .copy('node_modules/moment/min/moment.min.js', 'public/js')
-        .copy('node_modules/fancybox-plus/images/fbplus', 'public/images/fbplus')
-        .copy('node_modules/fancybox-plus/css/jquery.fancybox-plus.css', 'public/css')
-        .copy('node_modules/fancybox-plus/dist/jquery.fancybox-plus.min.js', 'public/js')
         .copy('node_modules/gmaps/gmaps.min.js', 'public/js')
         .copy('node_modules/slick-carousel/slick/slick.css', 'public/css')
         .copy('node_modules/slick-carousel/slick/slick-theme.css', 'public/css')
         .copy('node_modules/slick-carousel/slick/slick.min.js', 'public/js')
-        .copy('node_modules/gmaps/gmaps.min.js', 'public/js');
+        .copy('node_modules/gmaps/gmaps.min.js', 'public/js')
+        .copy('bower_components/fancybox/source/*.png', 'public/css/fancybox')
+        .copy('bower_components/fancybox/source/*.gif', 'public/css/fancybox')
+        .copy('bower_components/fancybox/source/jquery.fancybox.css', 'public/css/fancybox')
+        .copy('bower_components/fancybox/source/jquery.fancybox.pack.js', 'public/js');
 });
 

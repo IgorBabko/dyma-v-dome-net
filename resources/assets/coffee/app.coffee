@@ -10,6 +10,8 @@ $ ->
         CKEDITOR.replace('desc', height: 300)
         CKEDITOR.replace('content', height: 700)
 
+    $('.fancybox').fancybox()
+
 #    map = new GMaps(
 #        el: '#map'
 #        lat: 50.44985

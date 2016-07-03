@@ -15,6 +15,7 @@
         height: 700
       });
     }
+    $('.fancybox').fancybox();
     $('.single-feature').hover(function() {
       var imgName;
       imgName = $(this).parent('a').attr('href');

@@ -11,7 +11,9 @@
             <div class="row">
                 @foreach ($photosRow as $photo)
                 <div class="col-md-4 portfolio-item">
-                    <img class="img-responsive" src="{{ $photo->image }}" alt="">
+                    <a href="/images/logo.png" class="fancybox" title="{{ $photo->name }}">
+                        <img class="img-responsive" src="{{ $photo->image }}" alt="">
+                    </a>
                     <div class="photo-description">
                         <div>{!! $photo->desc !!}</div>
                         <a href="/photos/{{ $photo->id }}" class="btn Button Button__more--positioned" style="right: 20px; bottom: 20px">подробнее <span class="glyphicon glyphicon-chevron-right"></span></a> 
