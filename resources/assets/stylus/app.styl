@@ -229,13 +229,16 @@ body.admin
     clear: fix
     //border: 1px solid #E0E0E0
     padding: 40px
-    background: #F3F3F3
+    background: #d8d8d8//#F3F3F3
     //box-shadow: 0 2px 1px #b7b7b7
     //box-shadow: 0 0px 5px 1px #5d5d5d//#888
     box-shadow: 0 0px 3px 1px #000000
 
     img
         box-shadow: 0 0 5px 1px #868686
+
+    @media screen and (max-width: 768px)
+        padding: 20px
 
 .photo-description
     min-height: 250px
@@ -248,7 +251,7 @@ body.admin
 .photo-expanded,
 .article-expanded,
 .resource-expanded
-    background: #F3F3F3
+    background: #d8d8d8//#F3F3F3
     //box-shadow: 0 2px 1px #b7b7b7
     //box-shadow: 0 0px 5px 1px #5d5d5d//#888
     box-shadow: 0 0px 3px 1px #000000
@@ -259,7 +262,7 @@ body.admin
         box-shadow: 0 0 5px 1px #868686
 
 .main-block
-    background: #f3f3f3
+    background: #d8d8d8//#f3f3f3
     //box-shadow: 0 2px 1px #b7b7b7
     margin: 20px 0 50px 0
     padding: 50px
@@ -588,15 +591,22 @@ tr td:first-child
 .glyphicon-chevron-right
     font-size: 12px
 
+.nav-tabs li
+    float: none
+
 .single-feature
     background: #6b5858
     transition: all 0.1s ease-in-out 
     border-radius: 0
+    box-shadow: 1px 1px 3px 0px black
+    display: flex
 
     img
-        max-width: 64px
-        float: left
-        padding: 10px 10px 10px 0
+        width: 64px
+        margin: 10px 10px 10px 0
+
+    .feature-content
+        margin-left: 10px
 
     h4, i, &::after
        color: white 

@@ -43,9 +43,7 @@
                                     </div>
                                     <div class="col-sm-10 feature-content">
                                         <h4>Дымоходы</h4>
-                                        <p>excepteur sint occaecat cupidatat non proident,
-                                            sunt in culpa qui officia deserunt
-                                            mollit anim.</p>
+                                        <p>Пару слов о дымоходах</p>
                                     </div>
                                 </div>
                             </a>
@@ -58,9 +56,7 @@
                                     </div>
                                     <div class="col-sm-10 feature-content">
                                         <h4>Брикеты</h4>
-                                        <p>Excepteur sint occaecat cupidatat non proident,
-                                            sunt in culpa qui officia deserunt
-                                            mollit anim.</p>
+                                        <p>Пару слов о брикетах</p>
                                     </div>
                                 </div>
                             </a>
@@ -73,9 +69,7 @@
                                     </div>
                                     <div class="col-sm-10 feature-content">
                                         <h4>Котлы</h4>
-                                        <p>Excepteur sint occaecat cupidatat non proident,
-                                            sunt in culpa qui officia deserunt
-                                            mollit anim.</p>
+                                        <p>Пару слов о котлах Пару слов о котлахПару слов о котлаПару слов о котлаПару слов о котлаххх</p>
                                     </div>
                                 </div>
                             </a>
