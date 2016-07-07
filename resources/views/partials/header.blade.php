@@ -14,7 +14,7 @@
     <div class="top-line">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 col-md-5" style="padding-right: 0; padding-left: 0">
+                <div class="col-sm-12 col-md-5" style="padding-right: 0">
                     <a class="btn btn-success btn-lg pull-left order-header-button" href="/pages/order" role="button">заявка</a>
                     @if ( request::is('chimneys*') )
                         @include ('partials.search', ['action' => '/chimneys/search', 'placeholder' => 'найти дымоход'])
@@ -28,7 +28,7 @@
                         @include ('partials.search', ['action' => '/photos/search', 'placeholder' => 'найти фото'])
                     @endif
                 </div>
-                <div class="col-sm-12 col-md-7" style="padding-right: 0">
+                <div class="col-sm-12 col-md-7" style="padding-right: 0; padding-left: 0">
                     <div class="contacts">
                         <span><i class="fa fa-phone" aria-hidden="true"></i> (095) 57-57-677</span>
                         <span><i class="fa fa-phone" aria-hidden="true"></i> (097) 87-161-97</span>

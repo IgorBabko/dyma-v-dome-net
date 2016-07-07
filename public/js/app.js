@@ -27,20 +27,11 @@
     });
     $("input[name='width']").change(function(e) {
       var changePricesTableRequest, itemName, width;
-      console.log('niko');
       width = $(this).val();
       itemName = $(this).parent().siblings('name').text();
-      console.log('itemName: ' + itemName);
-      console.log('width: ' + width);
-      changePricesTableRequest = $.ajax({
+      return changePricesTableRequest = $.ajax({
         url: "/prices/" + itemName + "/" + width,
         method: "GET"
-      });
-      changePricesTableRequest.done(data(function() {
-        return console.log(data);
-      }));
-      return changePricesTableRequest.fail(function(jqXHR, textStatus) {
-        return console.log('fail');
       });
     });
   });

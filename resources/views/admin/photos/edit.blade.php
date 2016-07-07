@@ -11,11 +11,11 @@
                     {{ method_field('PATCH') }}
                     <div class="form-group">
                         <label for="name">Название</label>
-                        <input type="text" class="form-control" id="name" name="name" value="{{ $photo->name }}"> 
+                        <input type="text" class="form-control" id="name" name="name" value="{{ old('name') ? old('name') : $photo->name }}"> 
                     </div>
                     <div class="form-group">
                         <label for="desc">Описание</label>
-                        <textarea type="text" class="form-control" id="desc" name="decs">{!! $photo->desc !!}</textarea>
+                        <textarea type="text" class="form-control" id="desc" name="desc">{!! old('desc') ? old('desc') : $photo->desc !!}</textarea>
                     </div>
                     <!--<div class="form-group" style="margin: 20px 0">
                         <label for="image">Изменить изображение</label>
@@ -24,7 +24,7 @@
                     </div>-->
                     <div class="form-group">
                         <label for="image">Главная картинка</label>
-                        <input type="text" class="form-control" id="image" name="image">
+                        <input type="text" class="form-control" id="image" name="image" value="{{ old('image') ? old('image') : $photo->image }}">
                     </div>
                     <button type="submit" class="btn Button Button--green" style="float: right"><i class="fa fa-floppy-o" aria-hidden="true"></i> Сохранить</button>
                     <a href="/admin/photos" type="submit" class="btn Button Button--blue right-margin"><i class="fa fa-chevron-left" aria-hidden="true"></i> Назад</a>

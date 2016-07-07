@@ -26,7 +26,7 @@ $factory->define(DymaVDomeNet\Chimney::class, function (Faker\Generator $faker) 
         'desc' => $faker->paragraph,
         'content' => implode('<br><br>', $faker->paragraphs(rand(5, 7))),
         'type' => 'одностенный',
-        'image' => str_random(10),
+        'image' => $faker->imageUrl($width = 600, $height = 300),
     ];
 });
 
@@ -36,7 +36,7 @@ $factory->define(DymaVDomeNet\Briquette::class, function (Faker\Generator $faker
         'desc' => $faker->paragraph,
         'content' => implode('<br><br>', $faker->paragraphs(rand(5, 7))),
         //'type' => 'одностенный',
-        'image' => str_random(10),
+        'image' => $faker->imageUrl($width = 600, $height = 300),
     ];
 });
 
@@ -46,7 +46,7 @@ $factory->define(DymaVDomeNet\Boiler::class, function (Faker\Generator $faker) {
         'desc' => $faker->paragraph,
         'content' => implode('<br><br>', $faker->paragraphs(rand(5, 7))),
         //'type' => 'одностенный',
-        'image' => str_random(10),
+        'image' => $faker->imageUrl($width = 600, $height = 300),
     ];
 });
 
@@ -83,5 +83,6 @@ $factory->define(DymaVDomeNet\Page::class, function (Faker\Generator $faker) {
         'name' => $faker->word,
         'desc' => $faker->paragraph,
         'content' => implode('<br><br>', $faker->paragraphs(rand(5, 7))),
+        'image' => $faker->imageUrl($width = 600, $height = 300),
     ];
 });
