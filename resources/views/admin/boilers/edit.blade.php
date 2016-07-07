@@ -27,13 +27,22 @@
                         <option value="алюком" {{ $boiler->type == 'алюком' ? 'selected' : '' }}>алюком</option>
                         <option value="керамический" {{ $boiler->type == 'керамический' ? 'selected' : '' }}>керамический</option>
                     </select>-->
-                    <div class="form-group" style="margin: 20px 0">
+                    <!--<div class="form-group" style="margin: 20px 0">
                         <label for="image">Изменить изображение</label>
                         <input type="file" id="image" name="image">
                         <img src="{{ $boiler->image }}" class="thumb">
+                    </div>-->
+                    <div class="form-group">
+                        <label for="image">Главная картинка</label>
+                        <input type="text" class="form-control" id="image" name="image">
                     </div>
                     <button type="submit" class="btn Button Button--green" style="float: right">Редактировать</button>
                     <a href="/admin/boilers" type="submit" class="btn Button Button--blue right-margin">Назад <span class="glyphicon glyphicon-chevron-left"></span></a>
+                </form>
+                <form action="/admin/boilers/{{ $boiler->id }}" method="POST" class="pull-left">
+                    {{ csrf_field() }}
+                    {{ method_field('DELETE') }}
+                    <button type="submit" class="btn Button pull-right" style="margin-right: 5px">Удалить</button>
                 </form>
             </div>
         </div>

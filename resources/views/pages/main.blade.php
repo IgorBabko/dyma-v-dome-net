@@ -4,13 +4,13 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="feature_header text-center">
-                    <h3 class="feature_title"><span style="color: white; text-transform: uppercase"><img src="/images/logo2.png" class="logo logo-big">Тепло</span><b style="text-transform: uppercase; color: #ff9142">Квартал</b></h3>
+                    <h3 class="feature_title"><span style="color: white; text-transform: uppercase"><img src="/images/logo2.png" class="logo logo-big">Тепло</span><b style="text-transform: uppercase; color: #ff543e">Квартал</b></h3>
                     <!--<div class="divider"></div>-->
                     <!--<h4 class="feature_sub" style="color: white">Виды деятельности</h4>-->
                     <div class="Contacts">
-                        <div class="Contacts__item"><span>Александр: </span><strong>(095) 57-57-677</strong></div>
-                        <div class="Contacts__item" style="padding-left: 100px"><strong>(097) 87-161-97</strong></div>
-                        <div class="Contacts__item" style="padding-left: 100px"><strong>i.i.babko@gmail.com</strong></div>
+                        <div class="Contacts__item"><span>Александр: </span><strong> &nbsp;<i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;(095) 57-57-677</strong></div>
+                        <div class="Contacts__item" style="padding-left: 100px"> <strong> &nbsp;<i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;(097) 87-161-97</strong></div>
+                        <div class="Contacts__item" style="padding-left: 100px"> <strong> &nbsp;<i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;i.i.babko@gmail.com</strong></div>
                     </div>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                             <a href="chimneys">
                                 <div class="col-sm-12 single-feature">
                                     <div class="col-sm-2 feature-icon">
-                                        <i class="fa fa-laptop"></i>
+                                        <img src="/images/icons/chimney.png">
                                     </div>
                                     <div class="col-sm-10 feature-content">
                                         <h4>Дымоходы</h4>
@@ -54,7 +54,7 @@
                             <a href="briquettes">
                                 <div class="col-sm-12 single-feature">
                                     <div class="col-sm-2 feature-icon">
-                                        <i class="fa fa-send"></i>
+                                        <img src="/images/icons/briquette.png">
                                     </div>
                                     <div class="col-sm-10 feature-content">
                                         <h4>Брикеты</h4>
@@ -69,7 +69,7 @@
                             <a href="boilers">
                                 <div class="col-sm-12 single-feature">
                                     <div class="col-sm-2 feature-icon">
-                                        <i class="fa fa-heart"></i>
+                                        <img src="/images/icons/boiler.png">
                                     </div>
                                     <div class="col-sm-10 feature-content">
                                         <h4>Котлы</h4>

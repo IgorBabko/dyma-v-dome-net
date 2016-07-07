@@ -27,13 +27,22 @@
                         <option value="алюком" {{ $briquette->type == 'алюком' ? 'selected' : '' }}>алюком</option>
                         <option value="керамический" {{ $briquette->type == 'керамический' ? 'selected' : '' }}>керамический</option>
                     </select>-->
-                    <div class="form-group" style="margin: 20px 0">
+                    <!--<div class="form-group" style="margin: 20px 0">
                         <label for="image">Изменить изображение</label>
                         <input type="file" id="image" name="image">
                         <img src="{{ $briquette->image }}" class="thumb">
+                    </div>-->
+                    <div class="form-group">
+                        <label for="image">Главная картинка</label>
+                        <input type="text" class="form-control" id="image" name="image">
                     </div>
                     <button type="submit" class="btn Button Button--green" style="float: right">Сохранить</button>
                     <a href="/admin/briquettes" type="submit" class="btn Button Button--blue right-margin">Назад <span class="glyphicon glyphicon-chevron-left"></span></a>
+                </form>
+                <form action="/admin/briquettes/{{ $briquette->id }}" method="POST" class="pull-left">
+                    {{ csrf_field() }}
+                    {{ method_field('DELETE') }}
+                    <button type="submit" class="btn Button pull-right" style="margin-right: 5px">Удалить</button>
                 </form>
             </div>
         </div>

@@ -8,25 +8,24 @@
         <div class="divider"></div>
         <div class="row">
             @if ( Request::is('admin/orders/search*') ) @include ('partials.search-results',
-            ['returnUrl' => '/admin/orders']) @endif
-            @if (count($orders)) @foreach($orders as $order)
+            ['returnUrl' => '/admin/orders']) @endif @if (count($orders)) @foreach($orders
+            as $order)
             <div class="order">
                 <div class="col-xs-12">
                     <span class="pull-right" style="font-size: 16px">{{ $order->created_at->format('d.m.Y') }} </span> 
-                    <h3><strong>№ {{ $order->id }}</strong></h3>
-                    <h3>Контактное лицо: {{ $order->client_name }} </h3> 
-                    <h4>Контактные данные:</h4>
+                    <h4><strong>№ {{ $order->id }}</strong></h4>
                     <ul>
+                        <li>Контактное лицо: <strong>{{ $order->client_name }}</strong>
+                        </li>
                         <li>Телефон 1: <strong>{{ $order->phone1 }}</strong>
                         </li>
                         <li>Телефон 2: <strong>{{ $order->phone2 }}</strong>
                         </li>
                         <li>Email: <strong>{{ $order->email }}</strong>
                         </li>
+                        <h4>Суть вопроса</h4>
+                        <p class="description">{{ str_limit($order->question, 150) }}</p>
                     </ul>
-
-                    <h4>Суть вопроса</h4>
-                    <p class="description">{!! $order->question !!}</p>
                 </div>
                 <div class="col-xs-12">
                     <form action="/admin/orders/{{ $order->id }}" method="POST">

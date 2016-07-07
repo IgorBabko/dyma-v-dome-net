@@ -54,9 +54,9 @@ class ArticlesController extends Controller
 
         $article = Article::create($request->all());
 
-        if ($request->file('image')) {
+        /*if ($request->file('image')) {
             $this->saveImage($request, $article);
-        }
+        }*/
 
         $this->flashData($request, [
             'type' => 'success',
@@ -66,7 +66,7 @@ class ArticlesController extends Controller
         return redirect('/admin/articles');
     }
 
-    protected function saveImage(Request $request, Article $article, $replace = false)
+    /*protected function saveImage(Request $request, Article $article, $replace = false)
     {
         $imageName = $article->id . '.' . $request->file('image')->getClientOriginalExtension();
 
@@ -78,7 +78,7 @@ class ArticlesController extends Controller
     
         $article->image = '/images/uploads/' . $imageName;
         $article->save();
-    }
+    }*/
 
     /**
      * Display the specified resource.
@@ -117,13 +117,14 @@ class ArticlesController extends Controller
             'content' => 'required',
         ]);
 
-        if ($request->file('image')) {
+        /*if ($request->file('image')) {
             $this->saveImage($request, $article, true);
-        }
+        }*/
 
         $article->name = $request->name;
         $article->desc = $request->desc;
         $article->content = $request->content;
+        $article->image = $request->image;
 
         $article->save();
 
@@ -157,7 +158,7 @@ class ArticlesController extends Controller
             'message' => 'Статья успешно удалена!',
         ]);
 
-        return back();
+        return redirect('/admin/articles');
     }
 
     public function search(Request $request)

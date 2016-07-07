@@ -52,9 +52,9 @@ class PhotosController extends Controller
 
         $photo = Photo::create($request->all());
 
-        if ($request->file('image')) {
+        /*if ($request->file('image')) {
             $this->saveImage($request, $photo);
-        }
+        }*/
 
         $this->flashData($request, [
             'type' => 'success',
@@ -64,7 +64,7 @@ class PhotosController extends Controller
         return redirect('/admin/photos');
     }
 
-    protected function saveImage(Request $request, Photo $photo, $replace = false)
+    /*protected function saveImage(Request $request, Photo $photo, $replace = false)
     {
         $imageName = $photo->id . '.' . $request->file('image')->getClientOriginalExtension();
 
@@ -76,7 +76,7 @@ class PhotosController extends Controller
     
         $photo->image = '/images/uploads/' . $imageName;
         $photo->save();
-    }
+    }*/
 
     /**
      * Display the specified resource.
@@ -115,13 +115,14 @@ class PhotosController extends Controller
             //'content' => 'required',
         ]);
 
-        if ($request->file('image')) {
+        /*if ($request->file('image')) {
             $this->saveImage($request, $photo, true);
-        }
+        }*/
 
         $photo->name = $request->name;
         $photo->desc = $request->desc;
         $photo->content = $request->content;
+        $photo->image = $request->image;
 
         $photo->save();
 
@@ -155,7 +156,7 @@ class PhotosController extends Controller
             'message' => 'Фотография успешно удалена!',
         ]);
 
-        return back();
+        return redirect('/admin/photos');
     }
 
     public function search(Request $request)

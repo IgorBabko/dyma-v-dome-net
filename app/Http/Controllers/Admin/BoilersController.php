@@ -54,9 +54,9 @@ class BoilersController extends Controller
 
         $boiler = Boiler::create($request->all());
 
-        if ($request->file('image')) {
+        /*if ($request->file('image')) {
             $this->saveImage($request, $boiler);
-        }
+        }*/
 
         $this->flashData($request, [
             'type' => 'success',
@@ -66,7 +66,7 @@ class BoilersController extends Controller
         return redirect('/admin/boilers');
     }
 
-    protected function saveImage(Request $request, Boiler $boiler, $replace = false)
+    /*protected function saveImage(Request $request, Boiler $boiler, $replace = false)
     {
         $imageName = $boiler->id . '.' . $request->file('image')->getClientOriginalExtension();
 
@@ -78,7 +78,7 @@ class BoilersController extends Controller
     
         $boiler->image = '/images/uploads/' . $imageName;
         $boiler->save();
-    }
+    }*/
 
 
     /**
@@ -119,13 +119,14 @@ class BoilersController extends Controller
             //'type' => 'required',
         ]);
 
-        if ($request->file('image')) {
+        /*if ($request->file('image')) {
             $this->saveImage($request, $boiler, true);
-        }
+        }*/
 
         $boiler->name = $request->name;
         $boiler->desc = $request->desc;
         $boiler->content = $request->content;
+        $boiler->image = $request->image;
         //$boiler->type = $request->type;
 
         $boiler->save();
@@ -160,7 +161,7 @@ class BoilersController extends Controller
             'message' => 'Котел успешно удален!',
         ]);
 
-        return back();
+        return redirect('/admin/boilers');
     }
 
     public function search(Request $request)

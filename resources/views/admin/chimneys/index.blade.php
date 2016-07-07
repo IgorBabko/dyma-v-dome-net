@@ -138,7 +138,7 @@
                         <form action="/admin/chimneys/{{ $chimney->id }}" method="POST">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
-                            <button class="btn Button pull-right" style="margin-right: 5px">Удалить</a>
+                            <button type="submit" class="btn Button pull-right" style="margin-right: 5px">Удалить</button>
                         </form>
                     </div>
                 </div>

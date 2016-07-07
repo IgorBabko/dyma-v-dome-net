@@ -21,19 +21,31 @@
                         <label for="content">Контент</label>
                         <textarea type="text" class="form-control" id="content" name="content">{!! $chimney->content !!}</textarea>
                     </div>
-                    <select class="form-control" name="type">
-                        <option value="одностенный" {{ $chimney->type == 'одностенный' ? 'selected' :'' }}>одностенный</option>
-                        <option value="утепленный" {{ $chimney->type == 'утепленный' ? 'selected' : '' }}>утепленный</option>
-                        <option value="алюком" {{ $chimney->type == 'алюком' ? 'selected' : '' }}>алюком</option>
-                        <option value="керамический" {{ $chimney->type == 'керамический' ? 'selected' : '' }}>керамический</option>
-                    </select>
-                    <div class="form-group" style="margin: 20px 0">
+                    <div class="form-group">
+                        <label for="type">Тип</label>
+                        <select class="form-control" id="type" name="type">
+                            <option value="одностенный" {{ $chimney->type == 'одностенный' ? 'selected' :'' }}>одностенный</option>
+                            <option value="утепленный" {{ $chimney->type == 'утепленный' ? 'selected' : '' }}>утепленный</option>
+                            <option value="алюком" {{ $chimney->type == 'алюком' ? 'selected' : '' }}>алюком</option>
+                            <option value="керамический" {{ $chimney->type == 'керамический' ? 'selected' : '' }}>керамический</option>
+                        </select>
+                    </div>
+                    <!--<div class="form-group" style="margin: 20px 0">
                         <label for="image">Изменить изображение</label>
                         <input type="file" id="image" name="image">
                         <img src="{{ $chimney->image }}" class="thumb">
+                    </div>-->
+                    <div class="form-group">
+                        <label for="image">Главная картинка</label>
+                        <input type="text" class="form-control" id="image" name="image">
                     </div>
                     <button type="submit" class="btn Button Button--green" style="float: right">Сохранить</button>
                     <a href="/admin/chimneys" type="submit" class="btn Button Button--blue right-margin">Назад <span class="glyphicon glyphicon-chevron-left"></span></a>
+                </form>
+                <form action="/admin/chimneys/{{ $chimney->id }}" method="POST" class="pull-left">
+                    {{ csrf_field() }}
+                    {{ method_field('DELETE') }}
+                    <button type="submit" class="btn Button pull-right" style="margin-right: 5px">Удалить</button>
                 </form>
             </div>
         </div>

@@ -55,7 +55,16 @@ h3
 input.form-control,
 textarea.form-control,
 select.form-control
-    border-color: #868686 !important
+    border-color: black !important
+
+select
+    margin-bottom: 10px
+
+input:hover,
+textarea:hover,
+input:focus,
+textarea:focus
+    border-color: black !important
 
 body
     //background-image: url('../img/bricks2.jpg')
@@ -63,6 +72,12 @@ body
 
 .description
     font-size: 18px
+
+li
+    color: #6a6a6a
+    font-size: 18px
+    strong
+        color: black
 
 .search-form
     text-align: left
@@ -372,12 +387,6 @@ body.admin
 .navbar-inverse .navbar-toggle:hover
     background: #dc4545
 
-input:hover,
-textarea:hover,
-input:focus,
-textarea:focus
-    border-color: #ee3b24 !important
-
 section
     background: white
     display: flex
@@ -502,6 +511,7 @@ h3
 
 .divider
     background: #ff9142
+    margin: 40px auto
 
     &-orange
         background: #ff9142
@@ -564,14 +574,6 @@ tr td:first-child
     @media screen and (max-width: 768px)
         margin-left: 10px
 
-.single-feature
-    background: #eee
-    transition: none
-    border-radius: 0
-
-    &:after
-        transition: none
-
 .nav-tabs
     a
         padding: 0 !important
@@ -586,15 +588,27 @@ tr td:first-child
 .glyphicon-chevron-right
     font-size: 12px
 
-.single-feature:hover
-    background: #EE8B24
-
+.single-feature
+    background: #6b5858
+    transition: all 0.1s ease-in-out 
+    border-radius: 0
 
     h4, p, i, &::after
        color: white 
 
     &:after
-        background: #EE8B24 !important
+        transition: all 0.1s ease-in-out
+        background: #6b5858
+        color: #6b5858
+
+.single-feature:hover
+    background: #f1f1f1
+
+    h4, p, i, &::after
+       color: black 
+
+    &:after
+        background: #f1f1f1 !important
 
 
 // pagination

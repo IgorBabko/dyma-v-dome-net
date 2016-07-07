@@ -54,9 +54,9 @@ class ChimneysController extends Controller
 
         $chimney = Chimney::create($request->all());
 
-        if ($request->file('image')) {
+        /*if ($request->file('image')) {
             $this->saveImage($request, $chimney);
-        }
+        }*/
 
         $this->flashData($request, [
             'type' => 'success',
@@ -66,7 +66,7 @@ class ChimneysController extends Controller
         return redirect('/admin/chimneys');
     }
 
-    protected function saveImage(Request $request, Chimney $chimney, $replace = false)
+    /*protected function saveImage(Request $request, Chimney $chimney, $replace = false)
     {
         $imageName = $chimney->id . '.' . $request->file('image')->getClientOriginalExtension();
 
@@ -78,7 +78,7 @@ class ChimneysController extends Controller
     
         $chimney->image = '/images/uploads/' . $imageName;
         $chimney->save();
-    }
+    }*/
 
 
     /**
@@ -119,14 +119,15 @@ class ChimneysController extends Controller
             'type' => 'required',
         ]);
 
-        if ($request->file('image')) {
+        /*if ($request->file('image')) {
             $this->saveImage($request, $chimney, true);
-        }
+        }*/
 
         $chimney->name = $request->name;
         $chimney->desc = $request->desc;
         $chimney->content = $request->content;
         $chimney->type = $request->type;
+        $chimney->image = $request->image;
 
         $chimney->save();
 
@@ -160,7 +161,7 @@ class ChimneysController extends Controller
             'message' => 'Дымоход успешно удален!',
         ]);
 
-        return back();
+        return redirect('/admin/chimneys');
     }
 
     public function search(Request $request)

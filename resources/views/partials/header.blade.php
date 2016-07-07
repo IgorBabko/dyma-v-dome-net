@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <h1 class="feature_title nav-logo"><a href="/"><span style="color: white"><img src="/images/logo2.png" class="logo">Тепло</span><b style="color: #FF9142">Квартал</b></a></h1>
+            <h1 class="feature_title nav-logo"><a href="/"><span style="color: white"><img src="/images/logo2.png" class="logo">Тепло</span><b style="color: #ff543e">Квартал</b></a></h1>
         </div>
         @include ('partials.nav')
     </div>
@@ -23,7 +23,7 @@
                     @elseif ( Request::is('boilers*'))
                         @include ('partials.search', ['action' => '/boilers/search', 'placeholder' => 'найти котел'])
                     @elseif ( Request::is('articles*') || Request::is('pages*') )
-                        @include ('partials.search', ['action' => '/articles/search', 'placeholder' => 'найти сатью'])
+                        @include ('partials.search', ['action' => '/articles/search', 'placeholder' => 'найти статью'])
                     @elseif ( Request::is('photos*'))
                         @include ('partials.search', ['action' => '/photos/search', 'placeholder' => 'найти фото'])
                     @endif

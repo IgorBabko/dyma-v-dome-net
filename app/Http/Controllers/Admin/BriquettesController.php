@@ -54,9 +54,9 @@ class BriquettesController extends Controller
 
         $briquette = Briquette::create($request->all());
 
-        if ($request->file('image')) {
+        /*if ($request->file('image')) {
             $this->saveImage($request, $briquette);
-        }
+        }*/
 
         $this->flashData($request, [
             'type' => 'success',
@@ -66,7 +66,7 @@ class BriquettesController extends Controller
         return redirect('/admin/briquettes');
     }
 
-    protected function saveImage(Request $request, Briquette $briquette, $replace = false)
+    /*protected function saveImage(Request $request, Briquette $briquette, $replace = false)
     {
         $imageName = $briquette->id . '.' . $request->file('image')->getClientOriginalExtension();
 
@@ -78,7 +78,7 @@ class BriquettesController extends Controller
     
         $briquette->image = '/images/uploads/' . $imageName;
         $briquette->save();
-    }
+    }*/
 
 
     /**
@@ -119,13 +119,14 @@ class BriquettesController extends Controller
             //'type' => 'required',
         ]);
 
-        if ($request->file('image')) {
+        /*if ($request->file('image')) {
             $this->saveImage($request, $briquette, true);
-        }
+        }*/
 
         $briquette->name = $request->name;
         $briquette->desc = $request->desc;
         $briquette->content = $request->content;
+        $briquette->image = $request->image;
         //$briquette->type = $request->type;
 
         $briquette->save();
@@ -160,7 +161,7 @@ class BriquettesController extends Controller
             'message' => 'Брикет успешно удален!',
         ]);
 
-        return back();
+        return redirect('/admin/briquettes');
     }
 
     public function search(Request $request)

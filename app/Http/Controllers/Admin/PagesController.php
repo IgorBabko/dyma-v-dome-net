@@ -54,9 +54,9 @@ class PagesController extends Controller
 
         $page = Page::create($request->all());
 
-        if ($request->file('image')) {
+        /*if ($request->file('image')) {
             $this->saveImage($request, $page);
-        }
+        }*/
 
         $this->flashData($request, [
             'type' => 'success',
@@ -66,7 +66,7 @@ class PagesController extends Controller
         return redirect('/admin/pages');
     }
 
-    protected function saveImage(Request $request, Page $page, $replace = false)
+    /*protected function saveImage(Request $request, Page $page, $replace = false)
     {
         $imageName = $page->id . '.' . $request->file('image')->getClientOriginalExtension();
 
@@ -78,7 +78,7 @@ class PagesController extends Controller
     
         $page->image = '/images/uploads/' . $imageName;
         $page->save();
-    }
+    }*/
 
     /**
      * Display the specified resource.
@@ -117,13 +117,14 @@ class PagesController extends Controller
             'content' => 'required',
         ]);
 
-        if ($request->file('image')) {
+        /*if ($request->file('image')) {
             $this->saveImage($request, $page, true);
-        }
+        }*/
 
         $page->name = $request->name;
         $page->desc = $request->desc;
         $page->content = $request->content;
+        $page->image = $request->image;
 
         $page->save();
 
@@ -157,7 +158,7 @@ class PagesController extends Controller
             'message' => 'Страница успешно удалена!',
         ]);
 
-        return back();
+        return redirect('/admin/pages');
     }
 
     public function search(Request $request)
