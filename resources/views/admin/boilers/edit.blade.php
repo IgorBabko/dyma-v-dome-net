@@ -33,6 +33,7 @@
                         <img src="{{ $boiler->image }}" class="thumb">
                     </div>
                     <button type="submit" class="btn Button Button--green" style="float: right">Редактировать</button>
+                    <a href="/admin/boilers" type="submit" class="btn Button Button--blue right-margin">Назад <span class="glyphicon glyphicon-chevron-left"></span></a>
                 </form>
             </div>
         </div>

@@ -94,4 +94,9 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
     Route::resource('orders', 'OrdersController', [
         'parameters' => 'singular'
     ]);
+
+    Route::get('/pages/search', 'PagessController@search');
+    Route::resource('pages', 'PagesController', [
+        'parameters' => 'singular'
+    ]);
 });

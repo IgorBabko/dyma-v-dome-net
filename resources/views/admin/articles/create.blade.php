@@ -25,6 +25,7 @@
                         <input type="file" id="image" name="image">
                     </div>
                     <button type="submit" class="btn Button Button--green" style="float: right">Добавить</button>
+                    <a href="/admin/articles" type="submit" class="btn Button Button--blue right-margin">Назад <span class="glyphicon glyphicon-chevron-left"></span></a>
                 </form>
             </div>
         </div>

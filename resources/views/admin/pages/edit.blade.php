@@ -15,7 +15,7 @@
                     </div>
                     <div class="form-group">
                         <label for="desc">Краткое описание</label>
-                        <textarea type="text" class="form-control" id="desc" name="desc">{!! $article->desc !!}</textarea>
+                        <textarea type="text" class="form-control" id="desc" name="desc">{!! $page->desc !!}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="content">Контент</label>
@@ -27,6 +27,7 @@
                         <img src="{{ $page->image }}" class="thumb">
                     </div>
                     <button type="submit" class="btn Button Button--green" style="float: right">Редактировать</button>
+                    <a href="/admin/pages" type="submit" class="btn Button Button--blue right-margin">Назад <span class="glyphicon glyphicon-chevron-left"></span></a>
                 </form>
             </div>
         </div>

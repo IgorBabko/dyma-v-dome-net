@@ -3,15 +3,15 @@
 @section ('content')
 <div class="page">
     <div class="container">
+        <div class="col-xs-12 flash-block">
+            @include ('partials.flash')
+        </div>
         <h1>{{ Request::input('queryString') ? 'Результаты поиска' : 'Каталог дымоходов' }}</h1>
         <div class="divider"></div>
         <div class="row">
             @if ( Request::is('admin/chimneys/search*') )
                 @include ('partials.search-results', ['returnUrl' => '/admin/chimneys'])
             @endif
-            <div class="col-xs-12">
-                @include ('partials.flash')
-            </div>
             <div class="col-xs-12" style="text-align: center; float: none">
                 <a href="/admin/chimneys/create" class="btn Button Button__add-resource Button--green">Добавить дымоход</a>
             </div>

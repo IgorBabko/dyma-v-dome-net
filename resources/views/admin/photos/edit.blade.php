@@ -23,6 +23,7 @@
                         <img src="{{ $photo->image }}" class="thumb">
                     </div>
                     <button type="submit" class="btn Button Button--green" style="float: right">Редактировать</button>
+                    <a href="/admin/photos" type="submit" class="btn Button Button--blue right-margin">Назад <span class="glyphicon glyphicon-chevron-left"></span></a>
                 </form>
             </div>
         </div>

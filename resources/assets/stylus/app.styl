@@ -4,6 +4,10 @@ h3
 .feature_header .feature_title
     display: inline !important
 
+.right-margin
+    float: right
+    margin-right: 5px
+
 .top-line .container
     padding: 0
 
@@ -28,7 +32,7 @@ h3
     font-size: 16px
 
     &:hover
-        color: #505050
+        color: lighten(#8e8e8e, 30%)//#505050
 
 .search-results
     background: #dc4545 //#23c9ee
@@ -169,8 +173,14 @@ img
 
 .page,
 section
+    background: #5a5757 !important//#988585 !important
+    //background: #ff9142 !important
+    //background-image: url('../images/bricks55.jpg') !important
     @media screen and (max-width: 768px)
         padding-top: 200px !important
+
+label
+    color: white
 
 .admin
     .page,
@@ -179,7 +189,6 @@ section
             padding-top: 0 !important
 
 .page
-    background: #e6e6e6 // #f3f3f3
     padding: 180px 0 50px
     min-height: calc(100vh - 76px)
 
@@ -199,13 +208,16 @@ body.admin
 .order,
 .photo-description,
 .admin .article
+    min-height: 350px
     position: relative
     margin: 0 0 50px
     clear: fix
     //border: 1px solid #E0E0E0
     padding: 40px
     background: #F3F3F3
-    box-shadow: 0 2px 1px #b7b7b7
+    //box-shadow: 0 2px 1px #b7b7b7
+    //box-shadow: 0 0px 5px 1px #5d5d5d//#888
+    box-shadow: 0 0px 3px 1px #000000
 
     img
         box-shadow: 0 0 5px 1px #868686
@@ -222,7 +234,9 @@ body.admin
 .article-expanded,
 .resource-expanded
     background: #F3F3F3
-    box-shadow: 0 2px 1px #b7b7b7
+    //box-shadow: 0 2px 1px #b7b7b7
+    //box-shadow: 0 0px 5px 1px #5d5d5d//#888
+    box-shadow: 0 0px 3px 1px #000000
     padding: 0 40px 40px
     margin: 0 0 
 
@@ -231,12 +245,14 @@ body.admin
 
 .main-block
     background: #f3f3f3
-    box-shadow: 0 2px 1px #b7b7b7
+    //box-shadow: 0 2px 1px #b7b7b7
     margin: 20px 0 50px 0
     padding: 50px
+    box-shadow: 0 0px 5px 1px #5d5d5d//#888
 
     h1
         text-align: left
+        color: black
 
     .row
         margin: 0
@@ -335,8 +351,6 @@ body.admin
     @media screen and (max-width: 768px)
         text-align: center
 
-.gray-section
-    background: #e6e6e6 //#f3f3f3
 
 .search-button
     position: absolute
@@ -373,7 +387,8 @@ section
     min-height: calc(100vh - 177px) !important
 
 .section-main
-    background: #2C2C2C
+    background: #2C2C2C !important
+    background-image: none !important
     min-height: calc(100vh - 77px) !important
     padding: 0 0 50px 0
 
@@ -480,14 +495,13 @@ ul.navbar-nav > li > a
 h1
     text-transform: uppercase
     text-align: center
-    color: #5A5A5A
+    color: #f3f3f3
 
 h3
     font-size: 36px
 
 .divider
-    margin-bottom: 50px
-    background: #dc4545 // #ee8b24
+    background: #ff9142
 
     &-orange
         background: #ff9142

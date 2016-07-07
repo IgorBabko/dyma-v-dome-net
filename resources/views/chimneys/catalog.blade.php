@@ -1,6 +1,6 @@
 @extends('layout') @section('content')
-<section>
-    <section id="service">
+<div class="page">
+    <div id="service">
         <div class="container">
 
             <h1>Каталог дымоходов</h1>
@@ -48,6 +48,6 @@
                 </div>
             </div>
         </div>
-    </section>
-</section>
+    </div>
+</div>
 @stop

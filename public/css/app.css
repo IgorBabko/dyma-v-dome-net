@@ -4,6 +4,10 @@ h3 {
 .feature_header .feature_title {
   display: inline !important;
 }
+.right-margin {
+  float: right;
+  margin-right: 5px;
+}
 .top-line .container {
   padding: 0;
 }
@@ -28,7 +32,7 @@ h3 {
   font-size: 16px;
 }
 .reset-search-link:hover {
-  color: #505050;
+  color: #b0b0b0;
 }
 .search-results {
   background: #dc4545;
@@ -175,11 +179,18 @@ img {
 .submenu li:hover a {
   color: #000;
 }
+.page,
+section {
+  background: #5a5757 !important;
+}
 @media screen and (max-width: 768px) {
   .page,
   section {
     padding-top: 200px !important;
   }
+}
+label {
+  color: #fff;
 }
 @media screen and (max-width: 768px) {
   .admin .page,
@@ -188,7 +199,6 @@ img {
   }
 }
 .page {
-  background: #e6e6e6;
   padding: 180px 0 50px;
   min-height: calc(100vh - 76px);
 }
@@ -219,11 +229,12 @@ body.admin {
 .order,
 .photo-description,
 .admin .article {
+  min-height: 350px;
   position: relative;
   margin: 0 0 50px;
   padding: 40px;
   background: #f3f3f3;
-  box-shadow: 0 2px 1px #b7b7b7;
+  box-shadow: 0 0px 3px 1px #000;
 }
 .chimney img,
 .briquette img,
@@ -248,7 +259,7 @@ body.admin {
 .article-expanded,
 .resource-expanded {
   background: #f3f3f3;
-  box-shadow: 0 2px 1px #b7b7b7;
+  box-shadow: 0 0px 3px 1px #000;
   padding: 0 40px 40px;
   margin: 0 0;
 }
@@ -259,12 +270,13 @@ body.admin {
 }
 .main-block {
   background: #f3f3f3;
-  box-shadow: 0 2px 1px #b7b7b7;
   margin: 20px 0 50px 0;
   padding: 50px;
+  box-shadow: 0 0px 5px 1px #5d5d5d;
 }
 .main-block h1 {
   text-align: left;
+  color: #000;
 }
 .main-block .row {
   margin: 0;
@@ -367,9 +379,6 @@ body.admin {
     text-align: center;
   }
 }
-.gray-section {
-  background: #e6e6e6;
-}
 .search-button {
   position: absolute;
   top: 13px;
@@ -407,7 +416,8 @@ section {
   min-height: calc(100vh - 177px) !important;
 }
 .section-main {
-  background: #2c2c2c;
+  background: #2c2c2c !important;
+  background-image: none !important;
   min-height: calc(100vh - 77px) !important;
   padding: 0 0 50px 0;
 }
@@ -3125,6 +3135,12 @@ textarea:hover {
   right: 20px;
   bottom: 20px;
 }
+@media screen and (max-width: 1200px) {
+  .Button__group--positioned {
+    position: static;
+    float: right;
+  }
+}
 .Button__more {
   float: right;
 }
@@ -3187,14 +3203,13 @@ ul.navbar-nav > li > a:hover {
 h1 {
   text-transform: uppercase;
   text-align: center;
-  color: #5a5a5a;
+  color: #f3f3f3;
 }
 h3 {
   font-size: 36px;
 }
 .divider {
-  margin-bottom: 50px;
-  background: #dc4545;
+  background: #ff9142;
 }
 .divider-orange {
   background: #ff9142;

@@ -6,7 +6,7 @@
             <div class="divider"></div>
             <div class="col-xs-12">
                 @include ('partials.errors')
-                <form action="/admin/boliers" method="POST" enctype="multipart/form-data">
+                <form action="/admin/boilers" method="POST" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="name">Название</label>
@@ -34,6 +34,7 @@
                         <input type="file" id="image" name="image">
                     </div>
                     <button type="submit" class="btn Button Button--green" style="float: right">Добавить</button>
+                    <a href="/admin/boilers" type="submit" class="btn Button Button--blue right-margin">Назад <span class="glyphicon glyphicon-chevron-left"></span></a>
                 </form>
             </div>
         </div>

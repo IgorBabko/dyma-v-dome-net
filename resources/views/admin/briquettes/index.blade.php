@@ -3,15 +3,15 @@
 @section ('content')
 <div class="page">
     <div class="container">
+        <div class="col-xs-12 flash-block">
+            @include ('partials.flash')
+        </div>
         <h1>{{ Request::input('queryString') ? 'Результаты поиска' : 'Каталог брикетов' }}</h1>
         <div class="divider"></div>
         <div class="row">
             @if ( Request::is('admin/briquettes/search*') )
                 @include ('partials.search-results', ['returnUrl' => '/admin/briquettes'])
             @endif
-            <div class="col-xs-12">
-                @include ('partials.flash')
-            </div>
             <div class="col-xs-12" style="text-align: center; float: none">
                 <a href="/admin/briquettes/create" style="margin-top: 20px" class="btn Button Button__add-resource Button--green">Добавить брикет</a>
             </div>

@@ -48,7 +48,7 @@ class OrdersController extends Controller
             'message' => 'Заявка успешно удалена!',
         ]);
 
-        return back();
+        return redirect('/admin/orders');
     }
 
     protected function flashData(Request $request, $data = [])

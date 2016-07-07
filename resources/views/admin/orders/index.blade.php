@@ -1,19 +1,15 @@
-@extends ('admin.layout')
-
-@section ('content')
+@extends ('admin.layout') @section ('content')
 <div class="page">
     <div class="container">
+        <div class="col-xs-12 flash-block">
+            @include ('partials.flash')
+        </div>
         <h1>{{ Request::input('queryString') ? 'Результаты поиска' : 'Заявки' }}</h1>
         <div class="divider"></div>
         <div class="row">
-            @if ( Request::is('admin/orders/search*') )
-                @include ('partials.search-results', ['returnUrl' => '/admin/orders'])
-            @endif
-            <div class="col-xs-12">
-                @include ('partials.flash')
-            </div>
-            @if (count($orders))
-            @foreach($orders as $order)
+            @if ( Request::is('admin/orders/search*') ) @include ('partials.search-results',
+            ['returnUrl' => '/admin/orders']) @endif
+            @if (count($orders)) @foreach($orders as $order)
             <div class="order">
                 <div class="col-xs-12">
                     <span class="pull-right" style="font-size: 16px">{{ $order->created_at->format('d.m.Y') }} </span> 
@@ -21,9 +17,12 @@
                     <h3>Контактное лицо: {{ $order->client_name }} </h3> 
                     <h4>Контактные данные:</h4>
                     <ul>
-                        <li>Телефон 1: <strong>{{ $order->phone1 }}</strong></li>
-                        <li>Телефон 2: <strong>{{ $order->phone2 }}</strong></li>
-                        <li>Email: <strong>{{ $order->email }}</strong></li>
+                        <li>Телефон 1: <strong>{{ $order->phone1 }}</strong>
+                        </li>
+                        <li>Телефон 2: <strong>{{ $order->phone2 }}</strong>
+                        </li>
+                        <li>Email: <strong>{{ $order->email }}</strong>
+                        </li>
                     </ul>
 
                     <h4>Суть вопроса</h4>
@@ -31,8 +30,7 @@
                 </div>
                 <div class="col-xs-12">
                     <form action="/admin/orders/{{ $order->id }}" method="POST">
-                        {{ csrf_field() }}
-                        {{ method_field('DELETE') }}
+                        {{ csrf_field() }} {{ method_field('DELETE') }}
                         <a href="/admin/orders/{{ $order->id }}" class="btn Button Button--blue pull-right">Просмотреть</a>
                         <button class="btn Button pull-right" style="margin-right: 5px">Удалить</a>
                     </form>
@@ -40,11 +38,9 @@
             </div>
             @endforeach
             <div class="pagination-wrapper">
-            @if (!Request::is('admin/orders/search*')) 
-               {!! $orders->render() !!}
-            @endif
+                @if (!Request::is('admin/orders/search*')) {!! $orders->render() !!} @endif
             </div>
-        @endif
+            @endif
+        </div>
     </div>
-</div>
-@stop
+    @stop

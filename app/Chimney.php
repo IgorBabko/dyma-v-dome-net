@@ -20,7 +20,7 @@ class Chimney extends Model
         'columns' => [
             'name' => 10,
             'desc' => 10,
-            'description' => 10,
+            'content' => 10,
         ],
     ];
 }
