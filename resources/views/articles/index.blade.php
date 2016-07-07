@@ -15,7 +15,7 @@
                 <div class="col-md-5" style="position: static">
                     <h3>{{ $article->name }}</h3>
                     <div>{!! $article->desc !!}</div>
-                    <a class="btn Button Button__more--positioned" href="/articles/{{ $article->id }}">подробнее<span class="glyphicon glyphicon-chevron-right"></span></a>
+                    <a class="btn Button Button__more--positioned" href="/articles/{{ $article->id }}"><i class="fa fa-chevron-right" aria-hidden="true"></i> подробнее</a>
                 </div>
             </div>
             @endforeach

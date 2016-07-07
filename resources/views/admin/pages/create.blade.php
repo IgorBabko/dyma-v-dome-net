@@ -28,8 +28,8 @@
                         <label for="image">Главная картинка</label>
                         <input type="text" class="form-control" id="image" name="image">
                     </div>
-                    <button type="submit" class="btn Button Button--green" style="float: right">Добавить</button>
-                    <a href="/admin/pages" type="submit" class="btn Button Button--blue right-margin">Назад <span class="glyphicon glyphicon-chevron-left"></span></a>
+                    <button type="submit" class="btn Button Button--green" style="float: right"><i class="fa fa-floppy-o" aria-hidden="true"></i> Сохранить</button>
+                    <a href="/admin/pages" type="submit" class="btn Button Button--blue right-margin"><i class="fa fa-chevron-left" aria-hidden="true"></i> Назад</a>
                 </form>
             </div>
         </div>

@@ -10,7 +10,7 @@
             @if ( Request::is('admin/pages/search*') ) @include ('partials.search-results',
             ['returnUrl' => '/admin/pages']) @endif
             <div class="col-xs-12" style="text-align: center; float: none">
-                <a href="/admin/pages/create" style="margin-top: 20px" class="btn Button Button__add-resource Button--green">Добавить страницу</a>
+                <a href="/admin/pages/create" style="margin-top: 20px" class="btn Button Button__add-resource Button--green"><i class="fa fa-plus-square" aria-hidden="true"></i> Добавить страницу</a>
             </div>
         </div>
         @if (count($pages)) @foreach ($pages as $page)
@@ -24,9 +24,9 @@
                 <div class="Button__group--positioned" style="right: 40px; bottom: 40px">
                     <form action="/admin/pages/{{ $page->id }}" style="display: inline-block" method="POST">
                         {{ csrf_field() }} {{ method_field('DELETE') }}
-                        <button class="btn Button pull-right" style="margin-right: 5px">Удалить</button>
+                        <button class="btn Button pull-right" style="margin-right: 5px"><i class="fa fa-trash-o" aria-hidden="true"></i> Удалить</button>
                     </form>
-                    <a href="/admin/pages/{{ $page->id }}/edit" class="btn Button Button--blue pull-right">Редактировать</a>
+                    <a href="/admin/pages/{{ $page->id }}/edit" class="btn Button Button--blue pull-right"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Редактировать</a>
                 </div>
             </div>
         </div>

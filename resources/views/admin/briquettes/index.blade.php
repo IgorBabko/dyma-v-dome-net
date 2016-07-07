@@ -13,7 +13,7 @@
                 @include ('partials.search-results', ['returnUrl' => '/admin/briquettes'])
             @endif
             <div class="col-xs-12" style="text-align: center; float: none">
-                <a href="/admin/briquettes/create" style="margin-top: 20px" class="btn Button Button__add-resource Button--green">Добавить брикет</a>
+                <a href="/admin/briquettes/create" style="margin-top: 20px" class="btn Button Button__add-resource Button--green"><i class="fa fa-plus-square" aria-hidden="true"></i> Добавить брикет</a>
             </div>
             @if (count($briquettes))
                 @foreach ($briquettes as $briquette)
@@ -134,11 +134,11 @@
                         </div>
                     </div>
                     <div class="col-xs-12">
-                        <a href="/admin/briquettes/{{ $briquette->id }}/edit" class="btn Button Button--blue pull-right">Редактировать</a>
+                        <a href="/admin/briquettes/{{ $briquette->id }}/edit" class="btn Button Button--blue pull-right"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Редактировать</a>
                         <form action="/admin/briquettes/{{ $briquette->id }}" method="POST">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
-                            <button class="btn Button pull-right" style="margin-right: 5px">Удалить</a>
+                            <button class="btn Button pull-right" style="margin-right: 5px"><i class="fa fa-trash-o" aria-hidden="true"></i> Удалить</a>
                         </form>
                     </div>
                 </div>

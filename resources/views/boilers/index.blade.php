@@ -23,11 +23,10 @@
                     помещения.
                 </p>
                 <p>
-                    <a class="btn Button btn-lg pull-right" href="/chimneys/catalog">посмотреть каталог</a>
-                    <a class="btn Button Button--green btn-lg pull-right" href="/pages/order" style="margin-right: 20px">оформить заявку</a>
+                    <a class="btn Button btn-lg pull-right" href="/boilers/catalog"><i class="fa fa-folder-open" aria-hidden="true"></i> посмотреть каталог</a>
+                    <a class="btn Button Button--green btn-lg pull-right" href="/pages/order" style="margin-right: 20px"><i class="fa fa-pencil-square" aria-hidden="true"></i> оформить заявку</a>
                 </p>
             </div>
-
             <div class="row carousel-block">
                 <div class="slick-carousel">
                     <div>

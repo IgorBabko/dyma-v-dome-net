@@ -22,11 +22,11 @@
                     </ul>
                 </div>
                 <div class="col-xs-12">
-                    <a href="/admin/orders" type="submit" class="btn Button Button--blue right-margin">Назад <span class="glyphicon glyphicon-chevron-left"></span></a>
+                    <a href="/admin/orders" type="submit" class="btn Button Button--blue right-margin"><i class="fa fa-chevron-left" aria-hidden="true"></i> Назад</a>
                 <form action="/admin/orders/{{ $order->id }}" method="POST" class="pull-left">
                     {{ csrf_field() }}
                     {{ method_field('DELETE') }}
-                    <button type="submit" class="btn Button pull-right" style="margin-right: 5px">Удалить</button>
+                    <button type="submit" class="btn Button pull-right" style="margin-right: 5px"><i class="fa fa-trash-o" aria-hidden="true"></i> Удалить</button>
                 </form>
                 </div>
             </div>

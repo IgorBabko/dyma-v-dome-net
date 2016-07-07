@@ -16,7 +16,7 @@
                     </a>
                     <div class="photo-description">
                         <div>{!! $photo->desc !!}</div>
-                        <a href="/photos/{{ $photo->id }}" class="btn Button Button__more--positioned" style="right: 20px; bottom: 20px">подробнее <span class="glyphicon glyphicon-chevron-right"></span></a> 
+                        <a href="/photos/{{ $photo->id }}" class="btn Button Button__more--positioned" style="right: 20px; bottom: 20px"><i class="fa fa-chevron-right" aria-hidden="true"></i> подробнее</a> 
                     </div>
                 </div>
                 @endforeach

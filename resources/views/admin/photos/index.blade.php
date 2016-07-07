@@ -9,7 +9,7 @@
         @if ( Request::is('admin/photos/search*') ) @include ('partials.search-results',
         ['returnUrl' => '/admin/photos']) @endif
         <div class="col-xs-12" style="text-align: center; float: none">
-            <a href="/admin/photos/create" style="margin-top: 20px" class="btn Button Button__add-resource Button--green">Добавить фото</a>
+            <a href="/admin/photos/create" style="margin-top: 20px" class="btn Button Button__add-resource Button--green"><i class="fa fa-plus-square" aria-hidden="true"></i> Добавить фото</a>
         </div>
         @if (count($photos)) @foreach ($photos->chunk(3) as $photosRow)
         <div class="row">
@@ -21,9 +21,9 @@
                     <div class="Button__group--positioned">
                         <form action="/admin/photos/{{ $photo->id }}" style="display: inline-block" method="POST">
                             {{ csrf_field() }} {{ method_field('DELETE') }}
-                            <button class="btn Button" style="margin-right: 5px">Удалить</button>
+                            <button class="btn Button" style="margin-right: 5px"><i class="fa fa-trash-o" aria-hidden="true"></i> Удалить</button>
                         </form>
-                        <a href="/admin/photos/{{ $photo->id }}/edit" class="btn Button Button--blue">Редактировать</a> 
+                        <a href="/admin/photos/{{ $photo->id }}/edit" class="btn Button Button--blue"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Редактировать</a> 
                     </div>
                 </div>
             </div>

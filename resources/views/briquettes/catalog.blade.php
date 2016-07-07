@@ -126,7 +126,7 @@
                     </div>
                 </div>
                 <div class="col-xs-12">
-                    <a href="/briquettes/{{ $briquette->id }}" class="btn Button pull-right">Подробнее <span class="glyphicon glyphicon-chevron-right"></span></a>
+                    <a href="/briquettes/{{ $briquette->id }}" class="btn Button pull-right"><i class="fa fa-chevron-right" aria-hidden="true"></i> Подробнее</a>
                 </div>
             </div>
             @endforeach

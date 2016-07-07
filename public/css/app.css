@@ -197,7 +197,7 @@ img {
 }
 .page,
 section {
-  background: #504242 !important;
+  background: #483434 !important;
 }
 @media screen and (max-width: 768px) {
   .page,
@@ -434,12 +434,12 @@ section {
   -ms-flex-align: center;
       align-items: center;
   padding: 180px 0 70px;
-  min-height: calc(100vh - 177px) !important;
+  min-height: calc(100vh - 176px) !important;
 }
 .section-main {
   background: #2c2c2c !important;
   background-image: none !important;
-  min-height: calc(100vh - 77px) !important;
+  min-height: calc(100vh - 76px) !important;
   padding: 0 0 50px 0;
 }
 .Main {
@@ -3154,6 +3154,7 @@ textarea:hover {
 @media screen and (max-width: 480px) {
   .Button {
     width: 100%;
+    margin: 5px 0 !important;
   }
 }
 .Button__group--positioned {
@@ -3215,6 +3216,15 @@ textarea:hover {
 .Button--blue:active,
 .Button--blue:focus {
   background-color: #305bb9;
+  color: #fff;
+}
+.Button--orange {
+  background-color: #ff9142;
+}
+.Button--orange:hover,
+.Button--orange:active,
+.Button--orange:focus {
+  background-color: #ff7512;
   color: #fff;
 }
 ul.navbar-nav > li > a:hover {
@@ -3314,7 +3324,7 @@ tr td:first-child {
   float: none;
 }
 .single-feature {
-  background: #6b5858;
+  background: #483434;
   transition: all 0.1s ease-in-out;
   border-radius: 0;
   box-shadow: 1px 1px 3px 0px #000;
@@ -3338,7 +3348,7 @@ tr td:first-child {
 }
 .single-feature:after {
   transition: all 0.1s ease-in-out;
-  background: #6b5858;
+  background: #483434;
   color: #6b5858;
 }
 .single-feature:hover {

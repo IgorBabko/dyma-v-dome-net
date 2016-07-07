@@ -40,7 +40,7 @@
                         <textarea name="question" id="question" rows="5" style="width: 100%" class="textarea-block"></textarea>
                     </div>
                     <div class="col-md-12r" style="padding: 0">
-                        <button type="submit" class="btn Button pull-right">Отправить</button>
+                        <button type="submit" class="btn Button Button--orange pull-right"><i class="fa fa-paper-plane" aria-hidden="true"></i> Отправить</button>
                     </div>
                 </form>
             </div>

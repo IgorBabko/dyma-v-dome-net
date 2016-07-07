@@ -30,8 +30,8 @@
                 <div class="col-xs-12">
                     <form action="/admin/orders/{{ $order->id }}" method="POST">
                         {{ csrf_field() }} {{ method_field('DELETE') }}
-                        <a href="/admin/orders/{{ $order->id }}" class="btn Button Button--blue pull-right">Просмотреть</a>
-                        <button class="btn Button pull-right" style="margin-right: 5px">Удалить</a>
+                        <a href="/admin/orders/{{ $order->id }}" class="btn Button Button--blue pull-right"><i class="fa fa-chevron-right" aria-hidden="true"></i> Просмотреть</a>
+                        <button class="btn Button pull-right" style="margin-right: 5px"><i class="fa fa-trash-o" aria-hidden="true"></i> Удалить</a>
                     </form>
                 </div>
             </div>

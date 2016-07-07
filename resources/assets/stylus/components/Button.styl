@@ -11,6 +11,7 @@
 
     @media screen and (max-width: 480px)
         width: 100%
+        margin: 5px 0 !important
 
     &__group--positioned
         position: absolute
@@ -71,4 +72,11 @@
             background-color: darken(#446fce, 15%)
             color: white
 
-        //border-bottom: 5px solid darken(#30bd26, 30%)
+    &--orange
+        background-color: #ff9142
+
+        &:hover,
+        &:active,
+        &:focus
+            background-color: darken(#ff9142, 15%)
+            color: white

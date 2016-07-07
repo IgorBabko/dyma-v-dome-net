@@ -13,7 +13,7 @@
                 @include ('partials.search-results', ['returnUrl' => '/admin/chimneys'])
             @endif
             <div class="col-xs-12" style="text-align: center; float: none">
-                <a href="/admin/chimneys/create" class="btn Button Button__add-resource Button--green">Добавить дымоход</a>
+                <a href="/admin/chimneys/create" class="btn Button Button__add-resource Button--green"><i class="fa fa-plus-square" aria-hidden="true"></i> Добавить дымоход</a>
             </div>
             @if (count($chimneys))
                 @foreach ($chimneys as $chimney)
@@ -134,11 +134,11 @@
                         </div>
                     </div>
                     <div class="col-xs-12">
-                        <a href="/admin/chimneys/{{ $chimney->id }}/edit" class="btn Button Button--blue pull-right">Редактировать</a>
+                        <a href="/admin/chimneys/{{ $chimney->id }}/edit" class="btn Button Button--blue pull-right"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Редактировать</a>
                         <form action="/admin/chimneys/{{ $chimney->id }}" method="POST">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
-                            <button type="submit" class="btn Button pull-right" style="margin-right: 5px">Удалить</button>
+                            <button type="submit" class="btn Button pull-right" style="margin-right: 5px"><i class="fa fa-trash-o" aria-hidden="true"></i> Удалить</button>
                         </form>
                     </div>
                 </div>
