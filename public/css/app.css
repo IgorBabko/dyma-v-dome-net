@@ -197,7 +197,7 @@ img {
 }
 .page,
 section {
-  background: #5a5757 !important;
+  background: #504242 !important;
 }
 @media screen and (max-width: 768px) {
   .page,
@@ -3299,11 +3299,18 @@ tr td:first-child {
   transition: all 0.1s ease-in-out;
   border-radius: 0;
 }
+.single-feature img {
+  max-width: 64px;
+  float: left;
+  padding: 10px 10px 10px 0;
+}
 .single-feature h4,
-.single-feature p,
 .single-feature i,
 .single-feature::after {
   color: #fff;
+}
+.single-feature p {
+  color: #d2d2d2;
 }
 .single-feature:after {
   transition: all 0.1s ease-in-out;
