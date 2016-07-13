@@ -11,6 +11,14 @@ h3 {
 .top-line .container {
   padding: 0;
 }
+.add-resource-div {
+  text-align: center;
+  float: none;
+  padding: 0;
+}
+#query {
+  padding: 10px;
+}
 .row {
   margin: 0;
 }
@@ -45,6 +53,32 @@ h3 {
 }
 .query-string {
   color: #ff0;
+}
+#question {
+  padding: 10px 15px;
+}
+.alert-danger,
+.alert-success {
+  max-width: 540px;
+  margin: 10px auto 30px;
+  border-radius: 0;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+}
+.alert-danger li,
+.alert-success li {
+  font-size: 18px;
+  color: #fff;
+}
+.alert-danger {
+  background: #dc4545;
+}
+.alert-success {
+  background: #008000;
+}
+.form-level input {
+  border: none !important;
 }
 .order {
   font-size: 20px;
@@ -259,7 +293,7 @@ body.admin {
 .order img,
 .photo-description img,
 .admin .article img {
-  box-shadow: 0 0 5px 1px #868686;
+  box-shadow: 0 0 2px 1px #868686;
 }
 @media screen and (max-width: 768px) {
   .chimney,
@@ -295,6 +329,13 @@ body.admin {
 .resource-expanded img {
   box-shadow: 0 0 5px 1px #868686;
 }
+@media screen and (max-width: 768px) {
+  .photo-expanded,
+  .article-expanded,
+  .resource-expanded {
+    padding: 0 20px 40px;
+  }
+}
 .main-block {
   background: #d8d8d8;
   margin: 20px 0 50px 0;
@@ -310,6 +351,11 @@ body.admin {
 }
 .main-block p {
   font-size: 18px !important;
+}
+@media screen and (max-width: 768px) {
+  .main-block {
+    padding: 20px;
+  }
 }
 .photo {
   min-height: 296px;
@@ -3129,6 +3175,9 @@ textarea:hover {
   font-size: 16px;
   margin: 25px 15px;
 }
+.Footer__menu-item:hover {
+  color: #b5b5b5 !important;
+}
 .Contacts {
   float: right;
 }
@@ -3153,14 +3202,19 @@ textarea:hover {
 }
 @media screen and (max-width: 480px) {
   .Button {
-    width: 100%;
+    width: 100% !important;
     margin: 5px 0 !important;
+  }
+  .Button__group--positioned {
+    width: 100%;
   }
 }
 .Button__group--positioned {
   position: absolute;
   right: 20px;
   bottom: 20px;
+  width: 100%;
+  text-align: right;
 }
 @media screen and (max-width: 1200px) {
   .Button__group--positioned {
@@ -3207,7 +3261,10 @@ textarea:hover {
   color: #fff;
 }
 .Button__add-resource {
-  margin: 30px;
+  margin: 30px auto !important;
+}
+.Button__add-resource:parent {
+  padding: 0 !important;
 }
 .Button--blue {
   background-color: #446fce;
@@ -3276,7 +3333,6 @@ tr td:first-child {
   max-height: 240px;
   margin: 0;
   display: inline-block;
-  padding-top: 30px;
 }
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
@@ -3331,12 +3387,23 @@ tr td:first-child {
   display: -ms-flexbox;
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .single-feature {
+    display: block;
+  }
+  .single-feature .feature-icon {
+    margin: 20px 0 0 0;
+  }
+  .single-feature .feature-content {
+    padding: 0 0 10px;
+  }
+}
 .single-feature img {
   width: 64px;
   margin: 10px 10px 10px 0;
 }
 .single-feature .feature-content {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 .single-feature h4,
 .single-feature i,
@@ -3366,6 +3433,13 @@ tr td:first-child {
 .pagination>li>a,
 .pagination>li>span {
   color: #000;
+}
+.pagination>.disabled>span {
+  background: #d8d8d8;
+  brder: 1px solid #d8d8d8;
+}
+.pagination>.disabled>span:hover {
+  background: #d8d8d8;
 }
 .pagination>li>a:focus,
 .pagination>li>a:hover,

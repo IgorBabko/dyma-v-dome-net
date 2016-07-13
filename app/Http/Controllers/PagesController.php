@@ -4,6 +4,7 @@ namespace DymaVDomeNet\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DymaVDomeNet\Page;
+use DymaVDomeNet\Order;
 use DymaVDomeNet\Http\Requests;
 
 class PagesController extends Controller
@@ -36,10 +37,9 @@ class PagesController extends Controller
         $data = $request->all();
         $data['question'] = str_replace("\n", "<br>", $request->question);
 
-        \Mail::send('emails.order', $data, function ($message) use ($data) {
+        \Mail::send('emails.order', $data, function ($message) {
             $message->subject('Оформление заказа')
-                ->from(env('MAIL_FROM'))
-                ->to(env('MAIL_TO'));
+                ->to('i.i.babko@gmail.com');
         });
 
         $this->flashData($request, [
@@ -47,7 +47,7 @@ class PagesController extends Controller
             'message' => 'Заявка успешно оформлена'
         ]);
 
-        return redirect('/order');
+        return redirect('/pages/order');
     }
 
     protected function flashData(Request $request, $data = [])

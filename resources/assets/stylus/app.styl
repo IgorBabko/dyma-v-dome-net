@@ -11,6 +11,14 @@ h3
 .top-line .container
     padding: 0
 
+.add-resource-div
+    text-align: center
+    float: none
+    padding: 0
+
+#query
+    padding: 10px
+
 .row
     margin: 0
 
@@ -45,6 +53,32 @@ h3
 
 .query-string
     color: yellow
+
+#question
+    padding: 10px 15px
+
+.alert-danger,
+.alert-success
+    max-width: 540px
+    margin: 10px auto 30px
+    border-radius: 0
+    border: none
+    font-size: 18px
+    color: white
+
+    li
+        font-size: 18px
+        color: white
+
+.alert-danger
+    background: #dc4545
+
+.alert-success
+    background: green
+
+
+.form-level input
+    border: none !important
 
 .order
     font-size: 20px
@@ -235,7 +269,7 @@ body.admin
     box-shadow: 0 0px 3px 1px #000000
 
     img
-        box-shadow: 0 0 5px 1px #868686
+        box-shadow: 0 0 2px 1px #868686
 
     @media screen and (max-width: 768px)
         padding: 20px
@@ -260,6 +294,9 @@ body.admin
 
     img
         box-shadow: 0 0 5px 1px #868686
+        
+    @media screen and (max-width: 768px)
+        padding: 0 20px 40px
 
 .main-block
     background: #d8d8d8//#f3f3f3
@@ -277,6 +314,9 @@ body.admin
 
     p
         font-size: 18px !important
+    
+     @media screen and (max-width: 768px)
+        padding: 20px
 
 
 .photo
@@ -545,7 +585,7 @@ tr td:first-child
     max-height: 240px
     margin: 0
     display: inline-block
-    padding-top: 30px
+    // margin-top: 30px
 
 .navbar-inverse .navbar-nav > .active
     > a,
@@ -600,13 +640,22 @@ tr td:first-child
     border-radius: 0
     box-shadow: 1px 1px 3px 0px black
     display: flex
+    
+    @media screen and (max-width: 768px)
+        display: block
+        
+        .feature-icon
+            margin: 20px 0 0 0
+
+        .feature-content
+            padding: 0 0 10px
 
     img
         width: 64px
         margin: 10px 10px 10px 0
 
     .feature-content
-        margin-left: 10px
+        margin-left: 20px
 
     h4, i, &::after
        color: white 
@@ -635,6 +684,12 @@ tr td:first-child
 .pagination>li>a,
 .pagination>li>span
     color: black
+
+.pagination>.disabled>span
+    background: #d8d8d8
+    brder: 1px solid #d8d8d8
+    &:hover
+        background: #d8d8d8
 
 .pagination>li>a:focus,
 .pagination>li>a:hover,

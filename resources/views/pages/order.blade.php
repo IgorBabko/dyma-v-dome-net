@@ -13,19 +13,19 @@
                     {{ csrf_field() }}
                     <div class="form-level">
                         <label for="client_name">Контактное лицо</label>
-                        <input name="client_name" id="client_name" type="text" class="input-block">
+                        <input name="client_name" id="client_name" type="text" class="input-block" value="{{ old('client_name') }}">
                     </div>
                     <div class="form-level">
                         <label for="phone1">Контактное телефон 1</label>
-                        <input name="phone1" id="phone1" type="text" class="input-block">
+                        <input name="phone1" id="phone1" type="text" class="input-block" value="{{ old('phone1') }}">
                     </div>
                     <div class="form-level">
                         <label for="phone2">Контактное телефон 2</label>
-                        <input name="phone2" id="phone2" type="text" class="input-block">
+                        <input name="phone2" id="phone2" type="text" class="input-block" value="{{ old('phone2') }}">
                     </div>
                     <div class="form-level">
                         <label for="email">Email</label>
-                        <input name="email" id="mail" class="input-block" type="email">
+                        <input name="email" id="mail" class="input-block" type="email" value="{{ old('email') }}">
                     </div>
                     <!--<div class="form-level">
                         <label for="type">Вас интересует...</label>
@@ -37,7 +37,7 @@
                     </div>-->
                     <label for="question">Суть вопроса</label>
                     <div class="form-level">
-                        <textarea name="question" id="question" rows="5" style="width: 100%" class="textarea-block"></textarea>
+                        <textarea name="question" id="question" rows="5" style="width: 100%" class="textarea-block">{{ old('question') }}</textarea>
                     </div>
                     <div class="col-md-12r" style="padding: 0">
                         <button type="submit" class="btn Button Button--orange pull-right"><i class="fa fa-paper-plane" aria-hidden="true"></i> Отправить</button>

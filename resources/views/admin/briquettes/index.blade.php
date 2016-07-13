@@ -12,7 +12,7 @@
             @if ( Request::is('admin/briquettes/search*') )
                 @include ('partials.search-results', ['returnUrl' => '/admin/briquettes'])
             @endif
-            <div class="col-xs-12" style="text-align: center; float: none">
+            <div class="col-xs-12 add-resource-div">
                 <a href="/admin/briquettes/create" style="margin-top: 20px" class="btn Button Button__add-resource Button--green"><i class="fa fa-plus-square" aria-hidden="true"></i> Добавить брикет</a>
             </div>
             @if (count($briquettes))

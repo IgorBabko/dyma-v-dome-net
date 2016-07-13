@@ -27,7 +27,7 @@
                     <a class="btn Button Button--green pull-right" href="/pages/order" style="margin-right: 20px"><i class="fa fa-pencil-square" aria-hidden="true"></i> Оформить заявку</a>
                 </p>
             </div>
-            <div class="row carousel-block">
+            <!--<div class="row carousel-block">
                 <div class="slick-carousel">
                     <div>
                         <img src="/images/chimneys/one-wall/leyka.jpg">
@@ -48,7 +48,7 @@
                         <img src="/images/chimneys/one-wall/kagla.jpg">
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 </div>

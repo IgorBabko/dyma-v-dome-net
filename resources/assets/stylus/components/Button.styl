@@ -10,13 +10,18 @@
     font-size: 16px
 
     @media screen and (max-width: 480px)
-        width: 100%
+        width: 100% !important
         margin: 5px 0 !important
+        
+        &__group--positioned
+            width: 100%
 
     &__group--positioned
         position: absolute
         right: 20px
         bottom: 20px
+        width: 100%
+        text-align: right
 
         @media screen and (max-width: 1200px)
             position: static
@@ -58,10 +63,11 @@
             background-color: darken(#30bd26, 15%)
             color: white
 
-        //border-bottom: 5px solid darken(#30bd26, 30%)
-
     &__add-resource
-        margin: 30px
+        margin: 30px auto !important
+    
+    &__add-resource:parent
+        padding: 0 !important
 
     &--blue
         background-color: #446fce
