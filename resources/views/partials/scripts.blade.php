@@ -7,4 +7,5 @@
 <script src="/js/slick.min.js"></script>
 <script src="/ckeditor/ckeditor.js"></script>
 <script src="/js/jquery.fancybox.pack.js"></script>
+<script src="/js/jquery.magnific-popup.min.js"></script>
 <script src="/js/app.js"></script>

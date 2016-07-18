@@ -35,6 +35,8 @@ elixir(function(mix) {
         .copy('bower_components/fancybox/source/*.png', 'public/css/fancybox')
         .copy('bower_components/fancybox/source/*.gif', 'public/css/fancybox')
         .copy('bower_components/fancybox/source/jquery.fancybox.css', 'public/css/fancybox')
-        .copy('bower_components/fancybox/source/jquery.fancybox.pack.js', 'public/js');
+        .copy('bower_components/fancybox/source/jquery.fancybox.pack.js', 'public/js')
+        .copy('bower_components/magnific-popup/dist/magnific-popup.css', 'public/css')
+        .copy('bower_components/magnific-popup/dist/jquery.magnific-popup.min.js', 'public/js')
 });
 

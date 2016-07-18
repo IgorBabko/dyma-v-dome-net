@@ -3,6 +3,7 @@
 namespace DymaVDomeNet\Http\Controllers;
 
 use Session;
+use Storage;
 use Illuminate\Http\Request;
 use DymaVDomeNet\Http\Requests;
 use DymaVDomeNet\Briquette;
@@ -36,11 +37,15 @@ class BriquettesController extends Controller
         return view('chimneys.showByType', compact('chimneys'));
     } */
 
-   /* public function prices($type)
+    public function prices()
     {
-        $prices = Price::whereType($type)->get(); 
-        return view('briquettes.prices', compact('prices')); 
-   } */
+        $prices = scandir(public_path() . '/images/prices/briquettes');
+
+        array_shift($prices);
+        array_shift($prices);
+
+        return view('briquettes.prices', compact('prices'));
+    }
 
     public function search(Request $request)
     {

@@ -16,6 +16,8 @@ class PagesController extends Controller
 
     public function show(Page $page)
     {
+        // dd(Page::all());
+        // dd($page);
         return view('pages.index', compact('page'));
     } 
 

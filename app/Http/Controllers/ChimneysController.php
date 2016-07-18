@@ -3,6 +3,7 @@
 namespace DymaVDomeNet\Http\Controllers;
 
 use Session;
+use Storage;
 use Illuminate\Http\Request;
 use DymaVDomeNet\Http\Requests;
 use DymaVDomeNet\Chimney;
@@ -20,7 +21,17 @@ class ChimneysController extends Controller
     public function catalog()
     {
         return view('chimneys.catalog');
-    } 
+    }
+
+    public function prices()
+    {
+        $prices = scandir(public_path() . '/images/prices/chimneys');
+
+        array_shift($prices);
+        array_shift($prices);
+
+        return view('chimneys.prices', compact('prices'));
+    }
 
     public function showByType($type)
     {
@@ -32,12 +43,6 @@ class ChimneysController extends Controller
     public function show($type, Chimney $chimney)
     {
         return view('chimneys.show', compact('type', 'chimney'));
-    }
-
-    public function prices($type)
-    {
-        $prices = Price::whereType($type)->get(); 
-        return view('chimneys.prices', compact('prices')); 
     }
 
     public function search(Request $request)

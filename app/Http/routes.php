@@ -12,16 +12,17 @@
 */
 
 // pages
-Route::get('/', 'PagesController@index'); 
-//Route::get('/pages/contact', 'PagesController@contact'); 
-//Route::get('/pages/faq', 'PagesController@faq'); 
-Route::get('/pages/order', 'PagesController@order'); 
-Route::post('/pages/order', 'PagesController@saveOrder'); 
-Route::get('/pages/{name}', 'PagesController@show');
+Route::get('/', 'PagesController@index');
+//Route::get('/pages/contact', 'PagesController@contact');
+//Route::get('/pages/faq', 'PagesController@faq');
+Route::get('/pages/order', 'PagesController@order');
+Route::post('/pages/order', 'PagesController@saveOrder');
+Route::get('/pages/{page}', 'PagesController@show');
 
 // chimneys
 Route::get('/chimneys', 'ChimneysController@index'); 
 Route::get('/chimneys/search', 'ChimneysController@search'); 
+Route::get('/chimneys/prices', 'ChimneysController@prices'); 
 Route::get('/chimneys/catalog', 'ChimneysController@catalog'); 
 Route::get('/chimneys/catalog/{type}', 'ChimneysController@showByType'); 
 Route::get('/chimneys/catalog/{type}/{chimney}', 'ChimneysController@show'); 
@@ -30,13 +31,15 @@ Route::get('/chimneys/catalog/{type}/{chimney}', 'ChimneysController@show');
 Route::get('/briquettes', 'BriquettesController@index'); 
 Route::get('/briquettes/catalog', 'BriquettesController@catalog'); 
 Route::get('/briquettes/search', 'BriquettesController@search'); 
+Route::get('/briquettes/prices', 'BriquettesController@prices'); 
 //Route::get('/briquettes/{type}', 'BriquettesController@showByType'); 
 Route::get('/briquettes/{briquette}', 'BriquettesController@show'); 
 
 // boilers
 Route::get('/boilers', 'BoilersController@index'); 
 Route::get('/boilers/catalog', 'BoilersController@catalog'); 
-Route::get('/boilers/search', 'BoilersController@search'); 
+Route::get('/boilers/search', 'BoilersController@search');
+Route::get('/boilers/prices', 'BoilersController@prices'); 
 //Route::get('/boilers/{type}', 'BoilersController@showByType'); 
 Route::get('/boilers/{boiler}', 'BoilersController@show'); 
 
@@ -55,14 +58,13 @@ Route::get('/photos/{photo}', 'PhotosController@show');
 Route::get('/prices/{name}/{width}', 'PricesController@getPrice');
 
 
-
 // admin
 Route::get('/admin/login', 'Auth\AuthController@getLogin');
 Route::post('/admin/login', 'Auth\AuthController@postLogin');
 Route::get('/admin/logout', 'Auth\AuthController@logout');
 
 
-Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {        
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
 
     Route::get('/', 'ChimneysController@index');
     Route::get('/chimneys/search', 'ChimneysController@search');
