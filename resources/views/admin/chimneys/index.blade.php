@@ -25,10 +25,11 @@
                     </div>
                     <div class="col-md-9">
                         <h3>{{ $chimney->name }}</h3>
-                        <h4>Описание</h4> 
-                        <div class="description">{!! $chimney->desc !!}</div>
-                        <h4>Толщина: </h4>
-                        <label class="radio-inline">
+                        <div class="description"><strong>Описание:</strong><br><br>{!! $chimney->desc !!}</div><br>
+                        @if ($chimney->width)
+                            <p class="description"><strong>Толщина:</strong> {{ $chimney->width }}</p>
+                        @endif
+                        {{-- <label class="radio-inline">
                             <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked="checked">0.5мм AISI 304
                         </label>
                         <label class="radio-inline">
@@ -36,11 +37,10 @@
                         </label>
                         <label class="radio-inline">
                             <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">1мм AISI 321
-                        </label>
-                        <h4>Тип</h4>
-                        <p class="description">{{ $chimney->type }}</p>
+                        </label> --}}
+                        <p class="description"><strong>Тип:</strong> {{ $chimney->type }}</p>
                     </div>
-                    <div class="col-xs-12 col-md-9 col-md-offset-3">
+                    {{-- <div class="col-xs-12 col-md-9 col-md-offset-3">
                         <h4>Цены</h4>
                         <div class="table-block">
                             <table class="table table-bordered">
@@ -132,7 +132,7 @@
                                 </tr>
                             </table>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="col-xs-12">
                         <a href="/admin/chimneys/{{ $chimney->id }}/edit" class="btn Button Button--blue pull-right"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Редактировать</a>
                         <form action="/admin/chimneys/{{ $chimney->id }}" method="POST">

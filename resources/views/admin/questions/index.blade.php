@@ -1,4 +1,4 @@
-@extends('layout') @section('content')
+@extends('admin.layout') @section('content')
 <div class="page">
     <div class="col-xs-12 flash-block">
         @include ('partials.flash')
@@ -6,10 +6,9 @@
     <h1>{{ Request::input('queryString') ? 'Результаты поиска' : 'Вопросы' }}</h1>
     <div class="divider"></div>
     <div class="container">
-        @if ( Request::is('pages/questions/search*') )
-        @include ('partials.search-results', ['returnUrl' => '/pages/questions'])
+        @if ( Request::is('admin/questions/search*') )
+        @include ('partials.search-results', ['returnUrl' => 'admin/questions'])
         @endif
-        @include ('partials.question-form')
         @if ( count($questions) )
         @foreach ($questions as $question)
         <div class="row question">
@@ -21,10 +20,18 @@
             @else
             <p style="color: #ca7110">На данный вопрос пока ответ отсутствует</p>
             @endif
+            <div class="col-xs-12">
+                <a href="/admin/questions/{{ $question->id }}/answer" class="btn Button Button--blue pull-right"><i class="fa fa-question-circle" aria-hidden="true"></i> Ответить</a>
+                <form action="/admin/questions/{{ $question->id }}" method="POST">
+                    {{ csrf_field() }}
+                    {{ method_field('DELETE') }}
+                    <button type="submit" class="btn Button pull-right" style="margin-right: 5px"><i class="fa fa-trash-o" aria-hidden="true"></i> Удалить</button>
+                </form>
+            </div>
         </div>
         @endforeach
         <div class="pagination-wrapper">
-            @if (!Request::is('pages/questions/search*'))
+            @if (!Request::is('admin/questions/search*'))
             {!! $questions->render() !!}
             @endif
         </div>

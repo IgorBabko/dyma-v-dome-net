@@ -5,10 +5,11 @@ $ ->
         autoplay: true
         autoplaySpeed: 2000
 
-    if ($('#desc, #content')).length 
-        CKEDITOR.config.language = 'ru'
-        CKEDITOR.replace('desc', height: 300)
-        CKEDITOR.replace('content', height: 700)
+    CKEDITOR.config.language = 'ru'
+
+    if $('#desc').length then CKEDITOR.replace('desc', height: 300)
+    if $('#answer').length then CKEDITOR.replace('answer', height: 300)
+    if $('#content').length then CKEDITOR.replace('content', height: 300)
 
     $('.fancybox').fancybox()
 

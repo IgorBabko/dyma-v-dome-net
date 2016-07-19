@@ -13,12 +13,14 @@
 
 // pages
 Route::get('/', 'PagesController@index');
-//Route::get('/pages/contact', 'PagesController@contact');
 Route::get('/pages/questions', 'PagesController@questions');
 Route::post('pages/questions', 'PagesController@saveQuestion');
+Route::get('pages/questions/search', 'PagesController@searchQuestion');
 Route::get('/pages/order', 'PagesController@order');
 Route::post('/pages/order', 'PagesController@saveOrder');
 Route::get('/pages/{page}', 'PagesController@show');
+
+
 
 // chimneys
 Route::get('/chimneys', 'ChimneysController@index'); 
@@ -98,8 +100,14 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
         'parameters' => 'singular'
     ]);
 
-    Route::get('/pages/search', 'PagessController@search');
+    Route::get('/pages/search', 'PagesController@search');
     Route::resource('pages', 'PagesController', [
         'parameters' => 'singular'
     ]);
+
+    Route::get('/questions/search', 'QuestionsController@search');
+    Route::get('/questions', 'QuestionsController@index');
+    Route::get('/questions/{question}/answer', 'QuestionsController@answer');
+    Route::post('/questions/{question}/answer', 'QuestionsController@saveAnswer');
+    Route::delete('/questions/{id}', 'QuestionsController@destroy');
 });

@@ -24,8 +24,8 @@
                 </p>
                 <p>
                     <a class="btn Button Button--blue pull-right" href="/chimneys/prices"><i class="fa fa-usd" aria-hidden="true"></i> Цены</a>
-                    <a class="btn Button pull-right" href="/chimneys/catalog" style="margin-right: 20px"><i class="fa fa-folder-open" aria-hidden="true"></i> Каталог</a>
-                    <a class="btn Button Button--green pull-right" href="/pages/order" style="margin-right: 20px"><i class="fa fa-pencil-square" aria-hidden="true"></i> Оформить заявку</a>
+                    <a class="btn Button pull-right" href="/chimneys/catalog" style="margin-right: 5px"><i class="fa fa-folder-open" aria-hidden="true"></i> Каталог</a>
+                    <a class="btn Button Button--green pull-right" href="/pages/order" style="margin-right: 5px"><i class="fa fa-pencil-square" aria-hidden="true"></i> Оформить заявку</a>
                 </p>
             </div>
             <!--<div class="row carousel-block">

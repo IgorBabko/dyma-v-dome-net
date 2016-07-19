@@ -29,6 +29,10 @@
                             <option value="керамический">керамический</option>
                         </select>
                     </div>
+                    <div class="form-group">
+                        <label for="width">Толщина</label>
+                        <input type="text" class="form-control" id="width" name="width" value="{{ old('width') }}">
+                    </div>
                     <!--<div class="form-group" style="margin: 20px 0">
                         <label for="image">Добавить изображение</label>
                         <input type="file" id="image" name="image">

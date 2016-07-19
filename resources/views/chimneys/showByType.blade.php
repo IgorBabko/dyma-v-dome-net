@@ -16,9 +16,11 @@
                 </div>
                 <div class="col-md-9">
                     <h3>{{ $chimney->name }}</h3>
-                    <h4>Описание</h4> 
-                    <div class="description">{!! $chimney->desc !!}</div>
-                    <h4>Толщина: </h4>
+                    <div class="description"><strong>Описание:</strong><br><br>{!! $chimney->desc !!}</div><br>
+                    @if ($chimney->width)
+                        <p class="description"><strong>Толщина:</strong> {{ $chimney->width }}</p>
+                    @endif
+                    {{-- <h4>Толщина: </h4>
                     <label class="radio-inline">
                         <input type="radio" name="width" value="0.5" checked="checked">0.5мм AISI 304
                     </label>
@@ -28,102 +30,8 @@
                     <label class="radio-inline">
                         <input type="radio" name="width" value="1">1мм AISI 321
                     </label>
-                    <span id="name" style="display: none">{{ $chimney->name }}</span>
-                    <h4>Тип</h4>
-                    <p class="description">{{ $chimney->type }}</p>
-                </div>
-                <div class="col-xs-12 col-md-9 col-md-offset-3">
-                    <h4>Цены</h4>
-                    <div class="table-block">
-                        <table class="table table-bordered">
-                            <thead style="font-weight: bold">
-                                <tr>
-                                    <td>Димаметр</td>
-                                    <td>100/160</td>
-                                    <td>100/160</td>
-                                    <td>100/160</td>
-                                    <td>100/160</td>
-                                    <td>100/160</td>
-                                    <td>100/160</td>
-                                    <td>100/160</td>
-                                    <td>100/160</td>
-                                    <td>100/160</td>
-                                    <td>100/160</td>
-                                    <td>100/160</td>
-                                    <td>100/160</td>
-                                    <td>100/160</td>
-                                    <td>100/160</td>
-                                    <td>100/160</td>
-                                    <td>100/160</td>
-                                    <td>100/160</td>
-                                    <td>100/160</td>
-                                </tr>
-                            </thead>
-                            <tr>
-                                <td>Труба</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                            </tr>
-                            <tr>
-                                <td>Труба</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                            </tr>
-                            <tr>
-                                <td>Труба</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                                <td>234</td>
-                            </tr>
-                        </table>
-                    </div>
+                    <span id="name" style="display: none">{{ $chimney->name }}</span> --}}
+                    <p class="description"><strong>Тип:</strong> {{ $chimney->type }}</p>
                 </div>
                 <div class="col-xs-12">
                     <a class="btn Button Button__more" href="/chimneys/catalog/{{ $type }}/{{ $chimney->id }}"><i class="fa fa-chevron-right" aria-hidden="true"></i> подробнее</a>

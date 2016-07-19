@@ -6,6 +6,7 @@
             <li class="{{ Request::is('admin/articles*') ? 'active' : '' }}"><a href="/admin/articles" class="">статьи</a></li>
             <li class="{{ Request::is('admin/photos*') ? 'active' : '' }}"><a href="/admin/photos" class="">фото</a></li>
             <li class="{{ Request::is('admin/orders*') ? 'active' : '' }}"><a href="/admin/orders" class="">заявки</a></li>
+            <li class="{{ Request::is('admin/questions*') ? 'active' : '' }}"><a href="/admin/questions" class="">вопросы</a></li>
             <li class="{{ Request::is('admin/pages*') ? 'active' : '' }}"><a href="/admin/pages" class="">страницы</a></li>
             <li><a href="/">на сайт</a></li>
             <li><a href="/admin/logout">Выйти</a></li>

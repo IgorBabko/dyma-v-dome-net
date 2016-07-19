@@ -19,7 +19,7 @@ class Question extends Model
     protected $searchable = [
         'columns' => [
             'topic' => 10,
-            'content' => 10,
+            'text' => 10,
             'answer' => 10,
         ],
     ];

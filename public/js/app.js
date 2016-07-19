@@ -6,13 +6,20 @@
       autoplay: true,
       autoplaySpeed: 2000
     });
-    if (($('#desc, #content')).length) {
-      CKEDITOR.config.language = 'ru';
+    CKEDITOR.config.language = 'ru';
+    if ($('#desc').length) {
       CKEDITOR.replace('desc', {
         height: 300
       });
+    }
+    if ($('#answer').length) {
+      CKEDITOR.replace('answer', {
+        height: 300
+      });
+    }
+    if ($('#content').length) {
       CKEDITOR.replace('content', {
-        height: 700
+        height: 300
       });
     }
     $('.fancybox').fancybox();

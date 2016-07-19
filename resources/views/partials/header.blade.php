@@ -22,17 +22,19 @@
                         @include ('partials.search', ['action' => '/briquettes/search', 'placeholder' => 'найти брикет'])
                     @elseif ( Request::is('boilers*'))
                         @include ('partials.search', ['action' => '/boilers/search', 'placeholder' => 'найти котел'])
-                    @elseif ( Request::is('articles*') || Request::is('pages*') )
+                    @elseif ( Request::is('articles*') )
                         @include ('partials.search', ['action' => '/articles/search', 'placeholder' => 'найти статью'])
                     @elseif ( Request::is('photos*'))
                         @include ('partials.search', ['action' => '/photos/search', 'placeholder' => 'найти фото'])
+                    @elseif ( Request::is('pages/questions*') )
+                        @include ('partials.search', ['action' => '/pages/questions/search', 'placeholder' => 'найти вопрос'])
                     @endif
                 </div>
                 <div class="col-sm-12 col-md-7" style="padding-right: 0; padding-left: 0">
                     <div class="contacts">
                         <span><i class="fa fa-phone" aria-hidden="true"></i> (095) 57-57-677</span>
                         <span><i class="fa fa-phone" aria-hidden="true"></i> (097) 87-161-97</span>
-                        <span><i class="fa fa-envelope" aria-hidden="true"></i> i.i.babko@gmail.com</span>
+                        <span><i class="fa fa-envelope" aria-hidden="true"></i> kozatskyy1983@gmail.com</span>
                     </div>
                 </div>
                 <!--                <div class="col-sm-12 col-md-6">

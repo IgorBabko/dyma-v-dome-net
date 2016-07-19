@@ -39,7 +39,7 @@
                     <button type="submit" class="btn Button Button--green" style="float: right"><i class="fa fa-floppy-o" aria-hidden="true"></i> Сохранить</button>
                     <a href="/admin/boilers" type="submit" class="btn Button Button--blue right-margin"><i class="fa fa-chevron-left" aria-hidden="true"></i> Назад</a>
                 </form>
-                <form action="/admin/boilers/{{ $boiler->id }}" method="POST" class="pull-left">
+                <form action="/admin/boilers/{{ $boiler->id }}" method="POST" class="delete-form pull-left">
                     {{ csrf_field() }}
                     {{ method_field('DELETE') }}
                     <button type="submit" class="btn Button pull-right" style="margin-right: 5px"><i class="fa fa-trash-o" aria-hidden="true"></i> Удалить</button>

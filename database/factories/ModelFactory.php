@@ -24,6 +24,7 @@ $factory->define(DymaVDomeNet\Chimney::class, function (Faker\Generator $faker) 
     return [
         'name' => $faker->name,
         'desc' => $faker->paragraph,
+        'width' => $faker->randomNumber,
         'content' => implode('<br><br>', $faker->paragraphs(rand(5, 7))),
         'type' => 'одностенный',
         'image' => $faker->imageUrl($width = 600, $height = 300),

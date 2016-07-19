@@ -77,6 +77,14 @@ class PagesController extends Controller
         return redirect('pages/questions');
     }
 
+    public function searchQuestion(Request $request)
+    {
+        $questions = Question::search($request->queryString)->get();
+        $searchCount    = count($questions);
+
+        return view('pages.questions', compact('questions', 'searchCount'));
+    }
+
     protected function flashData(Request $request, $data = [])
     {
         foreach ($data as $key => $value) {

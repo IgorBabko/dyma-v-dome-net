@@ -10,7 +10,7 @@
                     <div class="Contacts">
                         <div class="Contacts__item"><span>Александр: </span><strong> &nbsp;<i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;(095) 57-57-677</strong></div>
                         <div class="Contacts__item" style="padding-left: 100px"> <strong> &nbsp;<i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;(097) 87-161-97</strong></div>
-                        <div class="Contacts__item" style="padding-left: 100px"> <strong> &nbsp;<i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;i.i.babko@gmail.com</strong></div>
+                        <div class="Contacts__item" style="padding-left: 100px"> <strong> &nbsp;<i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;kozatskyy1983@gmail.com</strong></div>
                     </div>
                 </div>
             </div>

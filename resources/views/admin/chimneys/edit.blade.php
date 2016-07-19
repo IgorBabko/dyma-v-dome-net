@@ -30,6 +30,10 @@
                             <option value="керамический" {{ $chimney->type == 'керамический' ? 'selected' : '' }}>керамический</option>
                         </select>
                     </div>
+                    <div class="form-group">
+                        <label for="width">Толщина</label>
+                        <input type="text" class="form-control" id="width" name="width" value="{{ old('width') ? old('width') : $chimney->width }}"> 
+                    </div>
                     <!--<div class="form-group" style="margin: 20px 0">
                         <label for="image">Изменить изображение</label>
                         <input type="file" id="image" name="image">
@@ -40,9 +44,9 @@
                         <input type="text" class="form-control" id="image" name="image" value="{{ old('image') ? old('image') : $chimney->image }}">
                     </div>
                     <button type="submit" class="btn Button Button--green" style="float: right"><i class="fa fa-floppy-o" aria-hidden="true"></i> Сохранить</button>
-                    <a href="/admin/chimneys" type="submit" class="btn Button Button--blue right-margin"><i class="fa fa-chevron-left" aria-hidden="true"></i> Назад</a>
+                    <a href="/admin/chimneys" class="btn Button Button--blue right-margin"><i class="fa fa-chevron-left" aria-hidden="true"></i> Назад</a>
                 </form>
-                <form action="/admin/chimneys/{{ $chimney->id }}" method="POST" class="pull-left">
+                <form action="/admin/chimneys/{{ $chimney->id }}" method="POST" class="delete-form pull-left">
                     {{ csrf_field() }}
                     {{ method_field('DELETE') }}
                     <button type="submit" class="btn Button pull-right" style="margin-right: 5px"><i class="fa fa-trash-o" aria-hidden="true"></i> Удалить</button>

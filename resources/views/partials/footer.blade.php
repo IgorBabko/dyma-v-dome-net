@@ -3,14 +3,16 @@
         <div class="row">
             <div class="col-md-6">
                 <ul class="Footer__menu">
-                    @foreach ($pages as $page)
-                        <a href="/pages/{{ $page->id }}" class="Footer__menu-link">
-                            <li class="Footer__menu-item">{{ $page->name }}</li>
-                        </a>
-                    @endforeach
-<!--                    <a href="/faq" class="Footer__menu-link">
-                        <li class="Footer__menu-item">FAQ</li>
-                    </a> -->
+                    <a href="/pages/questions" class="Footer__menu-link">
+                        <li class="Footer__menu-item">вопросы</li>
+                    </a>
+                    @if ( count($pages) )
+                        @foreach ($pages as $page)
+                            <a href="/pages/{{ $page->id }}" class="Footer__menu-link">
+                                <li class="Footer__menu-item">{{ $page->name }}</li>
+                            </a>
+                        @endforeach
+                    @endif
                 </ul>
             </div>
             <div class="col-md-6" style="text-align: right">

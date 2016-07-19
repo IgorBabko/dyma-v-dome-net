@@ -16,6 +16,7 @@ class CreateChimneysTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->text('desc');
+            $table->float('width')->nullable();
             $table->text('content');
             $table->string('type')->default('одностенный');
             $table->string('image')->nullable();

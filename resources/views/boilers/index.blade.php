@@ -24,8 +24,8 @@
                 </p>
                 <p>
                     <a class="btn Button Button--blue pull-right" href="/boilers/prices"><i class="fa fa-usd" aria-hidden="true"></i> Цены</a>
-                    <a class="btn Button btn-lg pull-right" href="/boilers/catalog"><i class="fa fa-folder-open" aria-hidden="true"></i> посмотреть каталог</a>
-                    <a class="btn Button Button--green btn-lg pull-right" href="/pages/order" style="margin-right: 20px"><i class="fa fa-pencil-square" aria-hidden="true"></i> оформить заявку</a>
+                    <a class="btn Button btn-lg pull-right" href="/boilers/catalog" style="margin-right: 5px"><i class="fa fa-folder-open" aria-hidden="true"></i> Каталог</a>
+                    <a class="btn Button Button--green btn-lg pull-right" href="/pages/order" style="margin-right: 5px"><i class="fa fa-pencil-square" aria-hidden="true"></i> оформить заявку</a>
                 </p>
             </div>
             <!--<div class="row carousel-block">
