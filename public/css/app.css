@@ -11,6 +11,9 @@ h3 {
 .top-line .container {
   padding: 0;
 }
+.question-form {
+  margin-bottom: 50px;
+}
 .add-resource-div {
   text-align: center;
   float: none;
@@ -53,9 +56,6 @@ h3 {
 }
 .query-string {
   color: #ff0;
-}
-#question {
-  padding: 10px 15px;
 }
 .alert-danger,
 .alert-success {
@@ -265,6 +265,7 @@ body.admin {
 .briquette:after,
 .article:after,
 .boiler:after,
+.question:after,
 .order:after,
 .photo-description:after,
 .admin .article:after {
@@ -276,6 +277,7 @@ body.admin {
 .briquette,
 .article,
 .boiler,
+.question,
 .order,
 .photo-description,
 .admin .article {
@@ -290,6 +292,7 @@ body.admin {
 .briquette img,
 .article img,
 .boiler img,
+.question img,
 .order img,
 .photo-description img,
 .admin .article img {
@@ -300,11 +303,19 @@ body.admin {
   .briquette,
   .article,
   .boiler,
+  .question,
   .order,
   .photo-description,
   .admin .article {
     padding: 20px;
   }
+}
+.question {
+  min-height: auto;
+  font-size: 18px;
+}
+.question h3 {
+  margin: 0;
 }
 .photo-description {
   min-height: 250px;

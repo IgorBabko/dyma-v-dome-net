@@ -2,6 +2,7 @@
 
 namespace DymaVDomeNet\Http\Controllers;
 
+use DymaVDomeNet\Question;
 use Illuminate\Http\Request;
 use DymaVDomeNet\Page;
 use DymaVDomeNet\Order;
@@ -52,6 +53,30 @@ class PagesController extends Controller
         return redirect('/pages/order');
     }
 
+    public function questions()
+    {
+        $questions = Question::orderBy('created_at', 'desc')->paginate(10);
+
+        return view('pages.questions', compact('questions'));
+    }
+
+    public function saveQuestion(Request $request)
+    {
+        $this->validate($request, [
+            'topic' => 'required',
+            'text' => 'required',
+        ]);
+
+        Question::create($request->all());
+
+        $this->flashData($request, [
+            'type' => 'success',
+            'message' => 'Спасибо за Ваш вопрос!'
+        ]);
+
+        return redirect('pages/questions');
+    }
+
     protected function flashData(Request $request, $data = [])
     {
         foreach ($data as $key => $value) {
@@ -59,8 +84,4 @@ class PagesController extends Controller
         }
     }
 
-    public function faq()
-    {
-        return view('pages.faq');
-    }
 }

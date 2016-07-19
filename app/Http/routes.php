@@ -14,7 +14,8 @@
 // pages
 Route::get('/', 'PagesController@index');
 //Route::get('/pages/contact', 'PagesController@contact');
-//Route::get('/pages/faq', 'PagesController@faq');
+Route::get('/pages/questions', 'PagesController@questions');
+Route::post('pages/questions', 'PagesController@saveQuestion');
 Route::get('/pages/order', 'PagesController@order');
 Route::post('/pages/order', 'PagesController@saveOrder');
 Route::get('/pages/{page}', 'PagesController@show');

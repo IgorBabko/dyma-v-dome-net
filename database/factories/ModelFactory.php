@@ -86,3 +86,17 @@ $factory->define(DymaVDomeNet\Page::class, function (Faker\Generator $faker) {
         'image' => $faker->imageUrl($width = 600, $height = 300),
     ];
 });
+
+$factory->define(DymaVDomeNet\Question::class, function (Faker\Generator $faker) {
+    return [
+        'topic' => $faker->sentence,
+        'text' => $faker->paragraph,
+        'answer' => $faker->paragraph,
+    ];
+});
+
+// $factory->define(DymaVDomeNet\Answer::class, function (Faker\Generator $faker) {
+//     return [
+//         'content' => implode('<br><br>', $faker->paragraphs(rand(5, 7))),
+//     ];
+// });
