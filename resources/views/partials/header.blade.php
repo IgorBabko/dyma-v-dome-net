@@ -23,9 +23,9 @@
                     @elseif ( Request::is('boilers*'))
                         @include ('partials.search', ['action' => '/boilers/search', 'placeholder' => 'найти котел'])
                     @elseif ( Request::is('articles*') )
-                        @include ('partials.search', ['action' => '/articles/search', 'placeholder' => 'найти статью'])
-                    @elseif ( Request::is('photos*'))
-                        @include ('partials.search', ['action' => '/photos/search', 'placeholder' => 'найти фото'])
+                        @include ('partials.search', ['action' => '/articles/' . $productName . '/search', 'placeholder' => 'найти статью'])
+                    @elseif ( Request::is('photos*') )
+                        @include ('partials.search', ['action' => '/photos/' . $productName . '/search', 'placeholder' => 'найти фото'])
                     @elseif ( Request::is('pages/questions*') )
                         @include ('partials.search', ['action' => '/pages/questions/search', 'placeholder' => 'найти вопрос'])
                     @endif
@@ -43,7 +43,7 @@
                         <li><a href="/chimneys/утепленный">утепленные</a></li>
                         <li><a href="/chimneys/алюком">алюком</a></li>
                         <li><a href="/chimneys/керамический">керамические</a></li>
-                    </ul> 
+                    </ul>
                 </div>
             </div>-->
             </div>

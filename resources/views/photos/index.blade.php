@@ -3,7 +3,7 @@
     <h1>{{ Request::input('queryString') ? 'Результаты поиска' : 'Фотографии' }}</h1>
     <div class="divider"></div>
     <div class="container">
-        @if ( Request::is('/photos/' . $productName . '/search*') )
+        @if ( Request::is('photos/' . $productName . '/search*') )
             @include ('partials.search-results', ['returnUrl' => '/photos/'.$productName])
         @endif
         @if (count($photos))
