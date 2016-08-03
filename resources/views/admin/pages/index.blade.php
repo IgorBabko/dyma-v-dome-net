@@ -23,7 +23,7 @@
                 <div>{!! $page->desc !!}</div>
                 <div class="Button__group--positioned" style="right: 40px; bottom: 40px">
                     <a href="/admin/pages/{{ $page->id }}/edit" class="btn Button Button--blue pull-right"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Редактировать</a>
-                    <form action="/admin/pages/{{ $page->id }}" style="display: inline-block" method="POST">
+                    <form action="/admin/pages/{{ $page->id }}" method="POST">
                         {{ csrf_field() }} {{ method_field('DELETE') }}
                         <button class="btn Button pull-right" style="margin-right: 5px"><i class="fa fa-trash-o" aria-hidden="true"></i> Удалить</button>
                     </form>

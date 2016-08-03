@@ -13,8 +13,20 @@
                         <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}">
                     </div>
                     <div class="form-group">
-                        <label for="desc">Описание</label>
+                        <label for="desc">Краткое описание</label>
                         <textarea type="text" class="form-control" id="desc" name="desc">{!! old('desc') !!}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Контент</label>
+                        <textarea type="text" class="form-control" id="content" name="content">{!! old('content') !!}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="product_name">Категория</label>
+                        <select class="form-control" id="product_name" name="product_name">
+                            <option value="chimneys" selected>дымоходы</option>
+                            <option value="briquettes">брикеты</option>
+                            <option value="boilers">котлы</option>
+                        </select>
                     </div>
                     <!--<div class="form-group" style="margin: 20px 0">
                         <label for="image">Добавить изображение</label>

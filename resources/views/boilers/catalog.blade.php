@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-md-9">
                     <h3>{{ $boiler->name }}</h3>
-                    <h4>Описание</h4> 
+                    <h4>Описание</h4>
                     <div class="description">{!! $boiler->desc !!}</div>
                     <!--<h4>Толщина: </h4>
                     <label class="radio-inline">
@@ -32,13 +32,13 @@
                     <h4>Тип</h4>
                     <p class="description">{{ $boiler->type }}</p>-->
                 </div>
-                <div class="col-xs-12">
+                <div class="col-xs-12" style="margin-top: 30px">
                     <a href="/boilers/{{ $boiler->id }}" class="btn Button pull-right"><i class="fa fa-chevron-right" aria-hidden="true"></i> Подробнее</a>
                 </div>
             </div>
             @endforeach
             <div class="pagination-wrapper">
-            @if (!Request::is('boilers/search*')) 
+            @if (!Request::is('boilers/search*'))
                {!! $boilers->render() !!}
             @endif
             </div>

@@ -11,7 +11,7 @@
                     {{ method_field('PATCH') }}
                     <div class="form-group">
                         <label for="name">Название</label>
-                        <input type="text" class="form-control" id="name" name="name" value="{{ old('name') ? old('name') : $article->name }}"> 
+                        <input type="text" class="form-control" id="name" name="name" value="{{ old('name') ? old('name') : $article->name }}">
                     </div>
                     <div class="form-group">
                         <label for="desc">Краткое описание</label>
@@ -20,6 +20,14 @@
                     <div class="form-group">
                         <label for="content">Контент</label>
                         <textarea type="text" class="form-control" id="content" name="content">{!! old('content') ? old('content') : $article->content !!}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="product_name">Категория</label>
+                        <select class="form-control" id="product_name" name="product_name">
+                            <option value="chimneys" {{ $article->product_name == 'chimneys' ? 'selected' :'' }}>дымоходы</option>
+                            <option value="briquettes" {{ $article->product_name == 'briquettes' ? 'selected' : '' }}>брикеты</option>
+                            <option value="boilers" {{ $article->product_name == 'boilers' ? 'selected' : '' }}>котлы</option>
+                        </select>
                     </div>
                     <!--<div class="form-group" style="margin: 20px 0">
                         <label for="image">Изменить изображение</label>

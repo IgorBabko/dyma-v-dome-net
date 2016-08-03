@@ -20,6 +20,7 @@
                     @if ($chimney->width)
                         <p class="description"><strong>Толщина:</strong> {{ $chimney->width }}</p>
                     @endif
+                    <p class="description"><strong>Тип:</strong> {{ $chimney->type }}</p>
                     {{-- <h4>Толщина: </h4>
                     <label class="radio-inline">
                         <input type="radio" name="width" value="0.5" checked="checked">0.5мм AISI 304
@@ -31,15 +32,14 @@
                         <input type="radio" name="width" value="1">1мм AISI 321
                     </label>
                     <span id="name" style="display: none">{{ $chimney->name }}</span> --}}
-                    <p class="description"><strong>Тип:</strong> {{ $chimney->type }}</p>
                 </div>
-                <div class="col-xs-12">
+                <div class="col-xs-12" style="margin-top: 30px">
                     <a class="btn Button Button__more" href="/chimneys/catalog/{{ $type }}/{{ $chimney->id }}"><i class="fa fa-chevron-right" aria-hidden="true"></i> подробнее</a>
                 </div>
             </div>
             @endforeach
             <div class="pagination-wrapper">
-            @if (!Request::is('chimneys/search*')) 
+            @if (!Request::is('chimneys/search*'))
                {!! $chimneys->render() !!}
             @endif
             </div>

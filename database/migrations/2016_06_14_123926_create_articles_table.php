@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
 
 class CreateArticlesTable extends Migration
 {
@@ -17,6 +17,7 @@ class CreateArticlesTable extends Migration
             $table->string('name');
             $table->text('desc');
             $table->text('content');
+            $table->string('product_name');
             $table->string('image')->nullable();
             $table->timestamps();
         });

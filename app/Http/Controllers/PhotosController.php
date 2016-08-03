@@ -2,29 +2,27 @@
 
 namespace DymaVDomeNet\Http\Controllers;
 
-use Illuminate\Http\Request;
-use DymaVDomeNet\Http\Requests;
 use DymaVDomeNet\Photo;
-use Nicolaslopezj\Searchable\SearchableTrait;
+use Illuminate\Http\Request;
 
 class PhotosController extends Controller
 {
-    public function index()
+    public function index($productName)
     {
-        $photos = Photo::orderBy('created_at', 'desc')->paginate();
-        return view('photos.index', compact('photos'));
-    } 
-
-    public function show(Photo $photo)
-    {
-        return view('photos.show', compact('photo'));
+        $photos = Photo::where('product_name', $productName)->orderBy('created_at', 'desc')->paginate();
+        return view('photos.index', compact('photos', 'productName'));
     }
 
-    public function search(Request $request)
+    public function show($productName, Photo $photo)
     {
-        $photos = Photo::search($request->queryString)->get();
-        $searchCount    = count($photos);
+        return view('photos.show', compact('photo', 'productName'));
+    }
 
-        return view('photos.index', compact('photos', 'searchCount'));
+    public function search($productName, Request $request)
+    {
+        $photos = Photo::where('product_name', $productName)->search($request->queryString)->get();
+        $searchCount = count($photos);
+
+        return view('photos.index', compact('photos', 'searchCount', 'productName'));
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Database\Seeder;
 use DymaVDomeNet\Article;
+use Illuminate\Database\Seeder;
 
 class ArticlesTableSeeder extends Seeder
 {
@@ -13,6 +13,17 @@ class ArticlesTableSeeder extends Seeder
     public function run()
     {
         Article::truncate();
-        factory(Article::class, 50)->create();
+
+        factory(Article::class, 10)->create([
+            'product_name' => 'chimneys',
+        ]);
+
+        factory(Article::class, 10)->create([
+            'product_name' => 'briquettes',
+        ]);
+
+        factory(Article::class, 10)->create([
+            'product_name' => 'boilers',
+        ]);
     }
 }

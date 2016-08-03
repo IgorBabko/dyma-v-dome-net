@@ -2,29 +2,27 @@
 
 namespace DymaVDomeNet\Http\Controllers;
 
-use Illuminate\Http\Request;
-use DymaVDomeNet\Http\Requests;
 use DymaVDomeNet\Article;
-use Nicolaslopezj\Searchable\SearchableTrait;
+use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
 {
-    public function index()
+    public function index($productName)
     {
-        $articles = Article::orderBy('created_at', 'desc')->paginate();
-        return view('articles.index', compact('articles'));
-    } 
-
-    public function show(Article $article)
-    {
-        return view('articles.show', compact('article'));
+        $articles = Article::where('product_name', $productName)->orderBy('created_at', 'desc')->paginate();
+        return view('articles.index', compact('articles', 'productName'));
     }
 
-    public function search(Request $request)
+    public function show($productName, Article $article)
     {
-        $articles = Article::search($request->queryString)->get();
-        $searchCount    = count($articles);
+        return view('articles.show', compact('article', 'productName'));
+    }
 
-        return view('articles.index', compact('articles', 'searchCount'));
+    public function search($productName, Request $request)
+    {
+        $articles = Article::where('product_name', $productName)->search($request->queryString)->get();
+        $searchCount = count($articles);
+
+        return view('articles.index', compact('articles', 'searchCount', 'productName'));
     }
 }

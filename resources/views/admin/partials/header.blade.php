@@ -23,11 +23,13 @@
                         @include ('partials.search', ['action' => '/admin/boilers/search', 'placeholder' => 'найти котел'])
                     @elseif ( Request::is('admin/articles*'))
                         @include ('partials.search', ['action' => '/admin/articles/search', 'placeholder' => 'найти статью'])
-                    @elseif ( request::is('admin/photos*'))
+                    @elseif ( Request::is('admin/photos*'))
                         @include ('partials.search', ['action' => '/admin/photos/search', 'placeholder' => 'найти фото'])
-                    @elseif ( request::is('admin/orders*'))
+                    @elseif ( Request::is('admin/orders*'))
                         @include ('partials.search', ['action' => '/admin/orders/search', 'placeholder' => 'найти заявку'])
-                    @elseif ( request::is('admin/pages*'))
+                    @elseif ( Request::is('admin/questions*'))
+                        @include ('partials.search', ['action' => '/admin/questions/search', 'placeholder' => 'найти вопрос'])
+                    @elseif ( Request::is('admin/pages*'))
                         @include ('partials.search', ['action' => '/admin/pages/search', 'placeholder' => 'найти страницу'])
                     @endif
                 </div>

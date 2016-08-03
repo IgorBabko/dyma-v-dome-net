@@ -9,7 +9,7 @@
 | you a convenient way to create models for testing and seeding your
 | database. Just tell the factory how a default model should look.
 |
-*/
+ */
 
 $factory->define(DymaVDomeNet\User::class, function (Faker\Generator $faker) {
     return [
@@ -56,6 +56,7 @@ $factory->define(DymaVDomeNet\Article::class, function (Faker\Generator $faker) 
         'name' => $faker->name,
         'desc' => implode('<br><br>', $faker->paragraphs(rand(1, 2))),
         'content' => implode('<br><br>', $faker->paragraphs(rand(5, 7))),
+        'product_name' => 'chimneys',
         'image' => $faker->imageUrl($width = 600, $height = 300),
     ];
 });
@@ -65,6 +66,7 @@ $factory->define(DymaVDomeNet\Photo::class, function (Faker\Generator $faker) {
         'name' => $faker->word(2),
         'desc' => $faker->paragraph,
         'content' => implode('<br><br>', $faker->paragraphs(rand(5, 7))),
+        'product_name' => 'chimneys',
         'image' => $faker->imageUrl($width = 600, $height = 300),
     ];
 });

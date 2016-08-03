@@ -20,7 +20,8 @@
             </div>
             <div class="col-md-5" style="position: static">
                 <h3>{{ $article->name }}</h3>
-                <div>{!! $article->desc !!}</div>
+                <div>{!! str_limit($article->desc, 200) !!}</div>
+                <p class="description"><strong>Категория:</strong> {{ $article->product_name == 'chimneys' ? 'дымоходы' : ($article->product_name == 'briquettes' ? 'брикеты' : 'котлы') }}</p>
                 <div class="Button__group--positioned" style="right: 40px; bottom: 40px">
                     <a href="/admin/articles/{{ $article->id }}/edit" class="btn Button Button--blue pull-right"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Редактировать</a>
                     <form action="/admin/articles/{{ $article->id }}" method="POST">

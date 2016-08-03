@@ -7,7 +7,7 @@
     <div class="divider"></div>
     <div class="container">
         @if ( Request::is('admin/questions/search*') )
-        @include ('partials.search-results', ['returnUrl' => 'admin/questions'])
+        @include ('partials.search-results', ['returnUrl' => '/admin/questions'])
         @endif
         @if ( count($questions) )
         @foreach ($questions as $question)

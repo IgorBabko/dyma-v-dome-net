@@ -11,11 +11,23 @@
                     {{ method_field('PATCH') }}
                     <div class="form-group">
                         <label for="name">Название</label>
-                        <input type="text" class="form-control" id="name" name="name" value="{{ old('name') ? old('name') : $photo->name }}"> 
+                        <input type="text" class="form-control" id="name" name="name" value="{{ old('name') ? old('name') : $photo->name }}">
                     </div>
                     <div class="form-group">
-                        <label for="desc">Описание</label>
+                        <label for="desc">Краткое описание</label>
                         <textarea type="text" class="form-control" id="desc" name="desc">{!! old('desc') ? old('desc') : $photo->desc !!}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Контент</label>
+                        <textarea type="text" class="form-control" id="content" name="content">{!! old('content') ? old('content') : $photo->content !!}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="product_name">Категория</label>
+                        <select class="form-control" id="product_name" name="product_name">
+                            <option value="chimneys" {{ $photo->product_name == 'chimneys' ? 'selected' :'' }}>дымоходы</option>
+                            <option value="briquettes" {{ $photo->product_name == 'briquettes' ? 'selected' : '' }}>брикеты</option>
+                            <option value="boilers" {{ $photo->product_name == 'boilers' ? 'selected' : '' }}>котлы</option>
+                        </select>
                     </div>
                     <!--<div class="form-group" style="margin: 20px 0">
                         <label for="image">Изменить изображение</label>

@@ -43,9 +43,10 @@ h3 {
   width: 96px;
 }
 .reset-search-link {
-  margin-top: 30px;
+  margin-bottom: 30px;
   color: #8e8e8e;
   font-size: 16px;
+  display: block;
 }
 .reset-search-link:hover {
   color: #b0b0b0;
@@ -443,7 +444,7 @@ body.admin {
   border: none;
   height: 32px;
   margin: 10px 0;
-  width: 286px;
+  width: 250px;
   color: #000;
   font-size: 16px;
   font-weight: normal;

@@ -2,12 +2,10 @@
 
 namespace DymaVDomeNet\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
-
-use DymaVDomeNet\Http\Requests;
-use DymaVDomeNet\Http\Controllers\Controller;
 use DymaVDomeNet\Article;
+use DymaVDomeNet\Http\Controllers\Controller;
 use DymaVDomeNet\Http\Middleware\Authenticate;
+use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
 {
@@ -55,12 +53,12 @@ class ArticlesController extends Controller
         $article = Article::create($request->all());
 
         /*if ($request->file('image')) {
-            $this->saveImage($request, $article);
+        $this->saveImage($request, $article);
         }*/
 
         $this->flashData($request, [
             'type' => 'success',
-            'message' => 'Статья успешно добавлена!'
+            'message' => 'Статья успешно добавлена!',
         ]);
 
         return redirect('/admin/articles');
@@ -68,16 +66,16 @@ class ArticlesController extends Controller
 
     /*protected function saveImage(Request $request, Article $article, $replace = false)
     {
-        $imageName = $article->id . '.' . $request->file('image')->getClientOriginalExtension();
+    $imageName = $article->id . '.' . $request->file('image')->getClientOriginalExtension();
 
-        if ($replace) {
-            \Storage::delete(public_path() . $article->image);
-        }
+    if ($replace) {
+    \Storage::delete(public_path() . $article->image);
+    }
 
-        $request->file('image')->move(public_path() . '/images/uploads/', $imageName);
-    
-        $article->image = '/images/uploads/' . $imageName;
-        $article->save();
+    $request->file('image')->move(public_path() . '/images/uploads/', $imageName);
+
+    $article->image = '/images/uploads/' . $imageName;
+    $article->save();
     }*/
 
     /**
@@ -118,19 +116,20 @@ class ArticlesController extends Controller
         ]);
 
         /*if ($request->file('image')) {
-            $this->saveImage($request, $article, true);
+        $this->saveImage($request, $article, true);
         }*/
 
         $article->name = $request->name;
         $article->desc = $request->desc;
         $article->content = $request->content;
+        $article->product_name = $request->product_name;
         $article->image = $request->image;
 
         $article->save();
 
         $this->flashData($request, [
             'type' => 'success',
-            'message' => 'Статья успешно обновлена!'
+            'message' => 'Статья успешно обновлена!',
         ]);
 
         return redirect('/admin/articles');
@@ -151,7 +150,7 @@ class ArticlesController extends Controller
      */
     public function destroy(Request $request, $id)
     {
-        Article::destroy($id); 
+        Article::destroy($id);
 
         $this->flashData($request, [
             'type' => 'success',
@@ -164,7 +163,7 @@ class ArticlesController extends Controller
     public function search(Request $request)
     {
         $articles = Article::search($request->queryString)->get();
-        $searchCount    = count($articles);
+        $searchCount = count($articles);
 
         return view('admin.articles.index', compact('articles', 'searchCount'));
     }

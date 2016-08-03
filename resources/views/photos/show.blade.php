@@ -10,7 +10,7 @@
             </div>
             <div class="col-xs-12">
                 <div class="article-text">{!! $photo->content !!}</div>
-                <a class="btn Button" href="/photos">назад <span class="glyphicon glyphicon-chevron-left"></span></a>
+                <a class="btn Button" href="/photos/{{ $productName }}">назад <span class="glyphicon glyphicon-chevron-left"></span></a>
             </div>
         </div>
     </div>

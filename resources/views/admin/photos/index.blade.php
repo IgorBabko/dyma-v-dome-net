@@ -17,13 +17,14 @@
             <div class="col-md-4 portfolio-item">
                 <img class="img-responsive" src="{{ $photo->image }}" alt="">
                 <div class="photo-description" style="position: relative">
-                    <div>{!! $photo->desc !!}</div>
+                    <div>{!! str_limit($photo->desc, 150) !!}</div>
+                    <p class="description"><strong>Категория:</strong> {{ $photo->product_name == 'chimneys' ? 'дымоходы' : ($photo->product_name == 'briquettes' ? 'брикеты' : 'котлы') }}</p>
                     <div class="Button__group--positioned">
                         <form action="/admin/photos/{{ $photo->id }}" class="delete-form" style="display: inline-block" method="POST">
                             {{ csrf_field() }} {{ method_field('DELETE') }}
                             <button class="btn Button" style="margin-right: 5px"><i class="fa fa-trash-o" aria-hidden="true"></i> Удалить</button>
                         </form>
-                        <a href="/admin/photos/{{ $photo->id }}/edit" class="btn Button Button--blue"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Редактировать</a> 
+                        <a href="/admin/photos/{{ $photo->id }}/edit" class="btn Button Button--blue"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Редактировать</a>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Database\Seeder;
 use DymaVDomeNet\Photo;
+use Illuminate\Database\Seeder;
 
 class PhotosTableSeeder extends Seeder
 {
@@ -13,6 +13,17 @@ class PhotosTableSeeder extends Seeder
     public function run()
     {
         Photo::truncate();
-        factory(Photo::class, 50)->create();
+
+        factory(Photo::class, 10)->create([
+            'product_name' => 'chimneys',
+        ]);
+
+        factory(Photo::class, 10)->create([
+            'product_name' => 'briquettes',
+        ]);
+
+        factory(Photo::class, 10)->create([
+            'product_name' => 'boilers',
+        ]);
     }
 }

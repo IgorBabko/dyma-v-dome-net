@@ -2,11 +2,10 @@
 
 namespace DymaVDomeNet\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
-use DymaVDomeNet\Photo;
-use DymaVDomeNet\Http\Requests;
 use DymaVDomeNet\Http\Controllers\Controller;
 use DymaVDomeNet\Http\Middleware\Authenticate;
+use DymaVDomeNet\Photo;
+use Illuminate\Http\Request;
 
 class PhotosController extends Controller
 {
@@ -53,12 +52,12 @@ class PhotosController extends Controller
         $photo = Photo::create($request->all());
 
         /*if ($request->file('image')) {
-            $this->saveImage($request, $photo);
+        $this->saveImage($request, $photo);
         }*/
 
         $this->flashData($request, [
             'type' => 'success',
-            'message' => 'Фотография успешно добавлена!'
+            'message' => 'Фотография успешно добавлена!',
         ]);
 
         return redirect('/admin/photos');
@@ -66,16 +65,16 @@ class PhotosController extends Controller
 
     /*protected function saveImage(Request $request, Photo $photo, $replace = false)
     {
-        $imageName = $photo->id . '.' . $request->file('image')->getClientOriginalExtension();
+    $imageName = $photo->id . '.' . $request->file('image')->getClientOriginalExtension();
 
-        if ($replace) {
-            \Storage::delete(public_path() . $photo->image);
-        }
+    if ($replace) {
+    \Storage::delete(public_path() . $photo->image);
+    }
 
-        $request->file('image')->move(public_path() . '/images/uploads/', $imageName);
-    
-        $photo->image = '/images/uploads/' . $imageName;
-        $photo->save();
+    $request->file('image')->move(public_path() . '/images/uploads/', $imageName);
+
+    $photo->image = '/images/uploads/' . $imageName;
+    $photo->save();
     }*/
 
     /**
@@ -116,19 +115,20 @@ class PhotosController extends Controller
         ]);
 
         /*if ($request->file('image')) {
-            $this->saveImage($request, $photo, true);
+        $this->saveImage($request, $photo, true);
         }*/
 
         $photo->name = $request->name;
         $photo->desc = $request->desc;
         $photo->content = $request->content;
+        $photo->product_name = $request->product_name;
         $photo->image = $request->image;
 
         $photo->save();
 
         $this->flashData($request, [
             'type' => 'success',
-            'message' => 'Фотография успешно обновлена!'
+            'message' => 'Фотография успешно обновлена!',
         ]);
 
         return redirect('/admin/photos');
@@ -149,7 +149,7 @@ class PhotosController extends Controller
      */
     public function destroy(Request $request, $id)
     {
-        Photo::destroy($id); 
+        Photo::destroy($id);
 
         $this->flashData($request, [
             'type' => 'success',
@@ -162,7 +162,7 @@ class PhotosController extends Controller
     public function search(Request $request)
     {
         $photos = Photo::search($request->queryString)->get();
-        $searchCount    = count($photos);
+        $searchCount = count($photos);
 
         return view('admin.photos.index', compact('photos', 'searchCount'));
     }
