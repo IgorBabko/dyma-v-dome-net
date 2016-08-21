@@ -1,12 +1,12 @@
 <?php
 
-namespace DymaVDomeNet\Http\Controllers;
+namespace Teplokvartal\Http\Controllers;
 
 use Session;
 use Storage;
 use Illuminate\Http\Request;
-use DymaVDomeNet\Http\Requests;
-use DymaVDomeNet\Boiler;
+use Teplokvartal\Http\Requests;
+use Teplokvartal\Boiler;
 use Nicolaslopezj\Searchable\SearchableTrait;
 
 class BoilersController extends Controller

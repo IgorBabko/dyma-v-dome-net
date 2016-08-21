@@ -1,13 +1,13 @@
 <?php
 
-namespace DymaVDomeNet\Http\Controllers\Admin;
+namespace Teplokvartal\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 
-use DymaVDomeNet\Http\Requests;
-use DymaVDomeNet\Http\Controllers\Controller;
-use DymaVDomeNet\Page;
-use DymaVDomeNet\Http\Middleware\Authenticate;
+use Teplokvartal\Http\Requests;
+use Teplokvartal\Http\Controllers\Controller;
+use Teplokvartal\Page;
+use Teplokvartal\Http\Middleware\Authenticate;
 
 class PagesController extends Controller
 {

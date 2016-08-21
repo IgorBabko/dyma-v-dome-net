@@ -1,12 +1,12 @@
 <?php
 
-namespace DymaVDomeNet\Http\Controllers\Admin;
+namespace Teplokvartal\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use DymaVDomeNet\Chimney;
-use DymaVDomeNet\Http\Requests;
-use DymaVDomeNet\Http\Controllers\Controller;
-use DymaVDomeNet\Http\Middleware\Authenticate;
+use Teplokvartal\Chimney;
+use Teplokvartal\Http\Requests;
+use Teplokvartal\Http\Controllers\Controller;
+use Teplokvartal\Http\Middleware\Authenticate;
 
 class ChimneysController extends Controller
 {

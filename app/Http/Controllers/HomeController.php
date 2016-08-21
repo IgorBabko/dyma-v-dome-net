@@ -1,8 +1,8 @@
 <?php
 
-namespace DymaVDomeNet\Http\Controllers;
+namespace Teplokvartal\Http\Controllers;
 
-use DymaVDomeNet\Http\Requests;
+use Teplokvartal\Http\Requests;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller

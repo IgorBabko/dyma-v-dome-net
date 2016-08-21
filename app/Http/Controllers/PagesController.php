@@ -1,12 +1,12 @@
 <?php
 
-namespace DymaVDomeNet\Http\Controllers;
+namespace Teplokvartal\Http\Controllers;
 
-use DymaVDomeNet\Question;
+use Teplokvartal\Question;
 use Illuminate\Http\Request;
-use DymaVDomeNet\Page;
-use DymaVDomeNet\Order;
-use DymaVDomeNet\Http\Requests;
+use Teplokvartal\Page;
+use Teplokvartal\Order;
+use Teplokvartal\Http\Requests;
 
 class PagesController extends Controller
 {

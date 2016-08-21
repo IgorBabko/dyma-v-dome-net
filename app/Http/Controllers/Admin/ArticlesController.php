@@ -1,10 +1,10 @@
 <?php
 
-namespace DymaVDomeNet\Http\Controllers\Admin;
+namespace Teplokvartal\Http\Controllers\Admin;
 
-use DymaVDomeNet\Article;
-use DymaVDomeNet\Http\Controllers\Controller;
-use DymaVDomeNet\Http\Middleware\Authenticate;
+use Teplokvartal\Article;
+use Teplokvartal\Http\Controllers\Controller;
+use Teplokvartal\Http\Middleware\Authenticate;
 use Illuminate\Http\Request;
 
 class ArticlesController extends Controller

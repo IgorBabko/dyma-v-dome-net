@@ -1,6 +1,6 @@
 <?php
 
-namespace DymaVDomeNet\Http\Middleware;
+namespace Teplokvartal\Http\Middleware;
 
 use Illuminate\Cookie\Middleware\EncryptCookies as BaseEncrypter;
 

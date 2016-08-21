@@ -151,10 +151,10 @@ return [
         /*
          * Application Service Providers...
          */
-        DymaVDomeNet\Providers\AppServiceProvider::class,
-        DymaVDomeNet\Providers\AuthServiceProvider::class,
-        DymaVDomeNet\Providers\EventServiceProvider::class,
-        DymaVDomeNet\Providers\RouteServiceProvider::class,
+        Teplokvartal\Providers\AppServiceProvider::class,
+        Teplokvartal\Providers\AuthServiceProvider::class,
+        Teplokvartal\Providers\EventServiceProvider::class,
+        Teplokvartal\Providers\RouteServiceProvider::class,
 
         /*
          * Custom

@@ -1,8 +1,8 @@
 <?php
 
-namespace DymaVDomeNet\Providers;
+namespace Teplokvartal\Providers;
 
-use DymaVDomeNet\Page;
+use Teplokvartal\Page;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider

@@ -1,12 +1,12 @@
 <?php
 
-namespace DymaVDomeNet\Http\Controllers\Admin;
+namespace Teplokvartal\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use DymaVDomeNet\Boiler;
-use DymaVDomeNet\Http\Requests;
-use DymaVDomeNet\Http\Controllers\Controller;
-use DymaVDomeNet\Http\Middleware\Authenticate;
+use Teplokvartal\Boiler;
+use Teplokvartal\Http\Requests;
+use Teplokvartal\Http\Controllers\Controller;
+use Teplokvartal\Http\Middleware\Authenticate;
 
 class BoilersController extends Controller
 {

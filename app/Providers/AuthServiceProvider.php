@@ -1,6 +1,6 @@
 <?php
 
-namespace DymaVDomeNet\Providers;
+namespace Teplokvartal\Providers;
 
 use Illuminate\Contracts\Auth\Access\Gate as GateContract;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'DymaVDomeNet\Model' => 'DymaVDomeNet\Policies\ModelPolicy',
+        'Teplokvartal\Model' => 'Teplokvartal\Policies\ModelPolicy',
     ];
 
     /**

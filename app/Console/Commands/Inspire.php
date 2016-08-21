@@ -1,6 +1,6 @@
 <?php
 
-namespace DymaVDomeNet\Console\Commands;
+namespace Teplokvartal\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Inspiring;

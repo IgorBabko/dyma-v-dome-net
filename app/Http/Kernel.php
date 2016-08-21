@@ -1,6 +1,6 @@
 <?php
 
-namespace DymaVDomeNet\Http;
+namespace Teplokvartal\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -24,11 +24,11 @@ class Kernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
-            \DymaVDomeNet\Http\Middleware\EncryptCookies::class,
+            \Teplokvartal\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            \DymaVDomeNet\Http\Middleware\VerifyCsrfToken::class,
+            \Teplokvartal\Http\Middleware\VerifyCsrfToken::class,
         ],
 
         'api' => [
@@ -44,10 +44,10 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth' => \DymaVDomeNet\Http\Middleware\Authenticate::class,
+        'auth' => \Teplokvartal\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'can' => \Illuminate\Foundation\Http\Middleware\Authorize::class,
-        'guest' => \DymaVDomeNet\Http\Middleware\RedirectIfAuthenticated::class,
+        'guest' => \Teplokvartal\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
     ];
 }

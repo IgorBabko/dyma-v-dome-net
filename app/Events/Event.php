@@ -1,6 +1,6 @@
 <?php
 
-namespace DymaVDomeNet\Events;
+namespace Teplokvartal\Events;
 
 abstract class Event
 {

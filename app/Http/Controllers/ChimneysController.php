@@ -1,13 +1,16 @@
 <?php
 
-namespace DymaVDomeNet\Http\Controllers;
+namespace Teplokvartal\Http\Controllers;
 
-use DymaVDomeNet\Chimney;
 use Illuminate\Http\Request;
 use Session;
+use Teplokvartal\Chimney;
+use Teplokvartal\Traits\Excelable;
 
 class ChimneysController extends Controller
 {
+    use Excelable;
+
     public function index()
     {
         Session::put('type', 'chimneys');
@@ -34,20 +37,9 @@ class ChimneysController extends Controller
     {
         $chimneys = Chimney::whereType($type)->orderBy('created_at', 'desc')->paginate(10);
 
-        \Excel::load('excel/0.5.xlsx', function ($reader) {
+        $prices = $this->readPricesFromExcel($type);
 
-            var_dump('it\'s working!');
-            // Getting all results
-            // $results = $reader->get();
-
-            // ->all() is a wrapper for ->get() and will work the same
-            // $results = $reader->all();
-
-            dd($reader->toArray());
-
-        });
-
-        dd($chimneys);
+        dd($prices);
 
         return view('chimneys.showByType', compact('type', 'chimneys'));
     }

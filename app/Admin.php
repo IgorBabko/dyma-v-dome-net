@@ -1,6 +1,6 @@
 <?php
 
-namespace DymaVDomeNet;
+namespace Teplokvartal;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 

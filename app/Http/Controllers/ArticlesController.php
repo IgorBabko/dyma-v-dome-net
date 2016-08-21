@@ -1,8 +1,8 @@
 <?php
 
-namespace DymaVDomeNet\Http\Controllers;
+namespace Teplokvartal\Http\Controllers;
 
-use DymaVDomeNet\Article;
+use Teplokvartal\Article;
 use Illuminate\Http\Request;
 
 class ArticlesController extends Controller

@@ -1,6 +1,6 @@
 <?php
 
-namespace DymaVDomeNet;
+namespace Teplokvartal;
 
 use Illuminate\Database\Eloquent\Model;
 use Nicolaslopezj\Searchable\SearchableTrait;

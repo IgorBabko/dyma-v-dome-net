@@ -28,17 +28,17 @@ $app = new Illuminate\Foundation\Application(
 
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
-    DymaVDomeNet\Http\Kernel::class
+    Teplokvartal\Http\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
-    DymaVDomeNet\Console\Kernel::class
+    Teplokvartal\Console\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    DymaVDomeNet\Exceptions\Handler::class
+    Teplokvartal\Exceptions\Handler::class
 );
 
 /*

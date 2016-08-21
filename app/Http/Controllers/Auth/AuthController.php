@@ -1,10 +1,10 @@
 <?php
 
-namespace DymaVDomeNet\Http\Controllers\Auth;
+namespace Teplokvartal\Http\Controllers\Auth;
 
-use DymaVDomeNet\User;
+use Teplokvartal\User;
 use Validator;
-use DymaVDomeNet\Http\Controllers\Controller;
+use Teplokvartal\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 

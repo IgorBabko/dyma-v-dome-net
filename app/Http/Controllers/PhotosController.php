@@ -1,8 +1,8 @@
 <?php
 
-namespace DymaVDomeNet\Http\Controllers;
+namespace Teplokvartal\Http\Controllers;
 
-use DymaVDomeNet\Photo;
+use Teplokvartal\Photo;
 use Illuminate\Http\Request;
 
 class PhotosController extends Controller

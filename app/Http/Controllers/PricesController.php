@@ -1,10 +1,10 @@
 <?php
 
-namespace DymaVDomeNet\Http\Controllers;
+namespace Teplokvartal\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use DymaVDomeNet\Http\Requests;
+use Teplokvartal\Http\Requests;
 use Excel;
 
 class PricesController extends Controller

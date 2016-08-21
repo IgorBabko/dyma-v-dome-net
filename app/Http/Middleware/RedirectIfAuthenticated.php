@@ -1,6 +1,6 @@
 <?php
 
-namespace DymaVDomeNet\Http\Middleware;
+namespace Teplokvartal\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

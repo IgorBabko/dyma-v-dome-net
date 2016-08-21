@@ -1,6 +1,6 @@
 <?php
 
-namespace DymaVDomeNet\Http\Requests;
+namespace Teplokvartal\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

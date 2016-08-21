@@ -11,7 +11,7 @@
 |
  */
 
-$factory->define(DymaVDomeNet\User::class, function (Faker\Generator $faker) {
+$factory->define(Teplokvartal\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->safeEmail,
@@ -20,7 +20,7 @@ $factory->define(DymaVDomeNet\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(DymaVDomeNet\Chimney::class, function (Faker\Generator $faker) {
+$factory->define(Teplokvartal\Chimney::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'desc' => $faker->paragraph,
@@ -31,7 +31,7 @@ $factory->define(DymaVDomeNet\Chimney::class, function (Faker\Generator $faker) 
     ];
 });
 
-$factory->define(DymaVDomeNet\Briquette::class, function (Faker\Generator $faker) {
+$factory->define(Teplokvartal\Briquette::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'desc' => $faker->paragraph,
@@ -41,7 +41,7 @@ $factory->define(DymaVDomeNet\Briquette::class, function (Faker\Generator $faker
     ];
 });
 
-$factory->define(DymaVDomeNet\Boiler::class, function (Faker\Generator $faker) {
+$factory->define(Teplokvartal\Boiler::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'desc' => $faker->paragraph,
@@ -51,7 +51,7 @@ $factory->define(DymaVDomeNet\Boiler::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(DymaVDomeNet\Article::class, function (Faker\Generator $faker) {
+$factory->define(Teplokvartal\Article::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'desc' => implode('<br><br>', $faker->paragraphs(rand(1, 2))),
@@ -61,7 +61,7 @@ $factory->define(DymaVDomeNet\Article::class, function (Faker\Generator $faker) 
     ];
 });
 
-$factory->define(DymaVDomeNet\Photo::class, function (Faker\Generator $faker) {
+$factory->define(Teplokvartal\Photo::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->word(2),
         'desc' => $faker->paragraph,
@@ -71,7 +71,7 @@ $factory->define(DymaVDomeNet\Photo::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(DymaVDomeNet\Order::class, function (Faker\Generator $faker) {
+$factory->define(Teplokvartal\Order::class, function (Faker\Generator $faker) {
     return [
         'client_name' => $faker->name,
         'phone1' => $faker->phoneNumber,
@@ -81,7 +81,7 @@ $factory->define(DymaVDomeNet\Order::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(DymaVDomeNet\Page::class, function (Faker\Generator $faker) {
+$factory->define(Teplokvartal\Page::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->word,
         'desc' => $faker->paragraph,
@@ -90,7 +90,7 @@ $factory->define(DymaVDomeNet\Page::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(DymaVDomeNet\Question::class, function (Faker\Generator $faker) {
+$factory->define(Teplokvartal\Question::class, function (Faker\Generator $faker) {
     return [
         'topic' => $faker->sentence,
         'text' => $faker->paragraph,
@@ -98,7 +98,7 @@ $factory->define(DymaVDomeNet\Question::class, function (Faker\Generator $faker)
     ];
 });
 
-// $factory->define(DymaVDomeNet\Answer::class, function (Faker\Generator $faker) {
+// $factory->define(Teplokvartal\Answer::class, function (Faker\Generator $faker) {
 //     return [
 //         'content' => implode('<br><br>', $faker->paragraphs(rand(5, 7))),
 //     ];

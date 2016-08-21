@@ -23,7 +23,7 @@
             "database"
         ],
         "psr-4": {
-            "DymaVDomeNet\\": "app/"
+            "Teplokvartal\\": "app/"
         }
     },
     "autoload-dev": {

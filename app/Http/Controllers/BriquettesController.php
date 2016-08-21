@@ -1,12 +1,12 @@
 <?php
 
-namespace DymaVDomeNet\Http\Controllers;
+namespace Teplokvartal\Http\Controllers;
 
 use Session;
 use Storage;
 use Illuminate\Http\Request;
-use DymaVDomeNet\Http\Requests;
-use DymaVDomeNet\Briquette;
+use Teplokvartal\Http\Requests;
+use Teplokvartal\Briquette;
 use Nicolaslopezj\Searchable\SearchableTrait;
 
 class BriquettesController extends Controller

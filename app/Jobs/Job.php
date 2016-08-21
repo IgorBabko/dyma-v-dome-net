@@ -1,6 +1,6 @@
 <?php
 
-namespace DymaVDomeNet\Jobs;
+namespace Teplokvartal\Jobs;
 
 use Illuminate\Bus\Queueable;
 
