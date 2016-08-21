@@ -2,12 +2,9 @@
 
 namespace DymaVDomeNet\Http\Controllers;
 
-use Session;
-use Storage;
-use Illuminate\Http\Request;
-use DymaVDomeNet\Http\Requests;
 use DymaVDomeNet\Chimney;
-use Nicolaslopezj\Searchable\SearchableTrait;
+use Illuminate\Http\Request;
+use Session;
 
 class ChimneysController extends Controller
 {
@@ -16,8 +13,8 @@ class ChimneysController extends Controller
         Session::put('type', 'chimneys');
 
         return view('chimneys.index');
-    } 
-    
+    }
+
     public function catalog()
     {
         return view('chimneys.catalog');
@@ -37,6 +34,21 @@ class ChimneysController extends Controller
     {
         $chimneys = Chimney::whereType($type)->orderBy('created_at', 'desc')->paginate(10);
 
+        \Excel::load('excel/0.5.xlsx', function ($reader) {
+
+            var_dump('it\'s working!');
+            // Getting all results
+            // $results = $reader->get();
+
+            // ->all() is a wrapper for ->get() and will work the same
+            // $results = $reader->all();
+
+            dd($reader->toArray());
+
+        });
+
+        dd($chimneys);
+
         return view('chimneys.showByType', compact('type', 'chimneys'));
     }
 
@@ -48,7 +60,7 @@ class ChimneysController extends Controller
     public function search(Request $request)
     {
         $chimneys = Chimney::search($request->queryString)->get();
-        $searchCount    = count($chimneys);
+        $searchCount = count($chimneys);
 
         return view('chimneys.showByType', compact('chimneys', 'searchCount'));
     }

@@ -29,8 +29,8 @@
             </li>
             <li class="{{ Request::is('boilers/*') && !Request::is('boilers/prices') && !Request::is('boilers/articles*') && !Request::is('boilers/photos*') ? 'active' : '' }}"><a href="/boilers/catalog" class="">каталог</a>
             </li>
-            <li class="{{ Request::is('boilers/prices') ? 'active' : '' }}"><a href="/boilers/prices" class="">цены</a>
-            </li>
+           {{--  <li class="{{ Request::is('boilers/prices') ? 'active' : '' }}"><a href="/boilers/prices" class="">цены</a>
+            </li> --}}
             <li class="{{ Request::is('articles/boilers*') ? 'active' : '' }}"><a href="/articles/boilers" class="">статьи</a>
             </li>
             <li class="{{ Request::is('photos/boilers*') ? 'active' : '' }}"><a href="/photos/boilers" class="">фото</a>

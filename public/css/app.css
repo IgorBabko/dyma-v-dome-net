@@ -3251,10 +3251,10 @@ textarea:hover {
 }
 .Button__more--positioned {
   position: absolute;
-  right: 40px;
-  bottom: 40px;
+  right: 20px;
+  bottom: 20px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 992px) {
   .Button__more--positioned {
     position: static;
     float: right;
@@ -3365,7 +3365,7 @@ tr td:first-child {
   color: #fff !important;
 }
 .navbar-inverse .navbar-nav > li > a {
-  padding: 15px;
+  padding: 15px 10px;
   color: #fff !important;
 }
 .feature_header {
@@ -3482,6 +3482,30 @@ tr td:first-child {
 }
 .pagination-wrapper {
   text-align: center;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold !important;
+}
+p {
+  color: #4a4a4a !important;
+}
+.single-feature p {
+  color: #c0c0c0 !important;
+}
+.single-feature:hover p {
+  color: #000 !important;
+}
+.article-expanded img,
+.photo-expanded img,
+.resource-expanded img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /*# sourceMappingURL=app.css.map */
