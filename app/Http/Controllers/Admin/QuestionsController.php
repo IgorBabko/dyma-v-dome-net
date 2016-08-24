@@ -2,10 +2,10 @@
 
 namespace Teplokvartal\Http\Controllers\Admin;
 
-use Teplokvartal\Question;
 use Illuminate\Http\Request;
 use Teplokvartal\Http\Controllers\Controller;
 use Teplokvartal\Http\Middleware\Authenticate;
+use Teplokvartal\Question;
 
 class QuestionsController extends Controller
 {
@@ -48,10 +48,18 @@ class QuestionsController extends Controller
 
         $this->flashData($request, [
             'type' => 'success',
-            'message' => 'Ответ успешно добавлен!'
+            'message' => 'Ответ успешно добавлен!',
         ]);
 
         return redirect('/admin/questions');
+    }
+
+    public function approve(Question $question)
+    {
+        $question->approved = true;
+        $question->save();
+
+        return back();
     }
 
     protected function flashData(Request $request, $data = [])
@@ -69,7 +77,7 @@ class QuestionsController extends Controller
      */
     public function destroy(Request $request, $id)
     {
-        Question::destroy($id); 
+        Question::destroy($id);
 
         $this->flashData($request, [
             'type' => 'success',
@@ -82,7 +90,7 @@ class QuestionsController extends Controller
     public function search(Request $request)
     {
         $questions = Question::search($request->queryString)->get();
-        $searchCount    = count($questions);
+        $searchCount = count($questions);
 
         return view('admin.questions.index', compact('questions', 'searchCount'));
     }

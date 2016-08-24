@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use DymaVDomeNet\Order;
+use Teplokvartal\Order;
 
 class OrdersTableSeeder extends Seeder
 {

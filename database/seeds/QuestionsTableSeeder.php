@@ -1,7 +1,7 @@
 <?php
 
-use DymaVDomeNet\Question;
 use Illuminate\Database\Seeder;
+use Teplokvartal\Question;
 
 class QuestionsTableSeeder extends Seeder
 {

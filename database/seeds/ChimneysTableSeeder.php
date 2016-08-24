@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use DymaVDomeNet\Chimney;
+use Teplokvartal\Chimney;
 
 class ChimneysTableSeeder extends Seeder
 {

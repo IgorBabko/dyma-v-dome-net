@@ -139,7 +139,7 @@ li
     border: none
     height: 32px
     padding: 3px 10px
-    box-shadow: 0 0 3px 0px #222222
+    // box-shadow: 0 0 3px 0px #222222
 
     &:hover
         background: darken(#35d22a, 10%)
@@ -168,7 +168,7 @@ textarea
 .hidden
     visibility: hidden
 
-a
+a:not(.price-link)
     color: white
     text-decoration: none
 
@@ -252,7 +252,7 @@ label
     min-height: calc(100vh - 76px)
 
 body.admin
-    background: #483434
+    background: #2c2c2c
 
 .admin .page
     padding: 50px 0
@@ -274,7 +274,7 @@ body.admin
     clear: fix
     //border: 1px solid #E0E0E0
     padding: 40px
-    background: #d8d8d8//#F3F3F3
+    background: #ececec//#d8d8d8//#F3F3F3
     //box-shadow: 0 2px 1px #b7b7b7
     //box-shadow: 0 0px 5px 1px #5d5d5d//#888
     box-shadow: 0 0px 3px 1px #000000
@@ -321,7 +321,7 @@ body.admin
 
 .price-img
     box-shadow: 0 0 5px 1px #868686
-    margin: 30px 0
+    margin: 70px 0
 
 .main-block
     background: #d8d8d8//#f3f3f3
@@ -409,7 +409,7 @@ body.admin
     font-weight: normal
     padding: 0 10px
     background: white
-    box-shadow: 0 0 5px 0px #222222
+    // box-shadow: 0 0 5px 0px #222222
     transition: box-shadow 0.2s ease-in-out
 
     &:focus
@@ -754,3 +754,47 @@ p
     display: block
     max-width: 100%
     height: auto
+
+.prices-table
+    font-size: 18px
+    tr
+        border-bottom: 1px solid gray
+    th, td
+        width: 150px
+        padding: 10px
+
+.price-list
+    margin: 60px 30px
+    li
+        // text-align: center
+        margin: 20px 0
+        a.price-link
+            color: black !important
+            &:hover
+                text-decoration: underline !important
+
+table tr
+    td,
+    th
+        border-right: 1px solid gray
+.table-meta
+    background: #ff9142
+
+.table-data th
+    border-right: 1px solid gray
+    background: #ff9142
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

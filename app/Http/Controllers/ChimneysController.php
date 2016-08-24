@@ -29,6 +29,9 @@ class ChimneysController extends Controller
 
         array_shift($prices);
         array_shift($prices);
+        array_shift($prices);
+
+        // dd($prices);
 
         return view('chimneys.prices', compact('prices'));
     }
@@ -37,11 +40,11 @@ class ChimneysController extends Controller
     {
         $chimneys = Chimney::whereType($type)->orderBy('created_at', 'desc')->paginate(10);
 
-        $prices = $this->readPricesFromExcel($type);
+        $prices = $this->readPricesFromExcel('утепленный');
 
-        dd($prices);
+        // dd($prices);
 
-        return view('chimneys.showByType', compact('type', 'chimneys'));
+        return view('chimneys.showByType', compact('type', 'chimneys', 'prices'));
     }
 
     public function show($type, Chimney $chimney)
@@ -54,6 +57,8 @@ class ChimneysController extends Controller
         $chimneys = Chimney::search($request->queryString)->get();
         $searchCount = count($chimneys);
 
-        return view('chimneys.showByType', compact('chimneys', 'searchCount'));
+        $prices = $this->readPricesFromExcel('утепленный');
+
+        return view('chimneys.showByType', compact('chimneys', 'searchCount', 'prices'));
     }
 }

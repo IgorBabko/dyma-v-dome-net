@@ -102,6 +102,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
 
     Route::get('/questions/search', 'QuestionsController@search');
     Route::get('/questions', 'QuestionsController@index');
+    Route::get('/questions/{question}/approve', 'QuestionsController@approve');
     Route::get('/questions/{question}/answer', 'QuestionsController@answer');
     Route::post('/questions/{question}/answer', 'QuestionsController@saveAnswer');
     Route::delete('/questions/{id}', 'QuestionsController@destroy');

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use DymaVDomeNet\Boiler;
+use Teplokvartal\Boiler;
 
 class BoilersTableSeeder extends Seeder
 {

@@ -1,7 +1,7 @@
 <?php
 
-use DymaVDomeNet\Photo;
 use Illuminate\Database\Seeder;
+use Teplokvartal\Photo;
 
 class PhotosTableSeeder extends Seeder
 {

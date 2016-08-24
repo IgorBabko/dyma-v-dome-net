@@ -1,7 +1,7 @@
 <?php
 
-use DymaVDomeNet\Page;
 use Illuminate\Database\Seeder;
+use Teplokvartal\Page;
 
 class PagesTableSeeder extends Seeder
 {

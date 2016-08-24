@@ -21,7 +21,7 @@
                         <p class="description"><strong>Толщина:</strong> {{ $chimney->width }}</p>
                     @endif
                     <p class="description"><strong>Тип:</strong> {{ $chimney->type }}</p>
-                    {{-- <h4>Толщина: </h4>
+             {{--        <h4>Толщина: </h4>
                     <label class="radio-inline">
                         <input type="radio" name="width" value="0.5" checked="checked">0.5мм AISI 304
                     </label>
@@ -32,6 +32,28 @@
                         <input type="radio" name="width" value="1">1мм AISI 321
                     </label>
                     <span id="name" style="display: none">{{ $chimney->name }}</span> --}}
+
+                    <h4>Таблица цен:</h4>
+                    <table class="prices-table">
+                        <tr class="table-meta">
+                            <th>Диаметр</th>
+                            <th style="text-align: center" colspan="3">Толщина</th>
+                        </tr>
+                        <tr class="table-meta">
+                            <th></th>
+                            <th>0.5мм</th>
+                            <th>0.8мм</th>
+                            <th>1.0мм</th>
+                        </tr>
+                        @foreach ($prices['Труба 1м нерж\\нерж']['0.5'] as $width => $price)
+                            <tr class="table-data">
+                                <th>{{ $width }}</th>
+                                <td>{{ preg_replace('/(.\...).*/', '$1', $price) }}</td>
+                                <td>{{ preg_replace('/(.\...).*/', '$1', $prices['Труба 1м нерж\\нерж']['0.8'][$width]) }}</td>
+                                <td>{{ preg_replace('/(.\...).*/', '$1', $prices['Труба 1м нерж\\нерж']['1.0'][$width]) }}</td>
+                            </tr>
+                        @endforeach
+                    </table>
                 </div>
                 <div class="col-xs-12" style="margin-top: 30px">
                     <a class="btn Button Button__more" href="/chimneys/catalog/{{ $type }}/{{ $chimney->id }}"><i class="fa fa-chevron-right" aria-hidden="true"></i> подробнее</a>

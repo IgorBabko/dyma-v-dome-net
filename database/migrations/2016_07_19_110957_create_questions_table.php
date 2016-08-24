@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
 
 class CreateQuestionsTable extends Migration
 {
@@ -16,6 +16,7 @@ class CreateQuestionsTable extends Migration
             $table->increments('id');
             $table->string('topic');
             $table->text('text');
+            $table->boolean('approved')->default(false);
             $table->text('answer')->nullable();
             $table->timestamps();
         });

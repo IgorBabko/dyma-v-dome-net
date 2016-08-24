@@ -137,7 +137,6 @@ li strong {
   border: none;
   height: 32px;
   padding: 3px 10px;
-  box-shadow: 0 0 3px 0px #222;
 }
 .order-header-button:hover {
   background: #30bd26;
@@ -166,12 +165,12 @@ textarea {
 .hidden {
   visibility: hidden;
 }
-a {
+a:not(.price-link) {
   color: #fff;
   text-decoration: none;
 }
-a:hover,
-a:focus {
+a:not(.price-link):hover,
+a:not(.price-link):focus {
   color: #fff;
 }
 .goup-container {
@@ -259,7 +258,7 @@ label {
   min-height: calc(100vh - 76px);
 }
 body.admin {
-  background: #483434;
+  background: #2c2c2c;
 }
 .admin .page {
   padding: 50px 0;
@@ -291,7 +290,7 @@ body.admin {
   position: relative;
   margin: 0 0 50px;
   padding: 40px;
-  background: #d8d8d8;
+  background: #ececec;
   box-shadow: 0 0px 3px 1px #000;
 }
 .chimney img,
@@ -358,7 +357,7 @@ body.admin {
 }
 .price-img {
   box-shadow: 0 0 5px 1px #868686;
-  margin: 30px 0;
+  margin: 70px 0;
 }
 .main-block {
   background: #d8d8d8;
@@ -450,7 +449,6 @@ body.admin {
   font-weight: normal;
   padding: 0 10px;
   background: #fff;
-  box-shadow: 0 0 5px 0px #222;
   transition: box-shadow 0.2s ease-in-out;
 }
 .search_input:focus {
@@ -3506,6 +3504,40 @@ p {
   display: block;
   max-width: 100%;
   height: auto;
+}
+.prices-table {
+  font-size: 18px;
+}
+.prices-table tr {
+  border-bottom: 1px solid #808080;
+}
+.prices-table th,
+.prices-table td {
+  width: 150px;
+  padding: 10px;
+}
+.price-list {
+  margin: 60px 30px;
+}
+.price-list li {
+  margin: 20px 0;
+}
+.price-list li a.price-link {
+  color: #000 !important;
+}
+.price-list li a.price-link:hover {
+  text-decoration: underline !important;
+}
+table tr td,
+table tr th {
+  border-right: 1px solid #808080;
+}
+.table-meta {
+  background: #ff9142;
+}
+.table-data th {
+  border-right: 1px solid #808080;
+  background: #ff9142;
 }
 
 /*# sourceMappingURL=app.css.map */

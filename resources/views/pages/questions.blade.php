@@ -12,16 +12,18 @@
         @include ('partials.question-form')
         @if ( count($questions) )
         @foreach ($questions as $question)
-        <div class="row question">
-            <h3>{{ $question->topic }}</h3>
-            <p>{{ $question->text }}</p>
-            @if ($question->answer)
-            <h3 style="color: green">Ответ</h3>
-            <p style="color: green">{!! $question->answer !!}</p>
-            @else
-            <p style="color: #ca7110">На данный вопрос пока ответ отсутствует</p>
-            @endif
-        </div>
+        @if ($question->approved)
+            <div class="row question">
+                <h3>{{ $question->topic }}</h3>
+                <p>{{ $question->text }}</p>
+                @if ($question->answer)
+                <h3 style="color: green">Ответ</h3>
+                <p style="color: green">{!! $question->answer !!}</p>
+                @else
+                <p style="color: #ca7110">На данный вопрос пока ответ отсутствует</p>
+                @endif
+            </div>
+        @endif
         @endforeach
         <div class="pagination-wrapper">
             @if (!Request::is('pages/questions/search*'))

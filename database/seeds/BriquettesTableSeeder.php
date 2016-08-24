@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use DymaVDomeNet\Briquette;
+use Teplokvartal\Briquette;
 
 class BriquettesTableSeeder extends Seeder
 {

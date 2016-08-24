@@ -1,7 +1,7 @@
 <?php
 
-use DymaVDomeNet\Article;
 use Illuminate\Database\Seeder;
+use Teplokvartal\Article;
 
 class ArticlesTableSeeder extends Seeder
 {

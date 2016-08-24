@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use DymaVDomeNet\Admin;
+use Teplokvartal\Admin;
 
 class DatabaseSeeder extends Seeder
 {
@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         Admin::create([
             'name' => 'admin',
             'email' => 'admin@gmail.com',
-            'password' => bcrypt('admin')
+            'password' => bcrypt('admin'),
         ]);
 
         $this->call(ChimneysTableSeeder::class);

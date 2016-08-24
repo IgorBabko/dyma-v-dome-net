@@ -1,4 +1,14 @@
 $ ->
+
+    $.fn.goTo = ->
+        $('html, body').animate({
+            scrollTop: ($(this).offset().top - 150) + 'px'
+        }, 'fast')
+        return this
+
+    $('.price-list a').click ->
+        $('#' + $(this).data('id')).goTo();
+
     $('.slick-carousel').slick
         slidesToShow: 5 
         slidesToScroll: 1
