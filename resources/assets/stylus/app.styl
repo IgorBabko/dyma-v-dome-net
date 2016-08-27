@@ -1,7 +1,8 @@
 h3
     text-transform: none !important
-    
 
+strong
+    color: #4a4a4a 
 
 .feature_header .feature_title
     display: inline !important
@@ -115,7 +116,7 @@ body
     background: white
 
 .description
-    font-size: 18px
+    font-size: 16px
 
 li
     color: #6a6a6a
@@ -168,13 +169,19 @@ textarea
 .hidden
     visibility: hidden
 
-a:not(.price-link)
+a:not(.price-link):not(.reset-search-link)
     color: white
     text-decoration: none
 
     &:hover,
     &:focus
         color: white
+
+a.cke_path_item, span.cke_path_empty
+    color: black !important
+
+.cke_reset_all, .cke_reset_all *, .cke_reset_all a, .cke_reset_all textarea
+    color: black !important
 
 .goup-container
     background-color:#dc4545 !important
@@ -274,7 +281,7 @@ body.admin
     clear: fix
     //border: 1px solid #E0E0E0
     padding: 40px
-    background: #ececec//#d8d8d8//#F3F3F3
+    background: #f3f3f3//#ececec//#d8d8d8//#F3F3F3
     //box-shadow: 0 2px 1px #b7b7b7
     //box-shadow: 0 0px 5px 1px #5d5d5d//#888
     box-shadow: 0 0px 3px 1px #000000
@@ -303,7 +310,7 @@ body.admin
 .photo-expanded,
 .article-expanded,
 .resource-expanded
-    background: #d8d8d8//#F3F3F3
+    background: #f3f3f3//#d8d8d8//#F3F3F3
     //box-shadow: 0 2px 1px #b7b7b7
     //box-shadow: 0 0px 5px 1px #5d5d5d//#888
     box-shadow: 0 0px 3px 1px #000000
@@ -324,7 +331,7 @@ body.admin
     margin: 70px 0
 
 .main-block
-    background: #d8d8d8//#f3f3f3
+    background: #f3f3f3//#d8d8d8//#f3f3f3
     //box-shadow: 0 2px 1px #b7b7b7
     margin: 20px 0 50px 0
     padding: 50px
@@ -607,7 +614,7 @@ tr td:first-child
     font-weight: bold
 
 .item-img
-    max-height: 240px
+    // max-height: 240px
     margin: 0
     display: inline-block
     // margin-top: 30px
@@ -708,7 +715,10 @@ tr td:first-child
 // pagination
 .pagination>li>a,
 .pagination>li>span
-    color: black
+    color: black !important
+
+.pagination .active span
+    color: white !important
 
 .pagination>.disabled>span
     background: #d8d8d8
@@ -773,16 +783,24 @@ p
             &:hover
                 text-decoration: underline !important
 
+table
+    border: 1px solid silver
+
 table tr
     td,
     th
-        border-right: 1px solid gray
+        border: 1px solid silver
+        color: black
 .table-meta
-    background: #ff9142
+    background: #d6d6d6
 
 .table-data th
-    border-right: 1px solid gray
-    background: #ff9142
+    border: 1px solid silver
+    background: #d6d6d6
+    color: black
+
+.Contacts strong
+    color: #c0c0c0
 
 
 

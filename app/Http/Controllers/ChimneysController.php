@@ -57,7 +57,13 @@ class ChimneysController extends Controller
         $chimneys = Chimney::search($request->queryString)->get();
         $searchCount = count($chimneys);
 
-        $prices = $this->readPricesFromExcel('утепленный');
+        $prices1 = $this->readPricesFromExcel('одностенный');
+        $prices2 = $this->readPricesFromExcel('утепленный');
+        // $prices3 = $this->readPricesFromExcel('алюком');
+        // $prices4 = $this->readPricesFromExcel('керамический');
+
+        $prices = array_collapse([$prices1, $prices2]);
+        // dd($prices);
 
         return view('chimneys.showByType', compact('chimneys', 'searchCount', 'prices'));
     }

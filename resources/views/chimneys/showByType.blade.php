@@ -15,7 +15,7 @@
                     <img class="img-responsive item-img" src="{{ $chimney->image }}" alt="picture">@endif
                 </div>
                 <div class="col-md-9">
-                    <h3>{{ $chimney->name }}</h3>
+                    <h3>{{ str_replace('*', '&deg;', $chimney->name) }}</h3>
                     <div class="description"><strong>Описание:</strong><br><br>{!! $chimney->desc !!}</div><br>
                     @if ($chimney->width)
                         <p class="description"><strong>Толщина:</strong> {{ $chimney->width }}</p>
@@ -45,18 +45,19 @@
                             <th>0.8мм</th>
                             <th>1.0мм</th>
                         </tr>
-                        @foreach ($prices['Труба 1м нерж\\нерж']['0.5'] as $width => $price)
+                        {{-- {{ dd($chimney->name) }} --}}
+                        @foreach ($prices[$chimney->name]['0.5'] as $width => $price)
                             <tr class="table-data">
-                                <th>{{ $width }}</th>
+                                <th>{{ str_replace('_', ' / ', $width) }}</th>
                                 <td>{{ preg_replace('/(.\...).*/', '$1', $price) }}</td>
-                                <td>{{ preg_replace('/(.\...).*/', '$1', $prices['Труба 1м нерж\\нерж']['0.8'][$width]) }}</td>
-                                <td>{{ preg_replace('/(.\...).*/', '$1', $prices['Труба 1м нерж\\нерж']['1.0'][$width]) }}</td>
+                                <td>{{ preg_replace('/(.\...).*/', '$1', $prices[$chimney->name]['0.8'][$width]) }}</td>
+                                <td>{{ preg_replace('/(.\...).*/', '$1', $prices[$chimney->name]['1.0'][$width]) }}</td>
                             </tr>
                         @endforeach
                     </table>
                 </div>
                 <div class="col-xs-12" style="margin-top: 30px">
-                    <a class="btn Button Button__more" href="/chimneys/catalog/{{ $type }}/{{ $chimney->id }}"><i class="fa fa-chevron-right" aria-hidden="true"></i> подробнее</a>
+                    <a class="btn Button Button__more" href="/chimneys/catalog/{{ $chimney->type }}/{{ $chimney->id }}"><i class="fa fa-chevron-right" aria-hidden="true"></i> подробнее</a>
                 </div>
             </div>
             @endforeach
