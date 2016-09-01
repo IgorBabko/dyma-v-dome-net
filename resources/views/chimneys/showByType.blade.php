@@ -20,7 +20,7 @@
                     @if ($chimney->width)
                         <p class="description"><strong>Толщина:</strong> {{ $chimney->width }}</p>
                     @endif
-                    <p class="description"><strong>Тип:</strong> {{ $chimney->type }}</p>
+                    {{-- <p class="description"><strong>Тип:</strong> {{ $chimney->type }}</p> --}}
              {{--        <h4>Толщина: </h4>
                     <label class="radio-inline">
                         <input type="radio" name="width" value="0.5" checked="checked">0.5мм AISI 304
@@ -33,7 +33,7 @@
                     </label>
                     <span id="name" style="display: none">{{ $chimney->name }}</span> --}}
 
-                    <h4>Таблица цен:</h4>
+                    <strong>Таблица цен:</strong>
                     <table class="prices-table">
                         <tr class="table-meta">
                             <th>Диаметр</th>
@@ -49,15 +49,18 @@
                         @foreach ($prices[$chimney->name]['0.5'] as $width => $price)
                             <tr class="table-data">
                                 <th>{{ str_replace('_', ' / ', $width) }}</th>
-                                <td>{{ preg_replace('/(.\...).*/', '$1', $price) }}</td>
-                                <td>{{ preg_replace('/(.\...).*/', '$1', $prices[$chimney->name]['0.8'][$width]) }}</td>
-                                <td>{{ preg_replace('/(.\...).*/', '$1', $prices[$chimney->name]['1.0'][$width]) }}</td>
+                                <td>{{ round(preg_replace('/(.\...).*/', '$1', $price)) }}</td>
+                                <td>{{ round(preg_replace('/(.\...).*/', '$1', $prices[$chimney->name]['0.8'][$width])) }}</td>
+                                <td>{{ round(preg_replace('/(.\...).*/', '$1', $prices[$chimney->name]['1.0'][$width])) }}</td>
                             </tr>
                         @endforeach
                     </table>
+                    <a class="expand-table-link">Развернуть</a>
+
                 </div>
                 <div class="col-xs-12" style="margin-top: 30px">
-                    <a class="btn Button Button__more" href="/chimneys/catalog/{{ $chimney->type }}/{{ $chimney->id }}"><i class="fa fa-chevron-right" aria-hidden="true"></i> подробнее</a>
+                    {{-- <a class="btn Button Button__more" href="/chimneys/catalog/{{ $chimney->type }}/{{ $chimney->id }}"><i class="fa fa-chevron-right" aria-hidden="true"></i> подробнее</a> --}}
+                    <a class="btn Button Button--blue Button__more" href="/chimneys/prices"><i class="fa fa-chevron-right" aria-hidden="true"></i> все цены</a>
                 </div>
             </div>
             @endforeach

@@ -46,25 +46,25 @@
                             <table class="table table-bordered">
                                 <thead style="font-weight: bold">
                                     <tr>
-                                        <td>Димаметр</td> 
-                                        <td>100/160</td> 
-                                        <td>100/160</td> 
-                                        <td>100/160</td> 
-                                        <td>100/160</td> 
-                                        <td>100/160</td> 
-                                        <td>100/160</td> 
-                                        <td>100/160</td> 
-                                        <td>100/160</td> 
-                                        <td>100/160</td> 
-                                        <td>100/160</td> 
-                                        <td>100/160</td> 
-                                        <td>100/160</td> 
-                                        <td>100/160</td> 
-                                        <td>100/160</td> 
-                                        <td>100/160</td> 
-                                        <td>100/160</td> 
-                                        <td>100/160</td> 
-                                        <td>100/160</td> 
+                                        <td>Димаметр</td>
+                                        <td>100/160</td>
+                                        <td>100/160</td>
+                                        <td>100/160</td>
+                                        <td>100/160</td>
+                                        <td>100/160</td>
+                                        <td>100/160</td>
+                                        <td>100/160</td>
+                                        <td>100/160</td>
+                                        <td>100/160</td>
+                                        <td>100/160</td>
+                                        <td>100/160</td>
+                                        <td>100/160</td>
+                                        <td>100/160</td>
+                                        <td>100/160</td>
+                                        <td>100/160</td>
+                                        <td>100/160</td>
+                                        <td>100/160</td>
+                                        <td>100/160</td>
                                     </tr>
                                 </thead>
                                 <tr>
@@ -144,7 +144,7 @@
                 </div>
             @endforeach
             <div class="pagination-wrapper">
-            @if (!Request::is('admin/chimneys/search*')) 
+            @if (!Request::is('admin/chimneys/search*'))
                {!! $chimneys->render() !!}
             @endif
             </div>

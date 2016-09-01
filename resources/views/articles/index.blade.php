@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-md-5" style="position: static">
                     <h3>{{ $article->name }}</h3>
-                    <div>{!! str_limit($article->desc, 250) !!}</div>
+                    <div class="small-description">{!! str_limit($article->desc, 250) !!}</div>
                     <a class="btn Button Button__more--positioned" style="display: inline-block; margin-top: 30px !important" href="/articles/{{ $productName }}/{{ $article->id }}"><i class="fa fa-chevron-right" aria-hidden="true"></i> подробнее</a>
                 </div>
             </div>

@@ -4,7 +4,6 @@ namespace Teplokvartal\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use Teplokvartal\Chimney;
-use Teplokvartal\Http\Requests;
 use Teplokvartal\Http\Controllers\Controller;
 use Teplokvartal\Http\Middleware\Authenticate;
 
@@ -47,20 +46,20 @@ class ChimneysController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            //'desc' => 'required',
-            'content' => 'required',
+            'desc' => 'required',
+            // 'content' => 'required',
             'type' => 'required',
         ]);
 
         $chimney = Chimney::create($request->all());
 
         /*if ($request->file('image')) {
-            $this->saveImage($request, $chimney);
+        $this->saveImage($request, $chimney);
         }*/
 
         $this->flashData($request, [
             'type' => 'success',
-            'message' => 'Дымоход успешно добавлен!'
+            'message' => 'Дымоход успешно добавлен!',
         ]);
 
         return redirect('/admin/chimneys');
@@ -68,18 +67,17 @@ class ChimneysController extends Controller
 
     /*protected function saveImage(Request $request, Chimney $chimney, $replace = false)
     {
-        $imageName = $chimney->id . '.' . $request->file('image')->getClientOriginalExtension();
+    $imageName = $chimney->id . '.' . $request->file('image')->getClientOriginalExtension();
 
-        if ($replace) {
-            \Storage::delete(public_path() . $chimney->image);
-        }
+    if ($replace) {
+    \Storage::delete(public_path() . $chimney->image);
+    }
 
-        $request->file('image')->move(public_path() . '/images/uploads/', $imageName);
-    
-        $chimney->image = '/images/uploads/' . $imageName;
-        $chimney->save();
+    $request->file('image')->move(public_path() . '/images/uploads/', $imageName);
+
+    $chimney->image = '/images/uploads/' . $imageName;
+    $chimney->save();
     }*/
-
 
     /**
      * Display the specified resource.
@@ -114,18 +112,18 @@ class ChimneysController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            //'desc' => 'required',
-            'content' => 'required',
+            'desc' => 'required',
+            // 'content' => 'required',
             'type' => 'required',
         ]);
 
         /*if ($request->file('image')) {
-            $this->saveImage($request, $chimney, true);
+        $this->saveImage($request, $chimney, true);
         }*/
 
         $chimney->name = $request->name;
         $chimney->desc = $request->desc;
-        $chimney->content = $request->content;
+        // $chimney->content = $request->content;
         $chimney->type = $request->type;
         $chimney->image = $request->image;
 
@@ -133,7 +131,7 @@ class ChimneysController extends Controller
 
         $this->flashData($request, [
             'type' => 'success',
-            'message' => 'Дымоход успешно обновлен!'
+            'message' => 'Дымоход успешно обновлен!',
         ]);
 
         return redirect('/admin/chimneys');
@@ -154,7 +152,7 @@ class ChimneysController extends Controller
      */
     public function destroy(Request $request, $id)
     {
-        Chimney::destroy($id); 
+        Chimney::destroy($id);
 
         $this->flashData($request, [
             'type' => 'success',
@@ -167,7 +165,7 @@ class ChimneysController extends Controller
     public function search(Request $request)
     {
         $chimneys = Chimney::search($request->queryString)->get();
-        $searchCount    = count($chimneys);
+        $searchCount = count($chimneys);
 
         return view('admin.chimneys.index', compact('chimneys', 'searchCount'));
     }

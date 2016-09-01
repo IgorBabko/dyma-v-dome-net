@@ -1,5 +1,7 @@
 h3
     text-transform: none !important
+    line-height: 1.4
+    margin: 0 0 10px 0
 
 strong
     color: #4a4a4a 
@@ -169,7 +171,7 @@ textarea
 .hidden
     visibility: hidden
 
-a:not(.price-link):not(.reset-search-link)
+a:not(.price-link):not(.reset-search-link):not(.expand-table-link)
     color: white
     text-decoration: none
 
@@ -197,6 +199,9 @@ img
 
 .tab-content img
     margin: 0 auto
+
+#boilers img
+    height: 350px
 
 .contacts
     margin: 15px 0
@@ -767,6 +772,7 @@ p
 
 .prices-table
     font-size: 18px
+    margin: 10px 0
     tr
         border-bottom: 1px solid gray
     th, td
@@ -774,12 +780,13 @@ p
         padding: 10px
 
 .price-list
-    margin: 60px 30px
+    list-style-type: decimal
+    margin: 0 30px 60px
     li
         // text-align: center
         margin: 20px 0
         a.price-link
-            color: black !important
+            color: #666 !important
             &:hover
                 text-decoration: underline !important
 
@@ -802,10 +809,19 @@ table tr
 .Contacts strong
     color: #c0c0c0
 
+tr:nth-child(n + 9)
+    display: none
 
+.expand-table-link
+    cursor: pointer
+    display: inline-block
+    font-size: 18px
+    
+    &:hover
+        text-decoration: underline !important
 
-
-
+.small-description
+    margin-bottom: 50px
 
 
 

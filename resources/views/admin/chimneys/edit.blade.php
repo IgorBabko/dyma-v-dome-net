@@ -11,16 +11,16 @@
                     {{ method_field('PATCH') }}
                     <div class="form-group">
                         <label for="name">Название</label>
-                        <input type="text" class="form-control" id="name" name="name" value="{{ old('name') ? old('name') : $chimney->name }}"> 
+                        <input type="text" class="form-control" id="name" name="name" value="{{ old('name') ? old('name') : $chimney->name }}">
                     </div>
                     <div class="form-group">
                         <label for="desc">Описание</label>
                         <textarea type="text" class="form-control" id="desc" name="desc">{!! old('desc') ? old('desc') : $chimney->desc !!}</textarea>
                     </div>
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label for="content">Контент</label>
                         <textarea type="text" class="form-control" id="content" name="content">{!! old('content') ? old('content') : $chimney->content !!}</textarea>
-                    </div>
+                    </div> --}}
                     <div class="form-group">
                         <label for="type">Тип</label>
                         <select class="form-control" id="type" name="type">
@@ -30,14 +30,14 @@
                             <option value="керамический" {{ $chimney->type == 'керамический' ? 'selected' : '' }}>керамический</option>
                         </select>
                     </div>
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label for="width">Толщина</label>
-                        <input type="text" class="form-control" id="width" name="width" value="{{ old('width') ? old('width') : $chimney->width }}"> 
-                    </div>
+                        <input type="text" class="form-control" id="width" name="width" value="{{ old('width') ? old('width') : $chimney->width }}">
+                    </div> --}}
                     <!--<div class="form-group" style="margin: 20px 0">
                         <label for="image">Изменить изображение</label>
                         <input type="file" id="image" name="image">
-                        <img src="{{ $chimney->image }}" class="thumb">
+                        <img src=" class="thumb">
                     </div>-->
                     <div class="form-group">
                         <label for="image">Главная картинка</label>

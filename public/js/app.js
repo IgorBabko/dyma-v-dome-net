@@ -2,7 +2,7 @@
   $(function() {
     $.fn.goTo = function() {
       $('html, body').animate({
-        scrollTop: ($(this).offset().top - 150) + 'px'
+        scrollTop: $(this).offset().top - 150
       }, 'fast');
       return this;
     };
@@ -62,6 +62,14 @@
       image: {
         tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
       }
+    });
+    $('.expand-table-link').click(function() {
+      if ($(this).text() === 'Свернуть') {
+        $(this).text('Развернуть');
+      } else {
+        $(this).text('Свернуть');
+      }
+      return $(this).prev('table').find('tr:nth-child(n + 9)').toggle();
     });
   });
 

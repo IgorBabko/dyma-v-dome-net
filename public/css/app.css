@@ -1,5 +1,7 @@
 h3 {
   text-transform: none !important;
+  line-height: 1.4;
+  margin: 0 0 10px 0;
 }
 strong {
   color: #4a4a4a;
@@ -168,12 +170,12 @@ textarea {
 .hidden {
   visibility: hidden;
 }
-a:not(.price-link):not(.reset-search-link) {
+a:not(.price-link):not(.reset-search-link):not(.expand-table-link) {
   color: #fff;
   text-decoration: none;
 }
-a:not(.price-link):not(.reset-search-link):hover,
-a:not(.price-link):not(.reset-search-link):focus {
+a:not(.price-link):not(.reset-search-link):not(.expand-table-link):hover,
+a:not(.price-link):not(.reset-search-link):not(.expand-table-link):focus {
   color: #fff;
 }
 a.cke_path_item,
@@ -199,6 +201,9 @@ img {
 }
 .tab-content img {
   margin: 0 auto;
+}
+#boilers img {
+  height: 350px;
 }
 .contacts {
   margin: 15px 0;
@@ -3522,6 +3527,7 @@ p {
 }
 .prices-table {
   font-size: 18px;
+  margin: 10px 0;
 }
 .prices-table tr {
   border-bottom: 1px solid #808080;
@@ -3532,13 +3538,14 @@ p {
   padding: 10px;
 }
 .price-list {
-  margin: 60px 30px;
+  list-style-type: decimal;
+  margin: 0 30px 60px;
 }
 .price-list li {
   margin: 20px 0;
 }
 .price-list li a.price-link {
-  color: #000 !important;
+  color: #666 !important;
 }
 .price-list li a.price-link:hover {
   text-decoration: underline !important;
@@ -3561,6 +3568,20 @@ table tr th {
 }
 .Contacts strong {
   color: #c0c0c0;
+}
+tr:nth-child(n + 9) {
+  display: none;
+}
+.expand-table-link {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+}
+.expand-table-link:hover {
+  text-decoration: underline !important;
+}
+.small-description {
+  margin-bottom: 50px;
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -2,7 +2,7 @@ $ ->
 
     $.fn.goTo = ->
         $('html, body').animate({
-            scrollTop: ($(this).offset().top - 150) + 'px'
+            scrollTop: ($(this).offset().top - 150)
         }, 'fast')
         return this
 
@@ -80,6 +80,14 @@ $ ->
         #     easing: 'ease-in-out'
         #     opener: (openerElement) ->
         #       return openerElement.is('img') ? openerElement : openerElement.find('img')
+
+    $('.expand-table-link').click ->
+        if $(this).text() == 'Свернуть'
+            $(this).text('Развернуть');
+        else
+            $(this).text('Свернуть');
+
+        $(this).prev('table').find('tr:nth-child(n + 9)').toggle();
 
 
     return

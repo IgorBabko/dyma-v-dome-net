@@ -16,10 +16,10 @@
                         <label for="desc">Описание</label>
                         <textarea type="text" class="form-control" id="desc" name="desc">{{ old('desc') }}</textarea>
                     </div>
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label for="content">Контент</label>
                         <textarea type="text" class="form-control" id="content" name="content">{{ old('content') }}</textarea>
-                    </div>
+                    </div> --}}
                     <div class="form-group">
                         <label for="type">Тип</label>
                         <select class="form-control" id="type" name="type">
@@ -29,10 +29,10 @@
                             <option value="керамический">керамический</option>
                         </select>
                     </div>
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label for="width">Толщина</label>
                         <input type="text" class="form-control" id="width" name="width" value="{{ old('width') }}">
-                    </div>
+                    </div> --}}
                     <!--<div class="form-group" style="margin: 20px 0">
                         <label for="image">Добавить изображение</label>
                         <input type="file" id="image" name="image">

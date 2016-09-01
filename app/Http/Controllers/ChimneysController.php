@@ -40,9 +40,9 @@ class ChimneysController extends Controller
     {
         $chimneys = Chimney::whereType($type)->orderBy('created_at', 'desc')->paginate(10);
 
-        $prices = $this->readPricesFromExcel('утепленный');
+        $prices = $this->readPricesFromExcel($type);
 
-        // dd($prices);
+        // dd($type);
 
         return view('chimneys.showByType', compact('type', 'chimneys', 'prices'));
     }
