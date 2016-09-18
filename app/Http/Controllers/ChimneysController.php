@@ -29,9 +29,9 @@ class ChimneysController extends Controller
 
         array_shift($prices);
         array_shift($prices);
-        array_shift($prices);
 
-        // dd($prices);
+        // This line get rids of .DS_Store file on OS X
+        // array_shift($prices);
 
         return view('chimneys.prices', compact('prices'));
     }
@@ -40,9 +40,11 @@ class ChimneysController extends Controller
     {
         $chimneys = Chimney::whereType($type)->orderBy('created_at', 'desc')->paginate(10);
 
-        $prices = $this->readPricesFromExcel($type);
-
-        // dd($type);
+        if ($type == 'одностенный' || $type == 'утепленный') {
+            $prices = $this->readPricesFromExcel($type);
+        } else {
+            $prices = collect([]);
+        }
 
         return view('chimneys.showByType', compact('type', 'chimneys', 'prices'));
     }
